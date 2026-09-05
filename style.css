@@ -1095,7 +1095,7 @@ input:focus-visible,
      de botão a reposicionar. Some o texto, encolhe a logo, migra para a
      esquerda: assim ele para de cobrir o topo da caixa de conteúdo. */
   .topo {
-    transition: left 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1), top 650ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: left 1100ms cubic-bezier(0.22, 1, 0.36, 1), transform 1100ms cubic-bezier(0.22, 1, 0.36, 1), top 1100ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .topo.topo--compacto {
     left: 0.9rem;
@@ -1103,14 +1103,14 @@ input:focus-visible,
     transform: translateX(0);
     width: auto;
   }
-  .topo__marca { transition: gap 650ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .topo__marca { transition: gap 1100ms cubic-bezier(0.22, 1, 0.36, 1); }
   .topo--compacto .topo__marca { gap: 0; }
-  .emblema { transition: width 650ms cubic-bezier(0.22, 1, 0.36, 1), height 650ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .emblema { transition: width 1100ms cubic-bezier(0.22, 1, 0.36, 1), height 1100ms cubic-bezier(0.22, 1, 0.36, 1); }
   .topo--compacto .emblema { width: 40px; height: 40px; }
   .topo__titulos {
     max-width: 320px;
     opacity: 1;
-    transition: max-width 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
+    transition: max-width 1100ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease;
   }
   .topo--compacto .topo__titulos { max-width: 0; opacity: 0; }
 }
