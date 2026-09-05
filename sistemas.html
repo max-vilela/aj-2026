@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistemas — Acampamento Júpiter</title>
+<meta name="description" content="Os mecanismos por trás da história: combate, progressão, economia, missões e conduta em jogo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="emblema.png">
+<link rel="stylesheet" href="style.css?v=27">
+</head>
+<body>
+
+<div class="cena-fundo" aria-hidden="true"></div>
+
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+<header class="topo" id="topo">
+  <div class="topo__faixa" aria-hidden="true"></div>
+  <div class="topo__conteudo">
+    <a class="topo__marca" href="index.html" aria-label="Acampamento Júpiter, ir para o início">
+      <img class="emblema" src="emblema.png" alt="Emblema do Acampamento Júpiter: águia dourada de asas abertas sobre fundo roxo, envolta em coroa de louros">
+      <span class="topo__titulos">
+        <span class="topo__titulo">Acampamento Júpiter</span>
+      </span>
+    </a>
+    <button class="topo__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-movel">
+      <span class="visually-hidden">Abrir menu de navegação</span>
+      <span class="topo__menu-icone" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="lateral lateral--esquerda caixa" aria-label="O Acampamento">
+  <p class="lateral__titulo">O Acampamento</p>
+  <ul>
+    <li><a href="index.html"><span class="lateral__numero">I</span> Início</a></li>
+    <li><a href="o-acampamento.html"><span class="lateral__numero">II</span> O Acampamento</a></li>
+    <li><a href="nova-roma.html"><span class="lateral__numero">III</span> Nova Roma</a></li>
+    <li><a href="coortes.html"><span class="lateral__numero">IV</span> Coortes</a></li>
+    <li><a href="deuses.html"><span class="lateral__numero">V</span> Deuses e Semideuses</a></li>
+    <li><a href="personagens.html"><span class="lateral__numero">VI</span> Personagens</a></li>
+    <li><a href="regras.html"><span class="lateral__numero">VII</span> Regras do RPG</a></li>
+  </ul>
+</nav>
+
+<nav class="lateral lateral--direita caixa" aria-label="Guia">
+  <p class="lateral__titulo">Guia</p>
+  <ul>
+    <li><a href="sistemas.html"><span class="lateral__numero">VIII</span> Sistemas</a></li>
+    <li><a href="patentes.html"><span class="lateral__numero">IX</span> Patentes e Honrarias</a></li>
+    <li><a href="missoes.html"><span class="lateral__numero">X</span> Missões e Eventos</a></li>
+    <li><a href="bestiario.html"><span class="lateral__numero">XI</span> Bestiário</a></li>
+    <li><a href="glossario.html"><span class="lateral__numero">XII</span> Glossário</a></li>
+    <li><a href="creditos.html"><span class="lateral__numero">XIII</span> Créditos</a></li>
+    <li><a href="mercado.html"><span class="lateral__numero">XIV</span> Mercado</a></li>
+  </ul>
+</nav>
+
+<nav class="nav-movel caixa" id="nav-movel" aria-label="Navegação principal" hidden>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="o-acampamento.html">O Acampamento</a></li>
+    <li><a href="nova-roma.html">Nova Roma</a></li>
+    <li><a href="coortes.html">Coortes</a></li>
+    <li><a href="deuses.html">Deuses e Semideuses</a></li>
+    <li><a href="personagens.html">Personagens</a></li>
+    <li><a href="regras.html">Regras do RPG</a></li>
+    <li><a href="sistemas.html">Sistemas</a></li>
+    <li><a href="patentes.html">Patentes e Honrarias</a></li>
+    <li><a href="missoes.html">Missões e Eventos</a></li>
+    <li><a href="bestiario.html">Bestiário</a></li>
+    <li><a href="glossario.html">Glossário</a></li>
+    <li><a href="creditos.html">Créditos</a></li>
+    <li><a href="mercado.html">Mercado</a></li>
+  </ul>
+</nav>
+
+<main id="conteudo-principal" class="conteudo">
+  <section class="caixa conteudo__caixa conteudo__caixa--escura" aria-labelledby="pagina-titulo">
+    <div class="secao__cabecalho">
+      <p class="secao__eyebrow">Capítulo VIII</p>
+      <h1 id="pagina-titulo">Sistemas</h1>
+      <img class="secao__banner" src="https://placehold.co/1200x675/3d1a4d/e3c568?text=Banner+de+Sistemas" alt="Banner ilustrativo do capítulo Sistemas">
+      <p class="secao__intro">
+        Os mecanismos por trás da história: como se luta, se evolui e se sobrevive em Roma.
+      </p>
+    </div>
+
+    <div class="acordeao" id="acordeao-sistemas">
+      <div class="acordeao__item">
+        <h3>
+          <button class="acordeao__gatilho" type="button" id="sistemas-gatilho-1" aria-expanded="false" aria-controls="sistemas-painel-1">Combate</button>
+        </h3>
+        <div class="acordeao__painel" id="sistemas-painel-1" role="region" aria-labelledby="sistemas-gatilho-1" hidden>
+          <p>
+            Combate é um tipo específico de interpretação na Estação Intermediária. Como
+            modalidade, tem suas próprias regras e conceitos, abaixo explicados. A fórmula para a
+            estruturação de uma ação de combate, ou seja, o formato da ação de um ataque, é:
+          </p>
+          <p class="acordeao__formula">*Ação física, lugar, efeito físico no alvo*</p>
+          <p>
+            Descrever o movimento corporal é indispensável, uma vez que é necessário não haver
+            conflito com o lugar de ataque e efeito explícito na ação. O mesmo vale para ações de
+            poderes, que seguem a regra de:
+          </p>
+          <p class="acordeao__formula"><strong>=Poder=</strong> *Ação mágica, lugar, efeito*</p>
+
+          <p class="acordeao__legenda">Exemplos, seguindo as fórmulas acima:</p>
+          <ul class="acordeao__exemplos">
+            <li>*Avança um passo e desfere um golpe de espada em arco horizontal, mirando o abdômen do oponente, abrindo um corte superficial na região.*</li>
+            <li>*Recua um passo e lança um soco reto em direção ao maxilar do adversário, acertando-o de raspão e desequilibrando-o.*</li>
+            <li><strong>=Fogo do Olimpo=</strong> *Ergue as mãos e projeta uma rajada de chamas em direção ao peito do oponente, chamuscando o tecido da armadura na região.*</li>
+            <li><strong>=Correntes do Tártaro=</strong> *Golpeia o chão e ergue correntes de sombra em torno dos tornozelos do oponente, prendendo-o no lugar por um instante.*</li>
+          </ul>
+
+          <h4 class="acordeao__subtitulo">Regras</h4>
+          <ol class="acordeao__lista">
+            <li>Todo combate formal deve ser 1x1, a menos que o mestre da sala, seja ele um organizador ou decurião, diga que 2x1 está liberado. Vale lembrar que arqueiros não contam como 2x1.</li>
+            <li>É permitido apenas uma ação física ou de poder por turno.</li>
+            <li>Se a sua tática exige mais turnos, você deve esperar a reação do oponente antes de complementá-la.</li>
+            <li>Mesmo sendo curado na enfermaria, ferimentos exigem recuperação. Dê um tempo após sair de um combate.</li>
+            <li>Tenha senso e seja educado com seu oponente.</li>
+            <li>Limite-se ao seu nível de contas, saiba quais poderes pode usar conferindo a página de seu respectivo deus.</li>
+            <li>Não é obrigatório descrever esteticamente um movimento, ou seja, incluir sua musculatura e eixos. Se você fizer isso, contudo, e descrever com pouca exatidão ou errado, seu ataque falha em ON. Usar a espada para acertar o ombro e atacar o joelho do adversário, por exemplo, significa que seu ataque falhou.</li>
+            <li>É possível avançar um passo ao atacar. Ações de defesa requerem permanência ou recuo.</li>
+            <li>Ações de corrida estão limitadas a cinco quadrados de avanço — com exceção dos filhos de Mercúrio, Arcus e possuidores de montaria; estes avançam sete quadrados.</li>
+            <li>Jogadores que utilizarem poderes da árvore que não escolheram serão banidos imediatamente da atividade ou evento.</li>
+            <li>Armas que não são naturalmente usadas com o intuito de serem arremessadas só podem ser utilizadas para este fim se o jogador possuir a vantagem "Perícia com Arremesso".</li>
+            <li>Aljavas contêm até quinze flechas ou setas.</li>
+            <li>Lutar cansa. Uma Habilidade Passiva não desgastará sua energia ou precisará de nenhum tipo de ativação consciente, sendo automática. A Habilidade Ativa, como o próprio nome sugere, requer ativação; seja por concentração ou prece proferida ao parente divino. Deve ser verbalizada ou ter seu nome evidenciado entre sinais de igual. É necessário respeitar seus tempos de recarga, e ter em mente que cada uso de um poder ativo desgasta, mais e mais, um semideus em combate.</li>
+          </ol>
+
+          <h4 class="acordeao__subtitulo">Defesa, Desvio e Distância</h4>
+          <p>
+            São três diretrizes que balanceiam o combate e devem ser seguidas à risca, sem
+            apelação. Estude-as e compreenda-as para não acabar caindo na velha armadilha do sábio
+            burro, que pensa que sabe tudo, mas não sabe nada.
+          </p>
+
+          <h4 class="acordeao__subtitulo acordeao__subtitulo--menor">Defendendo</h4>
+          <p>
+            A defesa depende exatamente do local onde foi feito o ataque. Caso a pessoa não
+            descreva o local defendido, a defesa não ocorre e o golpe/poder acerta. Você precisa
+            ter um utensílio defensivo em mente: o <strong>Broquel</strong>. É um escudo simples e
+            de livre acesso a todos os semideuses, podendo ser utilizado desde sua entrada como um
+            meio-sangue, ou seja, na nivelação de zero contas. É claro que você poderá utilizar
+            outros equipamentos para defesa, como um <strong>Scutum</strong> ou até mesmo uma
+            <strong>Espada Longa</strong>, mas isso dependerá da dinâmica do duelo, da sua aptidão
+            com a arma e do senso das partes envolvidas.
+          </p>
+          <ul class="acordeao__exemplos">
+            <li>*Ergue o broquel à frente do rosto, bloqueando o corte de espada antes que este alcance a bochecha.*</li>
+          </ul>
+
+          <h4 class="acordeao__subtitulo acordeao__subtitulo--menor">Desviando</h4>
+          <p>
+            Quando se está a mais de três quadrados de distância do oponente, é possível usar seu
+            corpo para sair do alcance do ataque. Assim, quando você estiver a quatro quadrados ou
+            mais, poderá desviar do poder e lançar o seu, alterando a ordem de atacante/atacado. Só
+            que existe uma regra para não se desviar o tempo todo: só se pode desviar a cada dois
+            poderes executados, e não é possível desviar duas vezes seguidas. Ou seja: desviou,
+            usou, usou, desviou, usou, usou. Muitas vezes, dependendo de onde a pessoa o golpeou,
+            pode acabar sendo indesviável corporalmente. Daí se pensa numa defesa.
+          </p>
+          <ul class="acordeao__exemplos">
+            <li>*Inclina o tronco para trás e desliza um passo à esquerda, deixando a lança do oponente cortar apenas o ar onde estava seu ombro.*</li>
+          </ul>
+
+          <h4 class="acordeao__subtitulo acordeao__subtitulo--menor">Distância</h4>
+          <ol class="acordeao__lista">
+            <li>Até sete quadrados de distância (sem contar o seu quadrado ou o do oponente): limitação máxima para semideuses que fazem o lançamento de flechas ou setas.</li>
+            <li>Até quatro quadrados de distância (sem contar o seu quadrado ou o do oponente): limitação máxima para semideuses que fazem o lançamento de esferas mágicas, feixes de luz, lampejo, conjurações elementais, etc.</li>
+            <li>Acima de seis quadrados de distância (sem contar o seu quadrado ou o do oponente): é possível efetuar desvio e defesa de projéteis, como setas e flechas.</li>
+            <li>Entre seis e quatro quadrados (sem contar o seu quadrado ou o do oponente): só é permitido defender-se (com senso!) de flechas e setas.</li>
+            <li>Abaixo de quatro quadrados (sem contar o seu quadrado ou o do oponente): só é permitido efetuar a defesa caso o equipamento defensivo esteja previamente posicionado na região alvejada.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="acordeao__item">
+        <h3>
+          <button class="acordeao__gatilho" type="button" id="sistemas-gatilho-2" aria-expanded="false" aria-controls="sistemas-painel-2">Progressão de Personagem</button>
+        </h3>
+        <div class="acordeao__painel" id="sistemas-painel-2" role="region" aria-labelledby="sistemas-gatilho-2" hidden>
+          <p>Ao acumular pontos de honra em missões e combates, seu personagem sobe de patente. Veja um exemplo de evolução abaixo:</p>
+          <div class="barra-progresso" role="img" aria-label="Exemplo de evolução de personagem: 60 por cento do caminho entre Recruta e Centurião">
+            <div class="barra-progresso__trilho">
+              <div class="barra-progresso__preenchimento" data-porcentagem="60"></div>
+            </div>
+            <div class="barra-progresso__marcos">
+              <span>Recruta</span><span>Legionário</span><span>Decurião</span><span>Centurião</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acordeao__item">
+        <h3>
+          <button class="acordeao__gatilho" type="button" id="sistemas-gatilho-3" aria-expanded="false" aria-controls="sistemas-painel-3">Economia</button>
+        </h3>
+        <div class="acordeao__painel" id="sistemas-painel-3" role="region" aria-labelledby="sistemas-gatilho-3" hidden>
+          <p>A moeda oficial é o <strong>denário</strong>. Personagens ganham denários completando missões e podem trocá-los por equipamentos, runas e itens cosméticos na Loja de Nova Roma.</p>
+        </div>
+      </div>
+      <div class="acordeao__item">
+        <h3>
+          <button class="acordeao__gatilho" type="button" id="sistemas-gatilho-4" aria-expanded="false" aria-controls="sistemas-painel-4">Missões</button>
+        </h3>
+        <div class="acordeao__painel" id="sistemas-painel-4" role="region" aria-labelledby="sistemas-gatilho-4" hidden>
+          <p>Missões variam de patrulhas simples a caçadas a monstros lendários. Cada uma concede pontos de honra, denários e, ocasionalmente, itens únicos.</p>
+        </div>
+      </div>
+      <div class="acordeao__item">
+        <h3>
+          <button class="acordeao__gatilho" type="button" id="sistemas-gatilho-5" aria-expanded="false" aria-controls="sistemas-painel-5">Conduta em Jogo</button>
+        </h3>
+        <div class="acordeao__painel" id="sistemas-painel-5" role="region" aria-labelledby="sistemas-gatilho-5" hidden>
+          <p>Decisões importantes da trama (mortes, grandes conquistas) devem ser combinadas previamente com a organização, garantindo uma história justa para todos os legionários.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p class="rodape__creditos">Acampamento Júpiter, 2026 — por Lau, Maria &amp; Organização.</p>
+  <p class="rodape__aviso">Projeto de comunidade/fã, sem vínculo oficial com Rick Riordan, Disney, a Sutton Books ou a Hubbe Hotel/Sulake. Nenhum direito autoral é reivindicado sobre personagens ou marcas de terceiros.</p>
+  <nav class="rodape__links" aria-label="Links do rodapé">
+    <a href="#">Discord</a>
+    <a href="#">Hubbe Hotel</a>
+  </nav>
+</footer>
+
+<script src="script.js?v=4"></script>
+</body>
+</html>

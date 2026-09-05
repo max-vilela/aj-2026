@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Acampamento — Acampamento Júpiter</title>
+<meta name="description" content="Como funciona o Acampamento Júpiter: Principia, Campo de Marte, Templo de Júpiter, Barracas das Coortes, Senado e Nova Roma.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="emblema.png">
+<link rel="stylesheet" href="style.css?v=27">
+</head>
+<body>
+
+<div class="cena-fundo" aria-hidden="true"></div>
+
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+<header class="topo" id="topo">
+  <div class="topo__faixa" aria-hidden="true"></div>
+  <div class="topo__conteudo">
+    <a class="topo__marca" href="index.html" aria-label="Acampamento Júpiter, ir para o início">
+      <img class="emblema" src="emblema.png" alt="Emblema do Acampamento Júpiter: águia dourada de asas abertas sobre fundo roxo, envolta em coroa de louros">
+      <span class="topo__titulos">
+        <span class="topo__titulo">Acampamento Júpiter</span>
+      </span>
+    </a>
+    <button class="topo__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-movel">
+      <span class="visually-hidden">Abrir menu de navegação</span>
+      <span class="topo__menu-icone" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="lateral lateral--esquerda caixa" aria-label="O Acampamento">
+  <p class="lateral__titulo">O Acampamento</p>
+  <ul>
+    <li><a href="index.html"><span class="lateral__numero">I</span> Início</a></li>
+    <li><a href="o-acampamento.html"><span class="lateral__numero">II</span> O Acampamento</a></li>
+    <li><a href="nova-roma.html"><span class="lateral__numero">III</span> Nova Roma</a></li>
+    <li><a href="coortes.html"><span class="lateral__numero">IV</span> Coortes</a></li>
+    <li><a href="deuses.html"><span class="lateral__numero">V</span> Deuses e Semideuses</a></li>
+    <li><a href="personagens.html"><span class="lateral__numero">VI</span> Personagens</a></li>
+    <li><a href="regras.html"><span class="lateral__numero">VII</span> Regras do RPG</a></li>
+  </ul>
+</nav>
+
+<nav class="lateral lateral--direita caixa" aria-label="Guia">
+  <p class="lateral__titulo">Guia</p>
+  <ul>
+    <li><a href="sistemas.html"><span class="lateral__numero">VIII</span> Sistemas</a></li>
+    <li><a href="patentes.html"><span class="lateral__numero">IX</span> Patentes e Honrarias</a></li>
+    <li><a href="missoes.html"><span class="lateral__numero">X</span> Missões e Eventos</a></li>
+    <li><a href="bestiario.html"><span class="lateral__numero">XI</span> Bestiário</a></li>
+    <li><a href="glossario.html"><span class="lateral__numero">XII</span> Glossário</a></li>
+    <li><a href="creditos.html"><span class="lateral__numero">XIII</span> Créditos</a></li>
+    <li><a href="mercado.html"><span class="lateral__numero">XIV</span> Mercado</a></li>
+  </ul>
+</nav>
+
+<nav class="nav-movel caixa" id="nav-movel" aria-label="Navegação principal" hidden>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="o-acampamento.html">O Acampamento</a></li>
+    <li><a href="nova-roma.html">Nova Roma</a></li>
+    <li><a href="coortes.html">Coortes</a></li>
+    <li><a href="deuses.html">Deuses e Semideuses</a></li>
+    <li><a href="personagens.html">Personagens</a></li>
+    <li><a href="regras.html">Regras do RPG</a></li>
+    <li><a href="sistemas.html">Sistemas</a></li>
+    <li><a href="patentes.html">Patentes e Honrarias</a></li>
+    <li><a href="missoes.html">Missões e Eventos</a></li>
+    <li><a href="bestiario.html">Bestiário</a></li>
+    <li><a href="glossario.html">Glossário</a></li>
+    <li><a href="creditos.html">Créditos</a></li>
+    <li><a href="mercado.html">Mercado</a></li>
+  </ul>
+</nav>
+
+<main id="conteudo-principal" class="conteudo">
+  <section class="caixa conteudo__caixa conteudo__caixa--escura" aria-labelledby="pagina-titulo">
+    <div class="secao__cabecalho">
+      <p class="secao__eyebrow">Capítulo II</p>
+      <h1 id="pagina-titulo">Conheça o Acampamento</h1>
+      <img class="secao__banner" src="https://placehold.co/1200x675/3d1a4d/e3c568?text=Banner+do+Acampamento" alt="Banner ilustrativo do capítulo O Acampamento">
+      <p class="secao__intro">
+        O Acampamento Júpiter funciona como um forte militar romano em atividade permanente. Cada
+        semideus recém-chegado é avaliado pelos augures, atribuído a uma coorte e passa a viver sob
+        uma rotina de treino, guarda e serviço à Legião — tudo isso narrado através do RPG, em que
+        cada jogador interpreta seu personagem nas tramas do fórum e do Hubbe Hotel. Clique em um
+        local abaixo para conhecer sua função dentro da história.
+      </p>
+    </div>
+
+    <div class="grade-locais">
+      <button class="cartao-local reveal" type="button" data-modal="principia">
+        <span class="cartao-local__nome">Principia</span>
+        <span class="cartao-local__teaser">Onde o pretor comanda a Legião.</span>
+      </button>
+      <button class="cartao-local reveal" type="button" data-modal="campo-marte">
+        <span class="cartao-local__nome">Campo de Marte</span>
+        <span class="cartao-local__teaser">Treinos e a Guerra de Bandeira mensal.</span>
+      </button>
+      <button class="cartao-local reveal" type="button" data-modal="templo-jupiter">
+        <span class="cartao-local__nome">Templo de Júpiter</span>
+        <span class="cartao-local__teaser">Juramentos e cerimônias religiosas.</span>
+      </button>
+      <button class="cartao-local reveal" type="button" data-modal="barracas">
+        <span class="cartao-local__nome">Barracas das Coortes</span>
+        <span class="cartao-local__teaser">O lar de cada uma das cinco coortes.</span>
+      </button>
+      <button class="cartao-local reveal" type="button" data-modal="senado">
+        <span class="cartao-local__nome">Senado</span>
+        <span class="cartao-local__teaser">Onde as leis de Nova Roma são debatidas.</span>
+      </button>
+      <button class="cartao-local reveal" type="button" data-modal="nova-roma-local">
+        <span class="cartao-local__nome">Nova Roma</span>
+        <span class="cartao-local__teaser">A cidade-santuário além da Névoa.</span>
+      </button>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p class="rodape__creditos">Acampamento Júpiter, 2026 — por Lau, Maria &amp; Organização.</p>
+  <p class="rodape__aviso">Projeto de comunidade/fã, sem vínculo oficial com Rick Riordan, Disney, a Sutton Books ou a Hubbe Hotel/Sulake. Nenhum direito autoral é reivindicado sobre personagens ou marcas de terceiros.</p>
+  <nav class="rodape__links" aria-label="Links do rodapé">
+    <a href="#">Discord</a>
+    <a href="#">Hubbe Hotel</a>
+  </nav>
+</footer>
+
+<div class="modal-fundo" id="modal-fundo" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" id="modal">
+    <button class="modal__fechar" type="button" id="modal-fechar" aria-label="Fechar janela">&times;</button>
+    <h3 class="modal__titulo" id="modal-titulo"></h3>
+    <div class="modal__texto" id="modal-texto"></div>
+  </div>
+</div>
+
+<script src="script.js?v=4"></script>
+</body>
+</html>

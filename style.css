@@ -1,0 +1,1139 @@
+/* =========================================================================
+   Acampamento Júpiter — Guia Oficial do RPG
+   style.css
+
+   Arquitetura: site de várias páginas curtas. Cabeçalho e os dois menus
+   laterais ficam fixos na tela (não rolam); cada página mostra um único
+   bloco de conteúdo (".conteudo__caixa") que rola por baixo deles.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   0. VARIÁVEIS GLOBAIS / PALETA
+   ------------------------------------------------------------------------- */
+:root {
+  /* paleta romana */
+  --preto: #150c1a;
+  --vinho: #3d1a4d;
+  --vinho-escuro: #230f2c;
+  --vermelho-romano: #7a2f8f;
+  --vermelho-vivo: #9c46b0;
+  --dourado: #c9a227;
+  --dourado-claro: #e3c568;
+  --bronze: #8c6239;
+  --bege: #ede0c8;
+  --bege-escuro: #d8c8a2;
+  --pergaminho: #f3e9d2;
+
+  --texto-claro: #f4ecd8;
+  --texto-suave: rgba(244, 236, 216, 0.78);
+  --texto-escuro: #2a1a12;
+  --texto-escuro-suave: #55402f;
+
+  --fonte-titulo: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+  --fonte-corpo: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+
+  /* fontes personalizadas (ver @font-face logo abaixo) */
+  --fonte-display: 'Roman SD', var(--fonte-titulo);   /* títulos grandes e a marca no cabeçalho */
+  --fonte-rotulo: 'Marathon', var(--fonte-titulo);     /* rótulos curtos em caixa alta (menus, botões, selos) */
+  --fonte-subtitulo: 'Dominican', var(--fonte-titulo); /* subtítulos de cartões, patentes, glossário */
+  --fonte-lema: 'Dominican Italic', 'Georgia', serif;  /* lemas em latim e citações */
+  --fonte-selo: 'Pompeji Petit', var(--fonte-titulo);  /* selo "S · P · Q · R" da home */
+
+  --sombra-forte: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --sombra-suave: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  --borda-radius: 6px;
+  --largura-conteudo: 720px;
+  --largura-cabecalho: 640px;
+  --largura-lateral: 220px;
+  --altura-cabecalho: 5.6rem;
+
+  --duracao-transicao: 220ms;
+}
+
+/* -------------------------------------------------------------------------
+   FONTES PERSONALIZADAS
+   Arquivos em fontes/. Cada @font-face carrega uma vez e fica em cache;
+   todas têm bom suporte a acentuação em português.
+   ------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Roman SD';
+  src: url('fontes/roman-sd.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Marathon';
+  src: url('fontes/marathon.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dominican';
+  src: url('fontes/dominican.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dominican Italic';
+  src: url('fontes/dominican-italic.ttf') format('truetype');
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pompeji Petit';
+  src: url('fontes/pompeji-petit.ttf') format('truetype');
+  font-display: swap;
+}
+/* -------------------------------------------------------------------------
+   1. RESET E BASE
+   ------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-corpo);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--texto-escuro);
+  background-color: var(--preto); /* cor de reserva atrás do fundo de cena */
+  /* respiro para o cabeçalho fixo não cobrir o início do conteúdo */
+  padding-top: calc(var(--altura-cabecalho) + 1.5rem);
+}
+
+body.bloquear-rolagem { overflow: hidden; }
+
+/* -------------------------------------------------------------------------
+   FUNDO DE CENA
+   Camada fixa atrás de tudo: a ilustração da arena, com um véu roxo por
+   cima para conversar com a paleta do site (e continuar legível sob as
+   caixas de conteúdo). Para trocar a arte, basta trocar a url() abaixo —
+   ou substituir esta div por um <video> de fundo, se um dia for animado.
+   ------------------------------------------------------------------------- */
+.cena-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(180deg, rgba(35, 15, 44, 0.55) 0%, rgba(30, 13, 38, 0.75) 45%, rgba(16, 9, 22, 0.92) 100%),
+    radial-gradient(ellipse 70% 55% at 50% 40%, rgba(122, 47, 143, 0.25), transparent 70%),
+    url('fundo-arena.png');
+  background-position: center, center, center 30%;
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed;
+  filter: saturate(0.75) brightness(0.9);
+}
+.cena-fundo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 90% 80% at 50% 45%, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-display);
+  color: var(--vinho-escuro);
+  letter-spacing: 0.02em;
+  margin: 0 0 0.6em;
+  line-height: 1.25;
+}
+
+p { margin: 0 0 1em; text-align: justify; }
+
+a { color: inherit; }
+
+ul, ol, dl { padding: 0; margin: 0; list-style: none; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* foco visível e consistente em toda a página */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--dourado);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--dourado);
+  color: var(--preto);
+  padding: 0.75em 1.25em;
+  border-radius: var(--borda-radius);
+  font-family: var(--fonte-rotulo);
+  font-weight: 700;
+  z-index: 1000;
+  transition: top var(--duracao-transicao) ease;
+}
+.skip-link:focus { top: 1rem; }
+
+/* -------------------------------------------------------------------------
+   2. UTILITÁRIOS / ANIMAÇÃO DE ENTRADA
+   ------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.reveal.em-vista {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.botao {
+  display: inline-block;
+  font-family: var(--fonte-rotulo);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.95em 1.9em;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  transition: transform var(--duracao-transicao) ease, box-shadow var(--duracao-transicao) ease, background-color var(--duracao-transicao) ease;
+}
+.botao--principal {
+  background: linear-gradient(180deg, var(--dourado-claro), var(--dourado));
+  color: var(--preto);
+  box-shadow: var(--sombra-suave);
+}
+.botao--principal:hover { transform: translateY(-2px); box-shadow: var(--sombra-forte); }
+.botao--fantasma {
+  background: transparent;
+  color: var(--texto-claro);
+  border-color: rgba(244, 236, 216, 0.55);
+}
+.botao--fantasma:hover { background: rgba(244, 236, 216, 0.12); }
+
+/* moldura ornamentada compartilhada por todas as caixas do guia
+   (cabeçalho, laterais, conteúdo, rodapé) */
+.caixa {
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid var(--dourado);
+  box-shadow: inset 0 0 0 4px rgba(23, 16, 13, 0.28), var(--sombra-forte);
+}
+
+/* -------------------------------------------------------------------------
+   3. CABEÇALHO (fixo, centralizado)
+   ------------------------------------------------------------------------- */
+.topo {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(var(--largura-cabecalho), 92vw);
+  z-index: 100;
+}
+
+/* filete decorativo em padrão "grega" (meandro romano) no topo do cabeçalho */
+.topo__faixa { display: none; }
+
+.topo__conteudo {
+  position: relative;
+  padding: 0.6rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.topo__marca {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--texto-claro);
+  min-width: 0;
+}
+
+.emblema {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  box-shadow: 0 0 16px 4px rgba(201, 162, 39, 0.55), 0 0 3px 1px rgba(227, 197, 104, 0.6);
+  transition: transform var(--duracao-transicao) ease, box-shadow var(--duracao-transicao) ease;
+}
+.topo__marca:hover .emblema,
+.topo__marca:focus-visible .emblema {
+  transform: scale(1.08);
+  box-shadow: 0 0 22px 6px rgba(201, 162, 39, 0.8), 0 0 5px 2px rgba(227, 197, 104, 0.85);
+}
+
+.topo__titulos {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.topo__titulo {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75), 0 0 2px rgba(0, 0, 0, 0.5);
+  transition: color var(--duracao-transicao) ease;
+}
+.topo__marca:hover .topo__titulo,
+.topo__marca:focus-visible .topo__titulo { color: var(--dourado-claro); }
+.topo__subtitulo {
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dourado-claro);
+}
+
+.topo__menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: rgba(23, 16, 13, 0.55);
+  border: 1px solid rgba(244, 236, 216, 0.5);
+  border-radius: 4px;
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border-color var(--duracao-transicao) ease, background-color var(--duracao-transicao) ease;
+}
+.topo__menu-btn:hover,
+.topo__menu-btn:focus-visible {
+  border-color: var(--dourado);
+  background: rgba(23, 16, 13, 0.75);
+}
+.topo__menu-icone,
+.topo__menu-icone::before,
+.topo__menu-icone::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  height: 2px;
+  background: var(--texto-claro);
+}
+.topo__menu-icone { top: 19px; }
+.topo__menu-icone::before { top: -7px; }
+.topo__menu-icone::after { top: 7px; }
+
+/* -------------------------------------------------------------------------
+   4. MENUS LATERAIS (fixos, só em telas largas)
+   ------------------------------------------------------------------------- */
+.lateral {
+  display: none; /* reativado a partir do breakpoint largo, ver §15 */
+  position: fixed;
+  top: calc(var(--altura-cabecalho) + 1.6rem);
+  width: var(--largura-lateral);
+  max-height: calc(100vh - var(--altura-cabecalho) - 3rem);
+  overflow-y: auto;
+  padding: 1.3rem 1.2rem;
+  z-index: 50;
+  background: linear-gradient(180deg, var(--vinho) 0%, var(--vinho-escuro) 100%);
+  color: var(--texto-suave);
+}
+.lateral--esquerda { left: 1.5rem; }
+.lateral--direita { right: 1.5rem; }
+
+.lateral__titulo {
+  font-family: var(--fonte-rotulo);
+  color: var(--dourado-claro);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  margin: 0 0 0.7em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.35);
+}
+.lateral ul { display: flex; flex-direction: column; gap: 0.1rem; }
+.lateral a {
+  display: block;
+  padding: 0.5em 0.1em 0.5em 0.6em;
+  text-decoration: none;
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  border-left: 3px solid transparent;
+  transition: color var(--duracao-transicao) ease, border-color var(--duracao-transicao) ease, padding-left var(--duracao-transicao) ease;
+}
+.lateral a:hover,
+.lateral a:focus-visible,
+.lateral a[aria-current="page"] {
+  color: var(--dourado-claro);
+  border-left-color: var(--dourado);
+  padding-left: 0.9em;
+}
+.lateral__numero {
+  display: inline-block;
+  min-width: 1.7em;
+  color: var(--dourado);
+  font-family: var(--fonte-rotulo);
+  font-size: 0.85em;
+}
+
+/* -------------------------------------------------------------------------
+   4.1 MENU MÓVEL (telas estreitas, onde as laterais somem)
+   ------------------------------------------------------------------------- */
+.nav-movel {
+  position: fixed;
+  top: calc(var(--altura-cabecalho) + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(var(--largura-cabecalho), 92vw);
+  max-height: calc(100vh - var(--altura-cabecalho) - 2rem);
+  overflow-y: auto;
+  z-index: 99;
+  background: linear-gradient(180deg, var(--vinho) 0%, var(--vinho-escuro) 100%);
+  padding: 0.5rem 0.4rem;
+}
+.nav-movel[hidden] { display: none; }
+.nav-movel ul { display: flex; flex-direction: column; }
+.nav-movel a {
+  display: block;
+  padding: 0.75em 0.8em;
+  text-decoration: none;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(244, 236, 216, 0.08);
+}
+.nav-movel a:hover,
+.nav-movel a:focus-visible,
+.nav-movel a[aria-current="page"] {
+  color: var(--dourado-claro);
+}
+
+/* -------------------------------------------------------------------------
+   5. CONTEÚDO (bloco único por página)
+   ------------------------------------------------------------------------- */
+.conteudo {
+  position: relative;
+  z-index: 1;
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+.conteudo__caixa,
+.conteudo__caixa--escura {
+  padding: 2.6rem 2.2rem;
+  color: var(--texto-claro);
+  background-color: var(--vinho-escuro);
+  background-image:
+    radial-gradient(rgba(201, 162, 39, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, var(--vinho-escuro), var(--preto));
+  background-size: 26px 26px, 100% 100%;
+}
+.conteudo__caixa h1, .conteudo__caixa h2, .conteudo__caixa h3 { color: var(--texto-claro); }
+.conteudo__caixa .secao__intro { color: var(--texto-suave); }
+.conteudo__caixa .secao__eyebrow { color: var(--dourado); }
+.conteudo__caixa .secao__nota { color: var(--dourado-claro); }
+
+.secao__cabecalho { margin: 0 auto 2rem; max-width: 68ch; text-align: center; }
+.secao__cabecalho p { text-align: center; }
+.secao__banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--dourado);
+  border-radius: var(--borda-radius);
+  margin: 1rem 0 1.2rem;
+}
+.secao__eyebrow {
+  font-family: var(--fonte-rotulo);
+  color: var(--vermelho-romano);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.78rem;
+  margin-bottom: 0.6em;
+}
+.secao__cabecalho h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); position: relative; padding-bottom: 0.5em; }
+.secao__cabecalho h2::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: var(--dourado);
+}
+.secao__intro { color: var(--texto-escuro-suave); font-size: 1.05rem; }
+.secao__nota {
+  font-family: var(--fonte-corpo);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--bronze);
+  margin-top: 0.5em;
+}
+
+/* filete horizontal para separar blocos de conteúdo (grupos, subseções) */
+.divisor {
+  border: none;
+  border-top: 2px solid var(--dourado);
+  margin: 1.6rem 0;
+  opacity: 0.6;
+}
+
+.secao__subtitulo {
+  font-family: var(--fonte-rotulo);
+  color: var(--dourado);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+.secao__subtitulo:not(:first-child) { margin-top: 0.4rem; }
+
+.conteudo-duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.cartao-destaque {
+  color: var(--texto-claro);
+  border-left: 3px solid var(--dourado);
+  padding: 0.2rem 0 0.2rem 1.2rem;
+}
+.cartao-destaque h3 { color: var(--dourado-claro); font-size: 1.1rem; }
+.cartao-destaque p { margin-bottom: 0; color: var(--texto-suave); }
+
+/* -------------------------------------------------------------------------
+   6. PÁGINA INICIAL (boas-vindas)
+   Reaproveita o mesmo padrão de cabeçalho + banner de todas as páginas,
+   só acrescentando o selo "S · P · Q · R" e a frase de efeito.
+   ------------------------------------------------------------------------- */
+.secao__eyebrow--selo {
+  font-family: var(--fonte-selo);
+  letter-spacing: 0.4em;
+  font-size: 0.95rem;
+}
+.secao__lema {
+  font-family: var(--fonte-lema);
+  font-style: italic;
+  color: var(--dourado-claro);
+  font-size: 1.1rem;
+  margin: -0.4rem 0 1rem;
+}
+.conteudo__acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------
+   7. CATEGORIAS (visão geral, usada na home)
+   ------------------------------------------------------------------------- */
+.grade-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+}
+.cartao-categoria {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--texto-escuro);
+  background: var(--bege);
+  border: 1px solid var(--bege-escuro);
+  border-radius: var(--borda-radius);
+  padding: 0.85rem 0.9rem;
+  font-family: var(--fonte-rotulo);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  box-shadow: var(--sombra-suave);
+  transition: transform var(--duracao-transicao) ease, box-shadow var(--duracao-transicao) ease, border-color var(--duracao-transicao) ease;
+}
+.cartao-categoria:hover,
+.cartao-categoria:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--dourado);
+  box-shadow: var(--sombra-forte);
+}
+.cartao-categoria__num {
+  font-weight: 700;
+  color: var(--vermelho-romano);
+  min-width: 1.4em;
+}
+
+/* -------------------------------------------------------------------------
+   8. LOCAIS DO ACAMPAMENTO (cards + modal)
+   ------------------------------------------------------------------------- */
+.grade-locais {
+  border-top: 1px solid rgba(244, 236, 216, 0.15);
+}
+.cartao-local {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  padding: 1em 0.2em;
+  border-bottom: 1px solid rgba(244, 236, 216, 0.15);
+  transition: padding-left var(--duracao-transicao) ease;
+}
+.cartao-local:hover, .cartao-local:focus-visible {
+  padding-left: 0.6rem;
+}
+.cartao-local:hover .cartao-local__nome,
+.cartao-local:focus-visible .cartao-local__nome {
+  color: var(--dourado-claro);
+}
+.cartao-local__nome {
+  font-family: var(--fonte-subtitulo);
+  color: var(--texto-claro);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  transition: color var(--duracao-transicao) ease;
+}
+.cartao-local__teaser {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.modal-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(23, 16, 13, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.modal-fundo[hidden] { display: none; }
+.modal {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+  max-height: min(82vh, 640px);
+  overflow-y: auto;
+  background: var(--pergaminho);
+  border: 2px solid var(--dourado);
+  border-radius: var(--borda-radius);
+  padding: 2.6rem 2rem 2rem;
+  box-shadow: var(--sombra-forte);
+}
+/* filete colorido no topo — usa a cor da coorte quando o JS a define via
+   --cor-modal; nos demais modais (locais do acampamento) cai no dourado */
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: var(--cor-modal, var(--dourado));
+  border-radius: 4px 4px 0 0;
+}
+.modal__titulo { color: var(--vinho); font-size: 1.3rem; letter-spacing: 0.02em; }
+.modal__texto { color: var(--texto-escuro-suave); }
+.modal__texto p { margin: 0 0 0.9em; }
+.modal__texto p:last-child { margin-bottom: 0; }
+.modal__lema {
+  margin-top: 0.9em;
+  padding-top: 0.9em;
+  border-top: 1px solid var(--bege-escuro);
+  font-family: var(--fonte-lema);
+  font-style: italic;
+  color: var(--vinho);
+  font-size: 1.05rem;
+}
+.modal__fechar {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  width: 36px; height: 36px;
+  color: var(--vinho);
+  border-radius: 50%;
+  transition: background-color var(--duracao-transicao) ease;
+}
+.modal__fechar:hover { background: rgba(139, 26, 26, 0.12); }
+
+/* -------------------------------------------------------------------------
+   9. COORTES
+   Sem cartões: cada coorte é um bloco de texto separado da próxima por um
+   filete dourado — como as demais listas com divisor do site.
+   ------------------------------------------------------------------------- */
+.grade-coortes {
+  border-top: 2px solid var(--dourado);
+}
+.cartao-coorte {
+  padding: 1.8rem 0;
+  border-bottom: 2px solid var(--dourado);
+  text-align: center;
+}
+.cartao-coorte__numero {
+  display: block;
+  font-family: var(--fonte-rotulo);
+  letter-spacing: 0.1em;
+  color: var(--dourado);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.cartao-coorte__nome { color: var(--texto-claro); font-size: 1.3rem; margin-bottom: 0.5em; }
+.cartao-coorte__descricao {
+  color: var(--texto-suave);
+  margin: 0 0 0;
+  text-align: justify;
+  text-align-last: center;
+}
+.cartao-coorte__lema {
+  font-family: var(--fonte-lema);
+  font-style: italic;
+  color: var(--dourado-claro);
+  font-size: 0.95rem;
+  margin: 0.9em 0 0;
+}
+.cartao-coorte__mais {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--fonte-rotulo);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dourado-claro);
+  border-bottom: 1px solid var(--dourado);
+  padding-bottom: 2px;
+  transition: color var(--duracao-transicao) ease;
+}
+.cartao-coorte__mais:hover { color: var(--texto-claro); }
+
+/* -------------------------------------------------------------------------
+   10. LISTAS EM COLUNAS COM DIVISOR
+   Usada em deuses, bestiário, personagens, missões e glossário: nada de
+   caixas — só um filete dourado à esquerda separando cada item, em colunas
+   quando o espaço permite.
+   ------------------------------------------------------------------------- */
+.lista-divisoria,
+.grade-cartoes,
+.grade-personagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem 2rem;
+}
+/* quando sobra um único item na última linha (total ímpar em 2 colunas),
+   ele ocupa a linha inteira e fica centralizado em vez de "torto" à esquerda */
+.grade-cartoes > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 1rem);
+  margin: 0 auto;
+}
+/* variante em coluna única, para itens com descrições longas (ex.: mercado) */
+.lista-divisoria--coluna-unica { grid-template-columns: 1fr; gap: 1.6rem; }
+/* cards de atalho para os catálogos à parte do mercado (legados, relicário, relíquias) */
+.grade-atalhos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+.cartao-atalho {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.4rem;
+  border: 1px solid var(--dourado);
+  border-radius: var(--borda-radius);
+  background: rgba(0, 0, 0, 0.18);
+  transition: transform var(--duracao-transicao) ease, box-shadow var(--duracao-transicao) ease, background-color var(--duracao-transicao) ease;
+}
+.cartao-atalho:hover, .cartao-atalho:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-suave);
+  background: rgba(0, 0, 0, 0.3);
+}
+.cartao-atalho__nome {
+  display: block;
+  font-family: var(--fonte-subtitulo);
+  color: var(--dourado-claro);
+  font-size: 1.15rem;
+  margin-bottom: 0.4em;
+}
+.cartao-atalho__teaser {
+  display: block;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+}
+
+.mercado__preco {
+  display: block;
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  color: var(--dourado);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  margin: 0.15em 0 0.5em;
+}
+.lista-divisoria__item,
+.cartao-info,
+.cartao-personagem {
+  border-left: 3px solid var(--dourado);
+  padding: 0.1rem 0 0.1rem 1rem;
+}
+.lista-divisoria__item h3, .lista-divisoria__item dt,
+.cartao-info h3, .cartao-personagem h3 {
+  font-family: var(--fonte-subtitulo);
+  font-size: 1.05rem;
+  margin-bottom: 0.3em;
+  color: var(--dourado-claro);
+}
+.lista-divisoria__item p, .lista-divisoria__item dd,
+.cartao-info p, .cartao-personagem p {
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--texto-suave);
+}
+.cartao-info__img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--dourado);
+  margin: 0 0 0.6em;
+}
+/* cartões com retrato (deuses): sem filete lateral, conteúdo centralizado */
+.cartao-info:has(.cartao-info__img) {
+  border-left: none;
+  text-align: center;
+}
+.cartao-info:has(.cartao-info__img) p { text-align: center; }
+.cartao-info:has(.cartao-info__img) .cartao-info__img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.cartao-info__status {
+  display: inline-block;
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
+  margin-left: 0.4em;
+  vertical-align: middle;
+}
+.cartao-info__status--livre {
+  color: var(--dourado);
+  border: 1px solid var(--dourado);
+  background: rgba(201, 162, 39, 0.08);
+}
+.cartao-info__status--adquirivel {
+  color: var(--bronze);
+  border: 1px solid var(--bronze);
+  background: rgba(140, 98, 57, 0.1);
+  cursor: help;
+}
+
+/* -------------------------------------------------------------------------
+   11. ACORDEÃO (regras e sistemas)
+   ------------------------------------------------------------------------- */
+.acordeao__item {
+  border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+}
+.acordeao__gatilho {
+  width: 100%;
+  text-align: left;
+  font-family: var(--fonte-subtitulo);
+  font-size: 1.02rem;
+  letter-spacing: 0.02em;
+  padding: 1em 0.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: inherit;
+  transition: color var(--duracao-transicao) ease;
+}
+.acordeao__gatilho:hover,
+.acordeao__gatilho:focus-visible { color: var(--dourado-claro); }
+.acordeao__gatilho::after {
+  content: '+';
+  font-size: 1.3rem;
+  color: var(--dourado);
+  transition: transform var(--duracao-transicao) ease, color var(--duracao-transicao) ease;
+}
+.acordeao__gatilho:hover::after,
+.acordeao__gatilho:focus-visible::after { color: var(--dourado-claro); }
+.acordeao__gatilho[aria-expanded="true"]::after { transform: rotate(45deg); }
+.acordeao__painel { padding: 0 0.2em 1.3em; color: var(--texto-suave); }
+.acordeao__painel p { margin-bottom: 1em; }
+.acordeao__painel p:last-child,
+.acordeao__painel > *:last-child { margin-bottom: 0; }
+
+/* destaque para as "fórmulas" de ação de combate */
+.acordeao__formula {
+  font-family: var(--fonte-lema);
+  font-style: italic;
+  text-align: center;
+  color: var(--dourado-claro);
+  padding: 0.7em 1em;
+  margin: 0.9em 0;
+  border: 1px dashed rgba(227, 197, 104, 0.4);
+  border-radius: var(--borda-radius);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.acordeao__legenda {
+  font-size: 0.85rem;
+  color: var(--dourado-claro);
+  margin-bottom: 0.6em;
+}
+.acordeao__exemplos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  margin: 0 0 1em;
+  padding: 0;
+}
+.acordeao__exemplos li {
+  font-family: var(--fonte-lema);
+  font-style: italic;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  padding: 0.6em 0.9em;
+  border-left: 3px solid var(--dourado);
+  background: rgba(0, 0, 0, 0.15);
+}
+.acordeao__exemplos li strong { font-style: normal; color: var(--dourado-claro); }
+
+/* subtítulos internos de um painel (ex.: "Regras", "Defendendo") */
+.acordeao__subtitulo {
+  font-family: var(--fonte-subtitulo);
+  color: var(--dourado-claro);
+  font-size: 1.05rem;
+  margin: 1.3em 0 0.5em;
+}
+.acordeao__subtitulo--menor { font-size: 0.95rem; }
+
+/* listas numeradas dentro de um painel (regras, distâncias etc.) */
+.acordeao__lista {
+  list-style: decimal;
+  padding-left: 1.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  margin: 0 0 1em;
+}
+.acordeao__lista li { padding-left: 0.3em; }
+.acordeao__lista li::marker { color: var(--dourado); }
+
+/* -------------------------------------------------------------------------
+   12. BARRA DE PROGRESSO
+   ------------------------------------------------------------------------- */
+.barra-progresso { margin-top: 1.1rem; max-width: 480px; }
+.barra-progresso__trilho {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(244, 236, 216, 0.15);
+  overflow: hidden;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+}
+.barra-progresso__preenchimento {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--vermelho-romano), var(--dourado));
+  transition: width 1100ms ease;
+  border-radius: 999px;
+}
+.barra-progresso__marcos {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dourado-claro);
+  margin-top: 0.5em;
+}
+
+/* -------------------------------------------------------------------------
+   13. PATENTES
+   ------------------------------------------------------------------------- */
+.lista-patentes {
+  counter-reset: patente;
+  border-top: 1px solid rgba(244, 236, 216, 0.18);
+  margin-bottom: 1.8rem;
+}
+.lista-patentes li {
+  counter-increment: patente;
+  display: flex;
+  gap: 1.1rem;
+  align-items: baseline;
+  padding: 0.9em 0;
+  border-bottom: 1px solid rgba(244, 236, 216, 0.18);
+  color: var(--texto-suave);
+}
+.lista-patentes li::before {
+  content: counter(patente);
+  font-family: var(--fonte-display);
+  color: var(--dourado);
+  font-size: 1.15rem;
+  min-width: 1.3em;
+}
+.lista-patentes__nome {
+  font-family: var(--fonte-subtitulo);
+  min-width: 8.5em;
+  color: var(--dourado-claro);
+}
+
+/* -------------------------------------------------------------------------
+   14. GLOSSÁRIO
+   Reaproveita o padrão de "lista em colunas com divisor" da seção 10.
+   ------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------
+   15. RODAPÉ
+   ------------------------------------------------------------------------- */
+.rodape {
+  position: relative;
+  z-index: 60; /* fica acima da cauda das laterais fixas em páginas curtas */
+  background: transparent;
+  padding: 1.2rem 1.5rem 2rem;
+  text-align: center;
+}
+.rodape p { text-align: center; }
+.rodape__creditos {
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+  margin-bottom: 0.5em;
+}
+/* aviso legal: propositalmente discreto — só precisa existir, não chamar atenção */
+.rodape__aviso {
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: rgba(244, 236, 216, 0.32);
+  max-width: 74ch;
+  margin: 0 auto 1em;
+}
+.rodape__links {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.rodape__links a {
+  text-decoration: none;
+  color: rgba(227, 197, 104, 0.55);
+  font-family: var(--fonte-rotulo);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: color var(--duracao-transicao) ease, border-color var(--duracao-transicao) ease;
+}
+.rodape__links a:hover { color: var(--dourado-claro); border-color: var(--dourado-claro); }
+
+/* -------------------------------------------------------------------------
+   16. RESPONSIVIDADE
+   ------------------------------------------------------------------------- */
+
+/* acima de 1240px: mostra as duas laterais fixas e libera espaço para elas
+   ao redor do bloco de conteúdo central */
+@media (min-width: 1240px) {
+  .lateral { display: block; }
+  .topo__menu-btn { display: none; }
+  .nav-movel { display: none !important; }
+
+  /* Acima desse ponto o menu hambúrguer some (vira laterais fixas), então
+     é seguro o cabeçalho encolher para o canto ao rolar a página — nada
+     de botão a reposicionar. Some o texto, encolhe a logo, migra para a
+     esquerda: assim ele para de cobrir o topo da caixa de conteúdo. */
+  .topo {
+    transition: left 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1), top 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .topo.topo--compacto {
+    left: 0.9rem;
+    top: 0.7rem;
+    transform: translateX(0);
+    width: auto;
+  }
+  .topo__marca { transition: gap 650ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .topo--compacto .topo__marca { gap: 0; }
+  .emblema { transition: width 650ms cubic-bezier(0.22, 1, 0.36, 1), height 650ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .topo--compacto .emblema { width: 40px; height: 40px; }
+  .topo__titulos {
+    max-width: 320px;
+    opacity: 1;
+    transition: max-width 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
+  }
+  .topo--compacto .topo__titulos { max-width: 0; opacity: 0; }
+}
+
+@media (max-width: 1239px) {
+  .topo__menu-btn { display: block; }
+  /* reserva espaço simétrico para o botão não sobrepor a marca centralizada */
+  .topo__conteudo { padding-left: 3.2rem; padding-right: 3.2rem; }
+}
+
+@media (max-width: 760px) {
+  :root { --altura-cabecalho: 4.6rem; }
+  .topo__conteudo { padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 2.6rem; padding-right: 2.6rem; }
+  .topo__titulo { font-size: 1rem; }
+  .conteudo__caixa { padding: 1.8rem 1.3rem; }
+  .caixa { border-radius: 10px; }
+  .lista-patentes li { flex-wrap: wrap; }
+  .lista-patentes__nome { min-width: 100%; }
+  .cartao-local { flex-direction: column; align-items: flex-start; }
+  .cartao-local__teaser { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .conteudo__acoes { flex-direction: column; align-items: stretch; }
+  .botao { text-align: center; }
+}

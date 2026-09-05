@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercado — Acampamento Júpiter</title>
+<meta name="description" content="O mercado de Nova Roma: perícias, habilidades extras e dons à venda, além de atalhos para legados, relicário e relíquias pessoais.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="emblema.png">
+<link rel="stylesheet" href="style.css?v=27">
+</head>
+<body>
+
+<div class="cena-fundo" aria-hidden="true"></div>
+
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+<header class="topo" id="topo">
+  <div class="topo__faixa" aria-hidden="true"></div>
+  <div class="topo__conteudo">
+    <a class="topo__marca" href="index.html" aria-label="Acampamento Júpiter, ir para o início">
+      <img class="emblema" src="emblema.png" alt="Emblema do Acampamento Júpiter: águia dourada de asas abertas sobre fundo roxo, envolta em coroa de louros">
+      <span class="topo__titulos">
+        <span class="topo__titulo">Acampamento Júpiter</span>
+      </span>
+    </a>
+    <button class="topo__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-movel">
+      <span class="visually-hidden">Abrir menu de navegação</span>
+      <span class="topo__menu-icone" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="lateral lateral--esquerda caixa" aria-label="O Acampamento">
+  <p class="lateral__titulo">O Acampamento</p>
+  <ul>
+    <li><a href="index.html"><span class="lateral__numero">I</span> Início</a></li>
+    <li><a href="o-acampamento.html"><span class="lateral__numero">II</span> O Acampamento</a></li>
+    <li><a href="nova-roma.html"><span class="lateral__numero">III</span> Nova Roma</a></li>
+    <li><a href="coortes.html"><span class="lateral__numero">IV</span> Coortes</a></li>
+    <li><a href="deuses.html"><span class="lateral__numero">V</span> Deuses e Semideuses</a></li>
+    <li><a href="personagens.html"><span class="lateral__numero">VI</span> Personagens</a></li>
+    <li><a href="regras.html"><span class="lateral__numero">VII</span> Regras do RPG</a></li>
+  </ul>
+</nav>
+
+<nav class="lateral lateral--direita caixa" aria-label="Guia">
+  <p class="lateral__titulo">Guia</p>
+  <ul>
+    <li><a href="sistemas.html"><span class="lateral__numero">VIII</span> Sistemas</a></li>
+    <li><a href="patentes.html"><span class="lateral__numero">IX</span> Patentes e Honrarias</a></li>
+    <li><a href="missoes.html"><span class="lateral__numero">X</span> Missões e Eventos</a></li>
+    <li><a href="bestiario.html"><span class="lateral__numero">XI</span> Bestiário</a></li>
+    <li><a href="glossario.html"><span class="lateral__numero">XII</span> Glossário</a></li>
+    <li><a href="creditos.html"><span class="lateral__numero">XIII</span> Créditos</a></li>
+    <li><a href="mercado.html"><span class="lateral__numero">XIV</span> Mercado</a></li>
+  </ul>
+</nav>
+
+<nav class="nav-movel caixa" id="nav-movel" aria-label="Navegação principal" hidden>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="o-acampamento.html">O Acampamento</a></li>
+    <li><a href="nova-roma.html">Nova Roma</a></li>
+    <li><a href="coortes.html">Coortes</a></li>
+    <li><a href="deuses.html">Deuses e Semideuses</a></li>
+    <li><a href="personagens.html">Personagens</a></li>
+    <li><a href="regras.html">Regras do RPG</a></li>
+    <li><a href="sistemas.html">Sistemas</a></li>
+    <li><a href="patentes.html">Patentes e Honrarias</a></li>
+    <li><a href="missoes.html">Missões e Eventos</a></li>
+    <li><a href="bestiario.html">Bestiário</a></li>
+    <li><a href="glossario.html">Glossário</a></li>
+    <li><a href="creditos.html">Créditos</a></li>
+    <li><a href="mercado.html">Mercado</a></li>
+  </ul>
+</nav>
+
+<main id="conteudo-principal" class="conteudo">
+  <section class="caixa conteudo__caixa" aria-labelledby="pagina-titulo">
+    <div class="secao__cabecalho">
+      <p class="secao__eyebrow">Capítulo XIV</p>
+      <h1 id="pagina-titulo">Mercado</h1>
+      <img class="secao__banner" src="https://placehold.co/1200x675/3d1a4d/e3c568?text=Banner+do+Mercado" alt="Banner ilustrativo do capítulo Mercado">
+      <p class="secao__intro">
+        Em Nova Roma, denários e dracmas compram mais do que equipamentos: perícias, dons e até
+        parte da ascendência de um personagem podem ser adquiridos aqui. Legados, relicário e
+        relíquias pessoais têm catálogos próprios; as perícias estão listadas logo abaixo.
+      </p>
+    </div>
+
+    <div class="grade-atalhos">
+      <a class="cartao-atalho reveal" href="legados.html">
+        <span class="cartao-atalho__nome">Legados</span>
+        <span class="cartao-atalho__teaser">Simples, compostos ou especiais.</span>
+      </a>
+      <a class="cartao-atalho reveal" href="relicario.html">
+        <span class="cartao-atalho__nome">Relicário</span>
+        <span class="cartao-atalho__teaser">Artefatos e metais lendários.</span>
+      </a>
+      <a class="cartao-atalho reveal" href="reliquias-pessoais.html">
+        <span class="cartao-atalho__nome">Relíquias Pessoais</span>
+        <span class="cartao-atalho__teaser">Objetos únicos, forjados pela própria história do personagem.</span>
+      </a>
+    </div>
+
+    <hr class="divisor">
+
+    <h2 class="secao__subtitulo">Perícias</h2>
+    <div class="lista-divisoria lista-divisoria--coluna-unica">
+      <article class="lista-divisoria__item reveal">
+        <h3>Perícia com Arma Exótica</h3>
+        <p class="mercado__preco">$5 ou 10 denários/dracmas</p>
+        <p>Torna-se um exímio usuário de qualquer que seja a arma exótica ao seu alcance, manejando-a ao seu bel prazer. (Arma exótica, aqui, significa qualquer arma que não esteja apontada no arsenal como ideal para sua filiação semidivina, além de armas que sequer estejam no catálogo.) Com essa perícia, é capaz de instigar medo naqueles que o encontram num campo de batalha portando sua arma exótica, célebre por ser um inimigo fatal ao empunhá-la.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Perícia com Arremesso</h3>
+        <p class="mercado__preco">$10 ou 25 denários/dracmas</p>
+        <p>Após um longo período de treinamento, finalmente alcança o status de um perito em arremesso, sendo capaz de, numa mesma ação, mirar e atirar, sem perder a perfeição da mira. Ademais, consegue arremessar facas múltiplas de arremesso em cada mão, bem como lançar com precisão armas não próprias para tal, como, por exemplo, uma pesada alabarda.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Perícia com Combate</h3>
+        <p class="mercado__preco">$10 ou 25 denários/dracmas</p>
+        <p>Um grande lutador geralmente é versado em alguma arte marcial. Possuidores desta perícia, portanto, são capacitados como qualquer pessoa que já tenha aprendido um determinado estilo de luta durante alguns anos, sendo faixa preta em tal. Obtém, sobretudo, grandes vantagens na luta corporal, não sendo necessariamente o mais forte, mas sim o mais habilidoso e o mais experiente.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Perícia com Montaria</h3>
+        <p class="mercado__preco">$5 ou 10 denários/dracmas</p>
+        <p>É capaz de montar com perfeição no seu animal (geralmente cavalos e pégasos), fazendo manobras avançadas, assim como combatendo com exímia destreza em cima dele. Leva com sincronia a sua conexão com a montaria, deixando-a à mercê de qualquer movimento seu, de forma a torná-lo uma aliança de forte potencial. Além disso, consegue chamá-la com um simples assobio.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Ambidestria</h3>
+        <p class="mercado__preco">$10 ou 25 denários/dracmas</p>
+        <p>Para aqueles combatentes que passaram uma grande quantidade de tempo treinando, o esforço é recompensado com a habilidade da ambidestria no manejo de qualquer arma — desde que seja portada por uma única mão. Além de, por exemplo, conseguir portar duas espadas curtas de modo perfeito e com certa experiência, é apto para, se porventura ter a mão destra ferida, conseguir manejar a espada com a mão esquerda com a mesma habilidade.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Acrobacia</h3>
+        <p class="mercado__preco">$12 ou 30 denários/dracmas</p>
+        <p>É muito flexível e ágil, conseguindo realizar piruetas e manobras no ar sem dificuldade alguma. Com essa habilidade, é capaz de desviar duas vezes seguidas a cada sete turnos, somando toda sua acrobacia e agilidade num mesmo gingado. Pode redirecionar seu fluxo de movimento com as acrobacias, enganando inimigos e tornando-se um alvo difícil para arqueiros e qualquer módulo de lançamento.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Sentidos Aguçados</h3>
+        <p class="mercado__preco">$5 ou 10 denários/dracmas por sentido</p>
+        <p>Controla seus sentidos (audição, olfato e visão) de modo que é capaz de, ao focar-se num, maximizá-lo ao extremo. Por exemplo, ao tornar seu foco a audição, é apto o suficiente para escutar numa área de 7x7 quadrados os mínimos ruídos, seguindo essa mesma regra de região e limite para a visão e faro.</p>
+      </article>
+      <article class="lista-divisoria__item reveal">
+        <h3>Resistência Mental</h3>
+        <p class="mercado__preco">$30 ou 60 denários/dracmas</p>
+        <p>O semideus possui a habilidade recessiva de blindar os pensamentos contra invasões alheias, incluindo seduções de Afrodite que lhe sejam empregadas ativamente, ou seja, geralmente não funciona com o escudo natural da Névoa. Por ser um dom que evolui de acordo com o treinamento do semideus, é necessário que ele a pratique e estude para melhorar a detecção e bloqueio de elos psíquicos.</p>
+      </article>
+    </div>
+
+    <hr class="divisor">
+
+    <h2 class="secao__subtitulo">Habilidades Extras</h2>
+    <div class="lista-divisoria lista-divisoria--coluna-unica">
+      <article class="lista-divisoria__item reveal">
+        <h3>Habilidades dos Deuses</h3>
+        <p class="mercado__preco">$30, 50 dracmas ou Merecimento</p>
+        <p>Disponíveis na página do respectivo deus. Com exceção do Charmspeak, todas as demais habilidades dos deuses podem ser comercializadas via mercado.</p>
+      </article>
+    </div>
+
+    <hr class="divisor">
+
+    <h2 class="secao__subtitulo">Dons</h2>
+    <div class="lista-divisoria lista-divisoria--coluna-unica">
+      <article class="lista-divisoria__item reveal">
+        <h3>Névoa</h3>
+        <p class="mercado__preco">$60 ou Merecimento</p>
+        <p>A Névoa é uma força mística primordial, regida pela deusa Hécate, responsável por distorcer a percepção dos mortais e protegê-los da verdadeira face do mundo divino. Por meio dela, monstros, deuses, titãs e fenômenos sobrenaturais são ocultados, substituídos por explicações plausíveis e imagens que a mente humana é capaz de aceitar sem colapsar.</p>
+          <p>Também conhecida como Véu, a Névoa atua como a fronteira entre a realidade e a Magia, um limiar sutil que sustenta o disfarce do mundo mítico. Embora a maioria dos mortais seja completamente influenciada por ela, alguns indivíduos possuem uma percepção rara que lhes permite enxergar além de suas ilusões, ainda que de forma limitada e instável. A manipulação consciente da Névoa, no entanto, é exclusiva de semideuses, feiticeiros e criaturas míticas.</p>
+        <p>É através da Névoa que a energia mágica se manifesta e se transforma em feitiços, permitindo a alteração de leis físicas, aparências e até eventos do mundo real. Quando fortalecida, ela mantém o sigilo do sobrenatural; quando enfraquecida, a linha entre os mundos se rompe, expondo verdades que jamais deveriam ser vistas e abrindo espaço para o caos.</p>
+      </article>
+    </div>
+    <h3 class="secao__subtitulo">Desenvolvimento</h3>
+    <p class="secao__nota">Em breve: dons que só podem ser obtidos através do desenvolvimento da história, não à venda.</p>
+
+  </section>
+</main>
+
+<footer class="rodape">
+  <p class="rodape__creditos">Acampamento Júpiter, 2026 — por Lau, Maria &amp; Organização.</p>
+  <p class="rodape__aviso">Projeto de comunidade/fã, sem vínculo oficial com Rick Riordan, Disney, a Sutton Books ou a Hubbe Hotel/Sulake. Nenhum direito autoral é reivindicado sobre personagens ou marcas de terceiros.</p>
+  <nav class="rodape__links" aria-label="Links do rodapé">
+    <a href="#">Discord</a>
+    <a href="#">Hubbe Hotel</a>
+  </nav>
+</footer>
+
+<script src="script.js?v=4"></script>
+</body>
+</html>
