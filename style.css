@@ -38,6 +38,7 @@
   --fonte-subtitulo: 'Dominican', var(--fonte-titulo); /* subtítulos de cartões, patentes, glossário */
   --fonte-lema: 'Dominican Italic', 'Georgia', serif;  /* lemas em latim e citações */
   --fonte-selo: 'Pompeji Petit', var(--fonte-titulo);  /* selo "S · P · Q · R" da home */
+  --fonte-menu: 'Poppins', 'Segoe UI', sans-serif;     /* itens de navegação dos menus laterais/móvel */
 
   --sombra-forte: 0 18px 40px rgba(0, 0, 0, 0.45);
   --sombra-suave: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -393,7 +394,11 @@ input:focus-visible,
   display: block;
   padding: 0.5em 0.1em 0.5em 0.6em;
   text-decoration: none;
-  font-size: 0.88rem;
+  font-family: var(--fonte-menu);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: var(--texto-suave);
   border-left: 3px solid transparent;
   transition: color var(--duracao-transicao) ease, border-color var(--duracao-transicao) ease, padding-left var(--duracao-transicao) ease;
@@ -435,8 +440,11 @@ input:focus-visible,
   padding: 0.75em 0.8em;
   text-decoration: none;
   color: var(--texto-suave);
-  font-size: 0.92rem;
-  letter-spacing: 0.02em;
+  font-family: var(--fonte-menu);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   border-bottom: 1px solid rgba(244, 236, 216, 0.08);
 }
 .nav-movel a:hover,
