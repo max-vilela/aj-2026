@@ -34,12 +34,30 @@ com cabeçalho e menus laterais fixos que não rolam com a página.
 ```
 ├── index.html, *.html      # uma página por capítulo
 ├── style.css               # todo o estilo do site
-├── script.js               # menu móvel, modais, acordeões, animações de rolagem
+├── latim.js                # textos em latim da animação latim → português (só dados)
+├── script.js               # menu móvel, modais, acordeões, rolagem e a tradução animada (seção 8)
 ├── emblema.png             # logo/favicon do site
 ├── fundo-arena.png         # ilustração de fundo fixa (cena-fundo)
-└── fontes/                 # fontes customizadas usadas via @font-face
+└── (fontes: Google Fonts, via <link> no <head> de cada página)
 ```
 
+## Fontes
+
+Cinzel (títulos, menus, rótulos), Cinzel Decorative (só o `h1`) e Libre Caslon Text
+(texto corrido e lemas em itálico), todas do Google Fonts. Não há arquivo de fonte para hospedar.
+
+## Tradução animada (latim → português)
+
+Ao abrir uma página, títulos, menus e botões aparecem em latim e se traduzem para o português;
+nos capítulos, só a **abertura de cada parágrafo** vem em latim e o restante surge palavra por palavra.
+
+- O HTML continua 100% em português (leitores de tela, buscadores e quem está sem JavaScript veem só isso).
+- Os textos em latim ficam em `latim.js`. Cada linha é `[português, latim]`; com um terceiro valor `1`,
+  a chave é o **início** do parágrafo. Para corrigir uma tradução, edite só o segundo valor.
+- Menus e cabeçalho animam uma vez por sessão; o conteúdo anima ao entrar na tela.
+- Clique ou tecla encerra a animação; `prefers-reduced-motion` a desliga; o rodapé tem o botão
+  "Tradução animada: ligada/desligada" (lembrado no navegador).
+- Ao adicionar ou editar texto, mantenha a chave de `latim.js` idêntica ao texto do HTML.
 ## Rodando localmente
 
 Como é um site 100% estático, qualquer servidor HTTP simples funciona. Por exemplo, com Python:
@@ -56,7 +74,7 @@ Depois é só abrir `http://localhost:4173` no navegador.
 ## Tecnologias
 
 - HTML semântico, sem frameworks ou bibliotecas externas de JS.
-- CSS puro com variáveis (`:root`), Grid/Flexbox e fontes customizadas via `@font-face`.
+- CSS puro com variáveis (`:root`), Grid/Flexbox e fontes do Google Fonts.
 - JavaScript vanilla para: menu móvel, marcação da página atual no menu, modais, acordeões,
   filtro de conteúdo, barra de progresso animada e revelação suave de elementos ao rolar
   (respeitando `prefers-reduced-motion`).

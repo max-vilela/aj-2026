@@ -8,10 +8,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <link rel="icon" type="image/png" href="https://i.imgur.com/DsgnYON.png">
-<link rel="stylesheet" href="style.css?v=29">
+<link rel="stylesheet" href="style.css?v=31">
+<!-- evita o "piscar" do português antes da animação do latim; some sozinho se o JS não rodar -->
+<script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&localStorage.getItem("aj-latim")!=="off"){d.classList.add("latim-preparando");setTimeout(function(){d.classList.remove("latim-preparando")},2500)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
 
@@ -121,6 +123,7 @@
   </nav>
 </footer>
 
-<script src="script.js?v=4"></script>
+<script src="latim.js?v=1"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>

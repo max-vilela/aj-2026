@@ -346,4 +346,334 @@
     elementosReveal.forEach(function (el) { observador.observe(el); });
     barrasProgresso.forEach(function (el) { observador.observe(el); });
   }
+
+  /* -----------------------------------------------------------------------
+     8. TRADUÇÃO ANIMADA (latim → português)
+     Os textos em latim ficam em latim.js (window.AJ_LATIM). O HTML continua
+     todo em português: leitores de tela, buscadores e quem está sem JavaScript
+     veem sempre o português. Aqui o script só "encena": troca o começo de cada
+     trecho pelo latim e o traduz letra a letra; ao terminar, devolve o DOM
+     exatamente como estava.
+       - Cabeçalho e menus animam uma vez por sessão (não a cada página).
+       - O conteúdo do capítulo anima quando entra na tela. Nos parágrafos, só
+         a abertura vem em latim; o restante surge palavra por palavra.
+       - Clique ou tecla encerra as animações em andamento.
+       - Respeita prefers-reduced-motion e o botão "Tradução animada" do rodapé.
+     ----------------------------------------------------------------------- */
+  var LATIM = window.AJ_LATIM || [];
+  var LETRAS_LATIM = 'abcdefghilmnopqrstuvx';
+  var latimAtivo = true;
+  var itensLatim = [];       // todos os trechos preparados
+  var ativosLatim = [];      // trechos em animação agora
+  var quadroLatim = null;
+  var observadorLatim = null;
+  var ultimoInicioLatim = 0;
+  var filaLatim = 0;
+
+  try { latimAtivo = localStorage.getItem('aj-latim') !== 'off'; } catch (erro) { /* sem armazenamento: fica ligado */ }
+
+  function jaVistoNaSessao(chave) {
+    try { return sessionStorage.getItem(chave) === '1'; } catch (erro) { return false; }
+  }
+  function marcarVistoNaSessao(chave) {
+    try { sessionStorage.setItem(chave, '1'); } catch (erro) { /* tudo bem */ }
+  }
+
+  var mapaExato = {};
+  var listaPrefixos = [];
+  LATIM.forEach(function (entrada) {
+    if (entrada[2]) {
+      listaPrefixos.push({ chave: entrada[0], latim: entrada[1], palavras: entrada[0].split(' ').length });
+    } else {
+      mapaExato[entrada[0]] = entrada[1];
+    }
+  });
+  // chaves mais longas primeiro, para a abertura mais específica vencer
+  listaPrefixos.sort(function (a, b) { return b.chave.length - a.chave.length; });
+
+  function normalizarTexto(texto) {
+    return texto.replace(/\s+/g, ' ').trim();
+  }
+
+  // devolve { latim, palavras } se este texto tem tradução (inteira ou só da abertura)
+  function procurarLatim(texto) {
+    var t = normalizarTexto(texto);
+    if (!t) return null;
+    if (Object.prototype.hasOwnProperty.call(mapaExato, t)) {
+      return { latim: mapaExato[t], palavras: t.split(' ').length };
+    }
+    for (var i = 0; i < listaPrefixos.length; i++) {
+      var p = listaPrefixos[i];
+      if (t.length > p.chave.length && t.indexOf(p.chave) === 0 &&
+          !/[A-Za-zÀ-ÿ0-9]/.test(t.charAt(p.chave.length))) {
+        return { latim: p.latim, palavras: p.palavras };
+      }
+    }
+    return null;
+  }
+
+  function coletarNosDeTexto(raiz) {
+    var lista = [];
+    if (!raiz) return lista;
+    var andador = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, null, false);
+    var no;
+    while ((no = andador.nextNode())) {
+      if (!/\S/.test(no.nodeValue)) continue;
+      var pai = no.parentNode;
+      if (!pai || /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA)$/.test(pai.nodeName)) continue;
+      if (pai.closest && pai.closest('.latim-wrap, .modal-fundo')) continue;
+      lista.push(no);
+    }
+    return lista;
+  }
+
+  // índice logo depois da n-ésima palavra de s
+  function fimDaPalavra(s, n) {
+    var re = /\S+/g, m, i = 0;
+    while ((m = re.exec(s))) {
+      i++;
+      if (i === n) return m.index + m[0].length;
+    }
+    return s.length;
+  }
+
+  function letraAleatoria(c) {
+    if (!/[A-Za-zÀ-ÿ]/.test(c)) return c;
+    var l = LETRAS_LATIM.charAt(Math.floor(Math.random() * LETRAS_LATIM.length));
+    return (c === c.toUpperCase() && c !== c.toLowerCase()) ? l.toUpperCase() : l;
+  }
+
+  // troca o nó de texto por: [espaço inicial] [abertura em latim] [resto]
+  function montarItemLatim(plano) {
+    var bruto = plano.no.nodeValue;
+    var inicio = bruto.search(/\S/);
+    var fim = fimDaPalavra(bruto, plano.achado.palavras);
+    var item = {
+      pt: bruto.slice(inicio, fim),
+      la: plano.achado.latim,
+      original: bruto,
+      pai: plano.pai,
+      bloco: plano.bloco,
+      estado: 'espera'
+    };
+    var envoltorio = document.createElement('span');
+    envoltorio.className = 'latim-wrap';
+    var leitor = document.createElement('span');          // o português, só para leitores de tela
+    leitor.className = 'visually-hidden';
+    leitor.textContent = item.pt;
+    var visual = document.createElement('span');          // o que a pessoa vê animando
+    visual.className = 'latim-vis';
+    visual.setAttribute('aria-hidden', 'true');
+    visual.lang = 'la';
+    item.spanPt = document.createElement('span');
+    item.spanCursor = document.createElement('span');
+    item.spanCursor.className = 'latim-cursor';
+    item.spanLa = document.createElement('span');
+    item.spanLa.className = 'latim-la';
+    item.spanLa.textContent = item.la;                    // começa 100% em latim
+    visual.appendChild(item.spanPt);
+    visual.appendChild(item.spanCursor);
+    visual.appendChild(item.spanLa);
+    envoltorio.appendChild(leitor);
+    envoltorio.appendChild(visual);
+
+    item.noInicio = document.createTextNode(bruto.slice(0, inicio));
+    item.envoltorio = envoltorio;
+    item.noResto = document.createTextNode(bruto.slice(fim));
+    plano.pai.insertBefore(item.noInicio, plano.no);
+    plano.pai.insertBefore(envoltorio, plano.no);
+    plano.pai.insertBefore(item.noResto, plano.no);
+    plano.pai.removeChild(plano.no);
+
+    // segura a altura do bloco para o conteúdo abaixo não "pular" durante a troca
+    if (plano.altura > 0) {
+      if (!plano.bloco.ajLatimN) plano.bloco.style.minHeight = plano.altura + 'px';
+      plano.bloco.ajLatimN = (plano.bloco.ajLatimN || 0) + 1;
+    }
+    itensLatim.push(item);
+    return item;
+  }
+
+  function prepararNosLatim(nos) {
+    var planos = [];
+    nos.forEach(function (no) {   // 1ª passada: só leituras (evita recalcular o layout a cada troca)
+      var achado = procurarLatim(no.nodeValue);
+      if (!achado) return;
+      var pai = no.parentNode;
+      var bloco = pai.closest('p, li, dd, dt, h1, h2, h3, h4, button, a') || pai;
+      planos.push({ no: no, achado: achado, pai: pai, bloco: bloco, altura: bloco.offsetHeight });
+    });
+    return planos.map(montarItemLatim);   // 2ª passada: as trocas
+  }
+
+  function restaurarItemLatim(item) {
+    if (item.estado === 'fim') return;
+    item.estado = 'fim';
+    var pai = item.pai;
+    if (pai && item.noInicio.parentNode === pai) {
+      pai.insertBefore(document.createTextNode(item.original), item.noInicio);
+      [item.noInicio, item.envoltorio, item.elResto || item.noResto].forEach(function (n) {
+        if (n && n.parentNode === pai) pai.removeChild(n);
+      });
+    }
+    var bloco = item.bloco;
+    if (bloco && bloco.ajLatimN) {
+      bloco.ajLatimN--;
+      if (bloco.ajLatimN <= 0) { bloco.ajLatimN = 0; bloco.style.minHeight = ''; }
+    }
+    var i = ativosLatim.indexOf(item);
+    if (i >= 0) ativosLatim.splice(i, 1);
+  }
+
+  function finalizarTudoLatim() {
+    if (observadorLatim) { observadorLatim.disconnect(); observadorLatim = null; }
+    itensLatim.forEach(restaurarItemLatim);
+  }
+
+  function iniciarItemLatim(item, atraso) {
+    if (item.estado !== 'espera') return;
+    item.estado = 'anim';
+    item.t0 = performance.now() + atraso;
+    item.espera = 350;                                                // latim parado antes de traduzir
+    item.dur = Math.max(450, Math.min(1100, item.pt.length * 22));    // tempo da tradução
+    item.restoIniciado = false;
+    item.fim = item.t0 + item.espera + item.dur;
+    ativosLatim.push(item);
+    if (quadroLatim === null) quadroLatim = requestAnimationFrame(quadroDeLatim);
+  }
+
+  function revelarRestoLatim(item, agora) {
+    if (!/\S/.test(item.noResto.nodeValue)) return;
+    var el = document.createElement('span');
+    el.className = 'latim-resto';
+    var partes = item.noResto.nodeValue.split(/(\s+)/);
+    var palavras = 0;
+    partes.forEach(function (p) { if (p && !/^\s+$/.test(p)) palavras++; });
+    var passo = Math.min(26, 1300 / Math.max(1, palavras));
+    var i = 0;
+    partes.forEach(function (parte) {
+      if (!parte) return;
+      if (/^\s+$/.test(parte)) { el.appendChild(document.createTextNode(parte)); return; }
+      var w = document.createElement('span');
+      w.textContent = parte;
+      w.style.animationDelay = Math.round(i * passo) + 'ms';
+      i++;
+      el.appendChild(w);
+    });
+    item.pai.insertBefore(el, item.noResto);
+    item.pai.removeChild(item.noResto);
+    item.elResto = el;
+    item.fim = Math.max(item.fim, agora + i * passo + 520);
+  }
+
+  function desenharItemLatim(item, p) {
+    var k = Math.floor(p * item.pt.length);
+    var cursor = '';
+    var kLa = item.la.length;
+    if (p < 1) {
+      for (var j = 0; j < 3 && k + j < item.pt.length; j++) cursor += letraAleatoria(item.pt.charAt(k + j));
+      kLa = Math.min(item.la.length, Math.floor(p * item.la.length) + 3);
+    }
+    item.spanPt.textContent = item.pt.slice(0, k);
+    item.spanCursor.textContent = cursor;
+    item.spanLa.textContent = p < 1 ? item.la.slice(kLa) : '';
+  }
+
+  function quadroDeLatim(agora) {
+    quadroLatim = null;
+    for (var i = ativosLatim.length - 1; i >= 0; i--) {
+      var item = ativosLatim[i];
+      var dt = agora - item.t0;
+      if (dt < item.espera) continue;
+      if (!item.restoIniciado) { item.restoIniciado = true; revelarRestoLatim(item, agora); }
+      var p = (dt - item.espera) / item.dur;
+      if (p >= 1 && agora >= item.fim) { restaurarItemLatim(item); continue; }
+      desenharItemLatim(item, Math.min(p, 1));
+    }
+    if (ativosLatim.length) quadroLatim = requestAnimationFrame(quadroDeLatim);
+  }
+
+  // escalona itens que entram na tela quase juntos, para não traduzir tudo no mesmo instante
+  function proximoAtrasoLatim() {
+    var agora = performance.now();
+    if (agora - ultimoInicioLatim > 600) filaLatim = 0;
+    ultimoInicioLatim = agora;
+    return Math.min(filaLatim++ * 90, 700);
+  }
+
+  function observarConteudoLatim(itens) {
+    var pais = [];
+    itens.forEach(function (item) {
+      if (!item.pai.ajLatimItens) { item.pai.ajLatimItens = []; pais.push(item.pai); }
+      item.pai.ajLatimItens.push(item);
+    });
+    if (typeof IntersectionObserver === 'undefined') {
+      itens.forEach(function (item, i) { iniciarItemLatim(item, Math.min(i * 60, 900)); });
+      return;
+    }
+    observadorLatim = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (entrada) {
+        if (!entrada.isIntersecting) return;
+        observadorLatim.unobserve(entrada.target);
+        var atraso = proximoAtrasoLatim();
+        (entrada.target.ajLatimItens || []).forEach(function (item) {
+          iniciarItemLatim(item, atraso);
+          atraso += 50;
+        });
+      });
+    }, { threshold: 0.1 });
+    pais.forEach(function (pai) { observadorLatim.observe(pai); });
+  }
+
+  function iniciarTraducaoLatim() {
+    // cabeçalho e menus: só na primeira página da sessão
+    if (!jaVistoNaSessao('aj-latim-chrome')) {
+      var nosChrome = coletarNosDeTexto(document.querySelector('.topo'));
+      document.querySelectorAll('.lateral, .nav-movel').forEach(function (nav) {
+        nosChrome = nosChrome.concat(coletarNosDeTexto(nav));
+      });
+      var itensChrome = prepararNosLatim(nosChrome);
+      itensChrome.forEach(function (item, i) { iniciarItemLatim(item, Math.min(i * 40, 900)); });
+      if (itensChrome.length) marcarVistoNaSessao('aj-latim-chrome');
+    }
+    // conteúdo do capítulo: anima quando aparece na tela
+    observarConteudoLatim(prepararNosLatim(coletarNosDeTexto(document.querySelector('main'))));
+  }
+
+  function criarAlternadorLatim() {
+    var onde = document.querySelector('.rodape__links');
+    if (!onde) return;
+    var botao = document.createElement('button');
+    botao.type = 'button';
+    botao.className = 'rodape__animacao';
+    function atualizarRotulo() {
+      botao.textContent = latimAtivo ? 'Tradução animada: ligada' : 'Tradução animada: desligada';
+    }
+    atualizarRotulo();
+    botao.addEventListener('click', function () {
+      latimAtivo = !latimAtivo;
+      try { localStorage.setItem('aj-latim', latimAtivo ? 'on' : 'off'); } catch (erro) { /* vale só nesta página */ }
+      atualizarRotulo();
+      if (!latimAtivo) finalizarTudoLatim();
+    });
+    onde.appendChild(botao);
+  }
+
+  if (LATIM.length && !prefersReducedMotion) {
+    criarAlternadorLatim();
+    if (latimAtivo) {
+      try {
+        iniciarTraducaoLatim();
+      } catch (erro) {
+        finalizarTudoLatim();   // qualquer falha: devolve o português e segue sem animação
+      }
+      // clique ou tecla encerra as animações em andamento
+      var pularLatim = function () { ativosLatim.slice().forEach(restaurarItemLatim); };
+      document.addEventListener('pointerdown', pularLatim);
+      document.addEventListener('keydown', pularLatim);
+      window.addEventListener('beforeprint', finalizarTudoLatim);
+    }
+  }
+  document.documentElement.classList.remove('latim-preparando');
+
 })();

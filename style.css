@@ -30,15 +30,15 @@
   --texto-escuro-suave: #55402f;
 
   --fonte-titulo: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
-  --fonte-corpo: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+  --fonte-corpo: 'Libre Caslon Text', 'Georgia', 'Times New Roman', serif;
 
   /* fontes personalizadas (ver @font-face logo abaixo) */
-  --fonte-display: 'Roman SD', var(--fonte-titulo);   /* títulos grandes e a marca no cabeçalho */
-  --fonte-rotulo: 'Marathon', var(--fonte-titulo);     /* rótulos curtos em caixa alta (menus, botões, selos) */
-  --fonte-subtitulo: 'Dominican', var(--fonte-titulo); /* subtítulos de cartões, patentes, glossário */
-  --fonte-lema: 'Dominican Italic', 'Georgia', serif;  /* lemas em latim e citações */
-  --fonte-selo: 'Pompeji Petit', var(--fonte-titulo);  /* selo "S · P · Q · R" da home */
-  --fonte-menu: 'Poppins', 'Segoe UI', sans-serif;     /* itens de navegação dos menus laterais/móvel */
+  --fonte-display: 'Cinzel Decorative', var(--fonte-titulo); /* h1 (título de página) e a marca no cabeçalho */
+  --fonte-rotulo: var(--fonte-titulo);                 /* rótulos curtos em caixa alta (botões, selos) */
+  --fonte-subtitulo: var(--fonte-titulo);             /* subtítulos de cartões, patentes, glossário */
+  --fonte-lema: 'Libre Caslon Text', 'Georgia', serif; /* lemas em latim e citações (sempre em itálico) */
+  --fonte-selo: var(--fonte-titulo);                  /* selo "S · P · Q · R" da home */
+  --fonte-menu: var(--fonte-titulo);                   /* itens de navegação dos menus laterais/móvel */
 
   --sombra-forte: 0 18px 40px rgba(0, 0, 0, 0.45);
   --sombra-suave: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -53,36 +53,11 @@
 }
 
 /* -------------------------------------------------------------------------
-   FONTES PERSONALIZADAS
-   Arquivos em fontes/. Cada @font-face carrega uma vez e fica em cache;
-   todas têm bom suporte a acentuação em português.
+   FONTES
+   Vêm do Google Fonts (link no <head> de cada página): Cinzel (títulos, menus,
+   rótulos), Cinzel Decorative (só o h1) e Libre Caslon Text (texto e lemas).
+   Nenhum arquivo de fonte precisa ser hospedado junto com o site.
    ------------------------------------------------------------------------- */
-@font-face {
-  font-family: 'Roman SD';
-  src: url('fontes/roman-sd.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Marathon';
-  src: url('fontes/marathon.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dominican';
-  src: url('fontes/dominican.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dominican Italic';
-  src: url('fontes/dominican-italic.ttf') format('truetype');
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pompeji Petit';
-  src: url('fontes/pompeji-petit.ttf') format('truetype');
-  font-display: swap;
-}
 /* -------------------------------------------------------------------------
    1. RESET E BASE
    ------------------------------------------------------------------------- */
@@ -103,7 +78,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--fonte-corpo);
-  font-size: 1.0625rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--texto-escuro);
   background-color: var(--preto); /* cor de reserva atrás do fundo de cena */
@@ -144,12 +119,15 @@ body.bloquear-rolagem { overflow: hidden; }
 img { max-width: 100%; display: block; }
 
 h1, h2, h3, h4 {
-  font-family: var(--fonte-display);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
   color: var(--vinho-escuro);
   letter-spacing: 0.02em;
   margin: 0 0 0.6em;
   line-height: 1.25;
 }
+
+h1 { font-family: var(--fonte-display); }
 
 p { margin: 0 0 1em; text-align: justify; }
 
@@ -1029,7 +1007,7 @@ input:focus-visible,
 }
 .lista-patentes li::before {
   content: counter(patente);
-  font-family: var(--fonte-display);
+  font-family: var(--fonte-titulo);
   color: var(--dourado);
   font-size: 1.15rem;
   min-width: 1.3em;
@@ -1132,7 +1110,8 @@ input:focus-visible,
 @media (max-width: 760px) {
   :root { --altura-cabecalho: 4.6rem; }
   .topo__conteudo { padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 2.6rem; padding-right: 2.6rem; }
-  .topo__titulo { font-size: 1rem; }
+  /* a fonte decorativa é larga: encolhe com a tela para o título não ser cortado pelo botão do menu */
+  .topo__titulo { font-size: clamp(0.68rem, 3.4vw, 1rem); }
   .conteudo__caixa { padding: 1.8rem 1.3rem; }
   .caixa { border-radius: 10px; }
   .lista-patentes li { flex-wrap: wrap; }
@@ -1144,4 +1123,56 @@ input:focus-visible,
 @media (max-width: 480px) {
   .conteudo__acoes { flex-direction: column; align-items: stretch; }
   .botao { text-align: center; }
+}
+
+/* -------------------------------------------------------------------------
+   17. TRADUÇÃO ANIMADA (latim → português)
+   O código está em script.js (seção 8) e os textos em latim.js.
+   ------------------------------------------------------------------------- */
+
+/* enquanto o script prepara os textos, a página fica transparente para o
+   português não "piscar" antes do latim. O script remove a classe sozinho
+   (e há um limite de 2,5 s no <head>, caso o JavaScript não rode). */
+.latim-preparando main,
+.latim-preparando .topo,
+.latim-preparando .lateral,
+.latim-preparando .rodape { opacity: 0; }
+
+/* o que ainda é latim (e o "cursor" de letras embaralhadas) brilha em dourado */
+.latim-cursor,
+.latim-la { color: var(--dourado-claro); }
+.latim-la { opacity: 0.8; }
+.botao .latim-cursor,
+.botao .latim-la { color: inherit; }   /* o botão dourado já tem texto escuro */
+
+/* o restante do parágrafo surge palavra por palavra */
+.latim-resto > span {
+  display: inline-block;
+  opacity: 0;
+  animation: latim-palavra 480ms ease forwards;
+}
+@keyframes latim-palavra {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* botão do rodapé que liga/desliga a animação */
+.rodape__animacao {
+  font-family: var(--fonte-rotulo);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(227, 197, 104, 0.8);
+  padding: 0.9em 0.5em;
+  min-height: 44px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--duracao-transicao) ease, border-color var(--duracao-transicao) ease;
+}
+.rodape__animacao:hover { color: var(--dourado-claro); border-color: var(--dourado-claro); }
+
+@media (prefers-reduced-motion: reduce) {
+  .latim-preparando main,
+  .latim-preparando .topo,
+  .latim-preparando .lateral,
+  .latim-preparando .rodape { opacity: 1; }
 }
