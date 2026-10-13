@@ -37,7 +37,7 @@ com cabeçalho e menus laterais fixos que não rolam com a página.
 ├── latim.js                # textos em latim da animação latim → português (só dados)
 ├── script.js               # menu móvel, modais, acordeões, rolagem e a tradução animada (seção 8)
 ├── emblema.png             # logo/favicon do site
-├── fundo-arena.png         # ilustração de fundo fixa (cena-fundo)
+(fundo da arena: hospedado no Imgur, ver .cena-fundo em style.css)
 └── (fontes: Google Fonts, via <link> no <head> de cada página)
 ```
 
