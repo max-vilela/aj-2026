@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <link rel="icon" type="image/png" href="https://i.imgur.com/DsgnYON.png">
-<link rel="stylesheet" href="style.css?v=31">
+<link rel="stylesheet" href="style.css?v=32">
 <!-- evita o "piscar" do português antes da animação do latim; some sozinho se o JS não rodar -->
 <script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&localStorage.getItem("aj-latim")!=="off"){d.classList.add("latim-preparando");setTimeout(function(){d.classList.remove("latim-preparando")},2500)}}catch(e){}})(document.documentElement)</script>
 </head>
-<body>
+<body class="pagina-inicio">
 
 <!-- Fundo de cena fixo (atrás de tudo). Hoje é um gradiente estático;
      no futuro este bloco pode virar um <video>/<img> em loop. -->
@@ -28,7 +28,7 @@
   <div class="topo__faixa" aria-hidden="true"></div>
   <div class="topo__conteudo">
     <a class="topo__marca" href="index.html" aria-label="Acampamento Júpiter, ir para o início">
-      <img class="emblema" src="https://i.imgur.com/DsgnYON.png" alt="Emblema do Acampamento Júpiter: águia dourada de asas abertas sobre fundo roxo, envolta em coroa de louros">
+      <img class="emblema" src="https://i.imgur.com/n5oUEAF.png" alt="Emblema do Acampamento Júpiter: águia dourada de asas abertas sobre fundo roxo, envolta em coroa de louros">
       <span class="topo__titulos">
         <span class="topo__titulo">Acampamento Júpiter</span>
       </span>
@@ -94,20 +94,16 @@
   <section class="caixa conteudo__caixa" aria-labelledby="pagina-titulo">
     <div class="secao__cabecalho">
       <p class="secao__eyebrow secao__eyebrow--selo">S · P · Q · R</p>
-      <h1 id="pagina-titulo">Acampamento Júpiter</h1>
-      <img class="secao__banner" src="https://placehold.co/1200x675/3d1a4d/e3c568?text=Banner+do+Acampamento+Jupiter" alt="Ilustração conceitual do Acampamento Júpiter ao entardecer, com tendas romanas e o Templo de Júpiter ao fundo">
-      <p class="secao__lema">Onde os filhos de Roma aprendem a servir, lutar e sobreviver.</p>
+      <h1 id="pagina-titulo" class="com-louros">Acampamento Júpiter</h1>
+      <div class="secao__moldura">
+        <img class="secao__banner" src="https://placehold.co/1700x500/3d1a4d/e3c568?text=Banner+do+Acampamento+Jupiter" alt="Ilustração conceitual do Acampamento Júpiter ao entardecer, com tendas romanas e o Templo de Júpiter ao fundo">
+      </div>
+      <h2 class="secao__bemvindo">Bem-vindo ao Acampamento</h2>
+      <p class="secao__lema">Filhos de deuses. Herdeiros de um legado que não se apaga.</p>
       <p class="secao__intro">
-        Além da névoa que esconde o mundo mortal, entre as colinas da Califórnia, ergue-se um vale
-        que Roma jamais abandonou. Aqui, filhos e filhas dos deuses romanos são treinados como
-        legionários e encontram, em Nova Roma, o único lar onde podem envelhecer em paz. Este guia
-        existe para que nenhum recruta atravesse o túnel de boas-vindas sem saber o que o espera do
-        outro lado.
+        O Acampamento Júpiter é o seu lar, um refúgio entre dois mundos, onde treinamento, honra e
+        amizade moldam os semideuses que escreverão a próxima era de Roma.
       </p>
-    </div>
-    <div class="conteudo__acoes">
-      <a class="botao botao--principal" href="o-acampamento.html">Começar a jornada</a>
-      <a class="botao botao--fantasma" href="regras.html">Ler as regras</a>
     </div>
   </section>
 </main>
@@ -123,6 +119,6 @@
 </footer>
 
 <script src="latim.js?v=1"></script>
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>
