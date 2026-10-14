@@ -1396,9 +1396,10 @@ body:not(.pagina-inicio) .conteudo__caixa::before { display: none; }
 
 /* ---- página inicial ---- */
 .pagina-inicio .conteudo__caixa { padding-top: 3.7rem; }
-.pagina-inicio .secao__cabecalho { max-width: none; margin-bottom: 0; }
+.conteudo__caixa .secao__cabecalho { max-width: none; margin-bottom: 0; }
+.secao__cabecalho .secao__intro { max-width: 62ch; margin-left: auto; margin-right: auto; }
 
-.pagina-inicio .secao__eyebrow--selo {
+.secao__cabecalho .secao__eyebrow {
   display: flex;
   align-items: center;
   gap: 0.9em;
@@ -1407,15 +1408,20 @@ body:not(.pagina-inicio) .conteudo__caixa::before { display: none; }
   font-size: 0.9rem;
   color: var(--dourado-claro);
 }
-.pagina-inicio .secao__eyebrow--selo::before,
-.pagina-inicio .secao__eyebrow--selo::after {
+.secao__cabecalho .secao__eyebrow::before,
+.secao__cabecalho .secao__eyebrow::after {
   content: '';
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--dourado));
 }
-.pagina-inicio .secao__eyebrow--selo::after { transform: scaleX(-1); }
+.secao__cabecalho .secao__eyebrow::after { transform: scaleX(-1); }
 
+.secao__cabecalho h1 {
+  --louro: 56px;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  margin: 0 0 0.5rem;
+}
 .pagina-inicio h1 {
   --louro: 72px;
   font-size: clamp(1.5rem, 3.1vw, 2.5rem);
@@ -1507,10 +1513,26 @@ body:not(.pagina-inicio) .conteudo__caixa::before { display: none; }
 @media (max-width: 760px) {
   .conteudo__caixa { padding: 2.4rem 1.5rem 1.8rem; }
   .pagina-inicio .conteudo__caixa { padding-top: 3.2rem; }
+  .secao__cabecalho h1 { --louro: 34px; font-size: clamp(1.05rem, 5vw, 1.4rem); gap: 0.3rem; }
   .pagina-inicio h1 { --louro: 34px; font-size: clamp(1rem, 5vw, 1.4rem); gap: 0.3rem; }
   .secao__cabecalho h2.secao__bemvindo { padding-inline: 13%; }
   .secao__moldura { border-radius: 8px; }
   .conteudo__caixa { --placa-largura: 250px; --entalhe: 16px; }
-  .pagina-inicio .secao__eyebrow--selo { font-size: 0.78rem; }
+  .secao__cabecalho .secao__eyebrow { font-size: 0.78rem; }
   .secao__moldura .secao__banner { aspect-ratio: 2.4 / 1; }
 }
+
+/* ---- janelas (modais de coortes e locais): mesma paleta das caixas ---- */
+.modal {
+  background: radial-gradient(ellipse 120% 70% at 50% 0%, var(--roxo-luz) 0%, var(--roxo-caixa) 55%, var(--roxo-fundo) 100%);
+  border: 2px solid var(--dourado);
+  border-radius: 0;
+  color: var(--texto-caixa);
+  box-shadow: 0 0 0 1px rgba(14, 5, 18, 0.9), var(--sombra-forte);
+}
+.modal__titulo { color: var(--ouro-titulo); }
+.modal__texto { color: rgba(239, 227, 198, 0.88); }
+.modal__lema { color: var(--dourado-claro); border-top-color: rgba(201, 162, 39, 0.4); }
+.modal__fechar { color: var(--dourado-claro); }
+.modal__fechar:hover { background: rgba(201, 162, 39, 0.15); }
+.modal-fundo { background: rgba(12, 5, 16, 0.82); }
