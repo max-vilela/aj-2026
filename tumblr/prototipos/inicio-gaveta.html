@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>Início | Acampamento Júpiter</title>
+  <meta name="description" content="Boas-vindas ao Acampamento Júpiter: o que é o RPG, como começar e onde encontrar cada informação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap">
+  <link rel="preload" as="image" href="https://i.imgur.com/AaWidyx.png">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/max-vilela/aj-2026@v1/tumblr/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/max-vilela/aj-2026@v1/tumblr/style.css">
+  <style>
+    /* Teste na /inicio: botão do Panteão como imagem (só esta página) */
+    .panteao__botao--img { padding: 0; border: 0; background: none; box-shadow: none; line-height: 0; transition: transform 0.2s, filter 0.2s; }
+    .panteao__botao--img::before, .panteao__botao--img::after { display: none; }
+    .panteao__botao--img img { display: block; width: min(520px, 90vw); height: auto; }
+    .panteao__botao--img:hover, .panteao__toggle:checked + .panteao__botao--img { background: none; transform: scale(1.03); filter: brightness(1.08); }
+    /* Panteão no meio da linha divisória, como a águia do topo */
+    .portal__corpo { padding-bottom: 0; border-bottom: 0; border-image: none; }
+    .panteao { display: flex; align-items: center; gap: 0; }
+    .panteao::before, .panteao::after { content: ""; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--ouro)); }
+    .panteao::after { background: linear-gradient(to left, transparent, var(--ouro)); }
+
+    /* Menu em gaveta (protótipo): medalhão que aparece ao rolar e abre os links do site */
+    .gaveta__toggle { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    .gaveta__botao { position: fixed; top: 1.75rem; left: 1.75rem; z-index: 85; width: 3.6rem; height: 3.6rem; border-radius: 50%; cursor: pointer; background: var(--img-brasao) center / 82% no-repeat, rgb(255 250 238 / 0.94); border: 1px solid var(--ouro); box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.7), 0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45); transition: opacity 0.3s, translate 0.3s, filter 0.2s; }
+    .gaveta__botao:hover { filter: brightness(1.06) saturate(1.1); translate: 0 -2px; }
+    .gaveta__toggle:focus-visible + .gaveta__botao { outline: 2px solid var(--purpura); outline-offset: 4px; }
+    .gaveta__botao.oculto { opacity: 0; translate: 0 -1rem; pointer-events: none; }
+    .gaveta__painel { position: fixed; inset: 0; z-index: 880; visibility: hidden; pointer-events: none; transition: visibility 0s 0.35s; }
+    body:has(.gaveta__toggle:checked) .gaveta__painel { visibility: visible; pointer-events: auto; transition: none; }
+    html:has(.gaveta__toggle:checked) { overflow: hidden; }
+    .gaveta__fundo { position: absolute; inset: 0; cursor: pointer; background: rgb(28 10 34 / 0.6); backdrop-filter: blur(2px); opacity: 0; transition: opacity 0.3s; }
+    body:has(.gaveta__toggle:checked) .gaveta__fundo { opacity: 1; }
+    .gaveta__caixa { position: absolute; top: 0; bottom: 0; left: 0; width: min(22rem, 88vw); overflow-y: auto; padding: 2rem 2rem 2.25rem; background: #f4ead8 var(--img-pergaminho) center / cover; border-right: 1px solid var(--ouro); box-shadow: inset -4px 0 0 rgb(244 234 216 / 0.9), inset -5px 0 0 rgb(176 135 58 / 0.45), 2rem 0 4rem -1rem rgb(20 8 25 / 0.6); translate: -100% 0; transition: translate 0.35s cubic-bezier(0.22, 0.8, 0.24, 1); }
+    body:has(.gaveta__toggle:checked) .gaveta__caixa { translate: 0 0; }
+    .gaveta__titulo { margin: 0 0 1.25rem; padding: 0.4rem 2.6rem 1rem 0; font-family: var(--fonte-titulo); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purpura); border-bottom: 1px solid transparent; border-image: linear-gradient(to right, var(--ouro), transparent) 1; }
+    .gaveta__lista { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.15rem; }
+    .gaveta__lista a { position: relative; display: block; padding: 0.55rem 0.75rem 0.55rem 1rem; font-family: var(--fonte-titulo); font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--tinta); transition: color 0.2s, background-color 0.2s, padding-left 0.25s; }
+    .gaveta__lista a::before { content: ""; position: absolute; left: 0; top: 20%; bottom: 20%; width: 2px; background: var(--ouro); transform: scaleY(0); transition: transform 0.3s; }
+    .gaveta__lista a:hover, .gaveta__lista a:focus-visible, .gaveta__lista a[aria-current="page"] { color: var(--purpura); background: rgb(255 250 238 / 0.55); padding-left: 1.25rem; }
+    .gaveta__lista a:hover::before, .gaveta__lista a:focus-visible::before, .gaveta__lista a[aria-current="page"]::before { transform: scaleY(1); }
+    .gaveta__panteao { display: block; width: fit-content; margin: 1.5rem auto 0; padding: 0.55rem 1.8rem; cursor: pointer; font-family: var(--fonte-titulo); font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--purpura); background: rgb(255 250 238 / 0.65); border: 1px solid var(--ouro); box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.6); transition: color 0.2s, background-color 0.2s; }
+    .gaveta__panteao:hover { color: #f6ead0; background: var(--purpura); }
+    .gaveta__fechar { position: absolute; top: 0.9rem; right: 0.9rem; width: 2.2rem; height: 2.2rem; display: grid; place-items: center; cursor: pointer; font-size: 1.6rem; line-height: 1; color: var(--purpura); border: 1px solid var(--ouro); background: #f7efde; }
+    .gaveta__fechar:hover { color: #f6ead0; background: var(--purpura); }
+  </style>
+</head>
+<body id="topo">
+
+  <a class="pular" href="#cronologia">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo__fundo" aria-hidden="true"></div>
+    <div class="topo__conteudo">
+      <div class="topo__ornamento">
+        <span class="topo__brasao" aria-hidden="true"></span>
+      </div>
+      <h1 class="topo__titulo">Acampamento Júpiter</h1>
+    </div>
+  </header>
+
+  <div class="pagina">
+    <!-- Laterais: louros no alto e colunatas embaixo (só em telas largas) -->
+    <div class="cenario" aria-hidden="true">
+      <div class="cenario__palco">
+        <div class="cenario__colunata cenario__colunata--esq"></div>
+        <div class="cenario__colunata cenario__colunata--dir"></div>
+        <div class="cenario__louro cenario__louro--esq"></div>
+        <div class="cenario__louro cenario__louro--dir"></div>
+      </div>
+    </div>
+
+    <main id="cronologia" class="cronologia">
+      <!-- Menu do site (centro) e lista de deuses (laterais): troque cada href="#" pelo link da página -->
+      <div class="portal">
+        <div class="menu__abertura" aria-hidden="true"><span class="aguia"></span></div>
+        <div class="portal__corpo">
+        <nav class="menu" aria-label="Menu do site">
+          <ul>
+            <li><a href="/inicio" aria-current="page">Início</a></li>
+            <li><a href="/trama">Trama</a></li>
+            <li><a href="/ambientacao">Ambientação</a></li>
+            <li><a href="/cronologia">Cronologia</a></li>
+            <li><a href="/sistemas">Sistemas</a></li>
+            <li><a href="/guias">Guias</a></li>
+            <li><a href="/olimpiadas">Olimpíadas</a></li>
+            <li><a href="/legados">Legados</a></li>
+            <li><a href="/coortes">Coortes</a></li>
+            <li><a href="/senado">Senado</a></li>
+            <li><a href="/bestiario">Bestiário</a></li>
+            <li><a href="/arsenal">Arsenal</a></li>
+            <li><a href="/conquistas">Conquistas</a></li>
+            <li><a href="/formularios">Formulários</a></li>
+            <li><a href="/nucleos">Núcleos</a></li>
+            <li><a href="/agradecimentos">Agradecimentos</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão do Panteão: o checkbox guarda o estado aberto/fechado (só HTML e CSS) -->
+        <div class="panteao">
+          <input type="checkbox" id="panteao" class="panteao__toggle">
+          <label for="panteao" class="panteao__botao panteao__botao--img" title="Panteão"><img src="https://i.imgur.com/LMA0r39.png" alt="Panteão" width="1024" height="576"></label>
+        </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo provisório: troque os textos e, para pôr uma imagem na moldura,
+           acrescente style="--ilustracao: url('https://i.imgur.com/XXXXXXX.png')" no <figure>. -->
+      <ol class="anais">
+        <li class="ano" id="secao-1">
+          <figure class="quadro" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">Início</h2>
+          <div class="ano__texto">
+            <p>Boas-vindas ao Acampamento Júpiter: o que é o RPG, como começar e onde encontrar cada informação.</p>
+            <p>Texto provisório. O conteúdo definitivo desta seção ainda está sendo escrito pela equipe do acampamento e será publicado em breve. Enquanto isso, acompanhe as novidades pela página inicial e pelos avisos do RPG.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="secao-2">
+          <figure class="quadro" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">Em breve</h2>
+          <div class="ano__texto">
+            <p>Este espaço vai reunir as informações principais do tema, organizadas em parágrafos curtos e acompanhadas de uma ilustração na moldura acima. Volte em alguns dias para conferir a versão completa.</p>
+          </div>
+        </li>
+      </ol>
+    </main>
+
+    <footer class="rodape">
+      <span class="aguia" aria-hidden="true"></span>
+      <p class="rodape__lema" lang="la">Senatus Populusque Romanus</p>
+      <a class="rodape__voltar" href="#topo">Voltar ao topo</a>
+    </footer>
+  </div>
+  <!-- Janela do Panteão: estandartes de cada deus. Troque href="#" pelo link da página do deus. -->
+  <div class="panteao__janela" role="dialog" aria-modal="true" aria-label="Panteão">
+    <label for="panteao" class="panteao__fundo" aria-hidden="true"></label>
+    <div class="panteao__caixa">
+      <label for="panteao" class="panteao__fechar" title="Fechar">&times;<span class="sr">Fechar</span></label>
+        <section class="pt-grupo pt-grupo--notaveis" aria-labelledby="pt-notaveis">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-notaveis">Deuses notáveis</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/ZLWBOzS.png" alt="" loading="lazy"><span>Júpiter</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/8uL98Ow.png" alt="" loading="lazy"><span>Netuno</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/Xl1xDLD.png" alt="" loading="lazy"><span>Plutão</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/470NHpH.png" alt="" loading="lazy"><span>Hécate</span></a></li>
+          </ul>
+        </section>
+        <section class="pt-grupo pt-grupo--olimpianos" aria-labelledby="pt-olimpianos">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-olimpianos">Deuses olimpianos</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/yjblcUW.png" alt="" loading="lazy"><span>Ceres</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/xDhsLhP.png" alt="" loading="lazy"><span>Marte</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/oLuMGSi.png" alt="" loading="lazy"><span>Apolo</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/mKANqFJ.png" alt="" loading="lazy"><span>Vulcano</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/A3sBpYI.png" alt="" loading="lazy"><span>Vênus</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/tYUWKCk.png" alt="" loading="lazy"><span>Mercúrio</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/u6x80XH.png" alt="" loading="lazy"><span>Baco</span></a></li>
+          </ul>
+        </section>
+        <section class="pt-grupo pt-grupo--menores" aria-labelledby="pt-menores">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-menores">Deuses menores</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/orDH3NG.png" alt="" loading="lazy"><span>Victória</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/mHAWlb4.png" alt="" loading="lazy"><span>Arcus</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/O6IoTAi.png" alt="" loading="lazy"><span>Fortuna</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/qCxxEY8.png" alt="" loading="lazy"><span>Ferônia</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/pouwOqL.png" alt="" loading="lazy"><span>Esculápio</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ZXVCovj.png" alt="" loading="lazy"><span>Epona</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/qkXNxFA.png" alt="" loading="lazy"><span>Somnus</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/9inuMzK.png" alt="" loading="lazy"><span>Nêmesis</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/S21JwPA.png" alt="" loading="lazy"><span>Belona</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/uLgehUu.png" alt="" loading="lazy"><span>Jano</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/UU5Nvoi.png" alt="" loading="lazy"><span>Cupido</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/J6ZtZDK.png" alt="" loading="lazy"><span>Discórdia</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/1Fdx1lP.png" alt="" loading="lazy"><span>Salácia</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/6kmV7lb.png" alt="" loading="lazy"><span>Áquilo</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/Wz5xxR4.png" alt="" loading="lazy"><span>Proserpina</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/QPa2YbS.png" alt="" loading="lazy"><span>Laverna</span></a></li>
+          </ul>
+        </section>
+      <div class="pt-dupla">
+        <section class="pt-grupo pt-grupo--entidades" aria-labelledby="pt-entidades">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-entidades">Entidades</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Heróis de Hércules</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Amazonas</span></a></li>
+          </ul>
+        </section>
+        <section class="pt-grupo pt-grupo--seres" aria-labelledby="pt-seres">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-seres">Seres</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Faunos</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Lares</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Ninfas</span></a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* Fecha a janela do Panteão com Esc */
+    document.addEventListener("keydown", function (e) {
+      var t = document.getElementById("panteao");
+      if (e.key === "Escape" && t && t.checked) t.checked = false;
+    });
+  </script>
+  <!-- Menu em gaveta (protótipo): medalhão que aparece ao rolar e abre os links do site -->
+  <input type="checkbox" id="gaveta" class="gaveta__toggle">
+  <label for="gaveta" class="gaveta__botao oculto" title="Menu"><span class="sr">Abrir menu</span></label>
+  <div class="gaveta__painel" role="dialog" aria-modal="true" aria-label="Menu do site">
+    <label for="gaveta" class="gaveta__fundo" aria-hidden="true"></label>
+    <nav class="gaveta__caixa" aria-label="Menu do site (gaveta)">
+      <label for="gaveta" class="gaveta__fechar" title="Fechar">&times;<span class="sr">Fechar</span></label>
+      <p class="gaveta__titulo">Acampamento Júpiter</p>
+      <ul class="gaveta__lista">
+        <li><a href="/inicio" aria-current="page">Início</a></li>
+        <li><a href="/trama">Trama</a></li>
+        <li><a href="/ambientacao">Ambientação</a></li>
+        <li><a href="/cronologia">Cronologia</a></li>
+        <li><a href="/sistemas">Sistemas</a></li>
+        <li><a href="/guias">Guias</a></li>
+        <li><a href="/olimpiadas">Olimpíadas</a></li>
+        <li><a href="/legados">Legados</a></li>
+        <li><a href="/coortes">Coortes</a></li>
+        <li><a href="/senado">Senado</a></li>
+        <li><a href="/bestiario">Bestiário</a></li>
+        <li><a href="/arsenal">Arsenal</a></li>
+        <li><a href="/conquistas">Conquistas</a></li>
+        <li><a href="/formularios">Formulários</a></li>
+        <li><a href="/nucleos">Núcleos</a></li>
+        <li><a href="/agradecimentos">Agradecimentos</a></li>
+      </ul>
+      <label for="panteao" class="gaveta__panteao">Panteão</label>
+    </nav>
+  </div>
+
+  <!-- Botão flutuante de voltar ao topo, presente em todas as páginas -->
+  <a class="voltar-topo oculto" id="voltar-topo" href="#topo" aria-label="Voltar ao topo"></a>
+
+  <script>
+    /* Mostra o botão de voltar ao topo só depois de rolar um pouco */
+    (function () {
+      var botao = document.getElementById("voltar-topo");
+      if (!botao) return;
+      function atualizar() { botao.classList.toggle("oculto", window.pageYOffset < 400); }
+      window.addEventListener("scroll", atualizar, { passive: true });
+      atualizar();
+    })();
+  </script>
+  <script>
+    /* Medalhão do menu: aparece depois de rolar um pouco; Esc e o botão Panteão fecham a gaveta */
+    (function () {
+      var botao = document.querySelector(".gaveta__botao");
+      var gaveta = document.getElementById("gaveta");
+      if (!botao || !gaveta) return;
+      function atualizar() { botao.classList.toggle("oculto", window.pageYOffset < 400 && !gaveta.checked); }
+      window.addEventListener("scroll", atualizar, { passive: true });
+      gaveta.addEventListener("change", atualizar);
+      document.querySelector(".gaveta__panteao").addEventListener("click", function () { gaveta.checked = false; atualizar(); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && gaveta.checked) { gaveta.checked = false; atualizar(); } });
+      atualizar();
+    })();
+  </script>
+</body>
+</html>
