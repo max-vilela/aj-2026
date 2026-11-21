@@ -163,6 +163,11 @@ ${cabecaFontes}
 ${corpo.trimEnd()}
 
   <div class="weebly-rodape">{footer}</div>
+
+  <div id="navMobile" class="nav mobile-nav" style="display: none">{menu}</div>
+
+  <script type="text/javascript" src="/files/theme/plugins.js"></script>
+  <script type="text/javascript" src="/files/theme/custom.js"></script>
 </body>
 </html>
 `;
