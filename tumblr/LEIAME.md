@@ -7,7 +7,11 @@ em 21/11/2026. O site no ar é este, e não o tríptico roxo da raiz do reposit�
 |---|---|
 | `tema-original.html` | Cópia fiel do que estava no Tumblr, com o CSS embutido (backup, não editar). |
 | `style.css` | O CSS extraído do tema (idêntico nas 16 páginas publicadas). |
-| `tema.html` | O mesmo HTML, sem `<style>`, carregando o CSS pela nuvem (jsDelivr). |
+| `tema.html` | HTML atual da raiz do site (a página sem `/`, em Personalizar → Editar HTML): tela de carregamento e redirect para `/inicio`. O CSS vem da nuvem (jsDelivr). |
+| `paginas/inicio.html` | HTML atual da página `/inicio`: botão do Panteão como imagem, centralizado numa linha dourada. Sem tela de carregamento. |
+
+A versão anterior da raiz (a Cronologia completa, ainda com o `<style>` embutido) continua em `tema-original.html`.
+O Tumblr não aceita `<meta http-equiv="refresh">` no HTML da raiz (dá "Ops! :(" ao salvar), então o redirect é feito só por JavaScript.
 
 ## Como o CSS vem da nuvem
 
