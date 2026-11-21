@@ -5,8 +5,8 @@ Tudo aqui é gerado por `node weebly/montar.js` a partir do material de `tumblr/
 | Arquivo | Para quê |
 |---|---|
 | `tema/no-header.html` | Template do tema. Colado em **Tema → Edit HTML/CSS** nos arquivos `header.html` e `no-header.html` (os dois iguais). |
-| `style.css` | CSS único do site, servido pelo jsDelivr (`@v2/weebly/style.css`). |
-| `site.js` | Menu (página atual), Esc, medalhão e voltar ao topo (`@v2/weebly/site.js`). |
+| `style.css` | CSS único do site, servido pelo jsDelivr (`@v3/weebly/style.css`). |
+| `site.js` | Menu (página atual), Esc, medalhão e voltar ao topo (`@v3/weebly/site.js`). |
 | `carregamento.js` | Tela de carregamento da Home, com redirect para `/inicio.html`. |
 | `paginas/*.html` | Conteúdo de cada página, colado num elemento **Embed Code** da página. `home.html` é a Home (carregamento). |
 | `preview/` | Páginas montadas para conferir no navegador (geradas, fora do git). |
@@ -14,7 +14,7 @@ Tudo aqui é gerado por `node weebly/montar.js` a partir do material de `tumblr/
 ## Como o Weebly foi configurado
 
 - **Tema:** `main.less` esvaziado (só um comentário), para o CSS padrão do tema não interferir.
-- **Header Code** (Configurações → SEO): links das fontes e do `style.css`.
+- **Header Code** (Configurações → SEO): links das fontes, do `style.css` (tag atual) e o `og:image` com o brasão.
 - **Páginas:** Home (carregamento) + Início, Trama, Ambientação, Cronologia, Sistemas, Guias, Olimpíadas,
   Legados, Coortes, Senado, Bestiário, Arsenal, Conquistas, Formulários, Núcleos e Agradecimentos.
   Cada uma tem título "Nome | Acampamento Júpiter" e endereço `nome.html`.
@@ -23,8 +23,8 @@ Tudo aqui é gerado por `node weebly/montar.js` a partir do material de `tumblr/
 ## Como atualizar
 
 1. Edite `tumblr/style.css` (ou os scripts) e rode `node weebly/montar.js`.
-2. Commit e push, depois mova a tag: `git tag -f v2 && git push -f origin v2`.
-3. Para forçar o cache do jsDelivr: `https://purge.jsdelivr.net/gh/max-vilela/aj-2026@v2/weebly/style.css`.
+2. Commit e push, depois mova a tag: `git tag v4 && git push origin v4 (tags novas, o jsDelivr guarda as antigas em cache)`.
+3. Para forçar o cache do jsDelivr: `https://purge.jsdelivr.net/gh/max-vilela/aj-2026@v3/weebly/style.css`.
 
 ## Observações
 
