@@ -1201,9 +1201,23 @@ body:has(.gaveta__toggle:checked) .gaveta__caixa { translate: 0 0; }
 
 /* ---------- Ajustes do Weebly ---------- */
 .conteudo { display: block; }
+
+/* ---------- Tipografia combinada em 12/10 ----------
+   Cinzel Decorative só no título principal, Cinzel nos títulos e menus, Libre Caslon Text no texto. */
+:root { --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif; }
+body { font-size: 1rem; font-weight: 400; }
+.ano__titulo { font-family: var(--fonte-titulo); font-weight: 600; }
+.topo__titulo {
+  padding-left: 0.06em;
+  font-family: "Cinzel Decorative", var(--fonte-titulo);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.8vw, 2.5rem);
+  letter-spacing: 0.06em;
+}
+
 /* O Weebly aplica a fonte do tema (Quicksand) com !important em tudo dentro de #wsite-content,
-   onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site (Cormorant Garamond). */
-#wsite-content .ano__titulo { font-family: var(--fonte-texto) !important; font-weight: 700 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
+   onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site. */
+#wsite-content .ano__titulo { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
 #wsite-content .ano__texto p { font-family: inherit !important; font-size: inherit !important; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }

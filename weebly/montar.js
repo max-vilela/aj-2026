@@ -12,7 +12,7 @@ const fs = require("fs");
 const path = require("path");
 
 const RAIZ = path.resolve(__dirname, "..");
-const TAG = "v2";
+const TAG = "v3";
 const CDN = "https://cdn.jsdelivr.net/gh/max-vilela/aj-2026@" + TAG + "/weebly";
 
 const ler = (p) => fs.readFileSync(path.join(RAIZ, p), "utf8").replace(/\r\n/g, "\n");
@@ -60,9 +60,23 @@ const cssExtra = entre(base, "<style>\n", "\n  </style>").miolo
 const cssWeebly = `
 /* ---------- Ajustes do Weebly ---------- */
 .conteudo { display: block; }
+
+/* ---------- Tipografia combinada em 12/10 ----------
+   Cinzel Decorative só no título principal, Cinzel nos títulos e menus, Libre Caslon Text no texto. */
+:root { --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif; }
+body { font-size: 1rem; font-weight: 400; }
+.ano__titulo { font-family: var(--fonte-titulo); font-weight: 600; }
+.topo__titulo {
+  padding-left: 0.06em;
+  font-family: "Cinzel Decorative", var(--fonte-titulo);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.8vw, 2.5rem);
+  letter-spacing: 0.06em;
+}
+
 /* O Weebly aplica a fonte do tema (Quicksand) com !important em tudo dentro de #wsite-content,
-   onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site (Cormorant Garamond). */
-#wsite-content .ano__titulo { font-family: var(--fonte-texto) !important; font-weight: 700 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
+   onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site. */
+#wsite-content .ano__titulo { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
 #wsite-content .ano__texto p { font-family: inherit !important; font-size: inherit !important; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }
@@ -122,6 +136,10 @@ scriptCarregamento = scriptCarregamento
   .split("\n").map((l) => (l.startsWith("    ") ? l.slice(4) : l)).join("\n");
 if (!scriptCarregamento.includes('window.location.replace("/inicio")')) throw new Error("redirect não encontrado");
 scriptCarregamento = scriptCarregamento.replace(
+  /var fontes = \[[^\]]*\];/,
+  'var fontes = ["600 1em Cinzel", "700 1em \'Cinzel Decorative\'", "400 1em \'Libre Caslon Text\'", "italic 400 1em \'Libre Caslon Text\'"];'
+);
+scriptCarregamento = scriptCarregamento.replace(
   'window.location.replace("/inicio");',
   'window.location.replace(window.AJ_DESTINO || "/inicio.html");'
 );
@@ -150,11 +168,14 @@ corpo = corpo.replace(/\n{3,}/g, "\n\n");
 /* O Weebly usa toda <img src> do HTML como og:image (pré-visualização de links). Para o link mostrar só o
    brasão, as imagens do tema vão em data-src e um script curto liga o src no navegador. */
 corpo = corpo.replace(/<img ([^>]*?)src="/g, '<img $1data-src="');
+/* Subtítulo do cabeçalho */
+if (!corpo.includes("</h1>")) throw new Error("h1 não encontrado");
+corpo = corpo.replace("</h1>", '</h1>\n      <p class="topo__subtitulo">A Renascença</p>');
 
 const cabecaFontes = [
   '  <link rel="preconnect" href="https://fonts.googleapis.com">',
   '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
-  '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap">',
+  '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">',
 ].join("\n");
 
 const montarTema = (css, js) => `<!DOCTYPE html>
