@@ -1,0 +1,1448 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>Cronologia | Acampamento Júpiter</title>
+  <meta name="description" content="Cronologia do Acampamento Júpiter: os acontecimentos da Duodécima Legião de 2016 a 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap">
+  <link rel="preload" as="image" href="https://i.imgur.com/AaWidyx.png">
+  <style>
+    /* ==========================================================
+       Cronologia do Acampamento Júpiter (HTML + CSS; JavaScript só na tela de carregamento)
+       ========================================================== */
+
+    :root {
+      /* ===== IMAGENS (hospedadas no Imgur) =====
+         Para trocar uma imagem, cole o link direto dela (https://i.imgur.com/XXXXXXX.png).
+         Envie em PNG: o Imgur não aceita WEBP, e o PNG mantém o fundo transparente. */
+      --img-pergaminho: url("https://i.imgur.com/3TQae1q.png");          /* textura de pergaminho do fundo */
+      --img-topo: url("https://i.imgur.com/AY6yRCT.png");                /* panorama com os estandartes (céu branco) */
+      --img-brasao: url("https://i.imgur.com/AaWidyx.png");              /* brasão SPQR com coroa de louros */
+      --img-divisor: url("https://i.imgur.com/Hhe9OYt.png");             /* linha dourada com a águia */
+      --img-moldura: url("https://i.imgur.com/Ne8Mym7.png");             /* moldura dourada quadrada (1254 × 1254) */
+      --img-estandarte: url("https://i.imgur.com/ztYypx6.png");          /* estandarte SPQR (reserva nas molduras) */
+      --img-colunata-esq: url("https://i.imgur.com/Pu6sv7R.png");        /* colunata com estandarte, lado esquerdo */
+      --img-colunas-dir: url("https://i.imgur.com/xmTCqlN.png");         /* colunas com hera, lado direito */
+      --img-louro-esq: url("https://i.imgur.com/tRbSTZZ.png");           /* ramo de louro no lado esquerdo da imagem */
+      --img-louro-dir: url("https://i.imgur.com/4nwXAuS.png");           /* ramo de louro no lado direito da imagem */
+
+      /* Ilustração de cada ano (imagens quadradas). Se trocar alguma por "none",
+         a moldura mostra o estandarte ou o brasão no lugar. */
+      --img-2016: url("https://i.imgur.com/NkJP4TI.png");
+      --img-2017: url("https://i.imgur.com/wI2SESb.png");
+      --img-2018: url("https://i.imgur.com/py7lUQs.png");
+      --img-2019: url("https://i.imgur.com/y2XF8S2.png");
+      --img-2020: url("https://i.imgur.com/88G6e8q.png");
+      --img-2021: url("https://i.imgur.com/jgTdrAJ.png");
+      --img-2022: url("https://i.imgur.com/2IVh1Y1.png");
+      --img-2023: url("https://i.imgur.com/rcWtrzM.png");
+      --img-2024: url("https://i.imgur.com/X2AvJkt.png");
+      --img-2025: url("https://i.imgur.com/1sYZ7vh.png");
+      --img-2026: url("https://i.imgur.com/HKu67Mj.png");
+
+      /* ===== CORES E FONTES ===== */
+      --pergaminho: #f3e9d8;
+      --tinta: #3d2e21;
+      --tinta-suave: #76654f;
+      --purpura: #4a1a57;
+      --purpura-viva: #6e2a80;
+      --ouro: #b0873a;
+      --ouro-claro: #dcc183;
+
+      --fonte-titulo: "Cinzel", "Trajan Pro", Georgia, serif;
+      --fonte-texto: "Cormorant Garamond", Garamond, Georgia, serif;
+
+      --largura: 56rem;
+      /* Escala da moldura dourada (imagem de 1254 × 1254 px) */
+      --m: 0.17;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--pergaminho);
+      color-scheme: light;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
+    /* Layout fixo de desktop: abaixo dessa largura a página rola na horizontal */
+    body {
+      min-width: 62rem;
+      margin: 0;
+      overflow-x: clip;
+      font-family: var(--fonte-texto);
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--tinta);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Pergaminho fixo atrás de tudo */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: var(--pergaminho) var(--img-pergaminho) center / cover no-repeat;
+    }
+
+    ::selection {
+      background: rgb(74 26 87 / 0.18);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--purpura);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .pular {
+      position: absolute;
+      top: -4rem;
+      left: 1rem;
+      z-index: 10;
+      padding: 0.5rem 1rem;
+      font-family: var(--fonte-titulo);
+      font-size: 0.85rem;
+      color: var(--pergaminho);
+      background: var(--purpura);
+      text-decoration: none;
+    }
+
+    .pular:focus {
+      top: 1rem;
+    }
+
+    /* ---------- Tela de carregamento ---------- */
+
+    /* Só aparece se o script ligar a classe "carregando" no <html>.
+       Sem JavaScript, o site abre direto. */
+    .carregamento {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 1.25rem;
+      background: radial-gradient(ellipse at 50% 45%, #f9f2e4, var(--pergaminho) 70%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.7s ease, visibility 0s 0.7s;
+    }
+
+    html.carregando {
+      overflow: hidden;
+    }
+
+    html.carregando .carregamento {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition: none;
+    }
+
+    .carregamento__brasao {
+      width: 6.5rem;
+      aspect-ratio: 1;
+      background: var(--img-brasao) center / contain no-repeat;
+    }
+
+    .carregamento__titulo {
+      margin: 0;
+      padding-left: 0.2em;
+      font-family: var(--fonte-titulo);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purpura);
+    }
+
+    .carregamento__barra {
+      width: min(16rem, 60vw);
+      height: 2px;
+      overflow: hidden;
+      background: rgb(176 135 58 / 0.25);
+    }
+
+    .carregamento__barra::after {
+      content: "";
+      display: block;
+      height: 100%;
+      background: linear-gradient(to right, var(--ouro), var(--ouro-claro));
+      transform-origin: left;
+      transform: scaleX(var(--progresso, 0.04));
+      transition: transform 0.35s ease-out;
+    }
+
+    /* Frase do universo de Rick Riordan que troca a cada poucos segundos */
+    .carregamento__frase {
+      display: grid;
+      align-content: start;
+      gap: 0.3rem;
+      width: min(30rem, 86vw);
+      min-height: 4.2rem;
+      margin: 0.25rem 0 0;
+      text-align: center;
+      transition: opacity 0.5s ease;
+    }
+
+    .carregamento__frase.trocando {
+      opacity: 0;
+    }
+
+    .carregamento__frase q {
+      quotes: none;
+      font-family: var(--fonte-texto);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      color: var(--tinta);
+    }
+
+    .carregamento__frase cite {
+      font-family: var(--fonte-titulo);
+      font-style: normal;
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ouro);
+    }
+
+    .carregamento__texto {
+      margin: 0;
+      padding-left: 0.3em;
+      font-family: var(--fonte-titulo);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--tinta-suave);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .carregamento__brasao {
+        animation: pulsar 2.2s ease-in-out infinite;
+      }
+
+      /* A entrada do topo só começa quando o site abre */
+      html.carregando .topo__fundo,
+      html.carregando .topo__ornamento,
+      html.carregando .topo__titulo,
+      html.carregando .topo__subtitulo,
+      html.carregando .portal {
+        animation-play-state: paused;
+      }
+    }
+
+    @keyframes pulsar {
+      50% {
+        opacity: 0.55;
+        scale: 0.96;
+      }
+    }
+
+    /* ---------- Barra de rolagem ---------- */
+
+    /* Chrome, Edge e Safari: trilho de pergaminho e puxador dourado com borda */
+    ::-webkit-scrollbar {
+      width: 14px;
+      height: 14px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #efe3cc;
+      border-left: 1px solid rgb(176 135 58 / 0.35);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to right, var(--ouro), var(--ouro-claro), var(--ouro));
+      border: 3px solid #efe3cc;
+      border-radius: 10px;
+      min-height: 3rem;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to right, var(--purpura), var(--purpura-viva), var(--purpura));
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: #efe3cc;
+    }
+
+    /* Firefox */
+    @supports not selector(::-webkit-scrollbar) {
+      html,
+      .panteao__caixa {
+        scrollbar-width: thin;
+        scrollbar-color: var(--ouro) #efe3cc;
+      }
+    }
+
+    /* ---------- Botão de voltar ao topo ---------- */
+
+    .voltar-topo {
+      position: fixed;
+      right: 1.75rem;
+      bottom: 1.75rem;
+      z-index: 80;
+      display: grid;
+      place-items: center;
+      width: 3rem;
+      height: 3rem;
+      color: var(--purpura);
+      text-decoration: none;
+      background: rgb(255 250 238 / 0.92);
+      border: 1px solid var(--ouro);
+      box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.7), 0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45);
+      transition: opacity 0.3s, translate 0.3s, color 0.2s, background-color 0.2s;
+    }
+
+    /* Seta feita com duas bordas */
+    .voltar-topo::before {
+      content: "";
+      width: 0.7rem;
+      height: 0.7rem;
+      margin-top: 0.3rem;
+      border-top: 2px solid currentColor;
+      border-left: 2px solid currentColor;
+      rotate: 45deg;
+    }
+
+    .voltar-topo:hover,
+    .voltar-topo:focus-visible {
+      color: #f6ead0;
+      background: var(--purpura);
+    }
+
+    /* Escondido enquanto a página está no topo (o script liga a classe) */
+    .voltar-topo.oculto {
+      opacity: 0;
+      translate: 0 1rem;
+      pointer-events: none;
+    }
+
+    /* ---------- Laterais: louros e colunatas ---------- */
+
+    /* Envolve a cronologia e o rodapé; as laterais começam abaixo do topo */
+    .pagina {
+      position: relative;
+    }
+
+    .cenario {
+      display: none;
+    }
+
+    /* Só aparecem quando sobra espaço dos lados do conteúdo */
+    @media (min-width: 80rem) {
+      .cenario {
+        /* Espaço livre de cada lado da coluna de conteúdo */
+        --vao: calc((100vw - var(--largura)) / 2);
+        /* Colunatas: até 66% da tela, sem invadir demais o texto */
+        --alto-colunata: min(66vh, (var(--vao) + 2rem) / 0.42);
+        --alto-louro: min(52vh, 34rem);
+
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        overflow: clip;
+        pointer-events: none;
+      }
+
+      /* Palco do tamanho da tela que acompanha a rolagem */
+      .cenario__palco {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+      }
+
+      .cenario__colunata {
+        position: absolute;
+        bottom: 0;
+        height: var(--alto-colunata);
+        aspect-ratio: 971 / 1619;
+        opacity: 0.75;
+        mask-composite: intersect;
+      }
+
+      .cenario__colunata--esq {
+        left: 0;
+        background: var(--img-colunata-esq) center / 100% 100% no-repeat;
+        mask-image:
+          linear-gradient(to right, #000 40%, transparent 72%),
+          linear-gradient(to bottom, transparent, #000 16%);
+      }
+
+      .cenario__colunata--dir {
+        right: 0;
+        background: var(--img-colunas-dir) center / 100% 100% no-repeat;
+        mask-image:
+          linear-gradient(to left, #000 50%, transparent 85%),
+          linear-gradient(to bottom, transparent, #000 16%);
+      }
+
+      .cenario__louro {
+        position: absolute;
+        top: 4vh;
+        height: var(--alto-louro);
+        aspect-ratio: 1024 / 1536;
+        opacity: 0.9;
+      }
+
+      .cenario__louro--esq {
+        left: 1.5vw;
+        background: var(--img-louro-esq) center / 100% 100% no-repeat;
+      }
+
+      .cenario__louro--dir {
+        right: 1.5vw;
+        background: var(--img-louro-dir) center / 100% 100% no-repeat;
+      }
+    }
+
+    /* ---------- Topo ---------- */
+
+    /* O título fica na faixa de céu, acima da cidade */
+    .topo {
+      position: relative;
+      display: grid;
+      place-items: start center;
+      min-height: clamp(15rem, 17.5vw, 24rem);
+      padding: clamp(1.75rem, 3.2vw, 3rem) 1rem 2rem;
+      text-align: center;
+    }
+
+    /* O céu branco da imagem some no pergaminho com multiply */
+    .topo__fundo {
+      position: absolute;
+      inset: 0;
+      background: var(--img-topo) center top / cover no-repeat;
+      mix-blend-mode: multiply;
+      mask-image: linear-gradient(to bottom, #000 62%, transparent);
+    }
+
+    .topo__conteudo {
+      position: relative;
+    }
+
+    .topo__ornamento {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .topo__ornamento::before,
+    .topo__ornamento::after {
+      content: "";
+      width: clamp(3rem, 14vw, 10rem);
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--ouro));
+    }
+
+    .topo__ornamento::after {
+      background: linear-gradient(to left, transparent, var(--ouro));
+    }
+
+    .topo__brasao {
+      width: 4.25rem;
+      aspect-ratio: 1;
+      background: var(--img-brasao) center / contain no-repeat;
+    }
+
+    .topo__titulo {
+      margin: 0;
+      padding-left: 0.1em; /* compensa o espaçamento após a última letra */
+      font-family: var(--fonte-titulo);
+      font-weight: 600;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purpura);
+      text-shadow: 0 0 1.5rem rgb(250 244 232 / 0.9);
+    }
+
+    .topo__subtitulo {
+      margin: 1rem 0 0;
+      padding-left: 0.38em;
+      font-family: var(--fonte-titulo);
+      font-size: clamp(0.68rem, 1.2vw, 0.8rem);
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--tinta-suave);
+    }
+
+    /* ---------- Menu do site e lista de deuses ---------- */
+
+    /* O portal é mais largo que a coluna da cronologia: deuses | menu | deuses */
+    .portal {
+      --largo: min(72rem, 100vw - 2rem);
+      width: var(--largo);
+      margin: 0 0 3.5rem calc((100% - var(--largo)) / 2);
+    }
+
+    /* Águia no centro de uma linha dourada, abrindo o menu */
+    .menu__abertura {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: -1.5rem 0 1.5rem;
+    }
+
+    .menu__abertura::before,
+    .menu__abertura::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--ouro));
+    }
+
+    .menu__abertura::after {
+      background: linear-gradient(to left, transparent, var(--ouro));
+    }
+
+    .menu__abertura .aguia {
+      margin: 0;
+    }
+
+    .portal__corpo {
+      display: grid;
+      grid-template-columns: 1fr 36rem 1fr;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(to right, transparent, var(--ouro), transparent) 1;
+    }
+
+    /* Menu enxuto: 4 colunas; as linhas 1-2 e 3-4 formam dois blocos */
+    .menu ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.35rem 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      font-family: var(--fonte-titulo);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .menu li:nth-child(n + 9):nth-child(-n + 12) {
+      margin-top: 1.1rem;
+    }
+
+    .deuses a {
+      color: var(--tinta);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .deuses a:hover {
+      color: var(--purpura);
+    }
+
+    /* Itens do menu: ao passar o mouse a palavra sobe um pouco, fica roxa e ganha uma barrinha dourada */
+    .menu a {
+      position: relative;
+      display: inline-block;
+      padding: 0.3rem 0.15rem 0.45rem;
+      color: var(--tinta);
+      text-decoration: none;
+      transition: color 0.25s, translate 0.25s, text-shadow 0.25s, letter-spacing 0.25s;
+    }
+
+    .menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--ouro) 20%, var(--ouro-claro) 50%, var(--ouro) 80%, transparent);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.24, 1);
+    }
+
+    .menu a:hover,
+    .menu a:focus-visible {
+      color: var(--purpura);
+      translate: 0 -2px;
+      letter-spacing: 0.07em;
+      text-shadow: 0 0 0.9rem rgb(220 193 131 / 0.7);
+    }
+
+    .menu a:hover::after,
+    .menu a:focus-visible::after,
+    .menu a[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+
+    /* A página atual fica em roxo com a barrinha sempre acesa */
+    .menu a[aria-current="page"] {
+      color: var(--purpura);
+    }
+
+    /* Deuses: grupos com título e 2 nomes por linha */
+    .deuses {
+      display: grid;
+      gap: 1.25rem;
+      text-align: center;
+    }
+
+    /* Deuses: texto discreto, em itálico e minúsculas, só uma palavra de título */
+    .deuses__titulo {
+      display: block;
+      margin: 0 0 0.35rem;
+      font-family: var(--fonte-texto);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--ouro);
+    }
+
+    .deuses ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.05rem 0.75rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: var(--fonte-texto);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .deuses a {
+      color: var(--tinta-suave);
+    }
+
+    .deuses a:hover {
+      color: var(--purpura);
+    }
+
+    /* Nome sozinho na última linha fica centralizado */
+    .deuses li:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+
+    /* Menu sozinho no centro */
+    .portal__corpo {
+      display: block;
+    }
+
+    .menu {
+      width: 36rem;
+      margin: 0 auto;
+    }
+
+    /* ---------- Botão Panteão: tabula ansata, a plaqueta romana com "orelhas" ---------- */
+
+    .panteao {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .panteao__toggle {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    .panteao__botao {
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 2.2rem;
+      cursor: pointer;
+      font-family: var(--fonte-titulo);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--purpura);
+      background: rgb(255 250 238 / 0.65);
+      border: 1px solid var(--ouro);
+      box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.6);
+      transition: color 0.2s, background-color 0.2s;
+    }
+
+    .panteao__botao span {
+      padding-left: 0.22em;
+    }
+
+    .panteao__botao::before,
+    .panteao__botao::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 0.9rem;
+      height: 1.5rem;
+      translate: 0 -50%;
+      background: var(--ouro);
+    }
+
+    .panteao__botao::before {
+      right: 100%;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    .panteao__botao::after {
+      left: 100%;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    .panteao__botao:hover,
+    .panteao__toggle:checked + .panteao__botao {
+      color: #f6ead0;
+      background: var(--purpura);
+    }
+
+    .panteao__toggle:focus-visible + .panteao__botao {
+      outline: 2px solid var(--purpura);
+      outline-offset: 4px;
+    }
+
+    /* ---------- Janela do Panteão ---------- */
+
+    /* Fechada fica fora da página (display: none), então os estandartes só carregam ao abrir */
+    .panteao__janela {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 900;
+      place-items: center;
+      padding: 2vh 2vw;
+    }
+
+    body:has(.panteao__toggle:checked) .panteao__janela {
+      display: grid;
+    }
+
+    html:has(.panteao__toggle:checked) {
+      overflow: hidden;
+    }
+
+    .panteao__fundo {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      background: rgb(28 10 34 / 0.6);
+      backdrop-filter: blur(2px);
+    }
+
+    .panteao__caixa {
+      position: relative;
+      width: min(100%, 84rem);
+      max-height: 96vh;
+      overflow-y: auto;
+      padding: 1.75rem 2.5rem 2.25rem;
+      background: #f4ead8 var(--img-pergaminho) center / cover;
+      border: 1px solid var(--ouro);
+      box-shadow:
+        inset 0 0 0 4px rgb(244 234 216 / 0.9),
+        inset 0 0 0 5px rgb(176 135 58 / 0.45),
+        0 2rem 4rem -1rem rgb(20 8 25 / 0.6);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      body:has(.panteao__toggle:checked) .panteao__fundo {
+        animation: aparecer 0.3s ease-out both;
+      }
+
+      body:has(.panteao__toggle:checked) .panteao__caixa {
+        animation: surgir 0.4s cubic-bezier(0.22, 0.8, 0.24, 1) both;
+      }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+      }
+    }
+
+    .panteao__fechar {
+      position: sticky;
+      top: 0;
+      float: right;
+      margin: -0.75rem -1.5rem 0 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--purpura);
+      border: 1px solid var(--ouro);
+      background: #f7efde;
+      z-index: 2;
+    }
+
+    .panteao__fechar:hover {
+      color: #f6ead0;
+      background: var(--purpura);
+    }
+
+    .sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    /* Título de cada grupo: louro no meio de uma linha dourada e o nome embaixo */
+    .pt-grupo + .pt-grupo,
+    .pt-dupla {
+      margin-top: 1.25rem;
+    }
+
+    .pt-titulo {
+      display: grid;
+      justify-items: center;
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+
+    .pt-titulo__louro {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      width: min(100%, 36rem);
+    }
+
+    .pt-titulo__louro::before,
+    .pt-titulo__louro::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--ouro));
+    }
+
+    .pt-titulo__louro::after {
+      background: linear-gradient(to left, transparent, var(--ouro));
+    }
+
+    .pt-titulo__louro {
+      background: var(--img-brasao) center / 1.9rem no-repeat;
+      height: 1.9rem;
+    }
+
+    .pt-titulo__louro::before {
+      margin-right: 1.7rem;
+    }
+
+    .pt-titulo__louro::after {
+      margin-left: 1.7rem;
+    }
+
+    .pt-titulo h2 {
+      margin: 0.35rem 0 0;
+      padding-left: 0.14em;
+      font-family: var(--fonte-titulo);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purpura);
+    }
+
+    /* Fileira de estandartes: um ao lado do outro, com losangos dourados entre os nomes */
+    .pt-fileira {
+      --larg: 6.5rem;
+      --vao: 1.6rem;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(0, var(--larg));
+      justify-content: center;
+      column-gap: var(--vao);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pt-grupo--notaveis .pt-fileira {
+      --larg: 7.5rem;
+      --vao: 2.25rem;
+    }
+
+    /* Deuses menores em duas linhas de 8 */
+    .pt-grupo--menores .pt-fileira {
+      --larg: 6rem;
+      --vao: 1.6rem;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(8, minmax(0, var(--larg)));
+      row-gap: 1.1rem;
+    }
+
+    .pt-grupo--menores li:nth-child(8n + 1)::before {
+      display: none;
+    }
+
+    .pt-fileira li {
+      position: relative;
+    }
+
+    .pt-fileira li + li::before {
+      content: "";
+      position: absolute;
+      left: calc(var(--vao) / -2);
+      bottom: 0.55em;
+      width: 0.3rem;
+      height: 0.3rem;
+      translate: -50% 0;
+      rotate: 45deg;
+      background: var(--ouro);
+    }
+
+    /* Estandartes alinhados pelo topo e nomes alinhados na base da fileira */
+    .pt-fileira a {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      height: 100%;
+      justify-items: center;
+      gap: 0.45rem;
+      color: var(--tinta);
+      text-decoration: none;
+    }
+
+    .pt-fileira img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0.4rem 0.5rem rgb(50 25 10 / 0.25));
+      transition: translate 0.25s ease;
+    }
+
+    .pt-fileira span {
+      font-family: var(--fonte-titulo);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    .pt-fileira a:hover img {
+      translate: 0 -0.25rem;
+    }
+
+    .pt-fileira a:hover span {
+      color: var(--purpura);
+    }
+
+    /* Entidades e Seres lado a lado */
+    .pt-dupla {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .pt-dupla .pt-grupo {
+      margin-top: 0;
+    }
+
+    .pt-dupla .pt-fileira {
+      --larg: 5.5rem;
+    }
+
+    /* Entrada do topo: o título se fecha como uma inscrição */
+    @media (prefers-reduced-motion: no-preference) {
+      .topo__fundo {
+        animation: assentar 2.2s cubic-bezier(0.22, 0.8, 0.24, 1) both;
+      }
+
+      .topo__ornamento,
+      .topo__subtitulo,
+      .portal {
+        animation: surgir 1.1s cubic-bezier(0.22, 0.8, 0.24, 1) both;
+      }
+
+      .topo__titulo {
+        animation: inscrever 1.6s cubic-bezier(0.22, 0.8, 0.24, 1) 0.15s both;
+      }
+
+      .topo__subtitulo {
+        animation-delay: 0.6s;
+      }
+
+      .portal {
+        animation-delay: 0.8s;
+      }
+    }
+
+    @keyframes assentar {
+      from {
+        opacity: 0;
+        scale: 1.04;
+      }
+    }
+
+    @keyframes surgir {
+      from {
+        opacity: 0;
+        translate: 0 0.6rem;
+      }
+    }
+
+    @keyframes inscrever {
+      from {
+        opacity: 0;
+        letter-spacing: 0.4em;
+        filter: blur(4px);
+      }
+    }
+
+    /* ---------- Cronologia ---------- */
+
+    .cronologia {
+      width: min(100% - 2rem, var(--largura));
+      margin-inline: auto;
+    }
+
+    /* Águia isolada, recortada do divisor */
+    .aguia {
+      display: block;
+      width: 6rem;
+      height: 3rem;
+      margin: -1.5rem auto 1.25rem;
+      background: var(--img-divisor) 50% 51% / 571% auto no-repeat;
+    }
+
+    .anais {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Cada ano numa coluna central: título, ilustração e texto, todos na mesma largura */
+    .ano {
+      --coluna: 38rem;
+      text-align: center;
+    }
+
+    /* Divisor com a águia entre um ano e outro */
+    .ano + .ano::before {
+      content: "";
+      display: block;
+      height: 4.5rem;
+      margin: 3rem 0;
+      background: var(--img-divisor) center / min(100%, 42rem) auto no-repeat;
+    }
+
+    /* ---------- Moldura dourada ---------- */
+
+    /* A moldura por fora da imagem tem a mesma largura da coluna de texto */
+    .quadro {
+      /* Imagem reserva enquanto a ilustração do ano não existir */
+      --reserva: var(--img-estandarte) center 55% / auto 84% no-repeat;
+
+      position: relative;
+      width: calc(var(--coluna) - 2 * 121px * var(--m));
+      aspect-ratio: 3 / 2;
+      margin: calc(152px * var(--m)) auto calc(2rem + 152px * var(--m));
+      /* As artes são quadradas: o recorte 3:2 mostra a faixa indicada em --foco
+         (0% = topo da arte, 100% = base). Ajuste por ano no style do <figure>. */
+      background:
+        var(--ilustracao, none) var(--foco, 50% 35%) / cover no-repeat,
+        var(--reserva),
+        radial-gradient(circle at 50% 42%, #f8f1e3, #dccaa8);
+      box-shadow:
+        inset 0 0 0 1px rgb(120 90 40 / 0.35),
+        inset 0 0 2.5rem rgb(70 40 10 / 0.22),
+        0 1.4rem 2rem -0.6rem rgb(70 45 15 / 0.3);
+    }
+
+    .ano:nth-child(even) .quadro {
+      --reserva: var(--img-brasao) center / auto 76% no-repeat;
+    }
+
+    .quadro::after {
+      content: "";
+      position: absolute;
+      inset: calc(-152px * var(--m)) calc(-121px * var(--m));
+      border-style: solid;
+      border-color: transparent;
+      border-width: calc(270px * var(--m)) calc(235px * var(--m));
+      border-image: var(--img-moldura) 270 235 stretch;
+      pointer-events: none;
+    }
+
+    /* ---------- Título e texto de cada ano ---------- */
+
+    .ano__titulo {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto 1.75rem;
+      padding-bottom: 0.85rem;
+      font-family: var(--fonte-texto);
+      font-weight: 700;
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      font-variant-numeric: lining-nums;
+      line-height: 1;
+      color: var(--purpura);
+      transition: color 0.3s;
+    }
+
+    .ano__titulo::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 2.75rem;
+      height: 2px;
+      translate: -50% 0;
+      background: linear-gradient(to right, var(--ouro), var(--ouro-claro));
+      transition: width 0.5s cubic-bezier(0.22, 0.8, 0.24, 1);
+    }
+
+    /* Texto justificado, com hifenização para não abrir buracos entre as palavras */
+    .ano__texto p {
+      margin: 0 0 1em;
+      text-align: justify;
+      hyphens: auto;
+      text-wrap: pretty;
+    }
+
+    .ano__texto p:last-child {
+      margin-bottom: 0;
+    }
+
+    .ano__texto {
+      max-width: var(--coluna);
+      margin-inline: auto;
+    }
+
+    /* Ano escolhido no índice */
+    .ano:target .ano__titulo {
+      color: var(--purpura-viva);
+    }
+
+    .ano:target .ano__titulo::after {
+      width: 5.5rem;
+    }
+
+    /* ---------- Rodapé ---------- */
+
+    .rodape {
+      padding: 4.5rem 1rem 3.5rem;
+      text-align: center;
+    }
+
+    .rodape .aguia {
+      margin: 0 auto 1.25rem;
+    }
+
+    .rodape__lema {
+      margin: 0 0 1rem;
+      padding-left: 0.32em;
+      font-family: var(--fonte-titulo);
+      font-size: 0.8rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--tinta-suave);
+    }
+
+    .rodape__voltar {
+      font-family: var(--fonte-titulo);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      color: var(--purpura);
+      text-underline-offset: 0.3em;
+      text-decoration-color: var(--ouro);
+    }
+  </style>
+</head>
+<body id="topo">
+  <a class="pular" href="#cronologia">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo__fundo" aria-hidden="true"></div>
+    <div class="topo__conteudo">
+      <div class="topo__ornamento">
+        <span class="topo__brasao" aria-hidden="true"></span>
+      </div>
+      <h1 class="topo__titulo">Acampamento Júpiter</h1>
+    </div>
+  </header>
+
+  <div class="pagina">
+    <!-- Laterais: louros no alto e colunatas embaixo (só em telas largas) -->
+    <div class="cenario" aria-hidden="true">
+      <div class="cenario__palco">
+        <div class="cenario__colunata cenario__colunata--esq"></div>
+        <div class="cenario__colunata cenario__colunata--dir"></div>
+        <div class="cenario__louro cenario__louro--esq"></div>
+        <div class="cenario__louro cenario__louro--dir"></div>
+      </div>
+    </div>
+
+    <main id="cronologia" class="cronologia">
+      <!-- Menu do site (centro) e lista de deuses (laterais): troque cada href="#" pelo link da página -->
+      <div class="portal">
+        <div class="menu__abertura" aria-hidden="true"><span class="aguia"></span></div>
+        <div class="portal__corpo">
+        <nav class="menu" aria-label="Menu do site">
+          <ul>
+            <li><a href="/inicio">Início</a></li>
+            <li><a href="/trama">Trama</a></li>
+            <li><a href="/ambientacao">Ambientação</a></li>
+            <li><a href="/cronologia" aria-current="page">Cronologia</a></li>
+            <li><a href="/sistemas">Sistemas</a></li>
+            <li><a href="/guias">Guias</a></li>
+            <li><a href="/olimpiadas">Olimpíadas</a></li>
+            <li><a href="/legados">Legados</a></li>
+            <li><a href="/coortes">Coortes</a></li>
+            <li><a href="/senado">Senado</a></li>
+            <li><a href="/bestiario">Bestiário</a></li>
+            <li><a href="/arsenal">Arsenal</a></li>
+            <li><a href="/conquistas">Conquistas</a></li>
+            <li><a href="/formularios">Formulários</a></li>
+            <li><a href="/nucleos">Núcleos</a></li>
+            <li><a href="/agradecimentos">Agradecimentos</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão do Panteão: o checkbox guarda o estado aberto/fechado (só HTML e CSS) -->
+        <div class="panteao">
+          <input type="checkbox" id="panteao" class="panteao__toggle">
+          <label for="panteao" class="panteao__botao"><span>Panteão</span></label>
+        </div>
+        </div>
+      </div>
+
+      <!-- As ilustrações de cada ano ficam nas variáveis --img-2016 a --img-2026, no início do <style>. -->
+      <ol class="anais">
+        <li class="ano" id="ano-2016">
+          <figure class="quadro" style="--ilustracao: var(--img-2016)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2016</h2>
+          <div class="ano__texto">
+            <p>Relatórios de inteligência da Terra Além dos Deuses confirmaram que o gigante Alcioneu mantinha uma linhagem de Hiperbóreos adormecida no Alasca. Diante da ameaça, a Legião iniciou a Operação Gelo Eterno e enviou a Quinta Coorte para conter os gigantes de gelo que se preparavam para avançar rumo ao sul. Dentre as perdas em batalha, estavam Hector e Thomas, filhos de Sybil Laurent, a áugure do acampamento.</p>
+            <p>Enquanto a Quinta sobrevivia no norte, uma seita fanática formada por semideuses e legados veteranos infiltrou-se no Senado de Nova Roma. Liderados por Stanwyck, um filho de Hécate, os conspiradores tentaram realizar um ritual de sangue no Templo de Saturno com o objetivo de depor o pretor em exercício e restaurar o governo dos Titãs sobre o acampamento. O golpe foi sufocado nos bastidores após uma batalha sangrenta e silenciosa na Cúria Júlia.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2017">
+          <figure class="quadro" style="--ilustracao: var(--img-2017); --foco: 50% 20%" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2017</h2>
+          <div class="ano__texto">
+            <p>O conflito no norte se intensificou quando os gigantes invocaram a fúria de Ceto, deusa primordial dos monstros marinhos. O Golfo do Alasca foi tomado por escorpiões marinhos gigantes e serpentes ancestrais capazes de congelar as águas. Exércitos da Terceira e da Quarta Coorte foram enviados como reforço à Quinta e enfrentaram as criaturas sob nevascas de origem mística até conterem o avanço do exército inimigo.</p>
+            <p>Ao mesmo tempo, com a maior parte da Legião mobilizada no Alasca, o Senado concluiu o julgamento dos responsáveis pela conspiração do ano anterior. A maioria dos envolvidos foi presa, enquanto o líder da seita foi condenado à morte por alta traição contra a águia romana. Por decisão unânime, o Senado também proibiu o uso de magia no acampamento.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2018">
+          <figure class="quadro" style="--ilustracao: var(--img-2018); --foco: 50% 10%" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2018</h2>
+          <div class="ano__texto">
+            <p>Após meses de cerco nas florestas congeladas do Yukon, os legados de Marte e Vulcano conseguiram encurralar o líder dos hiperbóreos. Usando catapultas carregadas de fogo grego e flechas de ouro imperial, a Legião abateu o gigante. A fronteira norte foi pacificada, mas o preço foi pago em armaduras esmagadas sob o gelo e em baixas profundas.</p>
+            <p>No exato momento em que o general de gelo caiu no norte, sua agonia desencadeou uma onda de choque mística que rompeu os portões do cemitério de Nova Roma. Milhares de Manes, espíritos de legionários que haviam morrido em desonra ao longo dos séculos, ergueram-se das tumbas e avançaram sobre a cidade. Com a maior parte da Legião ainda mobilizada no norte, idosos, senadores e adolescentes tiveram de empunhar antigos gládios para defender as muralhas até a chegada dos reforços.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2019">
+          <figure class="quadro" style="--ilustracao: var(--img-2019)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2019</h2>
+          <div class="ano__texto">
+            <p>Depois de meses sem que nenhum novo probatio chegasse ao Acampamento Júpiter, a atenção da Legião voltou-se para o leste, onde uma numerosa colônia de Empousai infestava um sistema de cavernas nos Montes Apalaches. As criaturas passaram a sequestrar semideuses isolados que viajavam em direção à Califórnia para enfrentar as provações da Casa do Lobo. Diante da ameaça, o Senado autorizou uma incursão subterrânea imediata.</p>
+            <p>A Primeira e a Segunda Coorte desceram às cavernas equipadas com lanças pesadas e enfrentaram as Empousai em combates travados na escuridão. Com o auxílio de Lupa, a Legião eliminou a resistência inimiga em poucos meses. Ao final da operação, engenheiros de Vulcano implodiram as principais saídas dos túneis, aprisionando os monstros sobreviventes no subsolo durante o outono daquele ano.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2020">
+          <figure class="quadro" style="--ilustracao: var(--img-2020)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2020</h2>
+          <div class="ano__texto">
+            <p>A pressão tectônica e a magia residual das implosões do ano anterior acabaram despertando algo muito pior: um Drakon ancestral, cujo couro era imune ao ouro imperial comum e que exalava um vapor ácido capaz de derreter escudos. A criatura começou a descer a cordilheira em direção às cidades mortais, ameaçando expor o mundo mitológico. A Legião precisou mobilizar três coortes em uma caçada épica a céu aberto pelas florestas densas. O confronto final exigiu que os legionários adotassem a formação de tartaruga (testudo) sob uma chuva de veneno, conseguindo cegar e decapitar a besta após uma semana de cerco ininterrupto.</p>
+            <p>Sybil Laurent, a áugure, anunciou, enquanto o grosso da Legião ainda caçava a fera nas montanhas, uma profecia que apontava um intenso distúrbio na Névoa sobre Long Island e advertia que sua origem poderia levar à ruína da Legião. A notícia levou o Senado a iniciar uma investigação e a autorizar uma missão de reconhecimento até Nova York. Durante a missão, confirmou-se a existência do Acampamento Meio-Sangue, uma comunidade destinada aos semideuses gregos.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2021">
+          <figure class="quadro" style="--ilustracao: var(--img-2021)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2021</h2>
+          <div class="ano__texto">
+            <p>A calmaria foi interrompida na Califórnia quando o rei lobo Licaão reuniu uma matilha de lobos humanoides renegados e Centauros Selvagens para atacar as fazendas de Nova Roma. Aproveitando-se do desgaste causado pelas campanhas dos anos anteriores, suas forças cercaram o Vale do Sacramento e incendiaram armazéns próximos ao Monte Diablo.</p>
+            <p>Durante o conflito, a áugure entrou em transe e recitou a Profecia dos Três Pretores, segundo a qual a Legião seria liderada por um traidor antes do fim da década. A profecia provocou uma crise política no Acampamento Júpiter: os dois pretores passaram a suspeitar um do outro, as coortes dividiram-se entre facções rivais, e a situação chegou à iminência de um confronto no Campo de Marte, justamente enquanto as forças de Licaão avançavam pelas fronteiras.</p>
+            <p>No mesmo período, o Senado também se dividia quanto à possibilidade de estabelecer relações com os semideuses gregos. Embora parte dos senadores defendesse o isolamento, outros consideravam uma aliança necessária diante das ameaças crescentes. Depois de diversas sessões acaloradas no Senado, ficou finalmente decidido que um filho de Nêmesis seria enviado ao Acampamento Meio-Sangue para iniciar negociações e avaliar a possibilidade de uma aliança entre as duas comunidades.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2022">
+          <figure class="quadro" style="--ilustracao: var(--img-2022)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2022</h2>
+          <div class="ano__texto">
+            <p>Por meses, o Acampamento Júpiter viveu sob estado de sítio. Os legionários enfrentaram a selvageria dos lobisomens nas colinas da Califórnia, em combates nos quais apenas lâminas de prata e o escasso ouro imperial eram eficazes. A Névoa ocultou o conflito do mundo mortal, fazendo-o parecer a maior sequência de incêndios florestais da história do estado.</p>
+            <p>Para restaurar a unidade da Legião após a Profecia dos Três Pretores, o Senado determinou que todos os oficiais e centuriões renovassem seu juramento de lealdade à águia romana diante do Templo de Júpiter. Durante a cerimônia, cada comandante foi submetido a um ritual conduzido pela áugure para identificar possíveis influências místicas, traições ou vínculos com forças inimigas. A investigação não revelou qualquer evidência de conspiração, mas a desconfiança entre as coortes permaneceu.</p>
+            <p>As negociações iniciadas entre romanos e gregos, enquanto isso, produziram seus primeiros resultados. Em resposta ao avanço das forças de Licaão, o Acampamento Meio-Sangue enviou um contingente de semideuses para reforçar a defesa de Nova Roma. As Caçadoras de Ártemis também participaram da campanha, atacando as forças inimigas nas florestas e protegendo as rotas de abastecimento da Legião. A atuação conjunta dos romanos, dos gregos e das Caçadoras foi decisiva para conter o ataque e consolidou a primeira aliança formal entre o Acampamento Júpiter e o Acampamento Meio-Sangue.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2023">
+          <figure class="quadro" style="--ilustracao: var(--img-2023)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2023</h2>
+          <div class="ano__texto">
+            <p>Com os monstros sobreviventes subjugados, o Senado impôs termos severos. Augúrios foram realizados e um pacto de não agressão foi selado, exigindo que os monstros recuassem para além das fronteiras da Sierra Nevada. A vitória sobre Licaão, no entanto, deixara como sequela a corrupção do Pequeno Tibre e da linha de fronteira sagrada do acampamento pelas sombras dos monstros derrotados no ano anterior: a água tornara-se ácida e amaldiçoada, enfraquecendo progressivamente a proteção das fronteiras.</p>
+            <p>Sem alternativa, tiveram que recorrer a Hécate, a deusa da magia, para purificar o rio antes que as defesas mágicas do acampamento colapsassem por completo. A pretora Emily Deere viajou até Nova York e encontrou a deusa em sua mansão próxima ao Gramercy Park. Ela aceitou ajudá-los, mas afirmou que pediria algo em troca no futuro.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2024">
+          <figure class="quadro" style="--ilustracao: var(--img-2024)" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2024</h2>
+          <div class="ano__texto">
+            <p>Em São Francisco, uma cabala de mortais tentou confiscar os bens de Nova Roma, usando porões do distrito financeiro para invocar Lêmures contra os cobradores. Durante a contraoperação, uma mulher elegante, de terno cinza e balança de ébano — que, posteriormente, revelou-se ser Nêmesis —, arruinou a empresa dos mortais na bolsa. O caso foi arquivado como justiça poética. Descobriu-se, então, que a crise no mercado financeiro havia sido facilitada por uma aliança secreta entre famílias patrícias de Nova Roma e bilionários mortais do Vale do Silício, com o objetivo de privatizar o poder da Legião. O Senado ruiu em escândalo quando os pretores ordenaram o exílio e o confisco dos bens de três das linhagens mais antigas e ricas do acampamento. Foi uma limpeza política brutal, que mudou para sempre o equilíbrio do poder interno.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2025">
+          <figure class="quadro" style="--ilustracao: var(--img-2025); --foco: 50% 15%" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2025</h2>
+          <div class="ano__texto">
+            <p>O ano foi marcado pelo conflito no Golfo do México. Bandos imensos de Harpias e Sereias migraram para a costa do Texas e da Louisiana, provocando naufrágios e tempestades místicas. A resposta romana foi brutal: os pretores mobilizaram a Terceira e a Quarta Coorte a bordo de uma frota de navios de guerra modernos, construídos em segredo nos estaleiros da Califórnia e transportados por vias místicas. Os legionários resistiram ao canto hipnótico das Sereias e limparam os céus com balistas e flechas incendiárias. O confronto terminou com a destruição da Matriarca das feras, eliminando a última grande ameaça externa do continente norte-americano.</p>
+            <p>Para comemorar a vitória, o espírito de Marte Ultor manifestou-se no acampamento de forma gloriosa e imponente. A presença do deus da guerra funcionou como um selo de aprovação divina: o Senado e a Legião sentiram orgulho de terem cumprido seu dever. Sob a bênção do Vingador, os orçamentos foram reorganizados para consolidar as defesas existentes, os arsenais foram reabastecidos com o melhor ouro imperial e o treinamento militar atingiu a perfeição técnica. Foi o encerramento perfeito para dez anos de provações, deixando a Legião estruturada, unida e pacificada.</p>
+          </div>
+        </li>
+
+        <li class="ano" id="ano-2026">
+          <figure class="quadro" style="--ilustracao: var(--img-2026); --foco: 50% 5%" aria-hidden="true"></figure>
+          <h2 class="ano__titulo">2026</h2>
+          <div class="ano__texto">
+            <p>Com a última linha de frente desfeita e a bênção dos deuses consolidada no período anterior, o Acampamento Júpiter inicia o ano de 2026 imerso em uma era de paz incontestável e estabilidade civil. Nova Roma prospera como nunca, o Senado debate leis de infraestrutura com tranquilidade, e a Duodécima Legião desfruta de uma merecida calmaria, com suas fronteiras totalmente seguras de ponta a ponta na América do Norte. Há, no ar, um sentimento generalizado de soberba e segurança absoluta. Essa atmosfera pacífica e relaxada permite que os quartéis e as ruas da cidadela se voltem inteiramente para as celebrações e para a vida cotidiana.</p>
+          </div>
+        </li>
+      </ol>
+    </main>
+
+    <footer class="rodape">
+      <span class="aguia" aria-hidden="true"></span>
+      <p class="rodape__lema" lang="la">Senatus Populusque Romanus</p>
+      <a class="rodape__voltar" href="#topo">Voltar ao topo</a>
+    </footer>
+  </div>
+  <!-- Janela do Panteão: estandartes de cada deus. Troque href="#" pelo link da página do deus. -->
+  <div class="panteao__janela" role="dialog" aria-modal="true" aria-label="Panteão">
+    <label for="panteao" class="panteao__fundo" aria-hidden="true"></label>
+    <div class="panteao__caixa">
+      <label for="panteao" class="panteao__fechar" title="Fechar">&times;<span class="sr">Fechar</span></label>
+        <section class="pt-grupo pt-grupo--notaveis" aria-labelledby="pt-notaveis">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-notaveis">Deuses notáveis</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/ZLWBOzS.png" alt="" loading="lazy"><span>Júpiter</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/8uL98Ow.png" alt="" loading="lazy"><span>Netuno</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/Xl1xDLD.png" alt="" loading="lazy"><span>Plutão</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/470NHpH.png" alt="" loading="lazy"><span>Hécate</span></a></li>
+          </ul>
+        </section>
+        <section class="pt-grupo pt-grupo--olimpianos" aria-labelledby="pt-olimpianos">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-olimpianos">Deuses olimpianos</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/yjblcUW.png" alt="" loading="lazy"><span>Ceres</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/xDhsLhP.png" alt="" loading="lazy"><span>Marte</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/oLuMGSi.png" alt="" loading="lazy"><span>Apolo</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/mKANqFJ.png" alt="" loading="lazy"><span>Vulcano</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/A3sBpYI.png" alt="" loading="lazy"><span>Vênus</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/tYUWKCk.png" alt="" loading="lazy"><span>Mercúrio</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/u6x80XH.png" alt="" loading="lazy"><span>Baco</span></a></li>
+          </ul>
+        </section>
+        <section class="pt-grupo pt-grupo--menores" aria-labelledby="pt-menores">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-menores">Deuses menores</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/orDH3NG.png" alt="" loading="lazy"><span>Victória</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/mHAWlb4.png" alt="" loading="lazy"><span>Arcus</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/O6IoTAi.png" alt="" loading="lazy"><span>Fortuna</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/qCxxEY8.png" alt="" loading="lazy"><span>Ferônia</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/pouwOqL.png" alt="" loading="lazy"><span>Esculápio</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ZXVCovj.png" alt="" loading="lazy"><span>Epona</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/qkXNxFA.png" alt="" loading="lazy"><span>Somnus</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/9inuMzK.png" alt="" loading="lazy"><span>Nêmesis</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/S21JwPA.png" alt="" loading="lazy"><span>Belona</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/uLgehUu.png" alt="" loading="lazy"><span>Jano</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/UU5Nvoi.png" alt="" loading="lazy"><span>Cupido</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/J6ZtZDK.png" alt="" loading="lazy"><span>Discórdia</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/1Fdx1lP.png" alt="" loading="lazy"><span>Salácia</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/6kmV7lb.png" alt="" loading="lazy"><span>Áquilo</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/Wz5xxR4.png" alt="" loading="lazy"><span>Proserpina</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/QPa2YbS.png" alt="" loading="lazy"><span>Laverna</span></a></li>
+          </ul>
+        </section>
+      <div class="pt-dupla">
+        <section class="pt-grupo pt-grupo--entidades" aria-labelledby="pt-entidades">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-entidades">Entidades</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Heróis de Hércules</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Amazonas</span></a></li>
+          </ul>
+        </section>
+        <section class="pt-grupo pt-grupo--seres" aria-labelledby="pt-seres">
+          <div class="pt-titulo">
+            <span class="pt-titulo__louro" aria-hidden="true"></span>
+            <h2 id="pt-seres">Seres</h2>
+          </div>
+          <ul class="pt-fileira">
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Faunos</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Lares</span></a></li>
+            <li><a href="#"><img src="https://i.imgur.com/ztYypx6.png" alt="" loading="lazy"><span>Ninfas</span></a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* Fecha a janela do Panteão com Esc */
+    document.addEventListener("keydown", function (e) {
+      var t = document.getElementById("panteao");
+      if (e.key === "Escape" && t && t.checked) t.checked = false;
+    });
+  </script>
+  <!-- Botão flutuante de voltar ao topo, presente em todas as páginas -->
+  <a class="voltar-topo oculto" id="voltar-topo" href="#topo" aria-label="Voltar ao topo"></a>
+
+  <script>
+    /* Mostra o botão de voltar ao topo só depois de rolar um pouco */
+    (function () {
+      var botao = document.getElementById("voltar-topo");
+      if (!botao) return;
+      function atualizar() { botao.classList.toggle("oculto", window.pageYOffset < 400); }
+      window.addEventListener("scroll", atualizar, { passive: true });
+      atualizar();
+    })();
+  </script>
+</body>
+</html>
