@@ -60,6 +60,10 @@ const cssExtra = entre(base, "<style>\n", "\n  </style>").miolo
 const cssWeebly = `
 /* ---------- Ajustes do Weebly ---------- */
 .conteudo { display: block; }
+/* O Weebly aplica a fonte do tema (Quicksand) com !important em tudo dentro de #wsite-content,
+   onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site (Cormorant Garamond). */
+#wsite-content .ano__titulo { font-family: var(--fonte-texto) !important; font-weight: 700 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
+#wsite-content .ano__texto p { font-family: inherit !important; font-size: inherit !important; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }
 `;
