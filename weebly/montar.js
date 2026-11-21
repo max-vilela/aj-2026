@@ -143,6 +143,9 @@ for (const s of SLUGS) corpo = corpo.split('href="/' + s + '"').join('href="/' +
 corpo = corpo.split(' aria-current="page"').join("");
 corpo = corpo.replace(/<!--[\s\S]*?-->\n?\s*/g, (m) => (m.includes("Janela do Panteão") || m.includes("gaveta") ? m : ""));
 corpo = corpo.replace(/\n{3,}/g, "\n\n");
+/* O Weebly usa toda <img src> do HTML como og:image (pré-visualização de links). Para o link mostrar só o
+   brasão, as imagens do tema vão em data-src e um script curto liga o src no navegador. */
+corpo = corpo.replace(/<img ([^>]*?)src="/g, '<img $1data-src="');
 
 const cabecaFontes = [
   '  <link rel="preconnect" href="https://fonts.googleapis.com">',
@@ -163,6 +166,8 @@ ${cabecaFontes}
 ${corpo.trimEnd()}
 
   <div class="weebly-rodape">{footer}</div>
+
+  <script>for (var i = 0, m = document.images; i < m.length; i++) m[i].dataset.src && (m[i].src = m[i].dataset.src);</script>
 
   <div id="navMobile" class="nav mobile-nav" style="display: none">{menu}</div>
 
