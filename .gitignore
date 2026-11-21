@@ -1,3 +1,6 @@
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Previas geradas por weebly/montar.js
+weebly/preview/

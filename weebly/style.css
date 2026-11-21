@@ -1,0 +1,1205 @@
+/* ==========================================================
+   Cronologia do Acampamento Júpiter (HTML + CSS; JavaScript só na tela de carregamento)
+   ========================================================== */
+
+:root {
+  /* ===== IMAGENS (hospedadas no Imgur) =====
+     Para trocar uma imagem, cole o link direto dela (https://i.imgur.com/XXXXXXX.png).
+     Envie em PNG: o Imgur não aceita WEBP, e o PNG mantém o fundo transparente. */
+  --img-pergaminho: url("https://i.imgur.com/3TQae1q.png");          /* textura de pergaminho do fundo */
+  --img-topo: url("https://i.imgur.com/AY6yRCT.png");                /* panorama com os estandartes (céu branco) */
+  --img-brasao: url("https://i.imgur.com/AaWidyx.png");              /* brasão SPQR com coroa de louros */
+  --img-divisor: url("https://i.imgur.com/Hhe9OYt.png");             /* linha dourada com a águia */
+  --img-moldura: url("https://i.imgur.com/Ne8Mym7.png");             /* moldura dourada quadrada (1254 × 1254) */
+  --img-estandarte: url("https://i.imgur.com/ztYypx6.png");          /* estandarte SPQR (reserva nas molduras) */
+  --img-colunata-esq: url("https://i.imgur.com/Pu6sv7R.png");        /* colunata com estandarte, lado esquerdo */
+  --img-colunas-dir: url("https://i.imgur.com/xmTCqlN.png");         /* colunas com hera, lado direito */
+  --img-louro-esq: url("https://i.imgur.com/tRbSTZZ.png");           /* ramo de louro no lado esquerdo da imagem */
+  --img-louro-dir: url("https://i.imgur.com/4nwXAuS.png");           /* ramo de louro no lado direito da imagem */
+
+  /* Ilustração de cada ano (imagens quadradas). Se trocar alguma por "none",
+     a moldura mostra o estandarte ou o brasão no lugar. */
+  --img-2016: url("https://i.imgur.com/NkJP4TI.png");
+  --img-2017: url("https://i.imgur.com/wI2SESb.png");
+  --img-2018: url("https://i.imgur.com/py7lUQs.png");
+  --img-2019: url("https://i.imgur.com/y2XF8S2.png");
+  --img-2020: url("https://i.imgur.com/88G6e8q.png");
+  --img-2021: url("https://i.imgur.com/jgTdrAJ.png");
+  --img-2022: url("https://i.imgur.com/2IVh1Y1.png");
+  --img-2023: url("https://i.imgur.com/rcWtrzM.png");
+  --img-2024: url("https://i.imgur.com/X2AvJkt.png");
+  --img-2025: url("https://i.imgur.com/1sYZ7vh.png");
+  --img-2026: url("https://i.imgur.com/HKu67Mj.png");
+
+  /* ===== CORES E FONTES ===== */
+  --pergaminho: #f3e9d8;
+  --tinta: #3d2e21;
+  --tinta-suave: #76654f;
+  --purpura: #4a1a57;
+  --purpura-viva: #6e2a80;
+  --ouro: #b0873a;
+  --ouro-claro: #dcc183;
+
+  --fonte-titulo: "Cinzel", "Trajan Pro", Georgia, serif;
+  --fonte-texto: "Cormorant Garamond", Garamond, Georgia, serif;
+
+  --largura: 56rem;
+  /* Escala da moldura dourada (imagem de 1254 × 1254 px) */
+  --m: 0.17;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--pergaminho);
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Layout fixo de desktop: abaixo dessa largura a página rola na horizontal */
+body {
+  min-width: 62rem;
+  margin: 0;
+  overflow-x: clip;
+  font-family: var(--fonte-texto);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--tinta);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Pergaminho fixo atrás de tudo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: var(--pergaminho) var(--img-pergaminho) center / cover no-repeat;
+}
+
+::selection {
+  background: rgb(74 26 87 / 0.18);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--purpura);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.pular {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.85rem;
+  color: var(--pergaminho);
+  background: var(--purpura);
+  text-decoration: none;
+}
+
+.pular:focus {
+  top: 1rem;
+}
+
+/* ---------- Tela de carregamento ---------- */
+
+/* Só aparece se o script ligar a classe "carregando" no <html>.
+   Sem JavaScript, o site abre direto. */
+.carregamento {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1.25rem;
+  background: radial-gradient(ellipse at 50% 45%, #f9f2e4, var(--pergaminho) 70%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.7s ease, visibility 0s 0.7s;
+}
+
+html.carregando {
+  overflow: hidden;
+}
+
+html.carregando .carregamento {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: none;
+}
+
+.carregamento__brasao {
+  width: 6.5rem;
+  aspect-ratio: 1;
+  background: var(--img-brasao) center / contain no-repeat;
+}
+
+.carregamento__titulo {
+  margin: 0;
+  padding-left: 0.2em;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+
+.carregamento__barra {
+  width: min(16rem, 60vw);
+  height: 2px;
+  overflow: hidden;
+  background: rgb(176 135 58 / 0.25);
+}
+
+.carregamento__barra::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background: linear-gradient(to right, var(--ouro), var(--ouro-claro));
+  transform-origin: left;
+  transform: scaleX(var(--progresso, 0.04));
+  transition: transform 0.35s ease-out;
+}
+
+/* Frase do universo de Rick Riordan que troca a cada poucos segundos */
+.carregamento__frase {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+  width: min(30rem, 86vw);
+  min-height: 4.2rem;
+  margin: 0.25rem 0 0;
+  text-align: center;
+  transition: opacity 0.5s ease;
+}
+
+.carregamento__frase.trocando {
+  opacity: 0;
+}
+
+.carregamento__frase q {
+  quotes: none;
+  font-family: var(--fonte-texto);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: var(--tinta);
+}
+
+.carregamento__frase cite {
+  font-family: var(--fonte-titulo);
+  font-style: normal;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ouro);
+}
+
+.carregamento__texto {
+  margin: 0;
+  padding-left: 0.3em;
+  font-family: var(--fonte-titulo);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .carregamento__brasao {
+    animation: pulsar 2.2s ease-in-out infinite;
+  }
+
+  /* A entrada do topo só começa quando o site abre */
+  html.carregando .topo__fundo,
+  html.carregando .topo__ornamento,
+  html.carregando .topo__titulo,
+  html.carregando .topo__subtitulo,
+  html.carregando .portal {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes pulsar {
+  50% {
+    opacity: 0.55;
+    scale: 0.96;
+  }
+}
+
+/* ---------- Barra de rolagem ---------- */
+
+/* Chrome, Edge e Safari: trilho de pergaminho e puxador dourado com borda */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efe3cc;
+  border-left: 1px solid rgb(176 135 58 / 0.35);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, var(--ouro), var(--ouro-claro), var(--ouro));
+  border: 3px solid #efe3cc;
+  border-radius: 10px;
+  min-height: 3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, var(--purpura), var(--purpura-viva), var(--purpura));
+}
+
+::-webkit-scrollbar-corner {
+  background: #efe3cc;
+}
+
+/* Firefox */
+@supports not selector(::-webkit-scrollbar) {
+  html,
+  .panteao__caixa {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ouro) #efe3cc;
+  }
+}
+
+/* ---------- Botão de voltar ao topo ---------- */
+
+.voltar-topo {
+  position: fixed;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--purpura);
+  text-decoration: none;
+  background: rgb(255 250 238 / 0.92);
+  border: 1px solid var(--ouro);
+  box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.7), 0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45);
+  transition: opacity 0.3s, translate 0.3s, color 0.2s, background-color 0.2s;
+}
+
+/* Seta feita com duas bordas */
+.voltar-topo::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.3rem;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  rotate: 45deg;
+}
+
+.voltar-topo:hover,
+.voltar-topo:focus-visible {
+  color: #f6ead0;
+  background: var(--purpura);
+}
+
+/* Escondido enquanto a página está no topo (o script liga a classe) */
+.voltar-topo.oculto {
+  opacity: 0;
+  translate: 0 1rem;
+  pointer-events: none;
+}
+
+/* ---------- Laterais: louros e colunatas ---------- */
+
+/* Envolve a cronologia e o rodapé; as laterais começam abaixo do topo */
+.pagina {
+  position: relative;
+}
+
+.cenario {
+  display: none;
+}
+
+/* Só aparecem quando sobra espaço dos lados do conteúdo */
+@media (min-width: 80rem) {
+  .cenario {
+    /* Espaço livre de cada lado da coluna de conteúdo */
+    --vao: calc((100vw - var(--largura)) / 2);
+    /* Colunatas: até 66% da tela, sem invadir demais o texto */
+    --alto-colunata: min(66vh, (var(--vao) + 2rem) / 0.42);
+    --alto-louro: min(52vh, 34rem);
+
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: clip;
+    pointer-events: none;
+  }
+
+  /* Palco do tamanho da tela que acompanha a rolagem */
+  .cenario__palco {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  .cenario__colunata {
+    position: absolute;
+    bottom: 0;
+    height: var(--alto-colunata);
+    aspect-ratio: 971 / 1619;
+    opacity: 0.75;
+    mask-composite: intersect;
+  }
+
+  .cenario__colunata--esq {
+    left: 0;
+    background: var(--img-colunata-esq) center / 100% 100% no-repeat;
+    mask-image:
+      linear-gradient(to right, #000 40%, transparent 72%),
+      linear-gradient(to bottom, transparent, #000 16%);
+  }
+
+  .cenario__colunata--dir {
+    right: 0;
+    background: var(--img-colunas-dir) center / 100% 100% no-repeat;
+    mask-image:
+      linear-gradient(to left, #000 50%, transparent 85%),
+      linear-gradient(to bottom, transparent, #000 16%);
+  }
+
+  .cenario__louro {
+    position: absolute;
+    top: 4vh;
+    height: var(--alto-louro);
+    aspect-ratio: 1024 / 1536;
+    opacity: 0.9;
+  }
+
+  .cenario__louro--esq {
+    left: 1.5vw;
+    background: var(--img-louro-esq) center / 100% 100% no-repeat;
+  }
+
+  .cenario__louro--dir {
+    right: 1.5vw;
+    background: var(--img-louro-dir) center / 100% 100% no-repeat;
+  }
+}
+
+/* ---------- Topo ---------- */
+
+/* O título fica na faixa de céu, acima da cidade */
+.topo {
+  position: relative;
+  display: grid;
+  place-items: start center;
+  min-height: clamp(15rem, 17.5vw, 24rem);
+  padding: clamp(1.75rem, 3.2vw, 3rem) 1rem 2rem;
+  text-align: center;
+}
+
+/* O céu branco da imagem some no pergaminho com multiply */
+.topo__fundo {
+  position: absolute;
+  inset: 0;
+  background: var(--img-topo) center top / cover no-repeat;
+  mix-blend-mode: multiply;
+  mask-image: linear-gradient(to bottom, #000 62%, transparent);
+}
+
+.topo__conteudo {
+  position: relative;
+}
+
+.topo__ornamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.topo__ornamento::before,
+.topo__ornamento::after {
+  content: "";
+  width: clamp(3rem, 14vw, 10rem);
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ouro));
+}
+
+.topo__ornamento::after {
+  background: linear-gradient(to left, transparent, var(--ouro));
+}
+
+.topo__brasao {
+  width: 4.25rem;
+  aspect-ratio: 1;
+  background: var(--img-brasao) center / contain no-repeat;
+}
+
+.topo__titulo {
+  margin: 0;
+  padding-left: 0.1em; /* compensa o espaçamento após a última letra */
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purpura);
+  text-shadow: 0 0 1.5rem rgb(250 244 232 / 0.9);
+}
+
+.topo__subtitulo {
+  margin: 1rem 0 0;
+  padding-left: 0.38em;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(0.68rem, 1.2vw, 0.8rem);
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* ---------- Menu do site e lista de deuses ---------- */
+
+/* O portal é mais largo que a coluna da cronologia: deuses | menu | deuses */
+.portal {
+  --largo: min(72rem, 100vw - 2rem);
+  width: var(--largo);
+  margin: 0 0 3.5rem calc((100% - var(--largo)) / 2);
+}
+
+/* Águia no centro de uma linha dourada, abrindo o menu */
+.menu__abertura {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: -1.5rem 0 1.5rem;
+}
+
+.menu__abertura::before,
+.menu__abertura::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ouro));
+}
+
+.menu__abertura::after {
+  background: linear-gradient(to left, transparent, var(--ouro));
+}
+
+.menu__abertura .aguia {
+  margin: 0;
+}
+
+.portal__corpo {
+  display: grid;
+  grid-template-columns: 1fr 36rem 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent, var(--ouro), transparent) 1;
+}
+
+/* Menu enxuto: 4 colunas; as linhas 1-2 e 3-4 formam dois blocos */
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.menu li:nth-child(n + 9):nth-child(-n + 12) {
+  margin-top: 1.1rem;
+}
+
+.deuses a {
+  color: var(--tinta);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.deuses a:hover {
+  color: var(--purpura);
+}
+
+/* Itens do menu: ao passar o mouse a palavra sobe um pouco, fica roxa e ganha uma barrinha dourada */
+.menu a {
+  position: relative;
+  display: inline-block;
+  padding: 0.3rem 0.15rem 0.45rem;
+  color: var(--tinta);
+  text-decoration: none;
+  transition: color 0.25s, translate 0.25s, text-shadow 0.25s, letter-spacing 0.25s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--ouro) 20%, var(--ouro-claro) 50%, var(--ouro) 80%, transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  color: var(--purpura);
+  translate: 0 -2px;
+  letter-spacing: 0.07em;
+  text-shadow: 0 0 0.9rem rgb(220 193 131 / 0.7);
+}
+
+.menu a:hover::after,
+.menu a:focus-visible::after,
+.menu a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* A página atual fica em roxo com a barrinha sempre acesa */
+.menu a[aria-current="page"] {
+  color: var(--purpura);
+}
+
+/* Deuses: grupos com título e 2 nomes por linha */
+.deuses {
+  display: grid;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+/* Deuses: texto discreto, em itálico e minúsculas, só uma palavra de título */
+.deuses__titulo {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-family: var(--fonte-texto);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ouro);
+}
+
+.deuses ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.05rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.deuses a {
+  color: var(--tinta-suave);
+}
+
+.deuses a:hover {
+  color: var(--purpura);
+}
+
+/* Nome sozinho na última linha fica centralizado */
+.deuses li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* Menu sozinho no centro */
+.portal__corpo {
+  display: block;
+}
+
+.menu {
+  width: 36rem;
+  margin: 0 auto;
+}
+
+/* ---------- Botão Panteão: tabula ansata, a plaqueta romana com "orelhas" ---------- */
+
+.panteao {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.panteao__toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.panteao__botao {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2.2rem;
+  cursor: pointer;
+  font-family: var(--fonte-titulo);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--purpura);
+  background: rgb(255 250 238 / 0.65);
+  border: 1px solid var(--ouro);
+  box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.6);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.panteao__botao span {
+  padding-left: 0.22em;
+}
+
+.panteao__botao::before,
+.panteao__botao::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.9rem;
+  height: 1.5rem;
+  translate: 0 -50%;
+  background: var(--ouro);
+}
+
+.panteao__botao::before {
+  right: 100%;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.panteao__botao::after {
+  left: 100%;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.panteao__botao:hover,
+.panteao__toggle:checked + .panteao__botao {
+  color: #f6ead0;
+  background: var(--purpura);
+}
+
+.panteao__toggle:focus-visible + .panteao__botao {
+  outline: 2px solid var(--purpura);
+  outline-offset: 4px;
+}
+
+/* ---------- Janela do Panteão ---------- */
+
+/* Fechada fica fora da página (display: none), então os estandartes só carregam ao abrir */
+.panteao__janela {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  place-items: center;
+  padding: 2vh 2vw;
+}
+
+body:has(.panteao__toggle:checked) .panteao__janela {
+  display: grid;
+}
+
+html:has(.panteao__toggle:checked) {
+  overflow: hidden;
+}
+
+.panteao__fundo {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: rgb(28 10 34 / 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.panteao__caixa {
+  position: relative;
+  width: min(100%, 84rem);
+  max-height: 96vh;
+  overflow-y: auto;
+  padding: 1.75rem 2.5rem 2.25rem;
+  background: #f4ead8 var(--img-pergaminho) center / cover;
+  border: 1px solid var(--ouro);
+  box-shadow:
+    inset 0 0 0 4px rgb(244 234 216 / 0.9),
+    inset 0 0 0 5px rgb(176 135 58 / 0.45),
+    0 2rem 4rem -1rem rgb(20 8 25 / 0.6);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body:has(.panteao__toggle:checked) .panteao__fundo {
+    animation: aparecer 0.3s ease-out both;
+  }
+
+  body:has(.panteao__toggle:checked) .panteao__caixa {
+    animation: surgir 0.4s cubic-bezier(0.22, 0.8, 0.24, 1) both;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+}
+
+.panteao__fechar {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: -0.75rem -1.5rem 0 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--purpura);
+  border: 1px solid var(--ouro);
+  background: #f7efde;
+  z-index: 2;
+}
+
+.panteao__fechar:hover {
+  color: #f6ead0;
+  background: var(--purpura);
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Título de cada grupo: louro no meio de uma linha dourada e o nome embaixo */
+.pt-grupo + .pt-grupo,
+.pt-dupla {
+  margin-top: 1.25rem;
+}
+
+.pt-titulo {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.pt-titulo__louro {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: min(100%, 36rem);
+}
+
+.pt-titulo__louro::before,
+.pt-titulo__louro::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ouro));
+}
+
+.pt-titulo__louro::after {
+  background: linear-gradient(to left, transparent, var(--ouro));
+}
+
+.pt-titulo__louro {
+  background: var(--img-brasao) center / 1.9rem no-repeat;
+  height: 1.9rem;
+}
+
+.pt-titulo__louro::before {
+  margin-right: 1.7rem;
+}
+
+.pt-titulo__louro::after {
+  margin-left: 1.7rem;
+}
+
+.pt-titulo h2 {
+  margin: 0.35rem 0 0;
+  padding-left: 0.14em;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+
+/* Fileira de estandartes: um ao lado do outro, com losangos dourados entre os nomes */
+.pt-fileira {
+  --larg: 6.5rem;
+  --vao: 1.6rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, var(--larg));
+  justify-content: center;
+  column-gap: var(--vao);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pt-grupo--notaveis .pt-fileira {
+  --larg: 7.5rem;
+  --vao: 2.25rem;
+}
+
+/* Deuses menores em duas linhas de 8 */
+.pt-grupo--menores .pt-fileira {
+  --larg: 6rem;
+  --vao: 1.6rem;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(8, minmax(0, var(--larg)));
+  row-gap: 1.1rem;
+}
+
+.pt-grupo--menores li:nth-child(8n + 1)::before {
+  display: none;
+}
+
+.pt-fileira li {
+  position: relative;
+}
+
+.pt-fileira li + li::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--vao) / -2);
+  bottom: 0.55em;
+  width: 0.3rem;
+  height: 0.3rem;
+  translate: -50% 0;
+  rotate: 45deg;
+  background: var(--ouro);
+}
+
+/* Estandartes alinhados pelo topo e nomes alinhados na base da fileira */
+.pt-fileira a {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  justify-items: center;
+  gap: 0.45rem;
+  color: var(--tinta);
+  text-decoration: none;
+}
+
+.pt-fileira img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0.4rem 0.5rem rgb(50 25 10 / 0.25));
+  transition: translate 0.25s ease;
+}
+
+.pt-fileira span {
+  font-family: var(--fonte-titulo);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.pt-fileira a:hover img {
+  translate: 0 -0.25rem;
+}
+
+.pt-fileira a:hover span {
+  color: var(--purpura);
+}
+
+/* Entidades e Seres lado a lado */
+.pt-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.pt-dupla .pt-grupo {
+  margin-top: 0;
+}
+
+.pt-dupla .pt-fileira {
+  --larg: 5.5rem;
+}
+
+/* Entrada do topo: o título se fecha como uma inscrição */
+@media (prefers-reduced-motion: no-preference) {
+  .topo__fundo {
+    animation: assentar 2.2s cubic-bezier(0.22, 0.8, 0.24, 1) both;
+  }
+
+  .topo__ornamento,
+  .topo__subtitulo,
+  .portal {
+    animation: surgir 1.1s cubic-bezier(0.22, 0.8, 0.24, 1) both;
+  }
+
+  .topo__titulo {
+    animation: inscrever 1.6s cubic-bezier(0.22, 0.8, 0.24, 1) 0.15s both;
+  }
+
+  .topo__subtitulo {
+    animation-delay: 0.6s;
+  }
+
+  .portal {
+    animation-delay: 0.8s;
+  }
+}
+
+@keyframes assentar {
+  from {
+    opacity: 0;
+    scale: 1.04;
+  }
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    translate: 0 0.6rem;
+  }
+}
+
+@keyframes inscrever {
+  from {
+    opacity: 0;
+    letter-spacing: 0.4em;
+    filter: blur(4px);
+  }
+}
+
+/* ---------- Cronologia ---------- */
+
+.cronologia {
+  width: min(100% - 2rem, var(--largura));
+  margin-inline: auto;
+}
+
+/* Águia isolada, recortada do divisor */
+.aguia {
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  margin: -1.5rem auto 1.25rem;
+  background: var(--img-divisor) 50% 51% / 571% auto no-repeat;
+}
+
+.anais {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Cada ano numa coluna central: título, ilustração e texto, todos na mesma largura */
+.ano {
+  --coluna: 38rem;
+  text-align: center;
+}
+
+/* Divisor com a águia entre um ano e outro */
+.ano + .ano::before {
+  content: "";
+  display: block;
+  height: 4.5rem;
+  margin: 3rem 0;
+  background: var(--img-divisor) center / min(100%, 42rem) auto no-repeat;
+}
+
+/* ---------- Moldura dourada ---------- */
+
+/* A moldura por fora da imagem tem a mesma largura da coluna de texto */
+.quadro {
+  /* Imagem reserva enquanto a ilustração do ano não existir */
+  --reserva: var(--img-estandarte) center 55% / auto 84% no-repeat;
+
+  position: relative;
+  width: calc(var(--coluna) - 2 * 121px * var(--m));
+  aspect-ratio: 3 / 2;
+  margin: calc(152px * var(--m)) auto calc(2rem + 152px * var(--m));
+  /* As artes são quadradas: o recorte 3:2 mostra a faixa indicada em --foco
+     (0% = topo da arte, 100% = base). Ajuste por ano no style do <figure>. */
+  background:
+    var(--ilustracao, none) var(--foco, 50% 35%) / cover no-repeat,
+    var(--reserva),
+    radial-gradient(circle at 50% 42%, #f8f1e3, #dccaa8);
+  box-shadow:
+    inset 0 0 0 1px rgb(120 90 40 / 0.35),
+    inset 0 0 2.5rem rgb(70 40 10 / 0.22),
+    0 1.4rem 2rem -0.6rem rgb(70 45 15 / 0.3);
+}
+
+.ano:nth-child(even) .quadro {
+  --reserva: var(--img-brasao) center / auto 76% no-repeat;
+}
+
+.quadro::after {
+  content: "";
+  position: absolute;
+  inset: calc(-152px * var(--m)) calc(-121px * var(--m));
+  border-style: solid;
+  border-color: transparent;
+  border-width: calc(270px * var(--m)) calc(235px * var(--m));
+  border-image: var(--img-moldura) 270 235 stretch;
+  pointer-events: none;
+}
+
+/* ---------- Título e texto de cada ano ---------- */
+
+.ano__titulo {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 1.75rem;
+  padding-bottom: 0.85rem;
+  font-family: var(--fonte-texto);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 4vw, 3rem);
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+  color: var(--purpura);
+  transition: color 0.3s;
+}
+
+.ano__titulo::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 2.75rem;
+  height: 2px;
+  translate: -50% 0;
+  background: linear-gradient(to right, var(--ouro), var(--ouro-claro));
+  transition: width 0.5s cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+/* Texto justificado, com hifenização para não abrir buracos entre as palavras */
+.ano__texto p {
+  margin: 0 0 1em;
+  text-align: justify;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+
+.ano__texto p:last-child {
+  margin-bottom: 0;
+}
+
+.ano__texto {
+  max-width: var(--coluna);
+  margin-inline: auto;
+}
+
+/* Ano escolhido no índice */
+.ano:target .ano__titulo {
+  color: var(--purpura-viva);
+}
+
+.ano:target .ano__titulo::after {
+  width: 5.5rem;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+  padding: 4.5rem 1rem 3.5rem;
+  text-align: center;
+}
+
+.rodape .aguia {
+  margin: 0 auto 1.25rem;
+}
+
+.rodape__lema {
+  margin: 0 0 1rem;
+  padding-left: 0.32em;
+  font-family: var(--fonte-titulo);
+  font-size: 0.8rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+.rodape__voltar {
+  font-family: var(--fonte-titulo);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--purpura);
+  text-underline-offset: 0.3em;
+  text-decoration-color: var(--ouro);
+}
+
+/* ---------- Ajustes das páginas (Panteão em imagem, gaveta do menu) ---------- */
+/* Teste na /inicio: botão do Panteão como imagem (só esta página) */
+.panteao__botao--img { padding: 0; border: 0; background: none; box-shadow: none; line-height: 0; transition: transform 0.2s, filter 0.2s; }
+.panteao__botao--img::before, .panteao__botao--img::after { display: none; }
+.panteao__botao--img img { display: block; width: min(300px, 90vw); height: auto; }
+.panteao__botao--img:hover, .panteao__toggle:checked + .panteao__botao--img { background: none; transform: scale(1.03); filter: brightness(1.08); }
+/* Panteão no meio da linha divisória, como a águia do topo */
+.portal__corpo { padding-bottom: 0; border-bottom: 0; border-image: none; }
+.panteao { display: flex; align-items: center; gap: 0; }
+.panteao::before, .panteao::after { content: ""; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--ouro)); }
+.panteao::after { background: linear-gradient(to left, transparent, var(--ouro)); }
+
+/* Menu em gaveta (protótipo): medalhão que aparece ao rolar e abre os links do site */
+.gaveta__toggle { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.gaveta__botao { position: fixed; top: 1.75rem; left: 1.75rem; z-index: 85; width: 3.6rem; height: 3.6rem; border-radius: 50%; cursor: pointer; background: var(--img-brasao) center / 82% no-repeat, rgb(255 250 238 / 0.94); border: 1px solid var(--ouro); box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.7), 0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45); transition: opacity 0.3s, translate 0.3s, filter 0.2s; }
+.gaveta__botao:hover { filter: brightness(1.06) saturate(1.1); translate: 0 -2px; }
+.gaveta__toggle:focus-visible + .gaveta__botao { outline: 2px solid var(--purpura); outline-offset: 4px; }
+.gaveta__botao.oculto { opacity: 0; translate: 0 -1rem; pointer-events: none; }
+.gaveta__painel { position: fixed; inset: 0; z-index: 880; visibility: hidden; pointer-events: none; transition: visibility 0s 0.35s; }
+body:has(.gaveta__toggle:checked) .gaveta__painel { visibility: visible; pointer-events: auto; transition: none; }
+html:has(.gaveta__toggle:checked) { overflow: hidden; }
+.gaveta__fundo { position: absolute; inset: 0; cursor: pointer; background: rgb(28 10 34 / 0.6); backdrop-filter: blur(2px); opacity: 0; transition: opacity 0.3s; }
+body:has(.gaveta__toggle:checked) .gaveta__fundo { opacity: 1; }
+.gaveta__caixa { position: absolute; top: 0; bottom: 0; left: 0; width: min(22rem, 88vw); overflow-y: auto; padding: 1.5rem 2rem 1.5rem; background: #f4ead8 var(--img-pergaminho) center / cover; border-right: 1px solid var(--ouro); box-shadow: inset -4px 0 0 rgb(244 234 216 / 0.9), inset -5px 0 0 rgb(176 135 58 / 0.45), 2rem 0 4rem -1rem rgb(20 8 25 / 0.6); translate: -100% 0; transition: translate 0.35s cubic-bezier(0.22, 0.8, 0.24, 1); }
+body:has(.gaveta__toggle:checked) .gaveta__caixa { translate: 0 0; }
+.gaveta__titulo { margin: 0 0 0.9rem; padding: 0.4rem 2.6rem 0.75rem 0; font-family: var(--fonte-titulo); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purpura); border-bottom: 1px solid transparent; border-image: linear-gradient(to right, var(--ouro), transparent) 1; }
+.gaveta__lista { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.05rem; }
+.gaveta__lista a { position: relative; display: block; padding: 0.3rem 0.75rem 0.3rem 1rem; font-family: var(--fonte-titulo); font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--tinta); transition: color 0.2s, background-color 0.2s, padding-left 0.25s; }
+.gaveta__lista a::before { content: ""; position: absolute; left: 0; top: 20%; bottom: 20%; width: 2px; background: var(--ouro); transform: scaleY(0); transition: transform 0.3s; }
+.gaveta__lista a:hover, .gaveta__lista a:focus-visible, .gaveta__lista a[aria-current="page"] { color: var(--purpura); background: rgb(255 250 238 / 0.55); padding-left: 1.25rem; }
+.gaveta__lista a:hover::before, .gaveta__lista a:focus-visible::before, .gaveta__lista a[aria-current="page"]::before { transform: scaleY(1); }
+.gaveta__panteao { display: block; width: fit-content; margin: 0.25rem auto 0; padding: 0; line-height: 0; cursor: pointer; transition: transform 0.2s, filter 0.2s; }
+.gaveta__panteao img { display: block; width: calc(100% + 2rem); max-width: none; margin: -1.1rem -1rem; height: auto; }
+.gaveta__panteao:hover { transform: scale(1.03); filter: brightness(1.08); }
+.gaveta__fechar { position: absolute; top: 0.9rem; right: 0.9rem; width: 2.2rem; height: 2.2rem; display: grid; place-items: center; cursor: pointer; font-size: 1.6rem; line-height: 1; color: var(--purpura); border: 1px solid var(--ouro); background: #f7efde; }
+.gaveta__fechar:hover { color: #f6ead0; background: var(--purpura); }
+
+/* ---------- Ajustes do Weebly ---------- */
+.conteudo { display: block; }
+.weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
+.weebly-rodape a { color: inherit; }
