@@ -132,7 +132,15 @@
 
     var detalhe = criar("div", "arvore__detalhe");
     detalhe.setAttribute("aria-live", "polite");
-    arvore.appendChild(detalhe);
+    /* o detalhe abre como janela por cima da árvore */
+    var janela = criar("div", "arvore__janela");
+    janela.hidden = true;
+    detalhe.setAttribute("role", "dialog");
+    janela.appendChild(detalhe);
+    arvore.appendChild(janela);
+    function fechar() { estado.selecionada = null; atualizar(); }
+    janela.addEventListener("click", function (e) { if (e.target === janela) fechar(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !janela.hidden) fechar(); });
 
     var resumo = criar("div", "arvore__resumo");
     arvore.appendChild(resumo);
@@ -181,18 +189,19 @@
     function selecionar(id) {
       estado.selecionada = id;
       atualizar();
-      detalhe.scrollIntoView({ block: "nearest", behavior: "smooth" });
     }
 
     function desenharDetalhe() {
       detalhe.textContent = "";
       var n = nos[estado.selecionada];
-      if (!n) {
-        detalhe.className = "arvore__detalhe arvore__detalhe--vazio";
-        detalhe.appendChild(criar("p", null, "Escolha uma habilidade na árvore para ver o que ela faz."));
-        return;
-      }
+      janela.hidden = !n;
+      if (!n) return;
       detalhe.className = "arvore__detalhe";
+      var x = criar("button", "detalhe__fechar", "×");
+      x.type = "button";
+      x.setAttribute("aria-label", "Fechar");
+      x.addEventListener("click", fechar);
+      detalhe.appendChild(x);
       var h = n.dado;
       var liberada = n.servico <= estado.nivel;
       var cab = criar("div", "detalhe__cabeca");
