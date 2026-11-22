@@ -53,6 +53,12 @@
     cabeca.appendChild(ident);
     raiz.appendChild(cabeca);
 
+    /* ilustração 16:9 na moldura do site; sem d.imagem mostra a imagem reserva */
+    var quadro = criar("figure", "quadro quadro--deus");
+    quadro.setAttribute("aria-hidden", d.imagem ? "false" : "true");
+    if (d.imagem) quadro.style.setProperty("--ilustracao", "url(\"" + d.imagem + "\")");
+    raiz.appendChild(quadro);
+
     var texto = criar("div", "deus__texto");
     (d.introducao || []).forEach(function (p) { texto.appendChild(criar("p", null, p)); });
     raiz.appendChild(texto);

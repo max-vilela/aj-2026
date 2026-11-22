@@ -525,3 +525,11 @@
 #wsite-content .deus .resumo__linha { font-size: 0.95rem !important; }
 #wsite-content .deus .resumo__linha--destaque { font-family: var(--fonte-titulo) !important; font-size: 0.8rem !important; }
 #wsite-content .deus .detalhe__aviso { font-size: 0.88rem !important; }
+
+/* Ilustração do deus: mesma moldura dourada das páginas, em 16:9 */
+.deus .quadro--deus {
+  --foco: 50% 50%;
+  width: min(34rem, calc(100% - 4rem));
+  aspect-ratio: 16 / 9;
+  margin: 2.5rem auto 3.5rem;
+}
