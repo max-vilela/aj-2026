@@ -1221,3 +1221,475 @@ body { font-size: 1rem; font-weight: 400; }
 #wsite-content .ano__texto p { font-family: inherit !important; font-size: inherit !important; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }
+
+/* ---------- Página de um deus (weebly/deuses.js) ---------- */
+
+.deus {
+  --largo: min(72rem, 100vw - 2rem);
+  --no-fundo: var(--purpura);
+  --no-borda: var(--ouro);
+  width: var(--largo);
+  margin: 0 0 4rem calc((100% - var(--largo)) / 2);
+  color: var(--tinta);
+}
+
+.deus > * { max-width: 100%; }
+
+/* Abertura: estandarte à esquerda, nome e domínios à direita */
+.deus__cabeca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  margin: 0 auto 2rem;
+}
+
+.deus__estandarte {
+  display: block;
+  width: clamp(7rem, 14vw, 10.5rem);
+  height: auto;
+  filter: drop-shadow(0 0.5rem 0.75rem rgb(50 25 10 / 0.35));
+}
+
+.deus__nome {
+  margin: 0;
+  font-family: "Cinzel Decorative", var(--fonte-titulo);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  color: var(--purpura);
+}
+
+.deus__titulo {
+  margin: 0.5rem 0 0;
+  font-family: var(--fonte-texto);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ouro);
+}
+
+.deus__dominios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deus__dominios li {
+  padding: 0.28rem 0.8rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--purpura);
+  background: rgb(255 250 238 / 0.7);
+  border: 1px solid var(--ouro);
+}
+
+.deus__texto {
+  max-width: 44rem;
+  margin: 0 auto 1.75rem;
+}
+
+.deus__texto p,
+.deus__destaque p {
+  margin: 0 0 1em;
+  text-align: justify;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+
+.deus__texto p:last-child,
+.deus__destaque p:last-child { margin-bottom: 0; }
+
+.deus__destaque {
+  max-width: 44rem;
+  margin: 0 auto 3rem;
+  padding: 1.25rem 1.6rem 1.4rem;
+  background: rgb(255 250 238 / 0.6);
+  border: 1px solid var(--ouro);
+  box-shadow: inset 0 0 0 3px rgb(255 250 238 / 0.7);
+}
+
+.deus__destaque h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+
+/* ---------- Árvore de habilidades ---------- */
+
+.arvore__titulo {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+
+.arvore__ajuda {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--tinta-suave);
+}
+
+.arvore__controle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.1rem;
+  margin: 0 auto 2rem;
+}
+
+.arvore__rotulo {
+  font-family: var(--fonte-titulo);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+.arvore__niveis { display: flex; }
+
+.arvore__nivel,
+.arvore__aba {
+  min-width: 3.4rem;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--purpura);
+  background: rgb(255 250 238 / 0.65);
+  border: 1px solid var(--ouro);
+  margin-left: -1px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.arvore__nivel:first-child { margin-left: 0; }
+
+.arvore__nivel:hover,
+.arvore__aba:hover { background: #fff6e0; }
+
+.arvore__nivel--ativo,
+.arvore__aba--ativa {
+  color: #f6ead0;
+  background: var(--purpura);
+}
+
+.arvore__nivel--ativo:hover,
+.arvore__aba--ativa:hover { background: var(--purpura); }
+
+.arvore__abas { display: none; justify-content: center; margin-bottom: 1.5rem; }
+
+/* Grade: passivas | serviço | ativas. Cada serviço é uma linha, então os dois lados ficam alinhados. */
+.arvore__grade {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11rem minmax(0, 1fr);
+  align-items: center;
+  row-gap: 2.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.arvore__ligacoes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.arvore__linha {
+  fill: none;
+  stroke: var(--ouro);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  transition: stroke 0.3s, opacity 0.3s;
+}
+
+.arvore__linha--apagada { opacity: 0.25; }
+
+.arvore__coluna {
+  position: relative;
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.9rem;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purpura);
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent, var(--ouro) 18%, var(--ouro) 82%, transparent) 1;
+}
+
+.arvore__celula {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.1rem;
+}
+
+.arvore__servico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+.arvore__servico::before,
+.arvore__servico::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  rotate: 45deg;
+  background: var(--ouro);
+}
+
+/* Habilidade (nó da árvore) */
+.no {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 9.75rem;
+  min-height: 3.7rem;
+  padding: 0.55rem 0.7rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f6ead0;
+  background: var(--no-fundo);
+  border: 2px solid var(--no-borda);
+  border-radius: 0.65rem;
+  box-shadow: inset 0 0 0 2px rgb(20 8 25 / 0.45), 0 0.35rem 0.8rem -0.35rem rgb(30 12 36 / 0.55);
+  transition: transform 0.2s, box-shadow 0.25s, opacity 0.25s, filter 0.25s;
+}
+
+.no:hover { transform: translateY(-2px); }
+
+.no:focus-visible,
+.no--selecionado {
+  outline: 2px solid var(--ouro-claro);
+  outline-offset: 3px;
+}
+
+.no__nome { display: block; }
+
+.no__grau {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  color: var(--ouro-claro);
+}
+
+.no__marca {
+  position: absolute;
+  top: -0.65rem;
+  right: -0.55rem;
+  display: none;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--purpura);
+  background: var(--ouro-claro);
+  border: 1px solid var(--ouro);
+  border-radius: 50%;
+}
+
+.no--marcado .no__marca { display: grid; }
+
+.no--liberado,
+.no--marcado {
+  box-shadow: inset 0 0 0 2px rgb(20 8 25 / 0.45), 0 0 0 1px var(--ouro-claro), 0 0 1.1rem rgb(220 193 131 / 0.55);
+}
+
+.no--bloqueado {
+  opacity: 0.4;
+  filter: grayscale(0.55);
+}
+
+/* Detalhe da habilidade escolhida */
+.arvore__detalhe {
+  max-width: 46rem;
+  margin: 0 auto 2.25rem;
+  padding: 1.4rem 1.7rem 1.5rem;
+  background: rgb(255 250 238 / 0.75);
+  border: 1px solid var(--ouro);
+  box-shadow: inset 0 0 0 3px rgb(255 250 238 / 0.75);
+  scroll-margin-top: 5rem;
+}
+
+.arvore__detalhe--vazio {
+  text-align: center;
+  font-style: italic;
+  color: var(--tinta-suave);
+}
+
+.arvore__detalhe--vazio p { margin: 0; }
+
+.detalhe__cabeca { margin-bottom: 0.9rem; }
+
+.detalhe__nome {
+  margin: 0 0 0.6rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+
+.detalhe__chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.chip {
+  padding: 0.2rem 0.65rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  border: 1px solid var(--ouro);
+  background: rgb(255 250 238 / 0.7);
+}
+
+.chip--passivas,
+.chip--ativas { color: #f6ead0; background: var(--purpura); border-color: var(--purpura); }
+
+.chip--tempo { color: var(--purpura); }
+
+.detalhe__texto p {
+  margin: 0 0 1em;
+  text-align: justify;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+
+.detalhe__texto p:last-child { margin-bottom: 0; }
+
+.detalhe__rodape {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.detalhe__aviso {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--tinta-suave);
+}
+
+.botao {
+  padding: 0.55rem 1.2rem;
+  cursor: pointer;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purpura);
+  background: rgb(255 250 238 / 0.75);
+  border: 1px solid var(--ouro);
+  box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.6);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.botao:hover:not(:disabled),
+.botao--ativo { color: #f6ead0; background: var(--purpura); }
+
+.botao:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.botao--discreto { border-color: transparent; background: transparent; box-shadow: none; text-decoration: underline; text-underline-offset: 0.3em; }
+
+.botao--discreto:hover:not(:disabled) { color: var(--purpura); background: transparent; }
+
+/* Resumo */
+.arvore__resumo {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.6rem;
+  text-align: center;
+  border-top: 1px solid var(--ouro);
+}
+
+.resumo__titulo {
+  margin: 0 0 0.75rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+
+.resumo__linha { margin: 0 0 0.45rem; font-size: 0.95rem; }
+
+.resumo__linha--destaque { font-family: var(--fonte-titulo); font-size: 0.8rem; letter-spacing: 0.12em; color: var(--ouro); }
+
+.resumo__acoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1rem; }
+
+/* Telas estreitas: uma coluna por vez (Passivas | Ativas) */
+@media (max-width: 760px) {
+  .arvore__abas { display: flex; }
+  .arvore__grade { grid-template-columns: minmax(0, 1fr); row-gap: 2.2rem; }
+  .arvore__vazio,
+  .arvore__coluna { display: none; }
+  .arvore__grade[data-vista="passivas"] .arvore__celula--ativas,
+  .arvore__grade[data-vista="ativas"] .arvore__celula--passivas { display: none; }
+  .arvore__servico { justify-content: flex-start; padding-left: 0.2rem; }
+  .deus__cabeca { flex-direction: column; text-align: center; }
+  .deus__dominios { justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .no,
+  .arvore__linha { transition: none; }
+}
+
+/* O Weebly impõe a fonte do tema (Quicksand) com !important dentro de #wsite-content. */
+#wsite-content .deus .deus__nome { font-family: "Cinzel Decorative", var(--fonte-titulo) !important; font-weight: 700 !important; font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important; }
+#wsite-content .deus h3,
+#wsite-content .deus h4 { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; }
+#wsite-content .deus .arvore__titulo { font-size: clamp(1.5rem, 2.6vw, 2rem) !important; }
+#wsite-content .deus .deus__destaque h3 { font-size: 0.95rem !important; }
+#wsite-content .deus .arvore__coluna { font-size: clamp(0.95rem, 1.6vw, 1.2rem) !important; }
+#wsite-content .deus .detalhe__nome { font-size: 1.35rem !important; }
+#wsite-content .deus .resumo__titulo { font-size: 0.85rem !important; }
+#wsite-content .deus p { font-family: var(--fonte-texto) !important; font-size: inherit !important; }
+#wsite-content .deus .deus__titulo { font-size: 1.05rem !important; }
+#wsite-content .deus .arvore__ajuda { font-size: 0.95rem !important; }
+#wsite-content .deus .resumo__linha { font-size: 0.95rem !important; }
+#wsite-content .deus .resumo__linha--destaque { font-family: var(--fonte-titulo) !important; font-size: 0.8rem !important; }
+#wsite-content .deus .detalhe__aviso { font-size: 0.88rem !important; }

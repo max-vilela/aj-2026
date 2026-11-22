@@ -1,0 +1,171 @@
+{
+  "id": "jupiter",
+  "nome": "Júpiter",
+  "estandarte": "https://i.imgur.com/ZLWBOzS.png",
+  "titulo": "Juppiter Optimus Maximus",
+  "introducao": [
+    "Júpiter é o deus supremo do céu, do trovão, das leis e dos juramentos, filho dos titãs Saturno e Ops e o mais jovem entre os irmãos, que liderou a revolta contra o pai na Titanomaquia e ficou com o céu quando o mundo foi dividido por sorteio.",
+    "Em Roma, tornou-se o patrono do próprio Estado, cultuado no Capitólio como Juppiter Optimus Maximus, tendo a águia e o raio como símbolos. É representado como um homem de barba cheia, severo e imponente, e sua presença costuma ser anunciada por tempestades. Reina sobre o Olimpo, que fica acima do Empire State Building."
+  ],
+  "destaque": {
+    "titulo": "Os Três Grandes",
+    "texto": "Raramente se atreve a adentrar territórios que pertençam aos domínios de seus tios, a menos que esteja em pleno cumprimento de uma missão — evitando, sempre que possível, afastar-se mais de sete palmos abaixo da terra ou submergir em corpos d'água profundos o suficiente para cobri-lo por completo. Nesses domínios alheios, seu poder se enfraquece visivelmente: dentro dos territórios de Plutão ou Netuno, o semideus sente sua força, resistência e demais atributos sobrenaturais diminuírem de forma considerável, como se o próprio ambiente se recusasse a reconhecer sua autoridade fora do céu que lhe pertence por direito."
+  },
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Herdeiro do Trono",
+        "texto": "Filhos do deus que ocupa o trono soberano do Olimpo, os descendentes de Júpiter nascem com uma vocação natural para a liderança. Sua opinião carrega peso considerável tanto dentro do Acampamento que leva o nome de seu pai quanto fora dele, em ambientes puramente mortais. Irradiam popularidade e um magnetismo pessoal difícil de ignorar, a ponto de apenas herdeiros de Netuno e Plutão ousarem questionar sua autoridade — qualquer outro semideus dificilmente permanece imune à imponência natural de um filho do céu. Essa mesma conexão concede ao semideus facilidade em se comunicar com criaturas ligadas aos domínios de seu pai, conquistando a confiança delas com notável naturalidade.",
+        "grau": "",
+        "id": "herdeiro-do-trono-p",
+        "servico": 0
+      },
+      {
+        "nome": "Reflexo das Nuvens",
+        "texto": "Dotados de uma conexão intrínseca com a atmosfera, os descendentes de Júpiter carregam emoções profundamente ligadas aos próprios movimentos do céu. Sempre que irritados ou magoados por alguém ou por alguma situação, o tempo ao seu redor tende a se fechar naturalmente: nuvens escurecem, a brisa se agita repentinamente, e não é raro que pancadas de chuva surjam sem aviso — às vezes acompanhadas de raios e trovões, como se o próprio céu refletisse fielmente o estado emocional do semideus.",
+        "grau": "",
+        "id": "reflexo-das-nuvens-p",
+        "servico": 0
+      }
+    ],
+    [
+      {
+        "nome": "Brisa Favorável",
+        "texto": "Quando em ambientes abertos, o filho de Júpiter sente-se revigorado pelo contato constante com o ar fresco ao seu redor. Essa conexão o torna significativamente mais resistente ao cansaço em combate, tornando-o completamente imune a ataques de natureza eólica — incluindo tempestades e correntes de vento provenientes de outras fontes de poder — e também à eletricidade em geral. Seu fôlego se prolonga muito além do de qualquer outro semideus, sempre que estiver em cenários abertos, permitindo-lhe recuperar-se com maior rapidez entre esforços. Além disso, jamais perde a noção dos pontos cardeais, orientando-se com precisão em qualquer ambiente, exceto quando confrontado por caminhos deliberadamente ocultos pela Névoa.",
+        "grau": "",
+        "id": "brisa-favoravel-p",
+        "servico": 1
+      }
+    ],
+    [
+      {
+        "nome": "Soberano dos Céus",
+        "texto": "Por carregar o sangue de um dos Três Grandes, o semideus possui um vigor físico muito acima da média, com força superior à dos próprios filhos de Marte e Vulcano. Além disso, essa herança divina concede uma resistência superior a qualquer forma de controle mental, bem como imunidade parcial a auras intimidadoras de outros semideuses que tentem comprometer seu autodomínio.",
+        "grau": "",
+        "id": "soberano-dos-ceus-p",
+        "servico": 2
+      }
+    ],
+    [
+      {
+        "nome": "Carga Viva",
+        "texto": "O filho de Júpiter é capaz de reaproveitar a energia que seu corpo dissipa em forma de movimento e calor, convertendo-a em eletricidade. Durante o calor de uma batalha, essa energia percorre sua pele e torna seus golpes mais letais e seus movimentos mais ágeis. Após um esforço prolongado, como uma longa corrida, o excesso de carga pode danificar aparelhos eletrônicos que ele tocar. Seu corpo agitado também solta faíscas naturais e, quando a carga está alta, chega a emitir um brilho próprio.",
+        "grau": "",
+        "id": "carga-viva-p",
+        "servico": 3
+      }
+    ],
+    [
+      {
+        "nome": "Visão de Águia",
+        "texto": "Assim como a águia, um dos símbolos mais reconhecidos no Acampamento Júpiter, o semideus possui os olhos adaptados de um verdadeiro falcão em plena caça. Enxerga a grandes distâncias com notável clareza e é extremamente sensível a detalhes, percebendo mudanças sutis ou movimentos praticamente imperceptíveis a olho nu.",
+        "grau": "",
+        "id": "visao-de-aguia-p",
+        "servico": 4
+      }
+    ],
+    [
+      {
+        "nome": "Presença Celestial",
+        "texto": "No ápice de sua linhagem, o filho de Júpiter passa a irradiar, de forma constante e involuntária, um fragmento genuíno da própria soberania paterna sobre os céus. Sempre que permanece parado por tempo suficiente em ambiente aberto, uma leve instabilidade atmosférica se instala ao seu redor — o vento gira em círculos discretos junto ao seu corpo, pequenas faíscas percorrem sua pele sem lhe causar qualquer dano, e o próprio ar parece mais denso, como se aguardasse apenas uma ordem para se tornar tempestade. Esse domínio inato também se reflete diretamente em combate: ventos favoráveis desviam qualquer projétil lançado contra o semideus, tornando ataques à distância inúteis contra ele, enquanto qualquer descarga elétrica direcionada ao seu corpo se dissipa por completo, reconhecendo instintivamente a autoridade superior de quem a recebe. Criaturas e espíritos ligados ao céu, ao vento ou às tempestades jamais o atacam, preferindo fugir a enfrentá-lo, tomados por um medo instintivo diante de sua presença.  Até mesmo divindades menores hesitam antes de agir contra ele, tratando-o com um respeito quase reverente, como se, por um instante, enxergassem nele um reflexo do próprio Júpiter.",
+        "grau": "",
+        "id": "presenca-celestial-p",
+        "servico": 5
+      }
+    ]
+  ],
+  "ativas": [
+    [
+      {
+        "nome": "Voo",
+        "texto": "O semideus é capaz de sustentar o próprio corpo no ar, contrariando a força da gravidade e beneficiando-se de uma leveza natural ao flutuar. Exibe controle preciso sobre as massas de ar ao seu redor, sobretudo aquelas localizadas diretamente sob seus pés, permitindo manter um voo estável e com velocidade agradável. A duração do voo começa em seis turnos e aumenta progressivamente em três turnos por serviço.",
+        "reposicao": "20 turnos",
+        "grau": "",
+        "id": "voo-a",
+        "servico": 0
+      }
+    ],
+    [
+      {
+        "nome": "Eletrocinese",
+        "texto": "Representa o domínio total e flexível do semideus sobre a eletricidade, que evolui gradualmente conforme sua experiência avança. No primeiro serviço, torna-se capaz de conjurar raios de intensidade moderada, capazes de atordoar um alvo por dois turnos e provocar um choque estático considerável no impacto — ou, alternativamente, manifestar essa mesma descarga através do contato direto com a pele, obrigando quem insiste em manter o toque a se afastar.",
+        "reposicao": "20 turnos",
+        "grau": "I",
+        "id": "eletrocinese-i-a",
+        "servico": 1
+      },
+      {
+        "nome": "Aerocinese",
+        "texto": "Quando o filho de Júpiter corta o ar — seja com sua arma ou com o próprio punho —, uma lufada poderosa se forma instantaneamente e avança contra o oponente, lançando-o cinco quadrados para trás e derrubando-o ao chão com o impacto. A mesma habilidade pode ser empregada de forma defensiva, desviando o curso de objetos ou até de pessoas em movimento, protegendo o próprio semideus ou aliados próximos de ataques à distância.",
+        "reposicao": "20 turnos",
+        "grau": "I",
+        "id": "aerocinese-i-a",
+        "servico": 1
+      }
+    ],
+    [
+      {
+        "nome": "Eletrocinese",
+        "texto": "A criação dos raios ganha força e precisão notavelmente superiores: o semideus concentra um raio disparado a até oito quadrados de distância, que atinge o alvo com uma descarga elétrica de grande potência, chamuscando suas roupas e deixando-o atordoado por três turnos consecutivos — período durante o qual o alvo permanece completamente impossibilitado de atacar. Além disso, torna-se capaz de redirecionar raios naturais já em movimento — sejam eles fenômenos climáticos genuínos, sejam originados de poderes conjurados por terceiros.",
+        "reposicao": "20 turnos",
+        "grau": "II",
+        "id": "eletrocinese-ii-a",
+        "servico": 2
+      },
+      {
+        "nome": "Aerocinese",
+        "texto": "Um tornado é um fenômeno meteorológico que se manifesta como uma coluna aérea em contato com o solo e as nuvens, capaz de girar com potência violenta e extremo perigo. O filho de Júpiter, por lidar diretamente com as oscilações da atmosfera responsáveis por incitar tempestades, também é capaz de induzir tornados de menor amplitude, mantendo controle total sobre seus movimentos.",
+        "reposicao": "20 turnos",
+        "grau": "II",
+        "id": "aerocinese-ii-a",
+        "servico": 2
+      }
+    ],
+    [
+      {
+        "nome": "Eletrocinese",
+        "texto": "Concentrando toda sua energia elétrica em uma única descarga concentrada, o filho de Júpiter é capaz de disparar um raio de intensidade absoluta contra um único monstro à sua escolha. Ao entrar em contato com a criatura, a descarga a pulveriza instantaneamente, reduzindo-a a pó dourado antes que qualquer reação de defesa seja possível. Ajustando com precisão a voltagem da descarga, o semideus também é capaz de provocar paralisia em vez da desintegração completa. Nesse caso, a eletricidade é lançada diretamente contra a testa do alvo — caso o disparo acerte o local desejado, a vítima cai imediatamente ao solo, completamente estática, permanecendo paralisada por três turnos consecutivos.",
+        "reposicao": "1 vez por dia",
+        "grau": "III",
+        "id": "eletrocinese-iii-a",
+        "servico": 3
+      },
+      {
+        "nome": "Aerocinese",
+        "texto": "O filho de Júpiter deixa de se limitar a tornados de baixa amplitude e passa a invocar colunas de vento muito mais violentas, capazes de arrancar objetos do próprio solo — destroços, galhos, pedras e qualquer item de porte pequeno ou médio que esteja ao alcance da tempestade — e arremessá-los contra inimigos presos em seu redemoinho. O tornado se desloca por uma área considerável, arrastando consigo tudo o que não estiver firmemente fixado.",
+        "reposicao": "1 vez por combate",
+        "grau": "III",
+        "id": "aerocinese-iii-a",
+        "servico": 3
+      }
+    ],
+    [
+      {
+        "nome": "Os Venti",
+        "texto": "Os venti — no singular, ventus — são espíritos do caos e da tempestade, também conhecidos pelos gregos como Anemoi Thuellai. Dependendo do nível de caos que carregam em si, esses espíritos podem assumir duas formas distintas: como uma forma parcialmente física, exibem corpos formados por densas nuvens de tempestade; como seres semelhantes a humanos, manifestam-se com asas esfumaçadas e olhos que faíscam com pequenas descargas elétricas. O filho de Júpiter, por sua ligação direta com os fenômenos atmosféricos, é capaz de convocar três desses espíritos para lutarem ao seu lado até que sejam derrotados. Uma vez manifestados, os venti atacam inimigos próximos com rajadas cortantes e descargas elétricas, arrastando objetos leves pelo campo de batalha em sua fúria natural — ainda que sua essência caótica os torne parcialmente imprevisíveis, exigindo do semideus atenção constante para direcioná-los contra os alvos desejados. Quando finalmente derrotado, um ventus se dissipa em uma implosão de ar comprimido, criando um vácuo momentâneo capaz de fazer com que o responsável por sua derrota perca a consciência instantaneamente, um último e traiçoeiro golpe da própria natureza caótica desses espíritos.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "os-venti-a",
+        "servico": 4
+      }
+    ],
+    [
+      {
+        "nome": "Atmocinese",
+        "texto": "O poder desenfreado das tempestades de Júpiter se manifesta através de um verdadeiro caos atmosférico. Ventos tão violentos quanto tufões varrem toda a extensão do ambiente, devastando tudo em seu caminho — capazes de derrubar árvores, desabar estruturas frágeis e arrastar objetos de grande porte —, enquanto raios caem aleatoriamente por diversos pontos da área afetada. A tempestade permanece ativa enquanto o semideus mantiver forças suficientes para sustentá-la, dissipando-se apenas quando ele se encontrar completamente exausto ou for derrubado antes disso — um poder tão desgastante quanto devastador, capaz de consumir por completo a energia de quem o invoca.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "atmocinese-a",
+        "servico": 5
+      }
+    ]
+  ]
+}

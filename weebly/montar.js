@@ -81,7 +81,7 @@ body { font-size: 1rem; font-weight: 400; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }
 `;
-gravar("weebly/style.css", cssTumblr.trimEnd() + "\n\n/* ---------- Ajustes das páginas (Panteão em imagem, gaveta do menu) ---------- */\n" + cssExtra.trim() + "\n" + cssWeebly);
+gravar("weebly/style.css", cssTumblr.trimEnd() + "\n\n/* ---------- Ajustes das páginas (Panteão em imagem, gaveta do menu) ---------- */\n" + cssExtra.trim() + "\n" + cssWeebly + "\n" + ler("weebly/deuses.css"));
 
 /* ---------- scripts ---------- */
 const siteJs = `/* Scripts compartilhados do site: marca a página atual no menu, fecha janelas com Esc,
@@ -163,6 +163,8 @@ corpo = corpo.slice(0, ol.a) + '{{#sections}}\n        <div class="conteudo">{co
 const SLUGS = PAGINAS.map((p) => p[0]);
 for (const s of SLUGS) corpo = corpo.split('href="/' + s + '"').join('href="/' + s + '.html"');
 corpo = corpo.split(' aria-current="page"').join("");
+/* Panteão: Júpiter já tem página */
+corpo = corpo.replace(/<li><a href="#">(<img src="https:\/\/i\.imgur\.com\/ZLWBOzS\.png"[^>]*><span>Júpiter<\/span>)<\/a><\/li>/, '<li><a href="/jupiter.html">$1</a></li>');
 corpo = corpo.replace(/<!--[\s\S]*?-->\n?\s*/g, (m) => (m.includes("Janela do Panteão") || m.includes("gaveta") ? m : ""));
 corpo = corpo.replace(/\n{3,}/g, "\n\n");
 /* O Weebly usa toda <img src> do HTML como og:image (pré-visualização de links). Para o link mostrar só o
@@ -238,16 +240,22 @@ const htmlHome = `${htmlCarregamento}
 `;
 gravar("weebly/paginas/home.html", htmlHome);
 
+/* páginas dos deuses: um div com o JSON de dados + o script que monta a árvore */
+const DEUSES = ["jupiter"];
+const embedDeus = (id, base) => `<div class="deus" data-fonte="${base}/deuses/${id}.json"></div>\n<script src="${base}/deuses.js"></script>\n`;
+for (const id of DEUSES) gravar("weebly/paginas/" + id + ".html", embedDeus(id, CDN));
+
 /* ---------- prévia local ---------- */
 const temaPrevia = montarTema("../style.css", "../site.js")
   .replace(/\{\{#sections\}\}[\s\S]*?\{\{\/sections\}\}/, "@@CONTEUDO@@")
   .replace("{footer}", "Rodapé do Weebly (exemplo)");
 const previaPagina = (conteudo) => {
   let t = temaPrevia.replace("@@CONTEUDO@@", '<div class="conteudo">' + conteudo + "</div>");
-  for (const s of SLUGS) t = t.split('href="/' + s + '.html"').join('href="/weebly/preview/' + s + '.html"');
+  for (const s of SLUGS.concat(DEUSES)) t = t.split('href="/' + s + '.html"').join('href="/weebly/preview/' + s + '.html"');
   return t;
 };
 for (const slug of SLUGS) gravar("weebly/preview/" + slug + ".html", previaPagina(conteudos[slug]));
+for (const id of DEUSES) gravar("weebly/preview/" + id + ".html", previaPagina(embedDeus(id, "..")));
 const previaHome = previaPagina(
   htmlCarregamento + '\n<script>window.AJ_DESTINO = "/weebly/preview/inicio.html";</script>\n<script src="../carregamento.js"></script>'
 );
