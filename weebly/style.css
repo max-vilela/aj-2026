@@ -1757,3 +1757,68 @@ body { font-size: 1rem; font-weight: 400; }
   aspect-ratio: 16 / 9;
   margin: 2.5rem auto 3.5rem;
 }
+
+/* ---------- Variante "menu": a árvore no estilo do menu do site (data-estilo="menu") ---------- */
+.deus[data-estilo="menu"] .no {
+  width: auto;
+  min-width: 8.5rem;
+  min-height: 0;
+  padding: 0.45rem 0.5rem 0.65rem;
+  color: var(--tinta);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: color 0.25s, translate 0.25s, letter-spacing 0.25s, opacity 0.25s;
+}
+
+.deus[data-estilo="menu"] .no::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--ouro) 20%, var(--ouro-claro) 50%, var(--ouro) 80%, transparent);
+  scale: 0.45 1;
+  opacity: 0.55;
+  transition: scale 0.25s, opacity 0.25s;
+}
+
+.deus[data-estilo="menu"] .no:hover { transform: none; translate: 0 -2px; color: var(--purpura); letter-spacing: 0.1em; }
+.deus[data-estilo="menu"] .no:hover::after { scale: 1 1; opacity: 1; }
+
+.deus[data-estilo="menu"] .no__grau { color: var(--ouro); letter-spacing: 0.2em; }
+
+.deus[data-estilo="menu"] .no--liberado,
+.deus[data-estilo="menu"] .no--marcado { box-shadow: none; }
+
+.deus[data-estilo="menu"] .no--liberado::after { opacity: 0.85; scale: 0.75 1; }
+
+.deus[data-estilo="menu"] .no--marcado,
+.deus[data-estilo="menu"] .no--selecionado { color: var(--purpura); }
+
+.deus[data-estilo="menu"] .no--marcado::after,
+.deus[data-estilo="menu"] .no--selecionado::after { scale: 1 1; opacity: 1; background: linear-gradient(to right, transparent, var(--purpura) 20%, var(--purpura) 80%, transparent); }
+
+.deus[data-estilo="menu"] .no--selecionado { outline: 0; }
+
+.deus[data-estilo="menu"] .no--bloqueado { opacity: 0.38; filter: none; }
+
+.deus[data-estilo="menu"] .no__marca {
+  top: 0.15rem;
+  right: -0.9rem;
+  width: auto;
+  height: auto;
+  color: var(--ouro);
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.deus[data-estilo="menu"] .arvore__linha { stroke-width: 1; opacity: 0.85; }
+.deus[data-estilo="menu"] .arvore__linha--apagada { opacity: 0.2; }
+
+.deus[data-estilo="menu"] .arvore__celula { gap: 1.6rem; }
