@@ -194,8 +194,10 @@
     function desenharDetalhe() {
       detalhe.textContent = "";
       var n = nos[estado.selecionada];
+      var estavaFechada = janela.hidden;
       janela.hidden = !n;
-      if (!n) return;
+      if (!n) { janela.classList.remove("arvore__janela--abrindo"); return; }
+      if (estavaFechada) { janela.classList.remove("arvore__janela--abrindo"); void janela.offsetWidth; janela.classList.add("arvore__janela--abrindo"); }
       detalhe.className = "arvore__detalhe";
       var x = criar("button", "detalhe__fechar", "×");
       x.type = "button";
