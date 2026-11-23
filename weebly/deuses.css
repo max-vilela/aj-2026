@@ -598,3 +598,32 @@
 .deus[data-estilo="menu"] .arvore__linha--apagada { opacity: 0.2; }
 
 .deus[data-estilo="menu"] .arvore__celula { gap: 1.6rem; }
+
+/* Variante menu: títulos das colunas como faixas de pergaminho, igual à arte de referência */
+.deus[data-estilo="menu"] .arvore__coluna {
+  padding: 0.95rem 1rem 1.05rem;
+  color: #3a1745;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(255 255 255 / 0.55), transparent 75%),
+    linear-gradient(180deg, #f6ecd2, #ecdcb4);
+  border: 0;
+  border-image: none;
+  border-top: 3px double var(--ouro);
+  box-shadow: inset 0 -1px 0 rgb(154 116 48 / 0.35), 0 0.5rem 0.9rem -0.6rem rgb(70 45 15 / 0.45);
+}
+
+/* linha dourada que some em direção ao centro, abaixo da faixa */
+.deus[data-estilo="menu"] .arvore__coluna::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: linear-gradient(to right, var(--ouro), var(--ouro-claro) 55%, transparent);
+}
+
+.deus[data-estilo="menu"] .arvore__coluna--ativas::after,
+.deus[data-estilo="menu"] .arvore__coluna:last-of-type::after {
+  background: linear-gradient(to left, var(--ouro), var(--ouro-claro) 55%, transparent);
+}
