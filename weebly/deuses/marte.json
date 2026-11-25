@@ -1,0 +1,165 @@
+{
+  "id": "marte",
+  "nome": "Marte",
+  "estandarte": "https://i.imgur.com/xDhsLhP.png",
+  "titulo": "",
+  "introducao": [
+    "Na tradição romana, Marte é venerado como o pai fundador de Roma, o guardião do Estado e o arquiteto divino da disciplina militar que ergueu o Império. Longe de ser apenas o deus do derramamento de sangue, ele personifica a força estratégica, o poderio organizado e a virtude cívica do soldado que luta para garantir a paz e a estabilidade de suas fronteiras. Durante a expansão de Roma, seu culto tornou-se o pilar moral e estrutural das legiões, pois a supremacia do Império dependia diretamente da ordem tática, da coragem inabalável e da obediência cega aos comandos no campo de batalha. Seus mitos destacam sua liderança severa sobre as tropas celestes e seu papel como o protetor supremo que pune com fúria implacável qualquer ameaça à soberania de seu povo.",
+    "Os filhos de Marte trazem no corpo a imponência física e a prontidão exigidas para o combate na vanguarda e na liderança da infantaria pesada. Eles exibem portes atléticos e intimidadores, com ombros maciços, cicatrizes de treinamento orgulhosamente expostas e um olhar focado e calculista que nunca perde de vista o perímetro de combate. No cotidiano militar, eles seguem com rigidez absoluta o código de vestimenta e manutenção do acampamento, ostentando armaduras polidas até o reflexo, elmos perfeitamente alinhados e capas vermelhas imaculadas, simbolizando o sangue dos inimigos e a glória do pretório. Eles assumem a liderança natural nos exercícios táticos, nos jogos de guerra e na guarda das muralhas de Nova Roma, comandando com punho de ferro e lealdade inabalável a linha de frente que protege todos os legionários."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Arsenal Prático",
+        "texto": "O legionário tem no sangue o desejo pela guerra, possuindo uma afinidade assassina e instintiva com qualquer instrumento capaz de tirar uma vida. Mesmo que nunca tenha pisado nos campos de treino, suas mãos se moldam perfeitamente ao cabo de um gládio romano, à empunhadura de um arco longo ou até mesmo ao cabo de uma ferramenta improvisada. Ele consegue manejar qualquer arma com uma precisão intermediária imediata, o que garante que ele nunca aja de forma desajeitada.",
+        "grau": "",
+        "id": "arsenal-pratico-p",
+        "servico": 0,
+        "icone": "marte-arsenal-pratico-p.png"
+      },
+      {
+        "nome": "Sentido de Trincheira",
+        "texto": "O corpo do legionário reage ao perigo iminente antes mesmo que sua mente consciente consiga processar a ameaça. Essa percepção aguçada funciona como um sexto sentido militar mecânico, permitindo que o recruta sinta o deslocamento do ar ou o brilho do metal hostil vindo em sua direção, sendo totalmente capaz de antecipar e bloquear golpes desferidos contra suas costas. Contudo, esse reflexo motor se baseia na leitura do espaço ao seu redor, o que significa que ele falha se o ataque físico a menos de dois quadrados de distância.",
+        "grau": "",
+        "id": "sentido-de-trincheira-p",
+        "servico": 0,
+        "icone": "marte-sentido-de-trincheira-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Resiliência Bélica",
+        "texto": "O sangue do deus da guerra altera a fiação do sistema nervoso do legionário, modificando permanentemente a forma como seu organismo processa o trauma físico. O semideus possui uma tolerância à dor extremamente elevada, o que impede que espasmos musculares, fraturas leves e choques mecânicos interrompam a fluidez de seus movimentos durante o combate. Seus músculos continuam a responder com força total mesmo sob o impacto de golpes pesados, anulando qualquer tipo de penalidade física por atordoamento.",
+        "grau": "",
+        "id": "resiliencia-belica-p",
+        "servico": 1,
+        "icone": "marte-resiliencia-belica-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fibra Muscular",
+        "texto": "O treinamento ostensivo do legionário aliado com sua genética divina garante uma hipertrofia pesada na musculatura dos braços, aumentando a força de explosão em qualquer golpe físico. Seus ataques corporais carregam uma potência bruta esmagadora. Sempre que o semideus ataca um adversário, a força concentrada é tão violenta que quebra a estabilidade do defensor. Mesmo que o oponente bloqueie o golpe usando um escudo rígido, a força empurra o alvo obrigatoriamente um quadrado para trás, impedindo que ele sustente a posição original.",
+        "grau": "",
+        "id": "fibra-muscular-p",
+        "servico": 2,
+        "icone": "marte-fibra-muscular-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Presença de Comando",
+        "texto": "O porte físico do legionário e sua postura de combate exalam a autoridade pesada do deus da guerra, estabelecendo uma área de influência física imediata que se estende por um perímetro de até quatro quadrados ao redor do seu corpo. Sempre que um inimigo entra nessa área de influência, o peso opressor da presença do semideus sobrecarrega os reflexos do alvo de forma automática. Esse travamento impede que o oponente consiga realizar jogadas de investida correndo, limitando o deslocamento do adversário a apenas um quadrado por turno enquanto ele permanecer dentro dessa área de influência.",
+        "grau": "",
+        "id": "presenca-de-comando-p",
+        "servico": 3,
+        "icone": "marte-presenca-de-comando-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Casca Grossa",
+        "texto": "O treinamento contínuo com armaduras pesadas expande a densidade óssea e a rigidez da caixa torácica do legionário. Essa alteração permanente blinda os órgãos internos contra traumas causados por impactos contundentes. Sempre que o filho de Marte é atingido por golpes de marretas, escudos, quedas e arremessos que normalmente esmagariam seus ossos, sua estrutura esquelética absorve a energia do choque de forma mecânica, reduzindo o impacto recebido pela metade e impedindo fraturas internas.",
+        "grau": "",
+        "id": "casca-grossa-p",
+        "servico": 4,
+        "icone": "marte-casca-grossa-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Corpo Renovado",
+        "texto": "O vigor físico do legionário atinge o ápice, permitindo que seu metabolismo neutralize o cansaço do combate de forma instantânea. No momento exato em que o filho de Marte finaliza um adversário através de um confronto corpo a corpo, a adrenalina da vitória gera uma descarga física que limpa todo o cansaço acumulado.\n\n________________",
+        "grau": "",
+        "id": "corpo-renovado-p",
+        "servico": 5,
+        "icone": "marte-corpo-renovado-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Gatilho Bélico",
+        "texto": "O legionário estende a mão e envolve sua arma com uma aura avermelhada que altera temporariamente a física do objeto. No momento em que desfere o próximo golpe físico, o armamento libera um estalo seco e uma onda de impacto invisível contra o alvo. Esse choque cinético joga o inimigo a dois quadrados de distância para trás, sem que o semideus precise sair do lugar para empurrá-lo.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "gatilho-belico-a",
+        "servico": 1,
+        "icone": "marte-gatilho-belico-a.png"
+      },
+      {
+        "nome": "Corte da Falange",
+        "texto": "O legionário rotaciona o próprio corpo com violência instantânea enquanto sua lâmina é envolta por uma energia enrubescida. Essa resposta motora desfere um golpe circular que atinge simultaneamente todos os inimigos localizados nos quadrados adjacentes ao seu redor, aplicando um corte superficial e empurrando cada um deles um quadrado para trás.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "corte-da-falange-a",
+        "servico": 1,
+        "icone": "marte-corte-da-falange-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Crava-metal",
+        "texto": "O legionário tensiona instantaneamente a musculatura de uma região específica do seu corpo para receber e repelir o próximo ataque físico direcionado àquela área. No milissegundo do impacto, a carne do local escolhido trava com uma rigidez tão absurda que a pele reage como se fosse uma carcaça poderosa de metal, colidindo de frente contra o golpe hostil e anulando o dano pesado.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "crava-metal-a",
+        "servico": 2,
+        "icone": "marte-crava-metal-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Duelo de Linha",
+        "texto": "O legionário evoca o antigo pacto dos lares militares e desafia um adversário localizado dentro de sua área de influência de até três quadrados. Essa ação manifesta uma corrente invisível que prende o corpo do oponente ao do semideus, impedindo completamente que o adversário consiga fugir da luta. O laço restringe as ações do alvo, fazendo com que ele só consiga desferir ataques contra o filho de Marte e outros que estejam localizados dentro deste mesmo perímetro de até três quadrados, permanecendo retido obrigatoriamente sob essa condição durante quatro turnos seguidos.",
+        "reposicao": "2 vezes por batalha",
+        "grau": "",
+        "id": "duelo-de-linha-a",
+        "servico": 3,
+        "icone": "marte-duelo-de-linha-a.png"
+      },
+      {
+        "nome": "Reivindicação da Arma",
+        "texto": "O semideus estende a mão aberta em direção a um adversário que esteja empunhando uma arma metálica dentro de sua área de influência de até três quadrados. Invocando o domínio de seu pai sobre o metal bélico, uma força de atração invisível arranca o armamento diretamente da palma do oponente, fazendo o objeto voar pelo ar até encaixar perfeitamente nos punhos do filho de Marte.",
+        "reposicao": "2 vez por batalha",
+        "grau": "",
+        "id": "reivindicacao-da-arma-a",
+        "servico": 3,
+        "icone": "marte-reivindicacao-da-arma-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Frenesi Assassino",
+        "texto": "O legionário entra em um estado de transe bélico extremo, tomado por uma sede de batalha avassaladora que anula instantaneamente quaisquer efeitos negativos ativos em seu corpo. Esse frenesi bloqueia mecanicamente os sinais de dor de ferimentos profundos, os travamentos de paralisias por veneno e as névoas de hipnotização mental, mantendo o semideus totalmente imune a essas penalidades durante dois turnos inteiros. Dominado por essa fúria cega, a potência de seus braços atinge o ápice destrutivo. Qualquer tentativa do oponente de erguer um escudo para conter o golpe falha de forma trágica, fazendo com que a proteção material seja completamente destruída e partida ao meio pelo impacto. A única forma de mitigar o dano desse ataque é através de manobras de deflexão e aparo usando espadas, sendo qualquer barreira estática pulverizada pela força do filho de Marte.",
+        "reposicao": "2 vezes ao dia",
+        "grau": "",
+        "id": "frenesi-assassino-a",
+        "servico": 4,
+        "icone": "marte-frenesi-assassino-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Legião Ferrata",
+        "texto": "O semideus choca o cabo de sua arma contra o solo e convoca as almas dos guerreiros romanos da famosa Legião de Marte. Três espíritos de legionários palpáveis, equipados com escudos de torre e gládios de ferro, emergem instantaneamente em seis quadrados adjacentes escolhidos pelo semideus. Essas entidades possuem a mesma integridade física do conjurador e se movem de forma coordenada durante quatro turnos.",
+        "reposicao": "4 vezes ao dia",
+        "grau": "",
+        "id": "legiao-ferrata-a",
+        "servico": 5,
+        "icone": "marte-legiao-ferrata-a.png"
+      }
+    ]
+  ]
+}

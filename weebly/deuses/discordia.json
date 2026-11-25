@@ -1,0 +1,165 @@
+{
+  "id": "discordia",
+  "nome": "Discórdia",
+  "estandarte": "https://i.imgur.com/J6ZtZDK.png",
+  "titulo": "",
+  "introducao": [
+    "Discórdia é fruto da união entre Júpiter e Juno, concebida já com o propósito de ocasionar o caos, além de um ímpeto forte e mandante. Por ser considerada, até então, fora dos padrões de beleza romanos, acabou expulsa do panteão e vagou pelo mundo até encontrar um lar fixo na Via Láctea, onde se casou com Éter e gerou as desgraças mundiais, principais responsáveis pelos problemas de saúde física e mental da humanidade. Curiosamente, foi ela quem causou a Guerra da Tróia.",
+    "A pele esbranquiçada e os cabelos vinho escondem a personalidade travessa e as mentiras acumuladas e disseminadas por tanto tempo. Além da túnica comum, traja sandálias largas de couro. Gosta de presenciar a instauração do caos e das confusões e, sobretudo, de ser a responsável pelos problemas entre as pessoas, sempre semeando intrigas entre os lados e gerando discussões — sua forma de se alimentar, por sinal."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Venha! Venha!",
+        "texto": "A presença de um filho de Discórdia é como um farol de provocação para qualquer ser com sangue quente. Sua aura de discórdia desperta instintivamente hostilidade nos adversários, fazendo com que ele seja naturalmente priorizado como alvo em confrontos contra semideuses, divindades menores e criaturas. Diplomacia e tática conjunta tornam-se exaustivas em sua proximidade, exigindo esforço consciente para manter a calma. A atração de hostilidade não se aplica a seres sem emoções instintivas, como constructos mortos-vivos, autômatos ou entidades puramente abstratas, nem a aliados que já tenham convivido com ele por mais de um ano ininterrupto.",
+        "grau": "",
+        "id": "venha-venha-p",
+        "servico": 0,
+        "icone": "discordia-venha-venha-p.png"
+      },
+      {
+        "nome": "Faca na Manga",
+        "texto": "Filhos de Discórdia movem-se com tanta imprevisibilidade que seus golpes pelas costas não deixam rastro perceptível. Nenhum sentido ou intuição consegue antecipar o golpe antes que ele caia. A concentração exigida para tal façanha, contudo, esvazia o semideus, impedindo-o de usar qualquer poder ativo pelos cinco turnos seguintes.",
+        "grau": "",
+        "id": "faca-na-manga-p",
+        "servico": 0,
+        "icone": "discordia-faca-na-manga-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cada Um Por Si",
+        "texto": "A discórdia ronda o semideus como um cão faminto. Aliados e inimigos próximos tornam-se relutantes em cooperar, priorizando sua própria sobrevivência ou glória. Aqueles que insistirem em ajudar uns aos outros encontram esforço redobrado para coordenar ações simples, enquanto o filho de Discórdia permanece imune a essa hesitação.",
+        "grau": "",
+        "id": "cada-um-por-si-p",
+        "servico": 1,
+        "icone": "discordia-cada-um-por-si-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cabeça Dura",
+        "texto": "A mente caótica do semideus não se dobra a comandos. Ele é imune a qualquer controle mental, sedução ou ordem que busque forçá-lo a agir contra sua vontade. Em compensação, substâncias e efeitos que confundem, atordoam ou desorientam o pegam com mais facilidade, durando um turno a mais que o normal..",
+        "grau": "",
+        "id": "cabeca-dura-p",
+        "servico": 2,
+        "icone": "discordia-cabeca-dura-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Eu Não Disse Isso",
+        "texto": "A palavra de um filho de Discórdia torna-se fluida e irresponsável. Sempre que ele mente deliberadamente, a memória daqueles que ouvirem será levemente alterada para que a mentira soe plausível, dificultando desmentidos imediatos. A alteração não é permanente: após algumas horas, as memórias originais tendem a ressurgir, frequentemente causando mais confusão que a própria mentira. O efeito não funciona contra quem já conheça a verdade, contra registros escritos feitos no momento e contra filhos de Laverna, filhos de Nêmesis e filhos de Mércurio.",
+        "grau": "",
+        "id": "eu-nao-disse-isso-p",
+        "servico": 3,
+        "icone": "discordia-eu-nao-disse-isso-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mãe dos Maus",
+        "texto": "O semideus torna-se um vetor de discórdia latente. Sempre que um efeito negativo como veneno, maldição, medo e confusão  for aplicado em um adversário por qualquer fonte que não seja o próprio filho da Discórdia, ele pode intensificar o mal em curso. Venenos causam mais dor, medos paralisam mais profundamente, confusões duram mais tempo e maldições agravam seus sintomas. O semideus apenas torna mais severo o que foi aplicado..",
+        "grau": "",
+        "id": "mae-dos-maus-p",
+        "servico": 4,
+        "icone": "discordia-mae-dos-maus-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Herança Maldita",
+        "texto": "O semideus carrega consigo uma fração do caos primordial. Quando um aliado em sua proximidade é atingido por um efeito negativo que o incapacitaria; como paralisia, petrificação, sono forçado e possessão, o filho de Discórdia pode escolher absorver esse efeito para si. O semideus não anula o efeito, apenas o redireciona para seu próprio corpo, onde o caos o dissolve sem lhe causar prejuízo.\n\n________________",
+        "grau": "",
+        "id": "heranca-maldita-p",
+        "servico": 5,
+        "icone": "discordia-heranca-maldita-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Aqui, Seu Fraco!",
+        "texto": "O semideus desafia abertamente um adversário, tornando-se irresistivelmente irritante para ele. O alvo abandonará seu foco atual para investir contra o provocador, mesmo que isso signifique quebrar regras de combate. O desafio não controla como o adversário ataca, apenas garante que o filho de Discórdia se torne sua prioridade imediata, permitindo situações como dois contra um quando o juiz ainda não liberou.",
+        "reposicao": "4 turnos",
+        "grau": "",
+        "id": "aqui-seu-fraco-a",
+        "servico": 1,
+        "icone": "discordia-aqui-seu-fraco-a.png"
+      },
+      {
+        "nome": "Presente da Mamãe",
+        "texto": "O semideus materializa uma maçã dourada em suas mãos, fruto da discórdia primordial. Ela pulsa com atração hostil por um turno antes de explodir em uma onda de ciúme e ódio, afetando todos em dois quadrados de distância. Aqueles atingidos são forçados a atacar quem quer que esteja mais próximo, seja aliado ou inimigo, permanecendo sob o efeito por dois turnos. O conjurador não é poupado se estiver no alcance da explosão, pois Discórdia não distingue amigo de adversário quando semeia o caos.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "presente-da-mamae-a",
+        "servico": 1,
+        "icone": "discordia-presente-da-mamae-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Dois Rostos",
+        "texto": "O semideus fixa os olhos em um adversário e, por um instante, vira-lhe a essência do avesso. Por três turnos, a natureza divina do alvo é invertida: o que era força torna-se fraqueza, o que era precisão torna-se torpeza, o que era domínio torna-se incapacidade. Filhos de Marte hesitam diante do combate, filhos de Apolo erram flechas que antes acertavam, filhos de Mercúrio tropeçam em próprias pegadas. O efeito é imprevisível e ocasionalmente colateral: herdeiros de Fortuna passam a perder a sorte e os filhos de Somnus ficam hiperativos. O semideus deve manter contato visual no momento da ativação; piscar, desviar o olhar ou ser cegado interrompe o poder antes que ele tome efeito.",
+        "reposicao": "13 turnos",
+        "grau": "",
+        "id": "dois-rostos-a",
+        "servico": 2,
+        "icone": "discordia-dois-rostos-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Palavra de Caos",
+        "texto": "Todo acordo firmado carrega o peso da discórdia primordial: as regras vinculam todos os envolvidos, e quem quebrar o juramento é imediatamente açoitado por uma praga definida por aqueles que permaneceram fiéis. O pacto não pode ser forçado, apenas proposto. A maldição do quebrante não mata, mas persegue conforme a gravidade da traição.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "palavra-de-caos-a",
+        "servico": 3,
+        "icone": "discordia-palavra-de-caos-a.png"
+      },
+      {
+        "nome": "Cá e Acolá",
+        "texto": "O filho de Discórdia materializa uma sósia a partir da própria sombra que é palpável. A sombra imita seus movimentos e confundem os sentidos dos adversários, que não conseguem distinguir qual é o semideus real. A qualquer momento, dentro de dois turnos, o conjurador pode fazer a sombra explodir em magia caótica, causando dano aos adversários em um quadrado. Se atingirem a sombra antes da explosão, ela se dissipa.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "ca-e-acola-a",
+        "servico": 3,
+        "icone": "discordia-ca-e-acola-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Inquilino",
+        "texto": "O semideus cospe pela boca um eidolon, fragmento dos primogênitos de Discórdia. A entidade não assume forma própria, mas invade o corpo de um adversário em contato visual, tomando-o por dois turnos. Durante a possessão, o hospedeiro perde o controle de suas ações e passa a atacar aliados e inimigos indiscriminadamente, enquanto o eidolon se diverte com o caos. O semideus não controla o eidolon, apenas o direciona para um corpo e assiste. Por conta da natureza dos filhos de Vênus, eles são imunes à possessão. Se utilizarem controle mental no eidolon, ele também se desfaz.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "inquilino-a",
+        "servico": 4,
+        "icone": "discordia-inquilino-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Maçã da Discórdia",
+        "texto": "O semideus lança uma maça no ar e o caos primordial responde. Um efeito aleatório se manifesta no local, escolhido pela figura de comando: pode ser uma briga generalizada entre todos presentes, a aparição repentina de criaturas e uma inversão das cores e formas visíveis, como também algo ainda mais absurdo. O filho de Discórdia lança a maçã, mas não controla o resultado, portanto, deve lançar o dado e, respectivamente, de acordo com os efeitos enumerados, teremos o que realmente acontecerá.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "maca-da-discordia-a",
+        "servico": 5,
+        "icone": "discordia-maca-da-discordia-a.png"
+      }
+    ]
+  ]
+}

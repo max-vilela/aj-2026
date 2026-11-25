@@ -1,0 +1,166 @@
+{
+  "id": "nemesis",
+  "nome": "Nêmesis",
+  "estandarte": "https://i.imgur.com/9inuMzK.png",
+  "titulo": "",
+  "introducao": [
+    "Nêmesis é a deusa da retribuição e do equilíbrio, aquela que se encarrega de restaurar a justa medida sempre que a sorte humana pende para excessos — seja o excesso de orgulho, seja o de fortuna imerecida. Ao contrário de muitas divindades gregas absorvidas pelo panteão romano, Nêmesis nunca recebeu um nome latino próprio, sendo cultuada em Roma sob sua própria identidade original, o que por si só demonstra a força e a singularidade de seu domínio. Filha da Noite, segundo a tradição mais antiga, carrega em si um caráter sombrio e inevitável: não age por ódio nem por capricho, mas por necessidade, castigando a desmedida (a chamada húbris) onde quer que ela surja, entre mortais e, por vezes, até entre deuses.",
+    "Representada com uma balança em uma das mãos e um chicote ou espada na outra, Nêmesis simboliza o julgamento equânime que não se deixa corromper por súplicas ou lágrimas. Alguns relatos também a descrevem com asas e uma roda, insígnias que reforçam sua natureza implacável e veloz: ninguém escapa por muito tempo do alcance da deusa da vingança justa. Seu semblante é sereno, quase frio, o que só intensifica o temor que desperta — afinal, Nêmesis nunca ergue a voz antes de agir.",
+    "Os poucos que reivindicam descendência de Nêmesis carregam um forte senso de justiça, por vezes severo demais, e uma dificuldade natural em tolerar arrogância alheia. Observadores meticulosos, percebem com facilidade quando algo está desequilibrado — uma vantagem injusta, uma mentira mal contada, um poder usado sem limites — e sentem um impulso quase incontrolável de corrigir a situação, ainda que isso signifique agir como a própria mão do destino. Não são crueis por natureza, mas tampouco costumam perdoar com facilidade: para os filhos de Nêmesis, toda ação tem um preço, e a balança, cedo ou tarde, sempre se equilibra."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Olhar Analítico",
+        "texto": "O semideus consegue reconstruir com precisão os acontecimentos de uma cena ou os passos de uma pessoa apenas observando os detalhes ao redor: a disposição de móveis, vestígios quase imperceptíveis, pequenas alterações no ambiente que passariam despercebidas a olhos menos atentos. Essa mesma capacidade se estende a evidências físicas mais concretas — uma simples amostra biológica, como um fio de cabelo ou uma gota de sangue, já é suficiente para que o semideus deduza informações relevantes sobre a identidade de quem procura.",
+        "grau": "",
+        "id": "olhar-analitico-p",
+        "servico": 0,
+        "icone": "nemesis-olhar-analitico-p.png"
+      },
+      {
+        "nome": "Sombra da Vingança",
+        "texto": "Nêmesis figura entre as divindades mais temidas até mesmo pelos menos supersticiosos, e não sem motivo — sua fúria costuma se estender por longos períodos, carregada de um rancor que raramente se dissipa com facilidade. Sempre que um descendente da deusa é alvo de azarações, humilhações públicas ou qualquer forma de agressão deliberada, o responsável tende a sentir, nos dias seguintes, um desconforto persistente e injustificável — um mal-estar que se intensifica em vergonha genuína sempre que cruza novamente o caminho do filho da deusa da vingança.",
+        "grau": "",
+        "id": "sombra-da-vinganca-p",
+        "servico": 0,
+        "icone": "nemesis-sombra-da-vinganca-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Farejar da Verdade",
+        "texto": "O semideus nemesiano identifica imediatamente qualquer tentativa de distorcer a verdade — nenhuma mentira, por mais elaborada que seja, passa despercebida por seus sentidos. Sua simples presença já basta para instaurar um desconforto crescente em quem tenta sustentar uma inverdade: o mentiroso sente uma dificuldade cada vez maior em manter o próprio discurso, gaguejando ou hesitando à medida que a farsa se desmorona. Essa mesma ligação com a honestidade se volta contra o próprio semideus, que enfrenta enorme dificuldade em mentir e chega a sentir um desconforto mental genuíno sempre que tenta fazê-lo.",
+        "grau": "",
+        "id": "farejar-da-verdade-p",
+        "servico": 1,
+        "icone": "nemesis-farejar-da-verdade-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Escudo da Equidade",
+        "texto": "É próprio dos filhos de Nêmesis lutarem sempre de forma justa, evitando ataques pelas costas ou golpes considerados desleais — um reflexo direto do próprio senso de equidade que a deusa representa. Essa mesma balança se aplica em sentido contrário: sempre que alguém tenta atingir o semideus de maneira injusta, um reflexo instintivo e repentino o faz reagir a tempo, defendendo-se ou desviando do golpe antes mesmo que a ameaça se concretize.",
+        "grau": "",
+        "id": "escudo-da-equidade-p",
+        "servico": 2,
+        "icone": "nemesis-escudo-da-equidade-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Resistência Inabalável",
+        "texto": "Reconhecido entre os campistas por sua notável força física e estabilidade psicológica, o semideus não está imune a ataques mentais, mas possui uma capacidade acima da média para perceber quando está sendo vítima de manipulações, como o charme natural dos filhos de Vênus ou a manipulação da Névoa exercida por um feiticeiro experiente. Ao identificar indícios claros de que não está agindo por vontade própria, é capaz de despender parte de sua energia para romper o controle imposto sobre sua mente.",
+        "grau": "",
+        "id": "resistencia-inabalavel-p",
+        "servico": 3,
+        "icone": "nemesis-resistencia-inabalavel-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Balança Cega",
+        "texto": "Nêmesis atua, em certas tradições, como contraparte de Fortuna, representando não apenas a sorte ou a ausência dela, mas também a justiça que emana dos céus — seja ela punição ou recompensa. Os filhos mais poderosos da deusa carregam, de forma quase inconsciente, um reflexo desse equilíbrio absoluto em meio ao combate: sempre que são desarmados, um azar equivalente recai sobre o adversário responsável, fazendo-o perder sua própria arma no mesmo instante.",
+        "grau": "",
+        "id": "balanca-cega-p",
+        "servico": 4,
+        "icone": "nemesis-balanca-cega-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Percepção Cármica",
+        "texto": "No ápice de sua linhagem, o semideus nemesiano desenvolve uma sensibilidade quase profética ao próprio equilíbrio que Nêmesis impõe sobre o mundo, percebendo com antecedência os momentos em que a arrogância alheia está prestes a se voltar contra seu próprio dono. É capaz de antecipar ataques adversários com clareza suficiente para esquivar-se deles com um movimento simples e preciso, como se a própria sorte do oponente escolhesse falhar justamente naquele instante — um lembrete silencioso de que todo excesso, cedo ou tarde, cobra seu preço.\n\n________________",
+        "grau": "",
+        "id": "percepcao-carmica-p",
+        "servico": 5,
+        "icone": "nemesis-percepcao-carmica-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Veredito",
+        "texto": "O semideus concentra sua força no próximo golpe desferido, tornando-o impossível de ser bloqueado — embora ainda passível de esquiva. Qualquer tentativa de defesa com escudos ou armas convencionais resulta na quebra imediata do item utilizado.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "veredito-a",
+        "servico": 1,
+        "icone": "nemesis-veredito-a.png"
+      },
+      {
+        "nome": "Adrasteia",
+        "texto": "O epíteto \"Adrasteia\", que significa \"a inescapável\", era frequentemente utilizado para se referir a Nêmesis. Seus filhos herdam esse mesmo dom da perseguição implacável: ao marcar mentalmente um adversário, o semideus passa a ter noção constante de sua localização, independentemente da distância ou dos obstáculos entre ambos, até que finalmente o encontre frente a frente. Quando utilizada em pleno combate, a marca garante ainda mais: o próximo ataque desferido contra o alvo torna-se impossível de ser desviado, como se o próprio destino se recusasse a permitir sua fuga.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "adrasteia-a",
+        "servico": 1,
+        "icone": "nemesis-adrasteia-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Lei de Talião",
+        "texto": "Fiel à antiga expressão que rege sua própria mãe, o semideus nemesiano carrega consigo uma parcela do equilíbrio implacável que Nêmesis impõe sobre o mundo. Durante cinco turnos, qualquer dano recebido em combate é automaticamente refletido, em igual intensidade, sobre o inimigo responsável pela agressão — de modo que, se o semideus é atingido por uma lança no abdômen, a mesma dor debilitante recai sobre quem desferiu o golpe.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "lei-de-taliao-a",
+        "servico": 2,
+        "icone": "nemesis-lei-de-taliao-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Equação da Justiça",
+        "texto": "O semideus invoca o equilíbrio absoluto que rege sua própria mãe, forçando a energia vital entre si e um adversário a se nivelar instantaneamente, desde que este esteja dentro de um raio de oito quadrados. Caso o filho de Nêmesis esteja à beira da exaustão enquanto o inimigo transborda vigor, ambos são igualados a um mesmo patamar intermediário de estamina, como se a própria justiça se recusasse a permitir que o cansaço determinasse o resultado de um confronto. O processo é brusco o suficiente para causar uma tontura momentânea no adversário, que sente o próprio fôlego drenado de forma abrupta, restabelecendo a batalha em condições verdadeiramente equilibradas para ambos os lados.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "equacao-da-justica-a",
+        "servico": 3,
+        "icone": "nemesis-equacao-da-justica-a.png"
+      },
+      {
+        "nome": "Purgar",
+        "texto": "O semideus é capaz de nulificar instantaneamente quaisquer efeitos negativos que estejam agindo sobre seu próprio corpo, ainda que permaneça vulnerável a novos ataques ou influências logo em seguida. Maldições, pragas, envenenamentos e qualquer outra forma de magia degradante são completamente anulados no momento da ativação — sangramentos ativos, porém, não são interrompidos por esse efeito, exigindo tratamento à parte.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "purgar-a",
+        "servico": 3,
+        "icone": "nemesis-purgar-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Corpo em Silêncio",
+        "texto": "De forma vagamente exótica, os filhos da deusa da justiça entram em pleno estado de equilíbrio e tranquilidade em meio ao combate, quase como se seus corpos mergulhassem em uma meditação profunda mesmo sob ataque. Durante cinco turnos, o semideus é capaz de ignorar completamente qualquer dor proveniente de golpes, pancadas, choques ou qualquer outra forma de agressão investida contra si, mantendo-se em pleno controle de suas ações independentemente do que sofra fisicamente nesse período. Ignorar a dor, porém, não significa estar imune aos ferimentos: o corpo continua sendo danificado normalmente, e todos os machucados sofridos precisam ser tratados posteriormente.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "corpo-em-silencio-a",
+        "servico": 4,
+        "icone": "nemesis-corpo-em-silencio-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Justo Retorno",
+        "texto": "No estágio seguinte de seu domínio sobre o próprio corpo, o semideus aprende a transformar o silêncio da dor em uma arma. Assim que o efeito de Corpo em Silêncio se encerra, toda a dor, angústia ou pavor acumulados durante aquele período condensam-se em uma aura invisível e intangível, que o semideus pode direcionar a um único alvo à sua escolha. O efeito colateral de tudo o que foi ignorado — cada corte, cada golpe, cada choque sofrido — se instaura então sobre o corpo da vítima escolhida, como se a própria justiça de Nêmesis cobrasse, de uma só vez, tudo aquilo que o semideus se recusou a sentir.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "justo-retorno-a",
+        "servico": 5,
+        "icone": "nemesis-justo-retorno-a.png"
+      }
+    ]
+  ]
+}

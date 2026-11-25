@@ -1,0 +1,165 @@
+{
+  "id": "cupido",
+  "nome": "Cupido",
+  "estandarte": "https://i.imgur.com/UU5Nvoi.png",
+  "titulo": "",
+  "introducao": [
+    "Concebido como fruto do relacionamento mitológico entre o amor e a guerra, Cupido herda os melhores aspectos de cada divindade: a sutileza de Vênus e a crueldade gladiadora de Marte. Governante de todos os aspectos do amor, desde os mais doces até os mais agressivos, Cupido administra a paixão por meio de suas setas, que — quase — nunca erram o alvo. Diz a tradição que possui dois tipos de flechas: as de ponta dourada, capazes de despertar um amor avassalador e incontrolável em quem for atingido, e as de ponta de chumbo, responsáveis por provocar repulsa e aversão instantâneas. Essa dualidade reflete a própria natureza ambígua do deus, capaz de unir corações com a mesma facilidade com que os afasta.",
+    "Bastante adorado pelas divindades romanas, principalmente por Júpiter, responsável por conceder-lhe um par de asas, Cupido é visto com bons olhos por trazer relações românticas tanto para deuses quanto para mortais, embora sua imparcialidade tenha sido contestada no tempo em que Vênus, sua mãe, ainda existia. Ainda assim, nem mesmo o deus do amor esteve livre das armadilhas de suas próprias flechas: conta-se que Cupido se apaixonou pela mortal Psiquê, envolvendo-se em uma longa saga de provações, desconfiança e redenção até que ela fosse elevada à condição de deusa, tornando-se sua esposa legítima entre os Doze Divinos."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Beleza Que Ofusca",
+        "texto": "Os descendentes de Cupido carregam uma beleza fora do comum, acompanhada por um sutil brilho dourado que torna sua presença quase impossível de ignorar. Para divindades e semideuses, esse brilho é apenas uma luz ofuscante; para os mortais, porém, encarar diretamente um filho de Cupido equivale a fitar o próprio sol, exigindo um esforço genuíno para não desviar o olhar.",
+        "grau": "",
+        "id": "beleza-que-ofusca-p",
+        "servico": 0,
+        "icone": "cupido-beleza-que-ofusca-p.png"
+      },
+      {
+        "nome": "Presença Cativante",
+        "texto": "Uma aura naturalmente envolvente acompanha os descendentes de Cupido, despertando simpatia e receptividade em quem cruza seu caminho. A beleza, a postura e o modo de se expressar desses semideuses facilitam a conquista da confiança alheia, concedendo pequenas vantagens em negociações, interações sociais e qualquer situação que dependa de charme ou persuasão. Essa influência, porém, tem limites claros: não permite controlar emoções alheias nem forçar obediência de forma alguma.",
+        "grau": "",
+        "id": "presenca-cativante-p",
+        "servico": 0,
+        "icone": "cupido-presenca-cativante-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mira do Desejo",
+        "texto": "Tal como o próprio deus do amor e do desejo, os descendentes de Cupido demonstram uma afinidade natural com armas de combate à distância, sobretudo o arco e a flecha. Seus movimentos carregam uma precisão calculada que poucos legionários conseguem igualar, com sentidos aguçados e uma percepção de distância refinada que guia suas flechas até o alvo com notável facilidade. Essa proficiência coloca os filhos de Cupido em um patamar comparável ao dos renomados descendentes de Apolo, tradicionalmente reconhecidos entre os semideuses por sua excelência na arquearia.",
+        "grau": "",
+        "id": "mira-do-desejo-p",
+        "servico": 1,
+        "icone": "cupido-mira-do-desejo-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Asas do Amor",
+        "texto": "Pequenas asas brancas, de poucos centímetros além do comprimento dos braços, manifestam-se instintivamente nos momentos de maior perigo do legionário. Ainda incapazes de sustentar um voo verdadeiro, essas asas surgem para amortecer quedas, permitindo que o semideus flutue suavemente até o solo independentemente da altura. Em combate, também auxiliam esquivas rápidas, permitindo ao legionário deslizar brevemente sobre o chão como se flutuasse, executando até duas esquivas consecutivas por batalha.",
+        "grau": "",
+        "id": "asas-do-amor-p",
+        "servico": 2,
+        "icone": "cupido-asas-do-amor-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Percepção Emocional",
+        "texto": "Os descendentes de Cupido desenvolvem uma sensibilidade incomum às emoções alheias, distinguindo com clareza sentimentos genuínos de fachadas emocionais ou afetos reprimidos. São capazes, inclusive, de identificar mentiras ligadas a paixões e vínculos afetivos — como um legionário que protege outro por lealdade disfarçada de indiferença. Com o aprimoramento desse dom, passam a influenciar sutilmente o estado emocional alheio, despertando insegurança, um interesse passageiro ou uma breve irritação, além de conseguirem amenizar superficialmente um desentendimento ou aproximar duas pessoas em conflito.",
+        "grau": "",
+        "id": "percepcao-emocional-p",
+        "servico": 3,
+        "icone": "cupido-percepcao-emocional-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Asas do Amor Ii",
+        "texto": "As asas do legionário ganham força suficiente para sustentar seu próprio peso e conduzi-lo pelos céus, possibilitando voos em grandes altitudes, ainda que com velocidade moderada. Para compensar essa limitação, o semideus aprende a executar rasantes e aproveitar a força da queda para ganhar impulso extra. Pode manifestar as asas sempre que desejar, alcançando velocidades de até 60 km/h durante o voo.",
+        "grau": "",
+        "id": "asas-do-amor-ii-p",
+        "servico": 4,
+        "icone": "cupido-asas-do-amor-ii-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Laço Eterno",
+        "texto": "O vínculo dos descendentes de Cupido com os sentimentos humanos atinge seu ponto mais elevado, permitindo que sua simples presença fortaleça os laços de quem luta ao seu lado. Enquanto permanecer próximo de seus aliados, o legionário desperta neles coragem, confiança e determinação, tornando-os mais resistentes ao medo, à intimidação e a qualquer efeito que enfraqueça sua vontade. Quanto mais profundo for o vínculo entre o semideus e seus companheiros, mais intensa se torna essa proteção — como se o próprio Cupido zelasse por aqueles unidos por laços verdadeiros.\n\n________________",
+        "grau": "",
+        "id": "laco-eterno-p",
+        "servico": 5,
+        "icone": "cupido-laco-eterno-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Ponta Dourada",
+        "texto": "Herdando a mais desejada das duas flechas de Cupido, o semideus conjura uma seta de ponta dourada e a dispara contra um alvo a até seis quadrados de distância. Ao atingir seu destino, a flecha desperta um amor avassalador e incontrolável na vítima em relação a uma pessoa à escolha do semideus — podendo ser ele mesmo, um aliado presente no campo de batalha ou qualquer outro indivíduo apontado no momento do disparo. Sob esse efeito, mesmo um monstro pode passar a enxergar um semideus como alguém a ser protegido a qualquer custo, recusando-se a atacá-lo e priorizando sua segurança acima de qualquer instinto predatório ou ordem recebida. O efeito dura três turnos e não funciona contra divindades ou seres imunes a manipulações emocionais.",
+        "reposicao": "10 turnos",
+        "grau": "I",
+        "id": "ponta-dourada-i-a",
+        "servico": 1,
+        "icone": "cupido-ponta-dourada-i-a.png"
+      },
+      {
+        "nome": "Ponta de Chumbo",
+        "texto": "Na face oposta do dom herdado de Cupido, o semideus conjura uma seta de ponta de chumbo, capaz de provocar o efeito inverso da Ponta Dourada. Ao atingir um alvo a até seis quadrados de distância, desperta nele uma repulsa e um ódio instantâneos por alguém à escolha do semideus, sendo esse sentimento intenso o suficiente para sobrepor-se a qualquer lealdade ou comando prévio. Um monstro atingido pode passar a enxergar um antigo aliado como alvo prioritário de sua fúria, atacando-o sem hesitação, enquanto um semideus afetado pode se voltar contra companheiros de batalha, tomado por uma aversão que não consegue explicar nem controlar. O efeito dura três turnos e, assim como sua contraparte dourada, não surte qualquer resultado sobre divindades ou seres imunes a influências emocionais.",
+        "reposicao": "10 turnos",
+        "grau": "I",
+        "id": "ponta-de-chumbo-i-a",
+        "servico": 1,
+        "icone": "cupido-ponta-de-chumbo-i-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Favor de Favônio",
+        "texto": "Como mensageiro dos ventos e aliado de Cupido, Favônio pode ser invocado em espaços abertos para conceder um de três favores: transmitir uma paixão momentânea a uma pessoa escolhida por cinco turnos, amparar a queda do legionário e de mais uma pessoa ou conduzir até ele alguém que deseje ir ao seu encontro.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "favor-de-favonio-a",
+        "servico": 2,
+        "icone": "cupido-favor-de-favonio-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ponta Dourada",
+        "texto": "A seta dourada disparada é envolta em um brilho quase ofuscante e explode em fragmentos luminosos ao atingir seu destino, atingindo também qualquer criatura ou semideus em um raio de dois quadrados ao redor do impacto original. Todos os afetados passam a nutrir devoção intensa pelo alvo escolhido pelo semideus, defendendo-o ativamente contra qualquer ameaça e chegando a se colocar entre ele e um ataque iminente, como se a própria vida de quem ama valesse menos que a proteção desse sentimento repentino. O efeito dura quatro turnos, e criaturas de inteligência mais desenvolvida — como certos monstros ou semideuses — podem, inspiradas por essa paixão súbita, agir com uma lealdade quase irracional, revelando informações ou baixando armas na presença de quem passaram a amar. Não funciona contra divindades.",
+        "reposicao": "10 turnos",
+        "grau": "II",
+        "id": "ponta-dourada-ii-a",
+        "servico": 3,
+        "icone": "cupido-ponta-dourada-ii-a.png"
+      },
+      {
+        "nome": "Ponta de Chumbo",
+        "texto": "A flecha de chumbo carrega um ódio profundo o suficiente para nublar completamente o julgamento de quem for atingido. Ao acertar o alvo, a flecha se estilhaça em fragmentos escuros que atingem também qualquer criatura ou semideus em um raio de dois quadrados ao redor do impacto, espalhando a mesma aversão visceral por igual. Todos os afetados voltam-se com fúria contra o alvo indicado pelo semideus, atacando sem hesitação e ignorando qualquer ordem, lealdade ou instinto de sobrevivência que normalmente os impediria — mesmo que isso signifique atacar um comandante, um aliado antigo ou uma criatura muito mais forte do que eles. O efeito dura quatro turnos e não funciona contra divindades.",
+        "reposicao": "10 turnos",
+        "grau": "II",
+        "id": "ponta-de-chumbo-ii-a",
+        "servico": 3,
+        "icone": "cupido-ponta-de-chumbo-ii-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Invisibilidade Errática",
+        "texto": "Inspirados pelo episódio em que Cupido se tornou invisível para cumprir a ordem de Vênus de atingir Psiquê com uma de suas flechas, seus descendentes podem envolver o próprio corpo pela magia do amor, tornando-se completamente invisíveis por três turnos. Contudo, a natureza instável desse dom impede que o legionário realize ataques surpresa ou pelas costas, só podendo executar ações ofensivas ao término da invisibilidade.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "invisibilidade-erratica-a",
+        "servico": 4,
+        "icone": "cupido-invisibilidade-erratica-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Espelho de Cupido",
+        "texto": "Através de uma sutil ligação mental, o legionário percebe instantaneamente aquilo que mais atrai ou repele até quatro pessoas ao seu redor, moldando a própria aparência para corresponder à forma ideal na percepção de cada uma delas. Traços físicos, tom de voz e outros detalhes específicos são reproduzidos com precisão suficiente para tornar sua presença praticamente impossível de ignorar, deixando os alvos momentaneamente desorientados e mais vulneráveis à persuasão, por um período de cinco turnos. O mesmo domínio pode ser usado de forma inversa: o semideus assume uma aparência deliberadamente repulsiva ou perturbadora, distorcendo a percepção emocional do alvo a ponto de provocar reações contraditórias — uma atração inexplicável por algo que normalmente rejeitaria, ou uma hesitação profunda diante de algo que antes considerava familiar. Como manifestação mais avançada desse poder, o legionário é capaz de projetar essa mesma distorção sobre um terceiro, fazendo-o assumir, aos olhos de outros, a forma desejada por até quatro turnos — embora, nesse caso, o efeito só consiga atingir duas pessoas simultaneamente.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "espelho-de-cupido-a",
+        "servico": 5,
+        "icone": "cupido-espelho-de-cupido-a.png"
+      }
+    ]
+  ]
+}

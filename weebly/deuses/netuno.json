@@ -1,0 +1,195 @@
+{
+  "id": "netuno",
+  "nome": "Netuno",
+  "estandarte": "https://i.imgur.com/8uL98Ow.png",
+  "titulo": "",
+  "introducao": [
+    "Netuno é o deus dos mares, dos terremotos e dos cavalos, filho de Saturno e Ops e irmão de Júpiter, a quem coube o oceano no sorteio que repartiu o mundo. Carrega o tridente, capaz de abrir fendas na terra e erguer tempestades, e é descrito como um homem de pele curtida pelo sol, barba escura e olhos de um verde que muda conforme o humor das águas.",
+    "Em Roma, seu aspecto é mais bruto e menos contido, e o culto lhe atribuía tanto a fúria das ondas quanto a velocidade dos cavalos. Os romanos sempre foram um povo de terra firme, de estradas, muralhas e legiões, e desconfiavam de tudo o que não podiam marchar sobre ou fortificar. O mar era para eles um território sem lei, onde a disciplina militar de nada servia, e Netuno era o senhor absoluto desse domínio. Marinheiros e comandantes de frotas não zarpavam sem antes lhe oferecer sacrifícios, e um naufrágio era lido como sinal de desagrado do deus, nunca como simples azar. A tradição conta que até generais experientes perderam batalhas navais por desprezar seus presságios, e que os mais prudentes preferiam atrasar uma travessia a enfrentá-la sem o seu favor. Seu temor ia além das ondas: como causador dos terremotos, Netuno também era visto como a força capaz de abalar as próprias fundações da cidade, o que lhe garantia respeito até entre quem jamais pisou em um navio."
+  ],
+  "destaque": {
+    "titulo": "Os Três Grandes",
+    "texto": "Raramente se atreve a adentrar territórios que pertençam aos domínios de seus irmãos, a menos que esteja em pleno cumprimento de uma missão — evitando, sempre que possível, afastar-se mais de sete palmos abaixo da terra ou permanecer por muito tempo em pleno céu aberto, distante de qualquer superfície ou corpo d'água. Fora de seus domínios naturais, seu poder se enfraquece visivelmente: nos territórios de Júpiter ou Plutão, o semideus sente sua força, resistência e demais atributos sobrenaturais diminuírem de forma considerável, como se o próprio ambiente se recusasse a reconhecer sua autoridade fora dos mares que lhe pertencem por direito."
+  },
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Os Três Grandes",
+        "texto": "Raramente se atreve a adentrar territórios que pertençam aos domínios de seus irmãos, a menos que esteja em pleno cumprimento de uma missão — evitando, sempre que possível, afastar-se mais de sete palmos abaixo da terra ou permanecer por muito tempo em pleno céu aberto, distante de qualquer superfície ou corpo d'água. Fora de seus domínios naturais, seu poder se enfraquece visivelmente: nos territórios de Júpiter ou Plutão, o semideus sente sua força, resistência e demais atributos sobrenaturais diminuírem de forma considerável, como se o próprio ambiente se recusasse a reconhecer sua autoridade fora dos mares que lhe pertencem por direito.",
+        "grau": "",
+        "id": "os-tres-grandes-p",
+        "servico": 0,
+        "icone": "netuno-os-tres-grandes-p.png"
+      },
+      {
+        "nome": "Reverência das Ondas",
+        "texto": "Sendo Netuno o senhor dos mares, seus herdeiros adquirem uma autoridade natural sobre as criaturas que habitam suas águas. Hipocampos, golfinhos, tubarões e demais feras marinhas os tomam como realeza do oceano, jamais os atacam e fazem questão de protegê-los. Até monstros hostis a serviço de outras divindades raramente os escolhem como primeiro alvo quando há vários à disposição. A partir do segundo serviço, sua vontade passa a alcançar também seres de maior inteligência, como náiades, tritões e ciclopes. A mesma autoridade vale em terra firme, onde Netuno era venerado em Roma como Netuno Equestre, patrono dos cavalos. Cavalos, pégasos e outras criaturas equinas confiam no semideus de imediato: ficam calmos perto dele, aceitam ser montados sem resistência e o obedecem sem esforço. Os cavalos comuns correm mais rápido sob seu comando, e os pégasos o tratam como parte da própria manada. A partir do terceiro serviço, essa proteção se estende às pessoas próximas a ele, reconhecidas como aliados genuínos, que passam a ser poupadas de ataques vindos do mar.",
+        "grau": "",
+        "id": "reverencia-das-ondas-p",
+        "servico": 0,
+        "icone": "netuno-reverencia-das-ondas-p.png"
+      },
+      {
+        "nome": "Onda Viva",
+        "texto": "O corpo do filho de Netuno foi feito para a água. Ele respira debaixo d’água como em terra firme e suporta a pressão das profundezas e as temperaturas extremas melhor que qualquer outro filho dos Três Grandes. Seus ossos e pulmões aguentam descidas que esmagariam um semideus comum, e o frio das fossas abissais mal o incomoda. Na água, ele se move com a velocidade de uma criatura marinha e percorre oito quadrados a cada ação de movimento. Se quiser, também permanece seco mesmo submerso, e a água só o molha quando ele permite.",
+        "grau": "",
+        "id": "onda-viva-p",
+        "servico": 0,
+        "icone": "netuno-onda-viva-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Maré Vital",
+        "texto": "A água restaura o filho de Netuno. Basta tocá-la para que o corpo comece a se recompor: ferimentos se fecham, hematomas somem e o cansaço vai embora, como se cada gota levasse embora a dor. Quanto mais tempo ele mergulha, mais rápida é a recuperação.",
+        "grau": "",
+        "id": "mare-vital-p",
+        "servico": 1,
+        "icone": "netuno-mare-vital-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mestre do Convés",
+        "texto": "Os filhos de Netuno nascem acostumados com embarcações, já que o mar pertence ao domínio do pai. Eles manejam qualquer navio com a facilidade de um marinheiro experiente, e o leme parece obedecê-los sem esforço. Em alto mar, o semideus sempre sabe onde está e para onde deve ir, e encontra o rumo de qualquer coordenada que lhe digam. Com alguma concentração, ele também percebe a direção e a posição de tudo o que estiver em contato com a água salgada, seja uma criatura, um objeto à deriva ou uma ilha ainda fora de vista.",
+        "grau": "",
+        "id": "mestre-do-conves-p",
+        "servico": 2,
+        "icone": "netuno-mestre-do-conves-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Pulso do Oceano",
+        "texto": "O filho de Netuno carrega o ritmo das marés no próprio corpo. Ele sente o movimento da água ao redor, mesmo a grande distância, e percebe quando alguém caminha sobre uma poça, atravessa um rio ou se move em um lago, sem precisar ver. Chuvas, ondas e correntes chegam a ele como vibrações, e isso o avisa de tempestades, enchentes e maremotos antes que qualquer sinal apareça no céu. Esse mesmo dom o deixa sempre sabendo quanta água existe por perto e em que direção ela corre. Em lugares secos, ele localiza com facilidade fontes, poços e lençois subterrâneos.",
+        "grau": "",
+        "id": "pulso-do-oceano-p",
+        "servico": 3,
+        "icone": "netuno-pulso-do-oceano-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Olhar de Tempestade",
+        "texto": "O humor do filho de Netuno agita o mar. Quando ele se irrita ou se emociona, a água ao redor reage ao que ele sente. Poças tremem, ondas mudam de direção, a chuva engrossa e o vento ganha força. Quanto mais intensa a emoção, maior a resposta: uma contrariedade leve faz a superfície ondular, enquanto uma fúria de verdade levanta marolas, derruba copos e faz canos e fontes vibrarem. Em alto-mar, essas reações podem virar ressacas, redemoinhos e tempestades, e navios próximos sentem o balanço mudar sem saber por quê.",
+        "grau": "",
+        "id": "olhar-de-tempestade-p",
+        "servico": 4,
+        "icone": "netuno-olhar-de-tempestade-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Pés de Marujo",
+        "texto": "Quem passa muito tempo em um navio aprende a ignorar o balanço do mundo, e o filho de Netuno, no auge de seu domínio sobre o mar, leva essa firmeza ao limite. Seu corpo não se confunde com o movimento, e o enjoo do mar nunca o atinge. A mesma firmeza vale em combate. Qualquer golpe ou poder que cause tontura, náusea, desorientação ou perda de direção falha por completo contra ele, por mais forte que seja.\n\n________________",
+        "grau": "",
+        "id": "pes-de-marujo-p",
+        "servico": 5,
+        "icone": "netuno-pes-de-marujo-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [
+      {
+        "nome": "Símbolo dos Mares",
+        "texto": "Havendo água suficiente por perto, o filho de Netuno invoca um tridente de Ouro Imperial, que se forma em sua mão e raramente o deixa desarmado. A arma serve para golpear, arremessar e defender, e volta ao semideus sempre que é lançada. Ela não surge do nada: o semideus apenas traz para a mão uma arma que o próprio mar guarda, e por isso precisa imaginá-la com clareza ao invocá-la. O tridente carrega o poder do oceano: quando o semideus o bate no chão, suas outras habilidades ativas passam a funcionar como se fossem do nível seguinte por sete turnos consecutivos. Quanto maior o corpo d’água nas proximidades, mais forte é o efeito.",
+        "reposicao": "20 turnos",
+        "grau": "",
+        "id": "simbolo-dos-mares-a",
+        "servico": 0,
+        "icone": "netuno-simbolo-dos-mares-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Hidrocinese",
+        "texto": "Nos primeiros anos de vida como semideus, o filho de Netuno sente a água responder ao seu comando. Desde que exista uma fonte por perto, em um raio de cinco quadrados, ele puxa até quinhentos litros em estado líquido e dá a eles formas simples, como chicotes, escudos e esferas, que também podem ser arremessadas contra um alvo. Além disso, pode usar a água para outros fins: cria bolhas de oxigênio que permitem aos aliados respirar debaixo d’água, impulsiona o próprio corpo para nadar mais rápido, faz a água explodir em área ou a molda em mãos e laços para agarrar. Com concentração, faz brotar um gêiser de uma corrente subterrânea. O jato atinge tudo o que estiver sobre o solo em uma área de 3x3 quadrados e segue jorrando por três turnos. Nesse estágio, o semideus mantém o controle da água por até quatro turnos seguidos.",
+        "reposicao": "20 turnos",
+        "grau": "I",
+        "id": "hidrocinese-i-a",
+        "servico": 1,
+        "icone": "netuno-hidrocinese-i-a.png"
+      },
+      {
+        "nome": "Terremoto",
+        "texto": "Os terremotos e abalos sísmicos que acompanham a fúria de Netuno também respondem aos seus filhos. Nesse primeiro estágio, o semideus se coloca como epicentro e impõe sua vontade às placas tectônicas, provocando um tremor breve e violento em uma área de até 3x3 quadrados. O abalo desequilibra os adversários, afasta quem estiver perto e abre rachaduras no chão. No mar, o mesmo tremor projeta ondas fortes o bastante para afundar embarcações pequenas, como um veleiro.",
+        "reposicao": "20 turnos",
+        "grau": "I",
+        "id": "terremoto-i-a",
+        "servico": 1,
+        "icone": "netuno-terremoto-i-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Hidrocinese",
+        "texto": "Com o tempo na Legião, o filho de Netuno amplia seu domínio e passa a comandar até mil litros de água de uma fonte existente, em uma área de oito quadrados. Ele levanta ondas grandes o bastante para derrubar e arrastar um monstro de porte médio, como um lestrigão, ou um grupo de até sete pessoas. Nesse estágio, também aumenta a tensão superficial da água até deixá-la quase sólida. Assim, consegue caminhar sobre ela, erguer um escudo capaz de resistir a quase qualquer ataque e prender os membros de um alvo como se usasse correntes de metal. Onde há muita água, como no mar ou em um rio, abre redemoinhos que puxam para o fundo tudo o que estiver na superfície, afogando nadadores e afundando pequenas embarcações. O semideus controla a água por até seis turnos seguidos.",
+        "reposicao": "20 turnos",
+        "grau": "II",
+        "id": "hidrocinese-ii-a",
+        "servico": 2,
+        "icone": "netuno-hidrocinese-ii-a.png"
+      },
+      {
+        "nome": "Terremoto",
+        "texto": "A vontade do semideus sobre o chão agora alcança uma área de até 5x5 quadrados. O solo se parte em fissuras largas o bastante para derrubar adversários e engolir objetos e seres pequenos. O tremor pode ser mantido por três turnos consecutivos, quebrando estruturas inteiras e deixando os alvos do perímetro ocupados demais em se manter de pé para realizar qualquer ação ofensiva.",
+        "reposicao": "20 turnos",
+        "grau": "II",
+        "id": "terremoto-ii-a",
+        "servico": 2,
+        "icone": "netuno-terremoto-ii-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Hidrocinese",
+        "texto": "Acostumado às correntezas, o semideus provoca ondas que arrastam construções menores, grupos de até dez pessoas e monstros grandes, como uma quimera. Seus redemoinhos afundam embarcações grandes e puxam para baixo qualquer um dentro do alcance, que passa a ser de doze quadrados. Nesse estágio, ele aproveita a umidade do ar como fonte de água e a molda em chicotes, escudos e projéteis. Também condensa vapor para esconder a si mesmo ou a visão dos inimigos em uma área de até 7x7 quadrados. Além disso, entende como a água se forma dentro de um corpo vivo e passa a extraí-la de si mesmo ou de outras pessoas. Nos alvos, o processo causa desidratação intensa, que traz confusão mental, delírio e até perda de consciência. Nesse estágio, o semideus controla a água por até oito turnos seguidos.",
+        "reposicao": "20 turnos",
+        "grau": "III",
+        "id": "hidrocinese-iii-a",
+        "servico": 3,
+        "icone": "netuno-hidrocinese-iii-a.png"
+      },
+      {
+        "nome": "Terremoto",
+        "texto": "O semideus deixa de ser o epicentro do abalo e passa a escolher livremente a área afetada. Seus tremores ficam fortes o bastante para danificar estruturas grandes, como casas, e para desmontar menores. Dentro de uma área de até 8x8 quadrados, todos caem e não conseguem evitar o desequilíbrio, o que inclui monstros grandes e seres divinos.",
+        "reposicao": "20 turnos",
+        "grau": "III",
+        "id": "terremoto-iii-a",
+        "servico": 3,
+        "icone": "netuno-terremoto-iii-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fluxo Sem Fronteiras",
+        "texto": "Quando entende melhor seus poderes, o filho de Netuno percebe que o domínio dele não se limita à água, mas alcança qualquer líquido. Dentro dos limites da habilidade anterior, ele controla qualquer fonte líquida, inclusive os cinco rios principais do Mundo Inferior, venenos e outros fluidos. O esforço é enorme, e o semideus precisa ter cuidado para não desmaiar.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "fluxo-sem-fronteiras-a",
+        "servico": 4,
+        "icone": "netuno-fluxo-sem-fronteiras-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cólera de Netuno",
+        "texto": "Esse poder bruto só se manifesta nos descendentes de Netuno capazes de sustentar um domínio absoluto sobre as forças primitivas de sua linhagem. Ele está ligado ao estado emocional e à fúria contida do legionário, e a tempestade que vive no espírito dele se reflete no mundo físico. Em momentos de calma, aparece apenas como leves vibrações sob a terra. Quando é liberada por completo, o céu escurece com nuvens pesadas, como o de um oceano bravio, e abalos sísmicos devastadores trincam o solo em um raio de um quarto inteiro. O terreno se curva à vontade do semideus. Ele ergue muralhas de pedra, projeta estacas rochosas, abre abismos profundos e provoca desmoronamentos. Sobre superfícies aquáticas, a mesma energia vira turbilhões, ondas gigantescas e ressacas de força equivalente. A destruição deixada por esse poder é praticamente irreversível.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "colera-de-netuno-a",
+        "servico": 5,
+        "icone": "netuno-colera-de-netuno-a.png"
+      }
+    ]
+  ]
+}

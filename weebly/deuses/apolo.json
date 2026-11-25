@@ -1,0 +1,165 @@
+{
+  "id": "apolo",
+  "nome": "Apolo",
+  "estandarte": "https://i.imgur.com/oLuMGSi.png",
+  "titulo": "",
+  "introducao": [
+    "Apolo é uma divindade greco-romana, fruto de uma relação extraconjugal entre Júpiter e Leto, sendo a contraparte irmã de Diana, representante da Lua. Em sua forma humanoide, Apolo demonstra um semblante sedutoramente fúlgido e jovial, acompanhado de um físico atlético digno de comparações com o de um fisiculturista. Sua participação no panteão romano, além de ser o total oposto de Diana, consiste em servir como representante da Luz e das Artes, patrono da Arquearia e de seus praticantes, e também indiscutível representante do Oráculo de Delfos, o que o leva a incumbir algumas de suas proles do dom da divinação.",
+    "Algumas pessoas creem que Febo seja a verdadeira forma de Apolo no mundo romano. Trata-se, na verdade, de um nome tido como apelido, já que Febo, em latim, significa \"brilhante\", podendo também ser empregado como adjetivo."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Solstício",
+        "texto": "Quando imerso na luz do dia, o semideus é agraciado com uma leve melhora em suas condições físicas, como uma velocidade ligeiramente superior — que, ainda assim, não se compara à dos herdeiros de Mercúrio. Tarefas, batalhas e treinos realizados sob a luz solar tornam-se menos exaustivos para os descendentes de Apolo, que também carregam consigo uma notável proficiência com arcos e flechas, ainda mais precisa quando exercida sob o sol a pino.",
+        "grau": "",
+        "id": "solsticio-p",
+        "servico": 0,
+        "icone": "apolo-solsticio-p.png"
+      },
+      {
+        "nome": "Alma de Artista",
+        "texto": "Peritos em planejar e realizar apresentações cativantes, dotados dos mais belos timbres e sendo, com frequência, os melhores musicistas e instrumentistas já nascidos, os herdeiros de Apolo capturam o fascínio do público com notável facilidade. Para esses semideuses, é extremamente natural memorizar roteiros, confeccionar figurinos e compor tanto peças musicais quanto teatrais. Quando em plena performance, sua arte carrega um leve resquício do encanto divino do próprio Apolo: espectadores desavisados podem se ver momentaneamente hipnotizados pela apresentação, com o olhar preso ao semideus e a atenção completamente alheia ao que ocorre ao redor.",
+        "grau": "",
+        "id": "alma-de-artista-p",
+        "servico": 0,
+        "icone": "apolo-alma-de-artista-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mãos de Cura",
+        "texto": "Filhos de Apolo herdam um conhecimento natural na aplicação de primeiros socorros — sabem prestar atendimento clínico, limpar ferimentos, estancar sangramentos e lidar com as mais diversas emergências. Possuem ainda amplo conhecimento sobre ervas, distinguindo com facilidade quais são curativas e quais são venenosas, o que os torna exímios preparadores de unguentos e chás medicinais, à semelhança do próprio deus que ensinou a arte da cura a Esculápio. Extremamente empáticos, esses semideuses também são capazes de sondar rapidamente o corpo de alguém através do olhar: detectam fraquezas e a intensidade de ferimentos, reconhecendo-os com precisão suficiente para tratá-los em seguida. Esse dom pode ser usado tanto para avaliar as condições de um possível combate quanto como método instantâneo de diagnóstico de um paciente — e, em batalha, revela-se de grande valia para identificar fragilidades físicas pouco óbvias em qualquer adversário.",
+        "grau": "",
+        "id": "maos-de-cura-p",
+        "servico": 1,
+        "icone": "apolo-maos-de-cura-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Passos do Sol",
+        "texto": "Competente nas artes, o filho de Apolo possui um corpo naturalmente preparado para elas, dominando com facilidade até mesmo danças dos mais variados estilos. Graças a esse condicionamento mais atlético, o semideus se mostra ágil e acrobático mesmo quando o Sol não está a seu favor no céu. Tal habilidade se revela útil inclusive em combate, sobretudo diante de adversários muito próximos, permitindo ao semideus esquivar-se com saltos e movimentos precisos, quase como se cada desvio fosse coreografado.",
+        "grau": "",
+        "id": "passos-do-sol-p",
+        "servico": 2,
+        "icone": "apolo-passos-do-sol-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Allegro",
+        "texto": "A destreza manual e a habilidade motora refinadas pelo domínio de instrumentos musicais conferem ao filho de Apolo uma vantagem considerável na hora de atirar. Diferente de qualquer outro semideus, que precisa de um momento para mirar antes de disparar, ele executa ambos os movimentos como um único gesto fluido, quase como se seguisse o ritmo de uma partitura — mirar e atirar tornam-se, para ele, uma única ação.",
+        "grau": "",
+        "id": "allegro-p",
+        "servico": 3,
+        "icone": "apolo-allegro-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Olhar de Piton",
+        "texto": "O filho de Apolo reconhece todo tipo de elemento prejudicial à saúde, de venenos a maldições, sabendo identificar, para cada um deles, o contraveneno ou o método de tratamento adequado. É capaz de identificar feitiços e magias com um simples olhar atento, mesmo sem possuir, de imediato, o poder necessário para combatê-los — reconhecendo quando alguém está amaldiçoado ou sob influência mental, por exemplo.",
+        "grau": "",
+        "id": "olhar-de-piton-p",
+        "servico": 4,
+        "icone": "apolo-olhar-de-piton-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Flecha Certeira",
+        "texto": "De olhos altamente perspicazes, os filhos do deus do sol possuem uma mira impecável. Anos de tradição como arqueiros permitem-lhes calcular com precisão o movimento de um alvo, mesmo em plena corrida — desde que, evidentemente, esteja dentro de seu campo de visão. Assim, são capazes de realizar disparos que interceptam o inimigo independentemente de sua movimentação, quase como se antecipassem cada ação antes mesmo que ela se concluísse.\n\n________________",
+        "grau": "",
+        "id": "flecha-certeira-p",
+        "servico": 5,
+        "icone": "apolo-flecha-certeira-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Disparo Cintilante",
+        "texto": "O legionário dispara uma flecha contra um oponente a até sete quadrados de distância. Ao atingir o alvo e fincar-se na armadura ou no corpo, a ponta do projétil libera um flash de luz solar instantâneo e intenso. O clarão queima a retina do inimigo atingido e ofusca a visão de todos os indivíduos situados em um raio de até dois quadrados ao redor do ponto de impacto, deixando-os completamente cegos durante o turno atual.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "disparo-cintilante-a",
+        "servico": 1,
+        "icone": "apolo-disparo-cintilante-a.png"
+      },
+      {
+        "nome": "Onda Dissonante",
+        "texto": "Concentrando o ar nos pulmões de forma precisa, o semideus emite um grito de altíssima frequência, um som agudo e ensurdecedor capaz de causar dor e atordoamento momentâneo em qualquer adversário a até dois quadrados de distância. Os afetados levam instintivamente as mãos aos ouvidos, ficando desorientados e incapazes de reagir com clareza durante o turno devido à vibração do impacto.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "onda-dissonante-a",
+        "servico": 1,
+        "icone": "apolo-onda-dissonante-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Benção de Peã",
+        "texto": "A habilidade envolve a ponta dos dedos do semideus em uma luz cintilante capaz de reparar tecidos danificados, como perfurações de flechas e cortes de lâmina, além de inchaços, luxações ósseas e o cansaço acumulado. Essa cura evolui junto ao legionário, passando a reverter exaustões completas, ossos trincados e envenenamentos a partir do Terceiro Serviço. No Quarto Serviço, mesmo ossos quebrados deixam de ser um obstáculo, e o semideus torna-se capaz de estabilizar ferimentos letais imediatos, embora a um custo considerável de sua própria energia. No Quinto Serviço, a habilidade reverte quase todo tipo de maldição existente, exceto aquelas lançadas por filhos de Hécate ou por divindades ligadas à magia, sendo capaz de estabilizar uma alma e resgatar um aliado no limiar da própria morte se aplicada no momento exato do golpe.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "bencao-de-pea-a",
+        "servico": 2,
+        "icone": "apolo-bencao-de-pea-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Arsenal Solar",
+        "texto": "O semideus transforma sua energia vital em energia solar, canalizando-a através das mãos em forma de descargas cinéticas e térmicas. Ele pode disparar discos solares — projéteis circulares e cortantes — capazes de causar ferimentos, queimar e gerar um impacto que empurra o alvo por três quadrados no quarto. Adagas e machadinhas de luz podem ser projetadas e arremessadas diretamente pelas mãos, enquanto suas flechas físicas convencionais podem ser envoltas nessa mesma energia térmica e cinética antes do disparo do arco.",
+        "reposicao": "8 turnos",
+        "grau": "",
+        "id": "arsenal-solar-a",
+        "servico": 3,
+        "icone": "apolo-arsenal-solar-a.png"
+      },
+      {
+        "nome": "Artista do Ano",
+        "texto": "Ao entoar poucos versos com seu vozeirão, o descendente de Apolo espalha uma melodia pelo ambiente que faz com que todos os presentes em uma área de quatro quadrados ao redor sintam o corpo reagir ao ritmo de forma automática. Os afetados passam a bater palmas ou marcar o compasso com os pés sem conseguir se conter. Por dois turnos, esses indivíduos interrompem suas ações ofensivas e de locomoção voluntária pelo quarto, tomados por um impulso incontrolável de acompanhar a música e mantendo apenas reações básicas de defesa física de onde estão.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "artista-do-ano-a",
+        "servico": 3,
+        "icone": "apolo-artista-do-ano-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Verso Maldito",
+        "texto": "O semideus profere pequenas maldições técnicas através da fala, acompanhadas de um breve gesto das mãos, gerando encantamentos que alteram as probabilidades do alvo por três turnos sem provocar lesões físicas diretas. O feitiço pode induzir uma onda de azar no adversário, forçando-o a cometer erros em suas ações simples, como falhar na empunhadura ao tentar defender, errar a direção de um ataque ou tropeçar nos próprios pés ao tentar correr pelo cenário. Alternativamente, o encantamento pode impor uma restrição de fala que obriga o atingido a terminar todas as suas frases em rima, tornando-se incapaz de emitir sons vocais e magias faladas caso tente resistir, embora ele ainda permaneça apto a relatar suas ações físicas normalmente.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "verso-maldito-a",
+        "servico": 4,
+        "icone": "apolo-verso-maldito-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Flecha de Aquiles",
+        "texto": "Esta habilidade abençoa um único projétil com o fragmento do sol vivo. Ao ser disparada, a flecha persegue o alvo com precisão absoluta, cruzando o quarto em linha reta enquanto incendeia e destrói coberturas de madeira, escudos leves ou vegetação no caminho. O disparo ignora qualquer capacidade natural de esquiva. No momento do acerto, o projétil explode em um flash térmico que causa queimaduras severas no alvo e gera uma onda de calor que se estende por um quadrado ao redor, superaquecendo armaduras de metal e fundindo armas próximas, o que impede os afetados de atacarem no turno seguinte. A trajetória só pode ser contida por defesas mágicas de alto nível ou se outro indivíduo se jogar deliberadamente na frente do projétil para receber o dano no lugar do alvo original.",
+        "reposicao": "1 vez ao dia",
+        "grau": "",
+        "id": "flecha-de-aquiles-a",
+        "servico": 5,
+        "icone": "apolo-flecha-de-aquiles-a.png"
+      }
+    ]
+  ]
+}

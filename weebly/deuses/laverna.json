@@ -1,0 +1,165 @@
+{
+  "id": "laverna",
+  "nome": "Laverna",
+  "estandarte": "https://i.imgur.com/QPa2YbS.png",
+  "titulo": "",
+  "introducao": [
+    "Laverna é a deusa romana dos ladrões, trapaceiros e de tudo aquilo que se ganha às escondidas. Ao contrário das divindades mais nobres do panteão, seu culto nunca foi motivo de orgulho declarado: era praticado nas sombras, em becos e tavernas, por aqueles que viviam à margem da lei e precisavam de proteção para seus feitos menos honrados. Ainda assim, sua influência se espalhava por todas as camadas da sociedade romana, dos pequenos furtos de mercado até os esquemas mais elaborados de fraude e falsificação, e não era incomum que mercadores desonestos lhe dedicassem orações silenciosas antes de fechar um negócio inescrupuloso.",
+    "Reza a tradição que Laverna era capaz de se manifestar apenas como uma voz sem corpo, ou assumir a aparência que melhor conviesse ao momento, valendo-se do disfarce como sua arma mais poderosa. Essa natureza esquiva e camaleônica tornou-a também padroeira dos enganadores e dos mentirosos mais talentosos, aqueles capazes de convencer qualquer plateia com um sorriso e uma história bem construída. Diziam os romanos que era melhor nunca confiar plenamente em alguém sortudo demais nos negócios, pois talvez tivesse recebido a bênção discreta e ambígua da deusa."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Rosto de Inocente",
+        "texto": "O semideus carrega consigo uma presença naturalmente desarmante, que leva as pessoas a presumirem sua inocência mesmo diante das circunstâncias mais suspeitas. Independentemente do quão comprometedora seja a situação, outros hesitam instintivamente em acreditar que ele seja o verdadeiro responsável por algo, o que se revela extremamente útil para desviar culpas e afastar atenções indesejadas. Como consequência natural dessa aura, as suspeitas alheias tendem a recair sobre qualquer outro indivíduo mais chamativo ou mais fácil de incriminar nas proximidades.",
+        "grau": "",
+        "id": "rosto-de-inocente-p",
+        "servico": 0,
+        "icone": "laverna-rosto-de-inocente-p.png"
+      },
+      {
+        "nome": "Farejar da Espreita",
+        "texto": "Como filha de uma deusa ligada ao Submundo, o semideus reconhece instintivamente que aquilo que é guardado costuma ter um guardião pouco convencional — muitas vezes, um morto. Sente com precisão quando armadilhas, selos mágicos ou espíritos vigilantes protegem ativamente um tesouro, uma entrada ou qualquer local de interesse, percebendo essa proteção através de um arrepio repentino ou de uma sensação sutil de perigo iminente. Essa percepção antecipada concede uma vantagem tática considerável, permitindo desarmar ou contornar a segurança mágica antes mesmo que ela seja ativada.",
+        "grau": "",
+        "id": "farejar-da-espreita-p",
+        "servico": 0,
+        "icone": "laverna-farejar-da-espreita-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Lábia Herdada",
+        "texto": "O semideus possui uma facilidade natural para convencer seus alvos de mentiras simples, sendo ainda mais eficaz quando já conhece detalhes da história pessoal da vítima, o que lhe permite construir enganos mais convincentes e adaptados a cada situação. Esse talento para a trapaça, porém, evolui de forma gradual conforme sua experiência: no primeiro serviço, funciona contra mortais e semideuses; no segundo, contra monstros; no quarto, contra divindades menores; e, no quinto, torna-se capaz de enganar até mesmo divindades de maior poder.",
+        "grau": "",
+        "id": "labia-herdada-p",
+        "servico": 1,
+        "icone": "laverna-labia-herdada-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Passos de Fumaça",
+        "texto": "Ainda que o pai tenha se ausentado, a mãe do semideus fez questão de garantir que ele soubesse desaparecer como poucos. Move-se com um silêncio quase antinatural, como se caminhasse sobre algodão em vez de solo firme, e possui uma facilidade incomum para se fundir com sombras e ambientes pouco iluminados — um talento digno da própria discrição associada ao Submundo. Para esse semideus, qualquer sala mal iluminada funciona quase como um manto de invisibilidade, tornando-o um exímio ladrão e espião capaz de agir sem deixar rastro.",
+        "grau": "",
+        "id": "passos-de-fumaca-p",
+        "servico": 2,
+        "icone": "laverna-passos-de-fumaca-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Dedos Ágeis",
+        "texto": "O descendente de Laverna sente, de forma quase instintiva, a estrutura interna e os mecanismos de qualquer fechadura — trincos, cadeados, cofres e afins — ao simples toque, sendo capaz de destrancá-la apenas pela própria vontade de que isso aconteça. A única exceção são fechaduras imbuídas de magia, sobre as quais esse domínio permanece limitado até o quinto serviço. Essa mesma sensibilidade permite detectar armadilhas ou maldições atreladas a uma fechadura e, dependendo da complexidade envolvida, desativá-las através de concentração mental. Ainda que se trate de uma habilidade passiva, seu funcionamento depende sempre de contato físico direto com o mecanismo em questão.",
+        "grau": "",
+        "id": "dedos-ageis-p",
+        "servico": 3,
+        "icone": "laverna-dedos-ageis-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mente Blindada",
+        "texto": "Como descendente da deusa da fraude e do engano, o semideus desenvolve uma resistência natural a feitiços ou poderes que forçam a verdade, já que sua mente está acostumada a operar em meio à desonestidade e à ambiguidade constante. Essa resistência permite que sustente uma mentira ou negue qualquer acusação mesmo sob pressão de origem divina, sem que o próprio corpo o traia através de reações físicas involuntárias — uma qualidade especialmente valiosa para qualquer semideus que atue como espião dentro da Legião.",
+        "grau": "",
+        "id": "mente-blindada-p",
+        "servico": 4,
+        "icone": "laverna-mente-blindada-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Reflexo Falso",
+        "texto": "A maior herança que Laverna deixa aos próprios filhos não é a arte do roubo em si, mas a capacidade de escapar das consequências. Em momentos de maior perigo, o corpo do semideus parece tremeluzir por um instante, quase como uma miragem distorcida pela própria Névoa, permitindo micro-movimentos que desafiam qualquer previsibilidade anatômica. Quando um ataque físico ou projétil está prestes a atingir um ponto vital, esse reflexo instintivo faz com que o golpe alcance apenas o ar ou uma parte irrelevante de sua vestimenta, poupando-o de ferimentos graves. Essa percepção aguçada para o perigo permite ao herdeiro de Laverna antecipar até três ataques distintos por combate, garantindo que saia ileso mesmo de emboscadas ou investidas que, para qualquer outro semideus, seriam certamente fatais.\n\n________________",
+        "grau": "",
+        "id": "reflexo-falso-p",
+        "servico": 5,
+        "icone": "laverna-reflexo-falso-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Avareza Compartilhada",
+        "texto": "Ao tocar brevemente em qualquer objeto próximo, o semideus é capaz de imbuí-lo com um resquício da influência de Laverna, tornando-o momentaneamente irresistível aos olhos de um único indivíduo à sua escolha. Durante três turnos, o alvo afetado passa a sentir um impulso quase incontrolável de se apropriar daquele objeto específico, priorizando tentar roubá-lo acima de qualquer outra ação — seja ela um ataque, uma defesa ou uma ordem recebida —, como se nada mais importasse além de tomar posse daquilo que os olhos insistem em cobiçar.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "avareza-compartilhada-a",
+        "servico": 1,
+        "icone": "laverna-avareza-compartilhada-a.png"
+      },
+      {
+        "nome": "Mãos Trocadas",
+        "texto": "Ao aproximar-se de um alvo a três quadrados e realizar um gesto rápido e quase imperceptível, o semideus consegue trocar de lugar um pequeno item que carrega consigo por outro de porte semelhante que o alvo esteja segurando ou portando, sem que a vítima perceba a substituição no momento exato em que ocorre. O engano só é notado quando o alvo, por algum motivo, examina o item com atenção — momento em que já pode ser tarde demais para reverter a situação. É uma habilidade discreta, útil tanto para roubos sutis quanto para plantar provas ou objetos comprometedores sem levantar suspeitas.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "maos-trocadas-a",
+        "servico": 1,
+        "icone": "laverna-maos-trocadas-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Piscar Nas Sombras",
+        "texto": "Um verdadeiro ladrão não corre — desaparece. O semideus é capaz de se dissolver brevemente nas sombras ao redor, reaparecendo em um ponto próximo, a até seis quadrados de distância, de forma praticamente imperceptível. O objetivo pode ser tanto se infiltrar discretamente em um ponto cego quanto escapar imediatamente de uma perseguição, sem deixar rastros perceptíveis pelo caminho. Não se trata de um deslocamento de longa distância, mas sim de um recurso rápido e eficiente para sair de situações comprometedoras com a mesma discrição de quem nunca esteve ali.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "piscar-nas-sombras-a",
+        "servico": 2,
+        "icone": "laverna-piscar-nas-sombras-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Nunca Foi Seu",
+        "texto": "Digna herdeira da deusa da fraude, essa habilidade permite ao semideus convencer um alvo de que o objeto recém-roubado jamais lhe pertenceu de fato — funcionando inclusive contra relíquias, armas encantadas ou qualquer item de valor pertencente a outro semideus. A vítima fica confusa e questiona a própria memória, duvidando de sua relação com o item perdido. Uma vez concluído o roubo, o objeto passa a pertencer legitimamente ao semideus, como se sua posse jamais tivesse sido contestada — exceto no caso de artefatos pessoais adquiridos diretamente através do mercado, que permanecem imunes a esse efeito.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "nunca-foi-seu-a",
+        "servico": 3,
+        "icone": "laverna-nunca-foi-seu-a.png"
+      },
+      {
+        "nome": "Dívida Impagável",
+        "texto": "Ao ferir um adversário em combate, o semideus é capaz de gravar simbolicamente uma marca invisível sobre o alvo — um resquício da própria natureza de Laverna, que jamais permite que uma dívida fique realmente saldada. Durante os cinco turnos seguintes, qualquer dano que esse adversário causar a um aliado do semideus retorna parcialmente contra si mesmo, como se o próprio golpe cobrasse um preço adicional por ferir alguém sob a proteção momentânea desse pacto silencioso. O efeito se dissipa automaticamente caso o alvo marcado seja derrotado antes do fim do prazo.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "divida-impagavel-a",
+        "servico": 3,
+        "icone": "laverna-divida-impagavel-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cortina de Fumaça",
+        "texto": "Um bom ladrão sabe que a melhor forma de roubar algo é garantir que todos estejam olhando para a direção oposta, de preferência tomados por confusão ou pavor. O semideus é capaz de projetar uma ilusão — como o estrondo repentino de uma explosão inexistente vinda de outra direção, ou a imagem fugaz de um monstro perigoso surgindo entre os inimigos — estridente e absurda o suficiente para capturar a atenção imediata de qualquer um, desviando o foco de adversários em um raio de até seis quadrados. É o truque perfeito para encobrir um roubo mais complexo ou garantir a passagem segura durante uma infiltração decisiva.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "cortina-de-fumaca-a",
+        "servico": 4,
+        "icone": "laverna-cortina-de-fumaca-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Herança Roubada",
+        "texto": "Ao tocar diretamente em um adversário durante o combate, o semideus é capaz de acessar, por um breve instante, uma fração do próprio talento daquele indivíduo — sua destreza com determinada arma, um poder específico, uma técnica de luta — e reproduzi-la em si mesmo pelos três turnos seguintes, como se Laverna emprestasse, por um momento, aquilo que jamais pertenceu de fato ao semideus. O talento tomado emprestado permanece disponível apenas enquanto durar o efeito, dissipando-se por completo ao fim do prazo e retornando, sem qualquer prejuízo, ao seu verdadeiro dono.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "heranca-roubada-a",
+        "servico": 5,
+        "icone": "laverna-heranca-roubada-a.png"
+      }
+    ]
+  ]
+}

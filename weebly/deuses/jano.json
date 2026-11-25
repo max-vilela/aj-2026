@@ -1,0 +1,166 @@
+{
+  "id": "jano",
+  "nome": "Jano",
+  "estandarte": "https://i.imgur.com/uLgehUu.png",
+  "titulo": "",
+  "introducao": [
+    "Desconhecido quanto a referenciais de descendência, Jano faz jus ao panteão exclusivamente romano. Deus das mudanças e transições, assim como dos portais e das dúvidas, conquistou fama ao apresentar aos mortais as duas faces de uma mesma moeda — tanto a verdade quanto a mentira — e ao ensinar que os erros nascem da própria escolha.",
+    "Suas faces divinas apresentam peculiaridades opostas. Enquanto uma é jovial e imberbe, de olhos claros e cabelos lisos, a outra ostenta idade mais avançada, além de cabelos e olhos escuros e uma barba espessa. Quanto ao aspecto corporal, possui um corpo alto e esguio, trajado com terno e gravata, sempre acompanhado de uma moeda dourada estampada com seus dois rostos. Manifesta-se diante de dúvidas sem resposta, apreciando com gosto as opções alheias e contribuindo para intensificar a culpa gerada pelo receio de errar. Nesse aspecto, abusa de uma personalidade perturbadora e zombeteira, como se já enxergasse o futuro com um simples olhar.",
+    "Seus filhos são os verdadeiros gênios por trás da logística do Acampamento Júpiter, obcecados por horários e por todas as portas da cidade. Possuem a capacidade de prever instantaneamente os dois lados de qualquer discussão, o que os torna figuras difíceis no Senado, mas extremamente eficazes ao antecipar a rota de fuga do inimigo. A hierarquia entre eles é decidida por quem demonstra maior pontualidade e por quem possui o melhor sistema de catalogação de suprimentos. Mantêm cronogramas detalhados até para os cenários mais extremos, definindo com precisão quem deve estar onde e em que momento, e consideram a falta de planejamento e o atraso as maiores ofensas possíveis. Em síntese, um filho de Jano é a referência mais confiável para qualquer plano que exija precisão e antecipação."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Rosto na Nuca",
+        "texto": "Em referência direta a Jano e seu icônico par de faces — uma voltada para frente, outra para trás —, os descendentes do deus das transições não são surpreendidos por ameaças vindas de suas costas, reagindo por instinto com movimentos improvisados o suficiente para escapar de um perigo iminente na retaguarda. Sons, odores e até pequenas alterações no caminho percorrido atrás de si são percebidos com clareza incomum, como se um segundo rosto, invisível aos olhos alheios, realmente vigiasse cada passo dado às suas costas.",
+        "grau": "",
+        "id": "rosto-na-nuca-p",
+        "servico": 0,
+        "icone": "jano-rosto-na-nuca-p.png"
+      },
+      {
+        "nome": "Ambidestria",
+        "texto": "A mesma dualidade que define o deus das portas e das transições se estende também aos campos de batalha. Diferente da maioria dos semideuses, o filho de Jano desenvolve habilidade equivalente em ambas as mãos, sem qualquer prejuízo de precisão ou força entre a esquerda e a direita. Some-se a isso a capacidade de dominar uma segunda arma, completamente distinta de sua especialidade principal, com o mesmo nível de maestria — resultando em um estilo de combate tão imprevisível e multifacetado quanto a própria natureza bifronte de seu pai.",
+        "grau": "",
+        "id": "ambidestria-p",
+        "servico": 0,
+        "icone": "jano-ambidestria-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Intuição Afiada",
+        "texto": "Segundo a mitologia, Jano confundia viajantes prestes a tomar decisões importantes, revelando simultaneamente a mentira e a verdade através de seus dois rostos — um representando o engano, o outro a honestidade das escolhas possíveis. Nos descendentes do deus dos portais e das transições, esse dom se manifesta como uma intuição quase infalível: o semideus costuma sentir, sem saber explicar exatamente como, qual caminho seguir ou se uma afirmação ouvida é verdadeira ou falsa. Preso em um local desconhecido, é capaz de perceber instintivamente a direção de uma saída ou rota de fuga próxima. Essa mesma conexão com a dualidade de Jano também protege parcialmente sua mente: poderes voltados a comprometer sua estabilidade mental atuam com intensidade reduzida sobre ele, que resiste com mais firmeza a influências psíquicas externas na hora de decidir o melhor caminho a seguir.",
+        "grau": "",
+        "id": "intuicao-afiada-p",
+        "servico": 1,
+        "icone": "jano-intuicao-afiada-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Dupla Perspectiva",
+        "texto": "Com o tempo, os filhos de Jano desenvolvem uma compreensão apurada sobre o funcionamento do Acampamento Júpiter e suas nuances táticas, aliando noção cívica, compostura e um pensamento fortemente realista. No que diz respeito à liderança, costumam ser escolhas naturais para comandar missões e atividades, ficando atrás apenas dos filhos de Júpiter nesse critério. Destacam-se, sobretudo, pela capacidade de enxergar além do óbvio: identificam com facilidade as verdadeiras intenções por trás de problemas, charadas ou armadilhas estratégicas, antecipando soluções e prevendo os possíveis desdobramentos de situações complexas antes mesmo que se concretizem.",
+        "grau": "",
+        "id": "dupla-perspectiva-p",
+        "servico": 2,
+        "icone": "jano-dupla-perspectiva-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Acesso Irrestrito",
+        "texto": "Assim como seu pai, o deus das portas e dos portais, o filho de Jano carrega consigo uma afinidade natural para transpor barreiras físicas: fechaduras cedem e passagens estreitas se abrem diante dele com facilidade incomum, garantindo acesso a praticamente qualquer localidade. Essa mesma influência se estende ao comportamento de criaturas e monstros ao seu redor, que tendem a se mostrar mais receptivos em sua presença, evitando confrontos diretos a menos que sejam eles mesmos provocados primeiro.",
+        "grau": "",
+        "id": "acesso-irrestrito-p",
+        "servico": 3,
+        "icone": "jano-acesso-irrestrito-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Presságio do Limiar",
+        "texto": "Como deus dos começos e das transições, Jano concede a seus filhos uma sensibilidade natural para o momento exato em que algo está prestes a mudar. O semideus percebe, com clareza incomum, o instante em que uma situação está prestes a virar — o início de uma emboscada, a mudança de intenção em uma conversa, o momento em que uma batalha está prestes a começar ou terminar —, como se sentisse fisicamente a fronteira entre um estado e outro antes que ela se concretizasse. Essa percepção não revela detalhes específicos do que está por vir, apenas a certeza de que uma transição significativa se aproxima, permitindo ao filho de Jano se preparar um instante antes de qualquer outro semideus ao seu redor.",
+        "grau": "",
+        "id": "pressagio-do-limiar-p",
+        "servico": 4,
+        "icone": "jano-pressagio-do-limiar-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Senhor dos Começos e Fins",
+        "texto": "A influência de Jano se estende muito além das simples transições, alcançando os próprios começos e fins de todas as coisas. Como herdeiros dessa autoridade, os legionários exercem um domínio sutil sobre a duração dos efeitos que atuam sobre si: quando atingidos por energias negativas — sejam elas magias, maldições ou qualquer origem semelhante —, esses efeitos tendem a se dissipar em metade do tempo esperado. Em contrapartida, bênçãos, magias benéficas ou qualquer efeito positivo imposto sobre o próprio semideus costuma se prolongar pelo dobro da duração original. Essa influência, no entanto, escapa ao controle consciente do legionário e, fiel à natureza dúbia de Jano, pode eventualmente se voltar contra ele — encurtando prematuramente uma bênção ou prolongando, sem que o semideus deseje, algo que originalmente parecia uma maldição.\n\n________________",
+        "grau": "",
+        "id": "senhor-dos-comecos-e-fins-p",
+        "servico": 5,
+        "icone": "jano-senhor-dos-comecos-e-fins-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Cara",
+        "texto": "Sendo Jano também o deus das moedas, seus descendentes carregam consigo um exemplar de bronze imbuído de magia, com um rosto bifronte gravado em uma das faces. Ao lançar a moeda para o alto durante um combate e ela cair voltada para essa face, o legionário recupera uma parcela considerável de sua energia física, revigorando o fôlego o suficiente para amenizar o desgaste acumulado até aquele momento — um pequeno respiro concedido pelo próprio deus dos começos.",
+        "reposicao": "6 turnos",
+        "grau": "I",
+        "id": "cara-i-a",
+        "servico": 1,
+        "icone": "jano-cara-i-a.png"
+      },
+      {
+        "nome": "Coroa",
+        "texto": "Gravada na face oposta da mesma moeda, uma esfinge — criatura mitológica associada a charadas e provações — representa o lado adverso do lançamento de Jano. Caso a moeda caia voltada para essa face, o legionário direciona o efeito contra um oponente à sua escolha, a uma distância de cinco quadrados: o alvo é imediatamente atordoado, perdendo o equilíbrio e a capacidade de reagir com clareza por um único turno, vulnerável a qualquer ataque que se aproveite dessa brecha.",
+        "reposicao": "6 turnos",
+        "grau": "I",
+        "id": "coroa-i-a",
+        "servico": 1,
+        "icone": "jano-coroa-i-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Passo Entre Mundos",
+        "texto": "Como herdeiro do deus das portas e dos portais, o legionário é capaz de abrir passagens mágicas que o transportam instantaneamente de um ponto a outro. Após um breve instante de concentração, ele conjura um portal que o leva a qualquer local na área de uma cidade, desde que já o conheça bem o suficiente para visualizá-lo com clareza em sua mente. A travessia não permite levar outro indivíduo e o portal se dissipa assim que atravessado — seu destino, uma vez definido, torna-se fixo e não pode ser alterado no meio do processo.",
+        "reposicao": "2 vezes por combate",
+        "grau": "",
+        "id": "passo-entre-mundos-a",
+        "servico": 2,
+        "icone": "jano-passo-entre-mundos-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cara",
+        "texto": "O legionário aprimora seu vínculo com a face da moeda voltada ao próprio deus dos começos. Ao lançá-la e vê-la cair voltada para esse lado, recupera uma parcela considerável de sua energia física e sente um fôlego renovado percorrer o corpo, traduzindo-se em golpes mais firmes e reações mais rápidas pelos três turnos seguintes. Nesse mesmo instante, uma pequena fração do tempo parece se dobrar a seu favor: o legionário ganha a chance de repetir imediatamente sua última ação bem-sucedida, como se um novo começo se abrisse diante dele — um eco direto do domínio de Jano sobre todo início e toda oportunidade recomeçada.",
+        "reposicao": "10 turnos",
+        "grau": "II",
+        "id": "cara-ii-a",
+        "servico": 3,
+        "icone": "jano-cara-ii-a.png"
+      },
+      {
+        "nome": "Coroa",
+        "texto": "A esfinge gravada na face adversa da moeda representa o lado mais cruel do julgamento de Jano. Caso a moeda caia voltada para esse lado, o legionário lança seu efeito contra um oponente à sua escolha, a até sete quadrados de distância: o alvo passa a enxergar duas imagens sobrepostas de tudo ao seu redor, como se a própria dualidade do deus se voltasse contra ele, comprometendo severamente sua noção de profundidade e distância. Por três turnos, o oponente tem sua precisão reduzida em ataques e defesas, errando golpes que normalmente acertaria e falhando em desviar de investidas simples, incapaz de distinguir qual das duas imagens é a real.",
+        "reposicao": "10 turnos",
+        "grau": "II",
+        "id": "coroa-ii-a",
+        "servico": 3,
+        "icone": "jano-coroa-ii-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ecos do Tempo",
+        "texto": "Como herdeiro do deus do passado e do futuro, o semideus desenvolve um conhecimento cognitivo além do comum, capaz de desvendar a história de objetos, artefatos e seres através de um simples toque fixo. Ao tocar um item ou criatura, viva ou morta, sua mente percorre um único trajeto pelo tempo, revelando a composição, a memória e a trajetória daquilo até o presente momento — desde a origem de uma lâmina antiga até o histórico de vida de alguém à sua frente. Essa mesma conexão o torna receptor de premonições involuntárias e intervaladas: sente quando algo ruim está prestes a acontecer, ouvindo duas vozes simultâneas que disputam entre si o absurdo e a realidade do que pode vir a ocorrer.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "ecos-do-tempo-a",
+        "servico": 4,
+        "icone": "jano-ecos-do-tempo-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Status Quo",
+        "texto": "Recitando um cântico ancestral que remonta às tradições mais antigas de Roma, o filho de Jano domina uma forma peculiar de manipulação temporal: consegue reverter o estado de alguém no tempo sem que isso implique qualquer deslocamento físico pela realidade. Caso o próprio semideus ou alguém próximo esteja gravemente ferido, exausto ou sob efeito de alguma influência nociva, ele pode entoar essa prece antiga, envolvendo o corpo do afetado em uma aura esbranquiçada que retrocede tanto sua alma quanto seu corpo físico a um estado anterior de saúde e integridade. O custo desse retorno, porém, é imprevisível — a perda de energia sofrida pelo próprio filho de Jano após o uso da habilidade varia a cada vez, sem que ele tenha qualquer controle sobre essa consequência.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "status-quo-a",
+        "servico": 5,
+        "icone": "jano-status-quo-a.png"
+      }
+    ]
+  ]
+}

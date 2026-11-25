@@ -1,0 +1,195 @@
+{
+  "id": "plutao",
+  "nome": "Plutão",
+  "estandarte": "https://i.imgur.com/Xl1xDLD.png",
+  "titulo": "",
+  "introducao": [
+    "Plutão é o deus do submundo e das riquezas que repousam sob a terra, filho de Saturno e Ops e irmão de Júpiter e Netuno, que recebeu o reino dos mortos quando os três sortearam seus domínios.",
+    "Os romanos o chamavam também de Dis Pater, o pai das riquezas, e o temiam menos que os gregos temiam seu equivalente, vendo nele um guardião de ordem e não um carrasco. Veste negro, tem pele pálida e olhos fundos, e usa o Elmo da Escuridão, que o torna invisível a quem quiser. Sua esposa é Proserpina, que passa parte do ano ao seu lado no submundo. É o menos querido dos Três Grandes, e só comparece ao conselho dos deuses no solstício de inverno, pois não tem lugar fixo no Olimpo e se recusa a viver fora de seu reino."
+  ],
+  "destaque": {
+    "titulo": "Os Três Grandes",
+    "texto": "Raramente se atreve a adentrar territórios que pertençam aos domínios de seus irmãos, a menos que esteja em pleno cumprimento de uma missão — evitando, sempre que possível, submergir em corpos d'água profundos ou permanecer por muito tempo em pleno céu aberto, longe de qualquer contato com a terra. Fora de seus domínios naturais, seu poder se enfraquece visivelmente: nos territórios de Júpiter ou Netuno, o semideus sente sua força, resistência e demais atributos sobrenaturais diminuírem de forma considerável, como se o próprio ambiente se recusasse a reconhecer sua autoridade fora das profundezas que lhe pertencem por direito."
+  },
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Os Três Grandes",
+        "texto": "Raramente se atreve a adentrar territórios que pertençam aos domínios de seus irmãos, a menos que esteja em pleno cumprimento de uma missão — evitando, sempre que possível, submergir em corpos d'água profundos ou permanecer por muito tempo em pleno céu aberto, longe de qualquer contato com a terra. Fora de seus domínios naturais, seu poder se enfraquece visivelmente: nos territórios de Júpiter ou Netuno, o semideus sente sua força, resistência e demais atributos sobrenaturais diminuírem de forma considerável, como se o próprio ambiente se recusasse a reconhecer sua autoridade fora das profundezas que lhe pertencem por direito.",
+        "grau": "",
+        "id": "os-tres-grandes-p",
+        "servico": 0,
+        "icone": "plutao-os-tres-grandes-p.png"
+      },
+      {
+        "nome": "Nobreza Infernal",
+        "texto": "Sendo Plutão o senhor do Mundo Inferior, seus herdeiros adquirem uma autoridade natural sobre as criaturas originadas de seus domínios. São, por esse motivo, respeitados por seres como cães infernais e fúrias, que jamais os atacam diretamente. Mesmo diante de criaturas de temperamento hostil devotas a outras divindades, os descendentes de Plutão raramente figuram como primeira escolha. Com o passar dos anos e o amadurecimento do semideus — a partir do segundo serviço —, essa mesma proteção se estende também a pessoas próximas a ele, reconhecidas como aliados genuínos, que passam a ser igualmente poupadas de ataques provenientes do submundo.",
+        "grau": "",
+        "id": "nobreza-infernal-p",
+        "servico": 0,
+        "icone": "plutao-nobreza-infernal-p.png"
+      },
+      {
+        "nome": "Aura Fúnebre",
+        "texto": "Uma aura sombria acompanha o filho de Plutão e provoca mal-estar, ansiedade e inquietação em estranhos que se aproximam dele. Durante a noite, sua pele ganha um aspecto pálido e translúcido, semelhante ao de um espectro, e ele passa a se mover quase sem ser notado, como se fosse só mais uma sombra entre as outras. Quando está nervoso, irradia morte como se veneno escorresse das solas de seu sapato, matando grama e flores.",
+        "grau": "",
+        "id": "aura-funebre-p",
+        "servico": 0,
+        "icone": "plutao-aura-funebre-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Detector de Metais",
+        "texto": "Plutão reside sobre a riqueza mineral de Roma, o que dá acesso a um leque de habilidades para seus filhos e legados. Representantes do deus funcionam como uma espécie de GPS ambulante, sempre conseguindo localizar tudo o que estiver nos domínios de seu ascendente divino, seja tocando o solo ou minimamente enterrado nele. Desde objetos comuns como um colar ou um ursinho de pelúcia até minérios valiosos e divinos, como o Ouro Imperial.",
+        "grau": "",
+        "id": "detector-de-metais-p",
+        "servico": 1,
+        "icone": "plutao-detector-de-metais-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Sensor de Morte",
+        "texto": "O filho de Plutão percebe a morte no instante em que ela acontece e, muitas vezes, pouco antes de ela chegar. Quando alguém próximo a ele morre, um zumbido agudo toma seus ouvidos e não cede até que ele compreenda o que sentiu. Seu conhecimento do Mundo Inferior também lhe permite saber quando a vida de uma pessoa está sendo julgada diante dos Juízes dos Mortos, como se a sentença ecoasse em sua mente. Esse dom não indica quem morreu nem onde, apenas que a morte se aproxima ou acabou de ocorrer.",
+        "grau": "",
+        "id": "sensor-de-morte-p",
+        "servico": 2,
+        "icone": "plutao-sensor-de-morte-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Geolocalização",
+        "texto": "Plutão é o deus do Submundo, mas também deus da terra: é por isso que seus descendentes jamais se perdem no subterrâneo, tendo sempre noção dos quatro pontos cardeais. Entretanto, na superfície da terra também conseguem se guiar como ninguém e só de estarem situados nela já conseguem detectar previamente armadilhas, presenças vivas ou mortas, suas localizações e afins. O seu vínculo com a terra no geral é extremamente forte. Funciona como um tato aguçado, visto que permite pressentir a aproximação das pessoas — exceto se elas não estiverem tocando o chão.",
+        "grau": "",
+        "id": "geolocalizacao-p",
+        "servico": 3,
+        "icone": "plutao-geolocalizacao-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Combustível do Caos",
+        "texto": "O filho de Plutão cresce à margem de quase todos os círculos, dentro e fora do acampamento, e esse sentimento de não pertencer a lugar nenhum alimenta uma raiva silenciosa contra si mesmo, contra o pai e contra os outros. Raramente a demonstra, mas ela fica ali, junto da inveja que o próprio Plutão guarda dos irmãos. Em ambientes caóticos, porém, ele se sente em casa, porque percebe que o mal não existe só dentro dele. Brigas e sofrimento ao redor lhe dão vitalidade e energia. Em batalha, ele se fortalece com a angústia e a dor de aliados e inimigos. Essa força absorvida se converte em regeneração: cortes pequenos se fecham sozinhos, e fraturas e rasgos mais graves cicatrizam mais depressa, ainda que de forma gradual.",
+        "grau": "",
+        "id": "combustivel-do-caos-p",
+        "servico": 4,
+        "icone": "plutao-combustivel-do-caos-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Corpo do Abismo",
+        "texto": "O organismo do filho de Plutão foi moldado para lugares onde outros morreriam. Seu corpo precisa de muito pouco ar e alimento, e ele aguenta dias em vácuos parciais, em câmaras tomadas por gases tóxicos ou soterrado sob escombros, sem sofrer danos fatais. Venenos transportados pelo ar e fumaças nocivas pouco o afetam, e a falta de oxigênio demora a derrubá-lo. O frio e o calor extremos também o incomodam pouco. Temperaturas negativas, tempestades de gelo e câmaras subterrâneas escaldantes raramente o desestabilizam, e ele atravessa ambientes que forçariam qualquer outro semideus a recuar. A pressão não o esmaga. Ele suporta profundezas, desabamentos e quedas de grande altura com muito menos dano que o normal, e seus ossos e órgãos resistem a impactos que quebrariam os de um legionário comum.\n\n________________",
+        "grau": "",
+        "id": "corpo-do-abismo-p",
+        "servico": 5,
+        "icone": "plutao-corpo-do-abismo-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [
+      {
+        "nome": "Viagem Nas Sombras",
+        "texto": "Abrindo um portal em um local pouco iluminado, consegue viajar pelas sombras, percorrendo distâncias enormes — sumindo e reaparecendo nos extremos de um quarto — em questão de segundos, podendo levar um aliado consigo na travessia. Fora de combate, a habilidade permite deslocamentos ainda maiores, atravessando cidades inteiras em segundos. Contudo, exige um alto dispêndio de energia do usuário, que, dependendo do esforço empregado, corre o risco de se perder nas sombras para sempre.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "viagem-nas-sombras-a",
+        "servico": 0,
+        "icone": "plutao-viagem-nas-sombras-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Necromancia",
+        "texto": "O filho de Plutão fala com os mortos com a naturalidade de quem conversa com um vizinho. Almas errantes, lêmures, manes e outros espíritos o ouvem, respondem e acatam suas ordens. Ele pode interrogá-los sobre o que presenciaram em vida ou depois dela, e os espíritos respondem com o que sabem. Além disso, pode ordenar que ossos enterrados no solo se levantem e formem três esqueletos guerreiros, que lutam ao seu lado e obedecem aos seus comandos. Os esqueletos tombam quando são destruídos ou quando o convocador perde a concentração ou a consciência.",
+        "reposicao": "20 turnos",
+        "grau": "I",
+        "id": "necromancia-i-a",
+        "servico": 1,
+        "icone": "plutao-necromancia-i-a.png"
+      },
+      {
+        "nome": "Domínio do Solo",
+        "texto": "Tudo o que está abaixo da superfície pertence a Plutão, e seus filhos herdam parte desse poder sobre a terra. O semideus molda o solo conforme a necessidade: abre e fecha fendas fundas o bastante para desequilibrar alguém, ergue o chão sob os pés de um adversário para fazê-lo tropeçar e faz objetos caídos afundarem na terra, como se fossem levados ao Mundo Inferior. O mesmo domínio permite chamar à superfície objetos preciosos enterrados, que emergem do solo diante dele.",
+        "reposicao": "20 turnos",
+        "grau": "I",
+        "id": "dominio-do-solo-i-a",
+        "servico": 1,
+        "icone": "plutao-dominio-do-solo-i-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Necromancia",
+        "texto": "O trato do filho de Plutão com os mortos deixa de depender do acaso e passa a seguir a sua vontade. Ele cava um buraco no chão, enche-o de comida e entoa um cântico em latim, e a oferta atrai a alma de um falecido específico, trazida diretamente do Mundo Inferior. A alma permanece diante dele pelo tempo da conversa, e o semideus pode interrogá-la sobre o que viveu, o que viu e o que sabe. Os espíritos comuns, como almas errantes, lêmures e manes, continuam a ouvi-lo e a obedecê-lo sem qualquer cerimônia. O mesmo comando vale para os ossos. O semideus os chama e os move telecineticamente, trazendo-os de longe até onde precisa e dispensando o contato direto com o solo onde estão enterrados. Com eles, levanta até oito esqueletos guerreiros, mais firmes e mais obedientes que os do nível anterior. Os esqueletos lutam ao lado dele e seguem suas ordens sem hesitar, e podem ser reerguidos com o mesmo material enquanto houver ossos por perto. Eles tombam quando o convocador perde a concentração ou a consciência.",
+        "reposicao": "20 turnos",
+        "grau": "II",
+        "id": "necromancia-ii-a",
+        "servico": 2,
+        "icone": "plutao-necromancia-ii-a.png"
+      },
+      {
+        "nome": "Domínio do Solo",
+        "texto": "O domínio de Plutão sobre o solo deixa de servir apenas para atrapalhar e passa a ferir. O semideus abre fendas largas o bastante para engolir um adversário até a cintura ou prendê-lo ao chão, fecha a terra ao redor de seus pés e ergue colunas de pedra para golpear, bloquear passagens ou levantar muralhas improvisadas. Também faz o chão tremer numa área de dois quadrados, derrubando quem estiver nela e abalando construções frágeis. Tudo o que repousa sob a terra obedece ao mesmo comando, e é daí que ele tira suas armas mais valiosas. Metais preciosos, gemas e lâminas sobem à superfície quando ele os chama, e o semideus pode lançá-los como projéteis contra os inimigos. Armas e escudos alheios, por sua vez, afundam no solo e seguem para o Mundo Inferior, sem que ele precise tocá-los. Manter o efeito por muito tempo cansa o semideus.",
+        "reposicao": "20 turnos",
+        "grau": "II",
+        "id": "dominio-do-solo-ii-a",
+        "servico": 2,
+        "icone": "plutao-dominio-do-solo-ii-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Necromancia",
+        "texto": "Comanda os mortos como um general comanda uma legião. Ele chama centenas de ossos de uma só vez, vindos do solo e de lugares distantes, e os molda em um exército de dez esqueletos guerreiros que marcha em formação e obedece a suas ordens como um só corpo. Alguns surgem armados com lanças, gládios e escudos romanos, e os ossos de um caído são logo reaproveitados para reerguer outro. O exército se mantém enquanto o semideus conservar a concentração e a consciência. O poder alcança também as almas. Ele convoca vários espíritos específicos ao mesmo tempo, usando a mesma oferta de comida e o mesmo cântico em latim. Quem enfrenta essa horda sente o peso do Mundo Inferior: o medo se espalha entre os inimigos, e os mais fracos hesitam ou fogem. Terminado o efeito, o semideus fica praticamente exausto e precisa de descanso antes de agir de novo.",
+        "reposicao": "1 vez por combate",
+        "grau": "III",
+        "id": "necromancia-iii-a",
+        "servico": 3,
+        "icone": "plutao-necromancia-iii-a.png"
+      },
+      {
+        "nome": "Domínio do Solo",
+        "texto": "O filho de Plutão deixa de pedir licença à terra e passa a comandá-la por inteiro. Com um gesto, ele parte o solo em fendas profundas, derruba muros e desaba estruturas inteiras sob inimigos. Tudo o que dorme sob a terra responde ao seu chamado. Ouro, prata, diamantes e rubis sobem em grande quantidade e se tornam suas armas: ele dispara chuvas de gemas e estilhaços de metal, ou as molda em lâminas, lanças e escudos. Esses tesouros também servem de isca, porque os inimigos que os veem ficam tentados a se aproximar. Consegue arrancar a distância qualquer metal ou pedra preciosa, inclusive armas de Ouro Imperial, Ferro Estígio e Bronze Celestial que estejam nas mãos de outros.",
+        "reposicao": "1 vez por combate",
+        "grau": "III",
+        "id": "dominio-do-solo-iii-a",
+        "servico": 3,
+        "icone": "plutao-dominio-do-solo-iii-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Umbracinese",
+        "texto": "O filho de Plutão dá forma à escuridão. Onde falta luz, ele reúne a sombra e a molda em um tecido negro que obedece ao seu pensamento, e a forma muda conforme a necessidade. Ela pode virar chicotes e correntes para açoitar e prender, laços para travar membros e armas, mãos que agarram objetos à distância, lâminas e lanças para ferir, escudos e muralhas para bloquear golpes, ou um manto que envolve o corpo dele e o esconde de olhos curiosos. Também pode cobrir o chão para fazer inimigos tropeçarem ou cegar quem estiver na área, escurecendo o ambiente ao redor. A luz enfraquece a sombra moldada, e quanto mais forte a iluminação, menos firmeza e alcance ela tem.",
+        "reposicao": "20 turnos",
+        "grau": "",
+        "id": "umbracinese-a",
+        "servico": 4,
+        "icone": "plutao-umbracinese-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Toque do Ceifador",
+        "texto": "Poucos filhos de Plutão chegam a dominar este poder, e os que o fazem costumam ser vistos com receio até pelos próprios aliados. A habilidade é rara, e a simples notícia de que alguém a possui basta para que legionários e criaturas mantenham distância. Em Roma, o medo da morte sem rosto sempre acompanhou o nome de Plutão, e o portador desse dom herda essa reputação. O semideus toca um indivíduo e arranca sua alma à força, lançando-a direto ao Mundo Inferior. Em um semideus ou mortal, a morte é instantânea, sem chance de reação depois que o contato se completa. Em um monstro, o corpo se desfaz em pó dourado no mesmo instante. Em seres imortais, como os deuses, a alma não pode ser destruída, mas o toque a rasga e a arrasta para as profundezas, e o alvo fica quase inteiramente sem poder, incapaz de agir com força plena por um longo período. O custo é enorme. Para realizar o toque, o semideus gasta quase toda a sua energia. Depois do uso, ele continua consciente, mas esgotado demais para lutar, usar outras habilidades ou fazer mais do que se manter de pé, e precisa de descanso prolongado para se recuperar. Como exige contato direto, falha se o alvo escapar do toque.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "toque-do-ceifador-a",
+        "servico": 5,
+        "icone": "plutao-toque-do-ceifador-a.png"
+      }
+    ]
+  ]
+}

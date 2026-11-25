@@ -1,0 +1,164 @@
+{
+  "id": "venus",
+  "nome": "Vênus",
+  "estandarte": "https://i.imgur.com/A3sBpYI.png",
+  "titulo": "",
+  "introducao": [
+    "Para os gregos, Afrodite. Para os romanos, Vênus. Suas contrapartes compartilham o sangue da primordialidade, sendo o amor um conceito extremamente difundido na Antiguidade. Vênus sempre foi uma deusa cultuada, embora seu nome tenha sido motivo de confusão, visto que nascera em Cítera, da espuma das águas. Citereia é o seu nome original, pois Vênus era, ali, uma deusa mercantil muitíssimo valorizada. Igualmente marcante e bela, acabou por se tornar única. A deusa do amor e da sexualidade é vista como a mais bela mulher que já pisara na terra. Tem um corpo inimaginável, como se esculpido em mármore branco, tamanha a delicadeza de seus traços corpóreos. É a guardiã de direito dos amantes e dos apaixonados transeuntes, traço que também legou à sua prole como característica nata. É esposa de Vulcano, mas mantém uma relação adúltera com Marte, com quem teve dois filhos: Cupido, personificação bélica do amor e também seu principal agente, e Concórdia, deusa da harmonia e da união."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Aroma Irresistível",
+        "texto": "O descendente de Vênus produz, de forma instintiva, um aroma corpóreo capaz de atrair ou confundir quem estiver por perto. Esse mesmo cheiro dificulta sua localização por meio do olfato em situações de risco, tornando-o mais difícil de ser rastreado por monstros ou legionários com sentidos aguçados enquanto estiver se ocultando. De caráter sedutor, o aroma também distrai qualquer indivíduo a até três quadrados de distância, desviando sua atenção e despertando um desconforto quase involuntário de atração no alvo.",
+        "grau": "",
+        "id": "aroma-irresistivel-p",
+        "servico": 0,
+        "icone": "venus-aroma-irresistivel-p.png"
+      },
+      {
+        "nome": "Face Intocável",
+        "texto": "Beneficiados por uma harmonia facial quase divina, os filhos de Vênus desfrutam de uma proteção momentânea contra criaturas monstruosas e adversários dispostos a atacá-los. A princípio, esses inimigos não os reconhecem como ameaça, levando-os a direcionar sua atenção para outros alvos ao redor.",
+        "grau": "",
+        "id": "face-intocavel-p",
+        "servico": 0,
+        "icone": "venus-face-intocavel-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Beleza Insuperável",
+        "texto": "Os filhos de Vênus dominam naturalmente o francês, tradicionalmente conhecido como a língua do amor. Possuem um refinado senso estético, sabendo escolher com precisão roupas, maquiagens e perfumes que realçam ainda mais uma beleza já naturalmente marcante. Uma vez reconhecidos por Vênus, esses semideuses passam a ser incapazes de manter qualquer imperfeição visível em sua aparência — sujeiras, manchas e pequenos arranhões na pele desaparecem de forma natural e praticamente instantânea. Além disso, mesmo em repouso, basta uma troca de olhares prolongada com alguém por quem nutra interesse para despertar, instintivamente, sensações de atração quase irresistíveis no outro indivíduo.",
+        "grau": "",
+        "id": "beleza-insuperavel-p",
+        "servico": 1,
+        "icone": "venus-beleza-insuperavel-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Linha do Coração",
+        "texto": "Naturalmente empáticos e sensíveis, os filhos de Vênus são capazes de decifrar o estado emocional de uma pessoa ou criatura apenas através do olhar, orientando-se por esses sentimentos quando necessário. Ao procurar por alguém em determinado estado emocional — como o medo, por exemplo —, seus sentidos o conduzem instintivamente até qualquer indivíduo ou criatura que compartilhe daquela emoção dentro de um raio de um quarto.",
+        "grau": "",
+        "id": "linha-do-coracao-p",
+        "servico": 2,
+        "icone": "venus-linha-do-coracao-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Elasticidade Venérea",
+        "texto": "Herdando parte da sensualidade materna, o semideus desenvolve uma elasticidade corporal notável, aliada a uma proficiência acrobática que se manifesta em movimentos fluidos e precisos — capaz de realizar torções, giros e esquivas que exigiriam de outro semideus anos de treinamento especializado em ginástica ou dança. Essa flexibilidade não se limita ao campo erótico: em combate, permite escapar de golpes e posições comprometedoras com uma facilidade quase antinatural, contorcendo o corpo em ângulos que a maioria consideraria impossíveis.",
+        "grau": "",
+        "id": "elasticidade-venerea-p",
+        "servico": 3,
+        "icone": "venus-elasticidade-venerea-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Autoestima Inabalável",
+        "texto": "Seguros de suas características harmônicas e refinadas, os descendentes de Vênus provam que a perfeição estética pode ser tanto instrumento de encanto quanto de defesa, desenvolvendo um notável autocontrole sobre os próprios sentimentos e processos de raciocínio, blindando a mente contra interferências externas. Mostram-se resistentes a ilusões que distorçam a realidade ou a emoções falsas impostas por terceiros, sustentados pela convicção inabalável de sua própria autenticidade — convicção que, somada aos evidentes atributos físicos herdados de Vênus, os torna genuinamente confiantes de figurarem entre os seres mais belos já vistos sobre a Terra.",
+        "grau": "",
+        "id": "autoestima-inabalavel-p",
+        "servico": 4,
+        "icone": "venus-autoestima-inabalavel-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fascínio Aterrador",
+        "texto": "O semideus aprende a transformar sua beleza estonteante em uma arma de intimidação genuína. Ao se concentrar ou entrar em combate, projeta uma presença capaz de instaurar hesitação em qualquer adversário que mantenha o olhar fixo sobre ele, como se a própria perfeição de seus traços bastasse para quebrar a confiança de quem se prepara para atacá-lo. Esse desconforto psicológico se traduz diretamente na eficácia dos golpes recebidos: a cada cinco ataques direcionados ao semideus, um falha, seja por hesitação do oponente, seja por um instante de distração causado pela presença hipnotizante à sua frente. Adversários que já tenham demonstrado interesse romântico ou admiração pelo semideus em algum momento — mesmo que breve — sofrem esse efeito com intensidade ainda maior, hesitando com mais frequência e demorando mais para se recompor após cada tentativa frustrada.\n\n________________",
+        "grau": "",
+        "id": "fascinio-aterrador-p",
+        "servico": 5,
+        "icone": "venus-fascinio-aterrador-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Beijo de Amor",
+        "texto": "Conhecendo profundamente as ilusões que o amor e o ódio podem impor à mente de alguém, o filho de Vênus é capaz de conceder a si mesmo e a um único alvo imunidade temporária contra ataques de natureza psíquica, selando essa proteção através de um beijo breve e sutil. O efeito permanece ativo por cinco turnos, blindando ambos contra qualquer tentativa de manipulação mental durante esse período.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "beijo-de-amor-a",
+        "servico": 1,
+        "icone": "venus-beijo-de-amor-a.png"
+      },
+      {
+        "nome": "Olhar Envenenado",
+        "texto": "Sentimentos como ódio e fúria, que constantemente atormentam os descendentes de Vênus, precisam de algum destino — e, quando necessário, o semideus pode despejá-los sobre um adversário através de um simples olhar carregado de intenção. O alvo é tomado por uma raiva cega e passa a voltar-se contra seus próprios aliados, atacando indiscriminadamente quem estiver ao seu lado, incapaz de distinguir amigo de inimigo durante três turnos consecutivos.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "olhar-envenenado-a",
+        "servico": 1,
+        "icone": "venus-olhar-envenenado-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Desgraça Estética",
+        "texto": "Versado na arte de amaldiçoar aqueles que lhe causam desagrado, o semideus precisa apenas de um extenso jogo de palavras em francês, proferido em voz alta e clara, para lançar sua maldição sobre um alvo escolhido. O efeito atinge exclusivamente a aparência física do desafortunado: espinhas e cravos surgem repentinamente por todo o rosto, tufos de cabelo começam a cair sem explicação, a pele descama em pequenas áreas visíveis, os dentes adquirem uma tonalidade amarelada e desalinhada, e um odor corporal desagradável passa a acompanhar o alvo por onde quer que vá — uma vingança puramente estética, mas capaz de abalar profundamente a autoestima de qualquer um.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "desgraca-estetica-a",
+        "servico": 2,
+        "icone": "venus-desgraca-estetica-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Beijo Que Sara",
+        "texto": "Através de um gesto afetuoso — um beijo breve ou um toque prolongado sobre a região ferida —, o semideus canaliza um pouco da energia do Amor para acelerar a regeneração das lesões físicas de um alvo. Hematomas perdem parte do inchaço e da dor e músculos tensionados relaxam o suficiente para devolver amplitude de movimento a quem estava limitado por algum ferimento leve ou moderado. Além da cura física, o efeito contagia o alvo com uma onda repentina de disposição e ânimo, aliviando parte do cansaço acumulado e renovando o fôlego para continuar em atividade. A habilidade, no entanto, não tem qualquer efeito sobre ferimentos graves, ossos quebrados ou condições de origem mágica, limitando-se estritamente ao campo dos danos físicos superficiais e moderados.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "beijo-que-sara-a",
+        "servico": 3,
+        "icone": "venus-beijo-que-sara-a.png"
+      },
+      {
+        "nome": "Névoa Intoxicante",
+        "texto": "O semideus intensifica temporariamente o próprio aroma corporal, criando uma densa nuvem perfumada ao seu redor. A fragrância adocicada carrega, além do efeito atrativo natural que já acompanha os descendentes de Vênus, uma nova camada de peçonha sutil: inimigos próximos passam a sentir náuseas constantes, uma leve sonolência e pontadas internas na cabeça, sintomas que se intensificam quanto mais tempo permanecem expostos à fragrância. O efeito permanece ativo por três turnos, período em que o aroma natural mais discreto do semideus fica suprimido, concentrando toda sua influência nessa versão mais tóxica e ofensiva.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "nevoa-intoxicante-a",
+        "servico": 3,
+        "icone": "venus-nevoa-intoxicante-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Toque Anestésico",
+        "texto": "Sendo Vênus a própria personificação dos sentimentos, seus descendentes aprendem, com o tempo, que também são capazes de suprimi-los por completo — tanto nos outros quanto em si mesmos. Através de um gesto afetuoso, como um abraço, um beijo no rosto ou um simples aperto de mão, o semideus consegue \"desligar\" temporariamente as sensações de um alvo: a sensibilidade característica de qualquer ser vivo se apaga por completo, mergulhando a vítima em um estado de inércia total, desconectada da própria realidade e incapaz de se mover ou reagir a qualquer estímulo externo. Após três turnos nesse estado, a consciência retorna ao afetado, mas o próprio semideus paga um preço elevado por manipular algo tão essencial quanto os sentimentos: sente-se momentaneamente incapaz de continuar lutando ou de recorrer a qualquer outra habilidade, refletindo o desgaste de silenciar, ainda que brevemente, aquilo que sua própria mãe rege sobre todos os seres. Esse mesmo domínio sobre as emoções pode ser voltado para si: o semideus é capaz de reduzir a intensidade dos próprios sentimentos por vontade própria, encarando situações aterrorizantes ou emocionalmente devastadoras sem que o medo, o pânico ou o desespero o paralisem — uma frieza calculada, quase antinatural, que só um filho da deusa do amor seria capaz de impor à própria alma.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "toque-anestesico-a",
+        "servico": 4,
+        "icone": "venus-toque-anestesico-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Benção de Páris",
+        "texto": "Inspirado na antiga bênção concedida a Páris, aquele cuja fuga com a amada Helena desencadeou a Guerra de Tróia, o semideus é capaz de conceder, através de um gesto físico afetuoso, um fragmento do poder do amor a qualquer aliado. O alvo se torna praticamente imparável durante o efeito, como se lutasse pela pessoa mais importante de sua vida: seus reflexos se apuram, sua força se intensifica e seus movimentos ganham uma precisão incomum, permitindo-lhe desviar de três ataques consecutivos e sentir consideravelmente menos o impacto de qualquer golpe recebido. O efeito dura cinco turnos.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "bencao-de-paris-a",
+        "servico": 5,
+        "icone": "venus-bencao-de-paris-a.png"
+      }
+    ]
+  ]
+}

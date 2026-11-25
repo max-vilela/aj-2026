@@ -1,0 +1,164 @@
+{
+  "id": "fortuna",
+  "nome": "Fortuna",
+  "estandarte": "https://i.imgur.com/O6IoTAi.png",
+  "titulo": "",
+  "introducao": [
+    "Fortuna foi amplamente celebrada desde os tempos anteriores a Roma e teve como ápice da devoção dos mortais por ela a sua consagração como uma das matronas da Cidade de Roma durante o período da República. A perspectiva de uma melhora na vida vinda do além — a crença de que as mudanças inexplicáveis pela lógica são obra da divindade — tornou Fortuna uma deusa cultuada desde os escravos até os círculos dos homens mais poderosos. Sua presença sempre indica alterações, sejam elas para o melhor ou para o pior, não se limitando a questões materiais. Muitos poetas e sofredores românticos invocaram Fortuna no passado, assim como ainda o fazem, para pedir reconciliações e oportunidades de firmar um amor duradouro e enraizado, súplicas de uma realidade improvável. A Roda da Fortuna, insígnia do poder da deidade, assim como a cornucópia, representa suas esferas de influência. A representação de Fortuna vendada simboliza o acaso do destino, que não vê a quem beneficia ou prejudica."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Sorte de Principiante",
+        "texto": "Existe um ditado popular de que iniciantes costumam ser abençoados por um golpe de sorte logo em suas primeiras tentativas. Nos filhos de Fortuna, esse fenômeno se manifesta de forma muito mais concreta: qualquer atividade nova que o semideus decida experimentar — seja um esporte, um estilo de combate ou qualquer outra habilidade — resulta em sucesso garantido na primeira tentativa.",
+        "grau": "",
+        "id": "sorte-de-principiante-p",
+        "servico": 0,
+        "icone": "fortuna-sorte-de-principiante-p.png"
+      },
+      {
+        "nome": "Golpe da Sorte",
+        "texto": "Existe um ditado popular de que a sorte de alguns costuma se espalhar para quem está por perto — e, nos filhos de Fortuna, esse fenômeno se manifesta de forma constante e tangível. A simples presença do semideus parece atrair um favorecimento sutil sobre todos os aliados próximos, que passam a experimentar pequenos golpes de sorte ao longo de qualquer atividade: um passo em falso que não resulta em queda, um golpe que erra por pouco, um item essencial encontrado no momento certo. Nenhum desses acontecimentos é garantido ou controlável pelo próprio semideus, mas a mera proximidade com um filho de Fortuna parece, de alguma forma, inclinar a balança do acaso a favor de quem o acompanha.",
+        "grau": "",
+        "id": "golpe-da-sorte-p",
+        "servico": 0,
+        "icone": "fortuna-golpe-da-sorte-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Dinheiro Infinito",
+        "texto": "Fortuna é a senhora de todas as fortunas e a deusa de toda sorte, e esse favorecimento constante se reflete diretamente na vida de seus herdeiros. Filhos de Fortuna costumam se deparar com pequenas quantias de dinheiro ao longo do dia, seja encontrando-as jogadas pelo chão, recebendo-as sem motivo aparente ou por meios pouco convencionais que ninguém sabe explicar direito. Ao final de cada dia, todo filho da deusa recebe vinte denários extras, como se a própria sorte insistisse em recompensá-lo — mesmo sem qualquer razão concreta.",
+        "grau": "",
+        "id": "dinheiro-infinito-p",
+        "servico": 1,
+        "icone": "fortuna-dinheiro-infinito-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ostentação Fora do Normal",
+        "texto": "Para um filho de Fortuna, dinheiro é muito mais do que simples valor monetário — ouro representa poder, e poder abre portas para vantagens especiais. Sempre que o semideus estiver portando mais denários do que seu oponente direto, um benefício sutil passa a agir a seu favor: qualquer efeito prejudicial imposto sobre ele, como venenos ou feitiços, tem sua duração encurtada em um turno, enquanto benefícios recebidos de fontes externas se prolongam por um turno a mais do que o normal. Trata-se, porém, de uma vantagem estritamente entre semideuses — monstros e divindades não são influenciados por essa \"sorte comparativa\".",
+        "grau": "",
+        "id": "ostentacao-fora-do-normal-p",
+        "servico": 2,
+        "icone": "fortuna-ostentacao-fora-do-normal-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cashback",
+        "texto": "Ter muito dinheiro não impede um filho de Fortuna de apreciar um bom negócio — muito pelo contrário: descontos parecem se atrair naturalmente para os herdeiros da deusa da sorte, como se o próprio comércio conspirasse a favor deles. Em qualquer compra realizada com denários, o semideus recebe um cashback de 50%, cortesia de uma sorte que parece sempre pender a seu favor.",
+        "grau": "",
+        "id": "cashback-p",
+        "servico": 3,
+        "icone": "fortuna-cashback-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Balança da Fortuna",
+        "texto": "Movidos por um perfeccionismo quase instintivo, os filhos de Fortuna carregam consigo a tendência de que as coisas, mais cedo ou mais tarde, pendam a seu favor — e enfrentar um deles em um combate prolongado costuma ser um erro estratégico grave, já que o próprio tempo trabalha contra o adversário. Nos primeiros sete turnos de confronto contra um legionário de Fortuna, uma a cada sete rodadas favorece automaticamente o semideus, seja em um desvio, uma defesa ou um ataque bem-sucedido — desde que não fatal.",
+        "grau": "",
+        "id": "balanca-da-fortuna-p",
+        "servico": 4,
+        "icone": "fortuna-balanca-da-fortuna-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fortis Fortuna Adiuvat",
+        "texto": "O espírito ousado e a confiança inabalável que caracterizam Fortuna se manifestam diretamente na força de seus filhos, concedendo-lhes maior vigor físico ao desferir golpes e maior domínio sobre armas já familiares em seu treinamento. Diz-se, ainda, que em momentos de extrema necessidade a própria deusa intervém discretamente a favor de seus descendentes, permitindo que realizem feitos que normalmente estariam fadados ao fracasso: um golpe capaz de romper a guarda do adversário e atingi-lo no mesmo instante, sem chance de defesa, ou até mesmo passar despercebido diante dos olhos atentos de uma divindade, valendo-se de um acaso ínfimo que só a sorte poderia explicar.\n\n________________",
+        "grau": "",
+        "id": "fortis-fortuna-adiuvat-p",
+        "servico": 5,
+        "icone": "fortuna-fortis-fortuna-adiuvat-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Passo em Falso",
+        "texto": "Com um gesto quase imperceptível, o filho de Fortuna concentra um resquício de má sorte e o direciona contra um único adversário próximo, a até três quadrados de distância. No turno seguinte, o alvo tem uma chance considerável de tropeçar, escorregar ou errar levemente sua próxima ação — não o suficiente para incapacitá-lo por completo, mas o bastante para abrir uma brecha momentânea em sua guarda ou pontaria.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "passo-em-falso-a",
+        "servico": 1,
+        "icone": "fortuna-passo-em-falso-a.png"
+      },
+      {
+        "nome": "Moeda Ao Vento",
+        "texto": "Ao lançar uma simples moeda para o alto (:dado 2), o filho de Fortuna consulta brevemente o favor da própria deusa antes de agir. Dependendo do resultado da queda — cara ou coroa —, o semideus recebe um pequeno bônus temporário: uma leve vantagem em seu próximo ataque ou em sua próxima tentativa de esquiva, válida apenas até o fim do turno seguinte. É uma habilidade simples e de baixo custo, refletindo mais um empurrãozinho da sorte do que um verdadeiro milagre.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "moeda-ao-vento-a",
+        "servico": 1,
+        "icone": "fortuna-moeda-ao-vento-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Roleta do Destino",
+        "texto": "O filho de Fortuna concentra sua energia em um único lance de dados invisíveis (:dado 2), entregando ao acaso o resultado de sua próxima ação em combate. Ao ativar a habilidade, escolhe um efeito entre duas possibilidades opostas — sucesso ampliado ou fracasso evitado — sem saber, no momento da escolha, qual delas de fato se manifestará: seu próximo ataque pode se tornar um golpe crítico, capaz de romper defesas convencionais, ou, caso o resultado seja desfavorável, transforma-se automaticamente em uma esquiva perfeita do próximo ataque recebido, como se o destino corrigisse o erro em seu favor. Por depender inteiramente do acaso, a Roleta do Destino é poderosa, mas imprevisível — mesmo para quem a invoca.",
+        "reposicao": "13 turnos",
+        "grau": "",
+        "id": "roleta-do-destino-a",
+        "servico": 2,
+        "icone": "fortuna-roleta-do-destino-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ás na Manga",
+        "texto": "A linha entre sorte e milagre costuma ser tênue demais para se explicar com lógica, e os filhos de Fortuna parecem viver exatamente nessa fronteira. De forma quase instintiva, o semideus consegue influenciar a probabilidade a seu favor, abrindo uma espécie de \"segunda chance\" para qualquer ação que esteja prestes a realizar. Sob esse efeito, torna-se capaz de executar desvios ou defesas que, para qualquer outro semideus, seriam simplesmente impossíveis dentro das regras convencionais de combate. Por depender inteiramente da vontade consciente do usuário para ser ativada, no entanto, a habilidade não pode ser empregada contra ataques surpresa, já que exige um mínimo de antecipação para funcionar.",
+        "reposicao": "2 vezes por combate",
+        "grau": "",
+        "id": "as-na-manga-a",
+        "servico": 3,
+        "icone": "fortuna-as-na-manga-a.png"
+      },
+      {
+        "nome": "Dia de Sorte?",
+        "texto": "Com um gesto quase imperceptível, o filho de Fortuna concentra um fragmento de sua má sorte e o lança sobre um único objeto inanimado a até 4 quadrados de distância. A partir desse momento, o objeto é tomado por uma sequência improvável de falhas. No início do próximo turno, o objeto sofre um acidente coerente com sua natureza — pode se partir, desabar, romper, explodir ou apresentar qualquer outra falha que possa ser utilizada a favor do semideus. O efeito deve servir para criar uma oportunidade de fuga, defesa ou vantagem momentânea, desde que o objeto possa plausivelmente produzir esse resultado. Uma corrente pode se romper e derrubar algo, uma estrutura instável pode desabar, um mecanismo pode falhar no momento oportuno, etc.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "dia-de-sorte-a",
+        "servico": 3,
+        "icone": "fortuna-dia-de-sorte-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "★ Maré de Azar",
+        "texto": "Assim como concede fortuna, Fortuna também rege o lado sombrio da moeda: o azar. Seus descendentes são capazes de canalizar essa face oculta da deusa através de uma maldição, drenando parte da sorte de um oponente e transformando-o, por um tempo, em um verdadeiro ímã de infortúnios. Sob esse efeito, o alvo se torna incapaz de acertar qualquer ataque e mal consegue avançar dois quadrados sem tropeçar e cair no chão. A maldição dura, a princípio, três turnos — mas caso o azarado se envolva em situações classicamente associadas à má sorte, como quebrar um espelho ou passar por baixo de uma escada, sua duração pode se estender em mais dois turnos por ocorrência, chegando a um limite máximo de sete turnos.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "mare-de-azar-a",
+        "servico": 4,
+        "icone": "fortuna-mare-de-azar-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Reação em Cadeia",
+        "texto": "O filho de Fortuna força o destino a se voltar contra seus inimigos. Com um gesto sutil, ele impregna até 3 objetos inanimados em um raio de 5 quadrados com uma poderosa onda de má sorte. No início do seu próximo turno, o azar se manifesta simultaneamente nos objetos escolhidos, fazendo com que se rompam, caiam, explodam, travem ou provoquem outra falha plausível. Se um dos objetos afetados puder causar uma reação em outro elemento próximo, o efeito pode se propagar, criando uma pequena reação em cadeia.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "reacao-em-cadeia-a",
+        "servico": 5,
+        "icone": "fortuna-reacao-em-cadeia-a.png"
+      }
+    ]
+  ]
+}

@@ -172,8 +172,11 @@ corpo = corpo.slice(0, ol.a) + '{{#sections}}\n        <div class="conteudo">{co
 const SLUGS = PAGINAS.map((p) => p[0]);
 for (const s of SLUGS) corpo = corpo.split('href="/' + s + '"').join('href="/' + s + '.html"');
 corpo = corpo.split(' aria-current="page"').join("");
-/* Panteão: Júpiter já tem página */
-corpo = corpo.replace(/<li><a href="#">(<img src="https:\/\/i\.imgur\.com\/ZLWBOzS\.png"[^>]*><span>Júpiter<\/span>)<\/a><\/li>/, '<li><a href="/jupiter.html">$1</a></li>');
+/* Panteão: cada deus com habilidades prontas ganha link para a sua página */
+const NOME_DEUS = {};
+for (const id of JSON.parse(ler("weebly/deuses/lista.json"))) NOME_DEUS[JSON.parse(ler("weebly/deuses/" + id + ".json")).nome] = id;
+corpo = corpo.replace(/<li><a href="#">(<img src="[^"]*"[^>]*><span>([^<]+)<\/span>)<\/a><\/li>/g,
+  (todo, miolo, nome) => (NOME_DEUS[nome] ? `<li><a href="/panteao.html?deus=${NOME_DEUS[nome]}">${miolo}</a></li>` : todo));
 corpo = corpo.replace(/<!--[\s\S]*?-->\n?\s*/g, (m) => (m.includes("Janela do Panteão") || m.includes("gaveta") ? m : ""));
 corpo = corpo.replace(/\n{3,}/g, "\n\n");
 /* O Weebly usa toda <img src> do HTML como og:image (pré-visualização de links). Para o link mostrar só o
@@ -249,10 +252,12 @@ const htmlHome = `${htmlCarregamento}
 `;
 gravar("weebly/paginas/home.html", htmlHome);
 
-/* páginas dos deuses: um div com o JSON de dados + o script que monta a árvore */
-const DEUSES = ["jupiter"];
-const embedDeus = (id, base, estilo) => `<div class="deus"${estilo ? ` data-estilo="${estilo}"` : ""} data-fonte="${base}/deuses/${id}.json"></div>\n<script src="${base}/deuses.js"></script>\n`;
-for (const id of DEUSES) gravar("weebly/paginas/" + id + ".html", embedDeus(id, CDN, "menu"));
+/* Panteão: uma página só serve todos os deuses, escolhidos pelo endereço (?deus=netuno) */
+const DEUSES = JSON.parse(ler("weebly/deuses/lista.json"));
+const embedDeus = (base) => `<div class="deus" data-estilo="menu" data-base="${base}/deuses/" data-padrao="jupiter"></div>
+<script src="${base}/deuses.js"></script>
+`;
+gravar("weebly/paginas/panteao.html", embedDeus(CDN));
 
 /* ---------- prévia local ---------- */
 const temaPrevia = montarTema("../style.css", "../site.js")
@@ -260,11 +265,12 @@ const temaPrevia = montarTema("../style.css", "../site.js")
   .replace("{footer}", "Rodapé do Weebly (exemplo)");
 const previaPagina = (conteudo) => {
   let t = temaPrevia.replace("@@CONTEUDO@@", '<div class="conteudo">' + conteudo + "</div>");
-  for (const s of SLUGS.concat(DEUSES)) t = t.split('href="/' + s + '.html"').join('href="/weebly/preview/' + s + '.html"');
+  for (const s of SLUGS) t = t.split('href="/' + s + '.html"').join('href="/weebly/preview/' + s + '.html"');
+  t = t.split('href="/panteao.html?').join('href="/weebly/preview/panteao.html?');
   return t;
 };
 for (const slug of SLUGS) gravar("weebly/preview/" + slug + ".html", previaPagina(conteudos[slug]));
-for (const id of DEUSES) gravar("weebly/preview/" + id + ".html", previaPagina(embedDeus(id, "..", "menu")));
+gravar("weebly/preview/panteao.html", previaPagina(embedDeus("..")));
 const previaHome = previaPagina(
   htmlCarregamento + '\n<script>window.AJ_DESTINO = "/weebly/preview/inicio.html";</script>\n<script src="../carregamento.js"></script>'
 );

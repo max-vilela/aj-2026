@@ -1,0 +1,166 @@
+{
+  "id": "hecate",
+  "nome": "Hécate",
+  "estandarte": "https://i.imgur.com/470NHpH.png",
+  "titulo": "",
+  "introducao": [
+    "Hécate é uma divindade pré-olímpica, filha dos titãs Perses e Astéria, e uma das poucas titânides a manter seu poder e prestígio mesmo após a Titanomaquia — uma neutralidade rara que reflete sua natureza liminar, já que habita as fronteiras entre os mundos, sem pertencer inteiramente a nenhum deles. Domina a lua, a magia, a Névoa, a feitiçaria e as encruzilhadas, sendo geralmente representada com duas tochas e, em suas formas mais antigas, com três rostos que simbolizam sua autoridade sobre passado, presente e futuro. Reina sobre terra, mar e céu, e acredita-se que, diante de toda encruzilhada, ela não dita caminhos: apenas entrega a tocha, deixando a escolha do rumo para quem a carrega.",
+    "Depois da conspiração liderada por Stanwyck — um filho de Hécate que tentou usar um ritual de sangue no Templo de Saturno para depor o pretor e restaurar o governo dos Titãs — a imagem da deusa entre os romanos ficou irremediavelmente manchada. Não foi apenas um traidor isolado sendo punido: o Senado, por decisão unânime, proibiu o uso de magia no acampamento inteiro, tratando a linhagem de Hécate como uma ameaça institucional, e não um caso pontual. Aos olhos romanos, a magia de Hécate é vista como algo intrinsecamente ligado à deslealdade — não é receada apenas como poder estranho, mas como semente de traição."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Filho da Noite",
+        "texto": "O filho de Hécate, assim como sua mãe, sente-se mais à vontade em ambientes escuros e sob a luz da lua, a ponto de emanar uma presença bruxuleante que, dependendo de seu estado emocional, desperta arrepio e temor em quem estiver por perto. Resiste mais tempo ao cansaço e desenvolve uma resistência considerável à feitiçaria alheia — sobretudo aquela proveniente de níveis iguais ou inferiores ao seu —, dificilmente se deixando enganar pelos próprios sentidos.",
+        "grau": "",
+        "id": "filho-da-noite-p",
+        "servico": 0,
+        "icone": "hecate-filho-da-noite-p.png"
+      },
+      {
+        "nome": "Biblioteca Ambulante",
+        "texto": "A afinidade de Hécate com feitiços e idiomas antigos é transmitida a alguns de seus descendentes, que desenvolvem uma capacidade natural para a compreensão de qualquer forma de linguagem. Os filhos da deusa conseguem decifrar línguas, códigos e cifras — sejam eles vivos, mortos ou mágicos —, não havendo pergaminho, mensagem ou enigma que resista à sua leitura.",
+        "grau": "",
+        "id": "biblioteca-ambulante-p",
+        "servico": 0,
+        "icone": "hecate-biblioteca-ambulante-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Passe Livre do Submundo",
+        "texto": "Os filhos de Hécate desenvolvem uma resistência natural contra as criaturas do Mundo Inferior, que os reconhecem como afins à deusa e, por isso, nunca os escolhem como alvos prioritários em combate. Empousai — criaturas forjadas pela própria deusa — jamais os atacarão. Fantasmas e espectros tratam o semideus como aliado.",
+        "grau": "",
+        "id": "passe-livre-do-submundo-p",
+        "servico": 1,
+        "icone": "hecate-passe-livre-do-submundo-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Três Rostos",
+        "texto": "A natureza triforme de Hécate manifesta-se em seus descendentes através de dois rostos adicionais — de caráter místico e invisíveis aos olhos comuns — que acompanham o semideus onde quer que vá. Esses rostos não conferem percepção sobrenatural nem reflexos sobre-humanos, mas cumprem um papel vital: mantêm vigília constante sobre os ângulos que os olhos mortais não alcançam. Assim, o filho de Hécate percebe a aproximação de qualquer ataque, seja ele vindo de frente, dos flancos ou das costas.",
+        "grau": "",
+        "id": "tres-rostos-p",
+        "servico": 2,
+        "icone": "hecate-tres-rostos-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Influência do Nevoeiro",
+        "texto": "Hécate e seus filhos são conhecidos por seu talento em agir por trás de guerras. Por isso, são capazes de mudar o curso de uma batalha ao influenciar passivamente a mente de seus adversários: caso o legionário da magia não deseje lutar, é devidamente ignorado; contudo, caso deseje, torna-se o primeiro alvejado na linha de frente. Esse mesmo dom permite atuar como diplomata em uma discussão, aumentando gradativamente as chances de acordo entre duas ou mais partes — um reflexo da posição da deusa diante dos três reinos: céu, oceano e submundo.",
+        "grau": "",
+        "id": "influencia-do-nevoeiro-p",
+        "servico": 3,
+        "icone": "hecate-influencia-do-nevoeiro-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Verdadeira Essência",
+        "texto": "A progenitura de Hécate mostra-se valiosa em situações delicadas. Os legionários da deusa da magia conseguem detectar a aura de um indivíduo, sendo capazes de julgá-lo em questão de segundos à sua presença — sem que sejam impedidos por habilidades passivas, exceto por influência divina. Em concomitância a isso, são formidáveis detectores de mentira, possuindo uma noção mística e intrínseca de quando os demais estão mentindo ou não, além de conseguirem perceber de forma abrangente as reais emoções do alvo focado, identificando raiva, paixão, tristeza ou até mesmo frustração.",
+        "grau": "",
+        "id": "verdadeira-essencia-p",
+        "servico": 4,
+        "icone": "hecate-verdadeira-essencia-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Poder Irrestrito",
+        "texto": "Depois de anos treinando sua magia, os feiticeiros que descendem de Hécate não necessitam mais de um vigor anormal para executar seus feitiços. Manipulação da Névoa e Mistiocinese perdem completamente o tempo de reposição, enquanto as demais habilidades ativas têm esse tempo reduzido pela metade, permitindo ao legionário sustentar uma batalha inteira através de sua magia e de suas ilusões forjadas pelo Véu.\n\n________________",
+        "grau": "",
+        "id": "poder-irrestrito-p",
+        "servico": 5,
+        "icone": "hecate-poder-irrestrito-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [
+      {
+        "nome": "Manipulação da Névoa",
+        "texto": "A Névoa é uma força mística primordial responsável por distorcer a percepção dos mortais, protegendo-os da verdadeira face do mundo divino. Os filhos de Hécate conseguem enxergar através dela e distorcê-la a seu favor, alterando leis físicas, aparências, memórias e até eventos do mundo real. Por exigir concentração e um alto dispêndio de energia, o feiticeiro não consegue realizar nenhuma outra ação ofensiva enquanto manipula a Névoa. Por seis turnos, é capaz de moldar o ambiente conforme sua criatividade e os limites do seu vigor físico e mágico, afetando os cinco sentidos sensoriais simultaneamente ou não.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "manipulacao-da-nevoa-a",
+        "servico": 0,
+        "icone": "hecate-manipulacao-da-nevoa-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Viagem Nas Sombras",
+        "texto": "Abrindo um portal em um local pouco iluminado, o feiticeiro consegue viajar pelas sombras, percorrendo distâncias enormes — sumindo e reaparecendo nos extremos de um cômodo grande — em questão de segundos. Exige um alto dispêndio de energia do usuário, que, dependendo do esforço empregado, corre o risco de se perder nas sombras para sempre.",
+        "reposicao": "2 vezes por combate",
+        "grau": "",
+        "id": "viagem-nas-sombras-a",
+        "servico": 1,
+        "icone": "hecate-viagem-nas-sombras-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mistiocinese",
+        "texto": "Por meio de feitiços simples, o feiticeiro consegue manipular a função de objetos e fazê-los agir ao seu comando, além de conjurar chamas usadas apenas para acender velas ou uma fogueira — sem domínio pleno sobre elas. É capaz de identificar as propriedades de frutos e ervas para produzir poções de cura ou envenenamento. Ao envolver o alvo num brilho arcano, pode realizar pequenos feitos ditados por sua criatividade: destrancar portas, encantar espadas para que desfiram golpes, compelir uma árvore a derrubar um fruto ou praguejar alguém, conferindo-lhe azar ou fazendo-o agir descontroladamente — desde que nada represente perigo ao alvo, como dançar, repetir uma frase ou rir sem parar durante um turno. É capaz ainda de realizar a transmutação de objetos, convertendo-os em outros com certa concentração, e de destituir a sua matéria, reduzindo-o a pó.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "mistiocinese-a",
+        "servico": 2,
+        "icone": "hecate-mistiocinese-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Centelha Mágica",
+        "texto": "A prole de Hécate, ao canalizar energia por um turno, guarnece as mãos com uma luminosidade púrpura. No turno seguinte, dispara essa energia mística — no formato de um raio — contra um alvo a até cinco quadrados de distância. Caso atinja um semideus ou monstro, o impacto o arremessa violentamente para trás em até quatro quadrados. Caso alveje o chão ou um objeto, o filho de Hécate provoca uma implosão moderada de 3x3, afastando todos os presentes na área em até dois quadrados. A centelha mágica é forte o suficiente para fragilizar e romper superfícies mais frágeis, como a madeira.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "centelha-magica-a",
+        "servico": 3,
+        "icone": "hecate-centelha-magica-a.png"
+      },
+      {
+        "nome": "Telecinese",
+        "texto": "Canalizando sua energia mágica através de um gesto preciso, o filho de Hécate é capaz de mover objetos à distância apenas com o poder da mente, envolvendo o alvo num leve brilho arcano enquanto o manipula no ar. Consegue erguer, arremessar ou sustentar objetos de porte médio — como móveis, escombros ou armas — a até cinco quadrados de distância.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "telecinese-a",
+        "servico": 3,
+        "icone": "hecate-telecinese-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Quatro Elementos",
+        "texto": "O filho de Hécate passa a controlar, com razoável precisão, os quatro elementos naturais da teoria clássica — fogo, água, terra e ar — em um alcance de seis quadrados. Contudo, por se tratar de uma manipulação puramente mística e derivada da bruxaria, esses elementos carecem da conexão viva e da magnitude física que os filhos dos deuses regentes possuem; a água manifestada não responderá com a mesma fluidez e escala de um herdeiro de Netuno, assim como as chamas não terão o calor ou o vigor destrutivo da linhagem de Vulcano, atuando como recursos inferiores em potência bruta.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "quatro-elementos-a",
+        "servico": 4,
+        "icone": "hecate-quatro-elementos-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Deusa Menor",
+        "texto": "Hécate, deusa da magia, é uma das entidades mais poderosas do panteão romano — temida e, posteriormente, esnobada justamente por isso. Os filhos da deusa carregam consigo um eco dessa magia bruta que a torna respeitada e temida até pelo rei dos deuses. Após concentrar-se por três turnos ininterruptos, a prole de Hécate cobre uma área de sete quadrados a partir de si, clonando os poderes de todos os semideuses presentes nesse raio, que podem ser utilizados pelo usuário durante os sete turnos seguintes. Ao fim da habilidade, porém, o filho da deusa tríplice encontra-se tão exaurido que é levado a uma síncope imediata, necessitando de repouso.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "deusa-menor-a",
+        "servico": 5,
+        "icone": "hecate-deusa-menor-a.png"
+      }
+    ]
+  ]
+}

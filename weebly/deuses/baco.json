@@ -1,0 +1,165 @@
+{
+  "id": "baco",
+  "nome": "Baco",
+  "estandarte": "https://i.imgur.com/u6x80XH.png",
+  "titulo": "",
+  "introducao": [
+    "Baco é o deus romano do vinho, da embriaguez, do êxtase e da libertação dos instintos — aquele que dissolve, ainda que temporariamente, as barreiras impostas pela razão e pela civilidade. Filho de Júpiter com a mortal Sêmele, ocupa uma posição singular no panteão: é o único entre os grandes deuses a carregar sangue humano em sua origem, o que talvez explique sua proximidade incomum com os mortais e seu apreço por seus prazeres mais terrenos. Reza a tradição que sua mãe pereceu ainda durante a gestação, ao exigir contemplar Júpiter em toda a sua forma divina, sendo consumida pelo esplendor do deus; o pai, então, teria acolhido o feto em sua própria coxa até que estivesse pronto para nascer — motivo pelo qual Baco é frequentemente chamado de \"o duas vezes nascido\".",
+    "Seu culto foi, entre todos, o mais temido pelas autoridades romanas. As Bacanais — festivais noturnos marcados por música, dança, vinho e transe coletivo — chegaram a ser oficialmente reprimidas pelo Senado, que enxergava nelas uma ameaça à ordem pública e à hierarquia social, justamente por suspenderem distinções entre patrícios e plebeus, homens e mulheres, livres e escravos. Ainda assim, o culto sobreviveu na clandestinidade e voltou a florescer, prova de que o domínio de Baco não se impõe pela força, mas pela sedução daquilo que a razão tenta conter."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Métrica do Banquete",
+        "texto": "No Acampamento Júpiter, os banquetes de Baco são sinônimos de união e disciplina. O semideus emana uma aura invisível de ordem social em um raio de 3x3 quadrados. Passivamente, essa atmosfera suprime a insubordinação: aliados dentro da área acham fisicamente impossível quebrar a formação militar ou desobedecer a ordens diretas de seus centuriões. Em festas oficiais da legião, o raio se expande para 6x6 quadrados, harmonizando o ambiente e fazendo com que os presentes entrem em uma sincronia de convivência perfeita, contendo brigas antes mesmo que comecem.",
+        "grau": "",
+        "id": "metrica-do-banquete-p",
+        "servico": 0,
+        "icone": "baco-metrica-do-banquete-p.png"
+      },
+      {
+        "nome": "Eterno Anfitrião",
+        "texto": "Herdeiros do deus que dita a etiqueta e a postura nas grandes festas romanas possuem um equilíbrio físico impecável. O semideus é completamente imune a tonturas, labirintite, enjoos por movimento ou vertigens provocadas por alturas e ventanias. Ele consegue correr e se mover por terrenos instáveis, inclinados ou escorregadios sem sofrer penalidades em sua precisão de movimento.",
+        "grau": "",
+        "id": "eterno-anfitriao-p",
+        "servico": 0,
+        "icone": "baco-eterno-anfitriao-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fisiologia Purificada",
+        "texto": "O organismo do filho de Baco funciona como um filtro biológico perfeito contra impurezas. O semideus possui imunidade total e permanente a qualquer tipo de veneno, toxina, infecção biológica ou efeitos debilitantes de gases nocivos. Além disso, substâncias tóxicas ou excessos alimentares que normalmente sobrecarregariam o corpo são digeridos instantaneamente, sendo convertidos em energia física para o semideus.",
+        "grau": "",
+        "id": "fisiologia-purificada-p",
+        "servico": 1,
+        "icone": "baco-fisiologia-purificada-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Efeito Sommelier",
+        "texto": "O semideus possui uma característica biológica marcante. Seu corpo exala de forma constante e natural um perfume sutil e sofisticado que remete a uvas finas e vinho envelhecido em barris de carvalho. Em banquetes, esse aroma atua em um raio de 3x3 quadrados, deixando as pessoas ao redor mais relaxadas e propensas a confiar em sua presença. Em combate, quando o calor corporal do semideus aumenta, o perfume se intensifica drasticamente na área. Ele passa a agir como um anestésico olfativo leve, reduzindo a percepção de dor dos aliados que estiverem lutando ao seu lado. Se o semideus for ferido, o efeito na área se propaga instantaneamente.",
+        "grau": "",
+        "id": "efeito-sommelier-p",
+        "servico": 2,
+        "icone": "baco-efeito-sommelier-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Termostato Divino",
+        "texto": "Como herdeiros de um deus fortemente ligado à vegetação e ao cultivo das vinhas sob condições severas, a estrutura física do semideus possui um grau elevado de adaptabilidade climática. Seu corpo possui uma tolerância biológica permanente e involuntária a extremos de temperatura ambiente, resistindo a frios intensos e calor de estiagem. O legionário não sofre com desidratação precoce, ressecamento labial e insolação, mantendo sua homeostase intacta sob qualquer clima.",
+        "grau": "",
+        "id": "termostato-divino-p",
+        "servico": 3,
+        "icone": "baco-termostato-divino-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Estabilidade Trágica",
+        "texto": "A estrutura neurológica do semideus assume a dualidade estática das máscaras da tragédia e da comédia do teatro romano. A mente do legionário funciona em um estado de transe contínuo que anula a percepção biológica do medo místico. Ele possui imunidade total e permanente contra auras de terror provocadas por monstros, feitiços de pânico e intimidações sobrenaturais, mantendo sua frequência cerebral em absoluto foco e estabilidade em qualquer situação. Existem limites para essa passiva; como por exemplo, resistir aos Três Grandes.",
+        "grau": "",
+        "id": "estabilidade-tragica-p",
+        "servico": 4,
+        "icone": "baco-estabilidade-tragica-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Eco de Prata",
+        "texto": "O semideus possui uma ressonância acústica involuntária ligada à pureza dos metais nobres e das taças imperiais usadas nos rituais de Baco. Em um raio permanente de 4x4 quadrados, a atmosfera ao redor do legionário gera um abafamento natural e estático sobre as ondas sonoras. Ruídos estridentes, estalos de armadilhas, o sibilar de flechas disparadas e o choque metálico próximo sofrem uma neutralização de impacto auditivo imediata, funcionando como uma blindagem de silêncio acústico contínuo na área de cobertura.\n\n________________",
+        "grau": "",
+        "id": "eco-de-prata-p",
+        "servico": 5,
+        "icone": "baco-eco-de-prata-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Bagaço Compacto",
+        "texto": "O semideus canaliza a pressão de esmagamento mecânico das grandes prensas de uva romanas, fazendo com que o solo em uma área de 1x3 quadrados à sua frente sofra uma compactação instantânea e violenta. Os restos de vegetação, pedras e terra batida na grade sofrem uma aglutinação química imediata, transformando-se em blocos sólidos e pesados de bagaço mineralizado. Inimigos que estiverem nessa linha de impacto são prensados contra o chão pela densidade do terreno modificado, sofrendo um forte impacto físico e ficando presos no local por 1 turno.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "bagaco-compacto-a",
+        "servico": 1,
+        "icone": "baco-bagaco-compacto-a.png"
+      },
+      {
+        "nome": "Muralha de Ramos",
+        "texto": "O legionário golpeia horizontalmente o ar com seu escudo, projetando uma força botânica que faz brotar do solo uma barreira compacta de galhos retorcidos de videira. A estrutura surge instantaneamente preenchendo uma área linear de 1x3 quadrados à sua escolha dentro de um raio de 3 quadrados. Essa barreira de madeira maciça possui a altura de um escudo romano e funciona como cobertura física total, bloqueando a trajetória de projéteis físicos e flechas por 2 turnos antes de secar e desabar.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "muralha-de-ramos-a",
+        "servico": 1,
+        "icone": "baco-muralha-de-ramos-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Explosão de Sabor",
+        "texto": "O semideus carrega um cantil preenchido com vinho, forçando uma fermentação instantânea tão violenta que rompe as barreiras físicas do recipiente. O processo químico e a expansão de gases geram uma detonação imediata que se propaga em uma área circular de 3x3 quadrados ao redor do legionário. A força do impacto arremessa os oponentes atingidos um quadrado para trás de forma abrupta e cobrindo o perímetro com resíduos de bebida fervente.",
+        "reposicao": "8 turnos",
+        "grau": "",
+        "id": "explosao-de-sabor-a",
+        "servico": 2,
+        "icone": "baco-explosao-de-sabor-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Defrutum",
+        "texto": "O semideus arremessa o sumo espesso de seu cantil diretamente sobre a grade de combate, cobrindo uma área de 3x3 quadrados por até 5 turnos. O líquido reage com o oxigênio e assume as propriedades do piche vinícola romano encorpado, tornando-se uma resina negra que endurece e corroi os metais de forma progressiva. Com 1 turno na área, a substância gruda nas juntas metálicas, gerando uma rigidez física que impede o oponente de realizar esquivas rápidas. Com 3 turnos de exposição na área, a acidez química concentrada começa a oxidar e enfraquecer os encaixes das armaduras inimigas, reduzindo drasticamente a resistência física dos alvos contra cortes. Com 5 turnos na área, o composto petrifica completamente sobre os equipamentos, travando o braço principal do adversário e impedindo-o de erguer escudos ou empunhar armas secundárias. São necessários 2 turnos de movimento contínuo para que uma criatura consiga raspar os resíduos das botas e abandonar o perímetro afetado.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "defrutum-a",
+        "servico": 3,
+        "icone": "baco-defrutum-a.png"
+      },
+      {
+        "nome": "Prensa de Cevadeira",
+        "texto": "O semideus possui a capacidade de manipular a germinação rápida de videiras lenhosas em solos pouco propícios, controlando o crescimento dos ramos com os movimentos das mãos para destiná-los a funções de compressão física em campo. Com dois turnos de concentração contínua, o legionário força o surgimento de duas ramificações robustas que se entrelaçam diretamente nos calcanhares de um alvo a até 4 quadrados de distância, subindo rapidamente pelas pernas da criatura. Caso essas amarras vegetais não sejam rompidas por armas de corte, a vegetação aperta os membros inferiores com a força mecânica de uma prensa vinícola romana, esmagando a guarda do oponente e imobilizando-o completamente por 2 turnos. Paralelamente, o semideus consegue direcionar esse crescimento botânico de forma instantânea para revestir sua própria arma principal com ramos espessos, conferindo um impacto físico de esmagamento que quebra a estabilidade de escudos leves no próximo ataque físico.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "prensa-de-cevadeira-a",
+        "servico": 3,
+        "icone": "baco-prensa-de-cevadeira-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Delírio de Tirreno",
+        "texto": "Inspirado no castigo aplicado por Baco aos marinheiros do mar Tirreno, os quais enlouqueceram ao verem os cabos e remos de seu navio ganharem vida, o semideus estabelece contato visual com a vítima, em um raio de cinco quadrados, para penetrar em sua psique. O processo dura dois turnos de concentração. Ao concretizá-lo, a habilidade funde o mito dos piratas tirrenos com os ocultos temores do adversário, fazendo-o enxergar a própria arma transmutar-se em uma serpente peçonhenta agressiva. A ilusão gera uma cegueira temporária de um turno, pois o semideus ainda estará raciocinando se aquilo realmente se trata de uma realidade. O transe dura no máximo três turnos, porém qualquer golpe desferido contra o alvo faz com que ele acorde do transe imediatamente.",
+        "reposicao": "12 turnos",
+        "grau": "",
+        "id": "delirio-de-tirreno-a",
+        "servico": 4,
+        "icone": "baco-delirio-de-tirreno-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Open Bar",
+        "texto": "Inspirado no transe em que Baco transmutava rios inimigos em vinho fervente, o semideus bate sua arma no chão, gerando uma ebulição química instantânea em um raio de 5x5 quadrados por cinco turnos. Todo o suor e umidade nos equipamentos dos oponentes na área sofrem uma fermentação violenta imediata. O choque térmico derrete fivelas de couro, estoura os encaixes e quebra as armaduras de metal dos alvos, arremessando-os dois quadrados para trás. O torpor concentrado penetra na pele das criaturas atingidas, causando paralisia motora por 2 turnos. O ar saturado pelo vapor alcoólico desencadeia alucinações caóticas imediatas nos adversários, estilhaçando sua concentração.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "open-bar-a",
+        "servico": 5,
+        "icone": "baco-open-bar-a.png"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "esculapio",
+  "nome": "Esculápio",
+  "estandarte": "https://i.imgur.com/pouwOqL.png",
+  "titulo": "",
+  "introducao": [
+    "Esculápio é o deus romano da medicina, da cura e da arte de afastar a morte — uma divindade cujo próprio nome tornou-se sinônimo da prática médica ao longo dos séculos. Filho de Apolo com a mortal Corônis, aprendeu a arte da cura ainda jovem sob a tutela do centauro Quíron, mestre reconhecido por sua sabedoria em ervas, ferimentos e enfermidades. Tamanha foi sua excelência que Esculápio não apenas curava os doentes, mas chegou a reverter a própria morte, ressuscitando mortais com o uso do sangue da górgona Medusa — um feito que rompeu a ordem natural estabelecida pelos deuses e atraiu a ira de Plutão, senhor do submundo, temeroso de que seu reino se esvaziasse.",
+    "Por essa ousadia, Júpiter fulminou-o com um raio, mas seu legado revelou-se maior do que a própria morte: elevado posteriormente à condição divina, Esculápio tornou-se objeto de um dos cultos mais duradouros e concretos de toda a Antiguidade. Seus templos, chamados asclepiara, funcionavam como verdadeiros centros de tratamento, onde os enfermos dormiam na esperança de receber, em sonho, o diagnóstico ou a cura diretamente do deus. Foi justamente em Roma, durante uma grave epidemia, que seu culto ganhou força decisiva: consultado o Oráculo, os romanos trouxeram uma serpente sagrada de Epidauro, associada ao deus, e ergueram-lhe um templo na Ilha Tiberina, no coração do Rio Tibre."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Triagem de Campanha",
+        "texto": "Os filhos de Esculápio trazem no sangue o conhecimento prático dos acampamentos médicos das legiões. Diante de qualquer emergência que ameace a vida de alguém, o semideus age por puro instinto, sabendo a ordem exata de prioridade para estancar hemorragias, estabilizar fraturas e higienizar cortes profundos. Essa capacidade se estende à botânica militar; ao olhar para a vegetação ao redor, o herói identifica instantaneamente quais cascas de árvores servem como talas rígidas, quais musgos possuem propriedades antissépticas para preencher feridas abertas e quais plantas podem ser mastigadas para aliviar dores agudas ou febres de campo.",
+        "grau": "",
+        "id": "triagem-de-campanha-p",
+        "servico": 0,
+        "icone": "esculapio-triagem-de-campanha-p.png"
+      },
+      {
+        "nome": "Herança Ofídica",
+        "texto": "Os filhos de Esculápio carregam uma ligação intrínseca com o animal sagrado de seu pai: a serpente. O semideus possui uma percepção sensorial modificada, sendo capaz de notar variações mínimas de temperatura no ambiente através da pele, o que ajuda a rastrear a presença de seres vivos mesmo no escuro total. Além disso, o herói possui um reflexo neuromuscular extremamente rápido; ele consegue pressentir a aproximação e o início de qualquer ataque físico de inimigos que estejam em um raio de até 1 quadrado de distância, permitindo reações rápidas de esquiva antes mesmo que o golpe seja desferido.",
+        "grau": "",
+        "id": "heranca-ofidica-p",
+        "servico": 0,
+        "icone": "esculapio-heranca-ofidica-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Medicus Legionis",
+        "texto": "O sistema imunológico do semideus possui anticorpos altamente adaptáveis, tornando-o imune a infecções por armas sujas, contaminações por fungos e venenos convencionais de insetos. Além disso, a estabilidade exigida em intervenções médicas se traduz na postura de combate do legionário. Livre de tremores musculares, ele mantém os punhos firmes para desferir golpes com encaixe exato e máxima transferência de impacto, aproveitando o alinhamento corporal para golpear com grande potência.",
+        "grau": "",
+        "id": "medicus-legionis-p",
+        "servico": 1,
+        "icone": "esculapio-medicus-legionis-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Anatomia Militar",
+        "texto": "O conhecimento do legionário atua como um escaneamento biológico visual. Ao olhar para qualquer indivíduo em um raio de até 4 quadrados, ele identifica instantaneamente fissuras ósseas, distensões musculares, hemorragias internas ocultas e tecidos comprometidos por traumas. Em situações de combate, essa percepção orienta as ações do semideus, permitindo que ele visualize com precisão as regiões feridas no corpo do oponente para direcionar seus ataques diretamente contra esses pontos vulneráveis.",
+        "grau": "",
+        "id": "anatomia-militar-p",
+        "servico": 2,
+        "icone": "esculapio-anatomia-militar-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Suporte do Bastão",
+        "texto": "O legionário manifesta a estrutura física e a resistência associadas ao bastão de seu pai, o símbolo do amparo aos enfermos. Essa herança biológica altera a capacidade de carga do semideus, permitindo carregar aliados desmaiados e arrastar legionários incapacitados sem sofrer penalidades de sobrecarga na velocidade de movimentação em quadrados.",
+        "grau": "",
+        "id": "suporte-do-bastao-p",
+        "servico": 3,
+        "icone": "esculapio-suporte-do-bastao-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Homeostase",
+        "texto": "O legionário desenvolve controle involuntário absoluto sobre as próprias funções vitais e metabólicas. O semideus consegue resfriar a própria temperatura corporal basal, igualando-a ao ambiente para ficar invisível a seres que caçam através do calor. Essa estabilização interna desacelera o consumo de oxigênio do organismo, permitindo que o legionário prenda a respiração pelo triplo do tempo normal em ambientes contaminados por fumaça. Diante de dores físicas extremas causadas por impactos, o sistema nervoso suprime o choque traumático imediatamente, impedindo respostas mecânicas de pânico, tremores musculares ou desmaios no corpo do semideus.",
+        "grau": "",
+        "id": "homeostase-p",
+        "servico": 4,
+        "icone": "esculapio-homeostase-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Renovação Cutânea",
+        "texto": "A herança biológica do legionário simula o ciclo de renovação associado às serpentes sagradas de seu pai. O organismo do semideus realiza processos mitóticos acelerados na epiderme de forma constante. Essa atividade celular promove o fechamento automático de cortes superficiais e médios, como lacerações musculares superficiais provocadas por lâminas, em poucos segundos. O processo abrange desde os cortes médios até os mais profundos, possuindo uma limitação estrita: a ativação dessa regeneração bloqueia totalmente o uso de habilidades ativas do legionário pelo período de cinco turnos.\n\n________________",
+        "grau": "",
+        "id": "renovacao-cutanea-p",
+        "servico": 5,
+        "icone": "esculapio-renovacao-cutanea-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Ecdise",
+        "texto": "Inspirado na troca de pele das serpentes sagradas, o legionário inicia um processo de metamorfose externa que exige dois turnos de preparação em concentração absoluta. Ao final do período, a camada superficial de sua epiderme se descama, moldando os tecidos para replicar com exatidão a aparência, a altura, os traços faciais e a estrutura física externa de outro semideus escolhido. O disfarce biológico é puramente visual e se desfaz espontaneamente após alguns minutos (dois turnos) ou se o legionário sofrer um impacto físico direto.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "ecdise-a",
+        "servico": 1,
+        "icone": "esculapio-ecdise-a.png"
+      },
+      {
+        "nome": "Grilhões de Linho",
+        "texto": "O legionário foca sua energia mística nas próprias vestes, fazendo com que tiras de tecido de sua túnica se desprendam e se estiquem rapidamente pelo ar como serpentes de pano. Essas faixas avançam em linha reta e se enrolam com força extrema ao redor dos braços e das pernas de uma vítima posicionada a até três quadrados de distância. O aperto prende os membros do alvo contra o próprio corpo, interrompendo imediatamente qualquer movimento de ataque e travando o deslocamento do inimigo por um turno.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "grilhoes-de-linho-a",
+        "servico": 1,
+        "icone": "esculapio-grilhoes-de-linho-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Resfolego Premium",
+        "texto": "O legionário gera nas palmas das mãos uma energia térmica amarelada que se propaga e se intensifica de acordo com o tempo de concentração. A liberação imediata dessa energia permite direcioná-la para fechar arranhões e cortes de raspão de aliados instantaneamente, coagulando o sangue de grandes perfurações para estancar a hemorragia, embora mantenha a dor latente e o risco de reabrir o ferimento com movimentos bruscos, limitando-se a ajustar dedos torcidos sem soldar ossos fraturados. Quando usado em si mesmo essa energia, no seu próprio peito durante 3 turnos seguidos faz com que o calor se acumule internamente, expandindo-se até atingir o ápice celular para restaurar sua própria vitalidade e energia a 100%, eliminando completamente o esgotamento físico pessoal.",
+        "reposicao": "8 turnos",
+        "grau": "",
+        "id": "resfolego-premium-a",
+        "servico": 2,
+        "icone": "esculapio-resfolego-premium-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fiador Biológico",
+        "texto": "O legionário aponta as palmas das mãos para um aliado situado a até 6 quadrados de distância e sela um contrato celular de dois turnos. Durante esse período, todo dano físico direcionado ao companheiro protegido é completamente anulado no corpo dele e absorvido pelo semideus, manifestando-se na pele do filho de Esculápio de forma reduzida: os cortes profundos viram arranhões superficiais, as grandes perfurações transformam-se em pequenos furos com sangramento imediatamente estancado, e os impactos pesados que causariam fraturas no aliado manifestam-se apenas como hematomas leves na epiderme do legionário.",
+        "reposicao": "8 turnos",
+        "grau": "",
+        "id": "fiador-biologico-a",
+        "servico": 3,
+        "icone": "esculapio-fiador-biologico-a.png"
+      },
+      {
+        "nome": "Área Restrita",
+        "texto": "O legionário finca a base de sua arma no solo e expande uma aura esmeralda translúcida que cobre um perímetro de 3x3 quadrados ao seu redor por dois turnos. Essa zona atua purificando qualquer ameaça biológica externa; flechas e projéteis físicos desaceleram até caírem no chão ao cruzarem o perímetro, enquanto poeiras ácidas, fumaças venenosas e esporos fúngicos nocivos lançados são instantaneamente desintegrados ao tocarem a borda da barreira.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "area-restrita-a",
+        "servico": 3,
+        "icone": "esculapio-area-restrita-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Pulsação Traumática",
+        "texto": "O legionário fixa os olhos em um corpo ferido posicionado a até 4 quadrados de distância, exigindo a manutenção do contato visual contínuo durante a ativação. Se o alvo for um parceiro de equipe, o semideus força uma contração imediata nos vasos rompidos por dois turnos, fechando a fresta de tecidos rasgados para conter a perda de energia vital de forma instantânea. Se o alvo for um adversário machucado, o filho de Esculápio sabota a cicatrização do ferimento inimigo pelo mesmo período de dois turnos, expandindo a abertura na pele para desencadear um fluxo contínuo que esgota as forças do oponente. A habilidade atua apenas no controle do fluido; o alívio da dor e a reconstrução de ossos destruídos exigem tratamentos tradicionais pós-combate.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "pulsacao-traumatica-a",
+        "servico": 4,
+        "icone": "esculapio-pulsacao-traumatica-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Não no Meu Plantão",
+        "texto": "Inspirado no milagre histórico onde a serpente de Esculápio tocou o solo da Ilha Tiberina e reverteu a mortalidade da peste em Roma, o legionário consegue desafiar o fim biológico de um aliado. Diante de um companheiro que sofreu óbito recente no campo de batalha, o semideus fixa os calcanhares no solo e inicia uma prece em latim arcaico, exigindo o suporte de mais dois integrantes da legião em coro ritualístico. Após três turnos seguidos de concentração sem interrupções físicas, a energia do santuário estabiliza o corpo do paciente, forçando o retorno da alma ao receptáculo original. O aliado desperta consciente no mesmo instante, retornando ao combate com sua integridade básica restabelecida.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "nao-no-meu-plantao-a",
+        "servico": 5,
+        "icone": "esculapio-nao-no-meu-plantao-a.png"
+      }
+    ]
+  ]
+}

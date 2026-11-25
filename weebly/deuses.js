@@ -341,8 +341,13 @@
   }
 
   function iniciar() {
-    var itens = document.querySelectorAll(".deus[data-fonte]");
+    var itens = document.querySelectorAll(".deus[data-fonte], .deus[data-base]");
     Array.prototype.forEach.call(itens, function (raiz) {
+      /* uma página só serve todos os deuses: o endereço diz qual (?deus=netuno) */
+      if (!raiz.getAttribute("data-fonte")) {
+        var qual = (location.search.match(/[?&]deus=([a-z0-9-]+)/i) || [])[1] || raiz.getAttribute("data-padrao") || "jupiter";
+        raiz.setAttribute("data-fonte", raiz.getAttribute("data-base") + qual + ".json");
+      }
       fetch(raiz.getAttribute("data-fonte"))
         .then(function (r) { return r.json(); })
         .then(function (d) { montar(raiz, d); })

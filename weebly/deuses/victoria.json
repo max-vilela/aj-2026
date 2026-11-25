@@ -1,0 +1,165 @@
+{
+  "id": "victoria",
+  "nome": "Victória",
+  "estandarte": "https://i.imgur.com/orDH3NG.png",
+  "titulo": "",
+  "introducao": [
+    "Gloriosa. Soberana. Inalcançável. Não existem palavras suficientes para descrever a grandeza de Victória, a personificação do triunfo. Amplamente cultuada em Roma devido ao anseio da nação por conquistas, Victória é a deusa responsável por trazer o triunfo tanto aos homens quanto aos deuses, motivo pelo qual assume o papel de lanceira de Júpiter e Minerva.",
+    "Como consequência de seu título quase invicto e da grandeza que lhe é atribuída por deuses e mortais, Victória incorpora uma personalidade extremamente sobrecarregada. Seus filhos não costumam fugir à regra: com predisposição natural ao atletismo e semblante obcecado, os semideuses da Vitória não sabem lidar com a derrota e se sentem desafiados a todo instante. A busca pela perfeição é o que define os heróis que carregam a vitória correndo em suas veias."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Sejamos Justos!",
+        "texto": "A mera presença de um filho de Victória em um ambiente competitivo já é suficiente para gerar apreensão no time adversário, abalando sua confiança e dificultando qualquer tentativa de cooperação contra ele. Por isso, o semideus não pode ser alvo de combates em conjunto ou de ataques coordenados por dois ou mais adversários, salvo em situações envolvendo projéteis, como flechas, ou poderes utilizados à distância. Todavia, em jogos ou disputas de caráter individual, essa habilidade torna-se negada.",
+        "grau": "",
+        "id": "sejamos-justos-p",
+        "servico": 0,
+        "icone": "victoria-sejamos-justos-p.png"
+      },
+      {
+        "nome": "Escultural",
+        "texto": "A resistência de um filho de Victória ultrapassa os limites comuns de um semideus. Seu corpo, favorecido pela herança divina, suporta longos períodos de esforço sem perder o rendimento, permitindo que continue lutando mesmo quando os demais já começam a sucumbir ao cansaço. Quanto maior a exigência física de uma atividade, maior é sua vantagem, fazendo dele um dos legionários mais difíceis de acompanhar em provas de resistência.",
+        "grau": "",
+        "id": "escultural-p",
+        "servico": 0,
+        "icone": "victoria-escultural-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Nada de Trapaças",
+        "texto": "Sua mente oferece uma resistência incomum à Névoa e formas de influência psíquica. Mesmo sob uma ofensiva mental, consegue permanecer imune por até três turnos antes que seus efeitos finalmente o alcancem. Contudo, essa resistência não lhe permite reconhecer quem está por trás do ataque.",
+        "grau": "",
+        "id": "nada-de-trapacas-p",
+        "servico": 1,
+        "icone": "victoria-nada-de-trapacas-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Alífero",
+        "texto": "Desde o nascimento, o semideus carrega duas cicatrizes discretas nas costas, estendendo-se das escápulas até o cóccix — marcas silenciosas de uma herança que só se revela por completo quando ele assim deseja. Ao ser invocado, um par de asas rompe a pele exatamente sobre essas cicatrizes, manifestando fisicamente a natureza de sua mãe, ainda que o processo cause certo desconforto no momento da transformação. Uma vez abertas, as asas podem permanecer ativas por tempo indeterminado, e voar torna-se um gesto tão natural quanto caminhar. Sustentar-se no ar, porém, tem seu custo: exige um esforço considerável do semideus, especialmente quando alcança grandes altitudes, podendo atingir velocidades de até 60 km/h.",
+        "grau": "",
+        "id": "alifero-p",
+        "servico": 2,
+        "icone": "victoria-alifero-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Veredito da Vitória",
+        "texto": "Quanto mais um confronto se estende, mais a balança se inclina a seu favor. A partir do quarto turno de um combate contra o mesmo adversário, a sua superioridade se torna evidente. Na próxima ação escrita, o legionário pode descrever um ataque que ignora completamente a tentativa de esquiva e bloqueio do oponente, forçando-o a sofrer o impacto direto ou gastar uma das habilidades para não ser atingido.",
+        "grau": "",
+        "id": "veredito-da-vitoria-p",
+        "servico": 3,
+        "icone": "victoria-veredito-da-vitoria-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Alífero Ii",
+        "texto": "Com o passar dos anos, o domínio sobre sua herança divina se torna ainda mais evidente: as asas agora alcançam três metros de envergadura quando completamente abertas e adquirem uma resistência semelhante à do metal, tornando-as difíceis de quebrar ou dobrar. Sua força também acompanha a evolução, permitindo que sejam utilizadas ofensivamente com um poder comparável ao dos filhos de Vulcano e dos Heróis de Hércules.",
+        "grau": "",
+        "id": "alifero-ii-p",
+        "servico": 4,
+        "icone": "victoria-alifero-ii-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "A Vitória Não Aceita Contestação",
+        "texto": "Uma vez por combate, ao superar diretamente um adversário, o filho de Victória consagra o resultado da disputa. O oponente derrotado torna-se incapaz de voltar a enfrentá-lo durante o restante do dia, seja por ataques, poderes ou interferências deliberadas contra suas ações. Ainda pode defender-se caso seja novamente provocado e agir normalmente contra outras pessoas, mas não consegue iniciar qualquer nova ofensiva contra seu vencedor. A habilidade somente reconhece triunfos conquistados pelo próprio semideus em confronto direto, não sendo ativada por rendição voluntária, auxílio decisivo de terceiros ou adversários que já estivessem incapacitados.\n\n________________",
+        "grau": "",
+        "id": "a-vitoria-nao-aceita-contestacao-p",
+        "servico": 5,
+        "icone": "victoria-a-vitoria-nao-aceita-contestacao-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Coroa de Louros",
+        "texto": "Toda vitória, para o semideus, carrega consigo uma recompensa quase divina: ao sair vencedor de uma batalha ou de qualquer atividade competitiva, seu corpo passa por uma rápida regeneração, curando ferimentos leves, aliviando a fadiga acumulada e neutralizando efeitos de menor intensidade, como ilusões fracas ou envenenamentos brandos — como se a própria glória da conquista purificasse o organismo. Ainda assim, trata-se de um dom com limites bem definidos: milagres maiores, como a recuperação de membros perdidos ou o retorno de alguém à vida, estão completamente fora de seu alcance.",
+        "reposicao": "4 turnos",
+        "grau": "",
+        "id": "coroa-de-louros-a",
+        "servico": 1,
+        "icone": "victoria-coroa-de-louros-a.png"
+      },
+      {
+        "nome": "Laço Salvador",
+        "texto": "O filho de Victória pode estabelecer um elo mental com um companheiro e, após um turno de concentração, utilizar essa conexão para dissipar quaisquer efeitos negativos que o estejam afetando. A habilidade é capaz de romper encantamentos, dissipar embriaguez, desfazer influências mentais e até reverter petrificações, desde que o vínculo seja estabelecido antes que o efeito se torne irreversível. Enquanto o elo estiver ativo, o filho de Victória permanece consciente do estado de seu companheiro, podendo agir rapidamente para libertá-lo de condições que normalmente exigiriam intervenção externa.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "laco-salvador-a",
+        "servico": 1,
+        "icone": "victoria-laco-salvador-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Asa Guardiã",
+        "texto": "O filho de Victória pode posicionar uma ou ambas as asas à frente do corpo, utilizando a rigidez natural das penas como um escudo físico contra projéteis e ataques próximos. A defesa suporta apenas um impacto por vez e, dependendo da força do golpe recebido, pode danificar temporariamente a asa, prejudicando tanto o voo quanto o uso subsequente da própria habilidade.",
+        "reposicao": "7 turnos",
+        "grau": "",
+        "id": "asa-guardia-a",
+        "servico": 2,
+        "icone": "victoria-asa-guardia-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ímpeto Celeste",
+        "texto": "Ao liberar sua velocidade, o filho de Victória dispara como um vulto, alcançando até 100 km/h, enquanto um rastro de partículas douradas e penas luminosas acompanha seus movimentos. Seus sentidos aceleram junto ao corpo, fazendo o mundo parecer mover-se em câmera lenta e permitindo-lhe realizar dois desvios consecutivos.",
+        "reposicao": "15 turnos",
+        "grau": "",
+        "id": "impeto-celeste-a",
+        "servico": 3,
+        "icone": "victoria-impeto-celeste-a.png"
+      },
+      {
+        "nome": "Instante da Vitória",
+        "texto": "O filho de Victória canaliza sua energia sobre uma arma, fazendo surgir veios de luz dourada que percorrem a lâmina como rachaduras de ouro. Quando a bênção desperta, o próximo golpe, no turno posterior, permitindo ao portador desferir dois ataques consecutivos na mesma ação.",
+        "reposicao": "8 turnos",
+        "grau": "",
+        "id": "instante-da-vitoria-a",
+        "servico": 3,
+        "icone": "victoria-instante-da-vitoria-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Legião de Victória",
+        "texto": "Convoca uma de suas servas celestiais, que surge em meio a um clarão dourado, acompanhada pelo som de asas metálicas. As Nicéias são guerreiras aladas de metal, capazes de combater tanto à distância, com bestas de repetição, quanto no corpo a corpo, empunhando espadas. A serva permanece em campo até ser derrotada ou por dez turnos, mas, enquanto estiver presente, o semideus deve manter sua mente voltada para ela, ficando incapaz de utilizar outros poderes. Sua vontade é transmitida à Nicéia por pensamentos e palavras, tornando-a uma extensão direta de seu comando.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "legiao-de-victoria-a",
+        "servico": 4,
+        "icone": "victoria-legiao-de-victoria-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Égide do Invicto",
+        "texto": "O filho de Victória envolve a si mesmo ou um aliado em uma aura dourada de penas e faíscas, transformando o escolhido em uma força impossível de deter por até quatro turnos. Durante esse período, lâminas, projéteis e habilidades, sejam ativas ou passivas, são incapazes de feri-lo, permitindo que avance sem ser interrompido. O esforço necessário para sustentar a bênção é extremo e deixa o filho de Victória praticamente exausto após seu término.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "egide-do-invicto-a",
+        "servico": 5,
+        "icone": "victoria-egide-do-invicto-a.png"
+      }
+    ]
+  ]
+}

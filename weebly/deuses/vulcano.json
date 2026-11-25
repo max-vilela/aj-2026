@@ -1,0 +1,155 @@
+{
+  "id": "vulcano",
+  "nome": "Vulcano",
+  "estandarte": "https://i.imgur.com/mKANqFJ.png",
+  "titulo": "",
+  "introducao": [
+    "Vulcano é o deus romano do fogo, das forjas e da metalurgia, senhor absoluto de tudo o que nasce do calor extremo e da transformação da matéria bruta em algo novo. Filho de Juno, gerado sozinha pela deusa como forma de retaliação contra Júpiter, Vulcano nasceu com uma deformidade nas pernas, o que lhe rendeu, ainda recém-nascido, a rejeição e o arremesso do Olimpo por parte da própria mãe, envergonhada de sua aparência. A queda o deixou permanentemente manco, mas foi justamente essa adversidade que moldou seu caráter reservado e sua devoção quase obsessiva ao trabalho manual, refúgio contra a rejeição sofrida na infância.",
+    "Apesar da aparência tosca e do temperamento reservado, poucos deuses são tão indispensáveis quanto Vulcano: de sua forja saíram algumas das armas e artefatos mais temidos e cobiçados da mitologia, forjados com uma perícia que nenhum outro ser, divino ou mortal, é capaz de igualar. Casou-se com Vênus, união desigual e amplamente conhecida por sua infelicidade, já que a deusa do amor nunca escondeu o desprezo pela aparência do marido, o que culminou no célebre caso adúltero entre ela e Marte — episódio que Vulcano expôs publicamente diante de todo o Olimpo, numa das raras vezes em que sua engenhosidade serviu à vingança, e não à criação."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Mente de Artífice",
+        "texto": "O filho de Vulcano possui um talento excepcional para a criação de construtos, sendo capaz de idealizá-los e construí-los rapidamente, mesmo sem anos de prática. Sua familiaridade com autômatos permite que compreenda seu funcionamento quase por completo, podendo reconhecer suas estruturas e, com concentração, interromper seu funcionamento. Um exemplo disso são os cães criados por Vulcano.",
+        "grau": "",
+        "id": "mente-de-artifice-p",
+        "servico": 0,
+        "icone": "vulcano-mente-de-artifice-p.png"
+      },
+      {
+        "nome": "Impacto Forjado",
+        "texto": "A convivência constante com o calor e o trabalho das forjas torna os filhos de Vulcano naturalmente fortes e resistentes. Seus punhos possuem uma potência incomum, fazendo com que seus golpes físicos causem danos maiores e sejam capazes de ferir consideravelmente um adversário. A exposição contínua às chamas das forjas também lhes concede grande resistência ao calor.",
+        "grau": "",
+        "id": "impacto-forjado-p",
+        "servico": 0,
+        "icone": "vulcano-impacto-forjado-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Tenacidade do Ferreiro",
+        "texto": "Os filhos de Vulcano possuem uma resistência física excepcional, sendo especialmente difíceis de derrubar e atordoar por ataques corporais. Mesmo sob forte pressão, conseguem manter a concentração e o raciocínio, cedendo apenas diante de golpes extremamente violentos ou uma sequência de ataques. Seu porte físico também lhes confere uma presença mais intimidadora, capaz de amedrontar seus oponentes.",
+        "grau": "",
+        "id": "tenacidade-do-ferreiro-p",
+        "servico": 1,
+        "icone": "vulcano-tenacidade-do-ferreiro-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Código de Ligação",
+        "texto": "O filho de Vulcano possui uma percepção aguçada para tecnologias e mecanismos, conseguindo identificar sua presença mesmo sem vê-los. Ao tocar uma superfície, é capaz de localizar máquinas e autômatos em uma área de 10x10 quadrados, reconhecendo sua posição. Sua afinidade com a engenharia também permite estabelecer uma comunicação simples com criações artificiais, que o reconhecem instintivamente como alguém de sua própria natureza.",
+        "grau": "",
+        "id": "codigo-de-ligacao-p",
+        "servico": 2,
+        "icone": "vulcano-codigo-de-ligacao-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Corpo Incandescente",
+        "texto": "O filho de Vulcano torna-se completamente imune ao fogo, podendo permanecer em meio a incêndios ou exposto a temperaturas extremas sem sofrer qualquer dano. O calor das chamas não representa ameaça ao seu corpo, permitindo-lhe atravessar grandes incêndios sem dificuldades. Além disso, consegue respirar normalmente mesmo em ambientes tomados por fumaça, sem ter sua respiração e visão prejudicadas.",
+        "grau": "",
+        "id": "corpo-incandescente-p",
+        "servico": 3,
+        "icone": "vulcano-corpo-incandescente-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Auréola de Fuligem",
+        "texto": "A essência dos vulcões de Vulcano passa a se manifestar ao redor do semideus na forma de uma pressão atmosférica invisível. O ar num raio de 3 quadrados ao seu redor torna-se denso, pesado e sutilmente superaquecido. Flechas, dardos e outros projéteis físicos menores que entrem nessa área perdem velocidade drasticamente devido à distorção térmica e à densidade do ar.",
+        "grau": "",
+        "id": "aureola-de-fuligem-p",
+        "servico": 4,
+        "icone": "vulcano-aureola-de-fuligem-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Reconhecimento Legítimo",
+        "texto": "A linhagem do semideus com o Deus das Forjas se torna tão evidente que sua presença impõe autoridade sobre toda e qualquer matéria artificial. Máquinas, autômatos, armadilhas complexas e sistemas de segurança reconhecem o filho de Vulcano como um mestre legítimo. Como consequência, essas entidades mecânicas hesitam e se recusam passivamente a atacá-lo de forma voluntária. Se forem forçadas a atacá-lo por ordens diretas de seus donos, seus movimentos tornam-se previsíveis.\n\n________________",
+        "grau": "",
+        "id": "reconhecimento-legitimo-p",
+        "servico": 5,
+        "icone": "vulcano-reconhecimento-legitimo-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Ruptura Sísmica",
+        "texto": "O filho de Vulcano canaliza a força acumulada de uma forja em um único e devastador golpe físico. Ao atingir o alvo, a força cinética liberada é tão intensa que é capaz de amassar armaduras de metal. Quando golpeia o solo, por outro lado, o filho de Vulcano provoca uma poderosa explosão de impacto, fazendo a terra estremecer e lançando os adversários próximos para longe. O efeito alcança uma área de 4x4 quadrados.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "ruptura-sismica-a",
+        "servico": 1,
+        "icone": "vulcano-ruptura-sismica-a.png"
+      },
+      {
+        "nome": "Boom!",
+        "texto": "Com certa habilidade na forja de pequenos mecanismos e explosivos, o filho de Vulcano é capaz de criar um apetrecho de ativação esférico de bronze, não passando dessa estatura. Caso opte por arremessá-lo como granada, explode em dois quadrados gerando fumaça e pequeno desnorteamento; caso opte por ocultá-lo no solo como mina, explode unicamente em quem pisar.",
+        "reposicao": "4 turnos",
+        "grau": "",
+        "id": "boom-a",
+        "servico": 1,
+        "icone": "vulcano-boom-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Comando de Inércia",
+        "texto": "Aproveitando a hesitação natural das criações artificiais, o filho de Vulcano é capaz de direcionar um comando verbal autoritário a um autômato numa distância de três quadrados. O sinal confunde as engrenagens e a lógica do construto por um breve período de um turno; costuma ser efetivo para interromper investidas inimigas, pois o autômato, por ação reflexa de sua programação, hesitará completamente e perderá sua ação.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "comando-de-inercia-a",
+        "servico": 2,
+        "icone": "vulcano-comando-de-inercia-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Suor de Combustão",
+        "texto": "Concentrando-se durante um turno, o filho de Vulcano é capaz de expelir pelos poros um suor altamente volátil, semelhante a querosene. O líquido espalhado pela pele entra em ignição instantânea ao menor sinal de calor; costuma ser efetivo contra oponentes que tentem desferir ataques de corte próximos, pois o sangue do impacto ou a fricção da arma gerará uma explosão leve que os afastará de si num raio de três quadrados quatro quadrados de distância.",
+        "reposicao": "6 turnos",
+        "grau": "",
+        "id": "suor-de-combustao-a",
+        "servico": 3,
+        "icone": "vulcano-suor-de-combustao-a.png"
+      },
+      {
+        "nome": "Lâmina de Fundição",
+        "texto": "O filho de Vulcano bate fortemente no cabo de sua arma, fazendo com que a estrutura de metal fique incandescente por um breve período de dois turnos. A alta temperatura aumenta o potencial do corte e a força do impacto; após o término dos dois turnos em combate, o semideus é apto para transferir o calor residual para a arma do oponente, gerando uma pequena queimadura nas mãos do adversário que, por ação reflexa, soltará a arma.",
+        "reposicao": "8 turnos",
+        "grau": "",
+        "id": "lamina-de-fundicao-a",
+        "servico": 3,
+        "icone": "vulcano-lamina-de-fundicao-a.png"
+      }
+    ],
+    [],
+    [
+      {
+        "nome": "Núcleo Tormenta",
+        "texto": "O filho de Vulcano finca um gerador autômato em forma de pilar no solo. O construto flutua e abre quatro hastes metálicas que disparam passivamente arcos elétricos contínuos contra qualquer inimigo que se mova no raio de oito quadrados. Caso o semideus ordene, o núcleo consome toda sua energia e explode em um flash de plasma elétrico puríssimo; o impacto cega os alvos por 2 turnos e frita instantaneamente qualquer arma ou armadura de metal inimiga na área seis quadrados, derretendo suas ligas.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "nucleo-tormenta-a",
+        "servico": 5,
+        "icone": "vulcano-nucleo-tormenta-a.png"
+      }
+    ]
+  ]
+}

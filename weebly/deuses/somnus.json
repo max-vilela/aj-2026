@@ -1,0 +1,165 @@
+{
+  "id": "somnus",
+  "nome": "Somnus",
+  "estandarte": "https://i.imgur.com/qkXNxFA.png",
+  "titulo": "",
+  "introducao": [
+    "Somnus é um deus intrigante, que parece agir de forma autônoma. Embora às vezes realize serviços para o Panteão, não serve a nenhuma jurisdição divina, e nem mesmo Júpiter pode castigá-lo impunemente por suas transgressões. Personificação do sono e dos sonhos, tem um caráter ambíguo: tanto pode aliviar o cansaço do dia nas horas de descanso quanto enganar e ludibriar com fantasias oníricas. O sono é uma linha tênue entre a vida e a morte, território pouco compreendido pelos mortais, e por isso Somnus é uma divindade ctônica, ligada ao Submundo. No Mundo Inferior, habita uma gruta às margens dos rios, onde nenhuma luz ou ruído consegue penetrar. É uma caverna de breu e silêncio perpétuos, cercada por um campo florido de papoulas e outras plantas narcóticas, com as quais é associado. Nesse esconderijo, permanece adormecido ou sonolento, deitado sobre uma cama de ébano, dando ordens aos lacaios para que executem seus desejos.",
+    "Sua família é anterior à formação do Panteão: Somnus é filho de Nox, deusa da noite, e irmão de Mors, deus da morte, o que liga os conceitos de noite e morte ao sono. Em forma física, manifesta-se como um homem alado e barbudo, embora possa preferir uma aparência mais jovem e humana. Costuma acompanhar o irmão Mors quando este tem algum afazer no plano dos mortais, e os dois muitas vezes trabalham em conjunto. Graças ao domínio sobre os sonhos e delírios, também prega peças em outras deidades, e obviamente em mortais, sendo considerado um dos deuses da trapaça e da fraude. Sua habilidade em enganar e sua lealdade fluida fazem dele um nome muito procurado para trabalhos sorrateiros, inclusive contra outros deuses."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Passos de Sonâmbulo",
+        "texto": "O filho de Somnus é acostumado a dormir em qualquer lugar e a qualquer hora. Quando a mente mergulha no sono, o corpo continua desperto, e por isso esses semideuses costumam ter episódios de sonambulismo. Nesse estado, os olhos ficam entreabertos e ele balbucia frases sem sentido, mas os reflexos ficam mais afiados. Mesmo que dormindo, consegue se defender de um ataque iminente e nunca é pego pelas costas.",
+        "grau": "",
+        "id": "passos-de-sonambulo-p",
+        "servico": 0,
+        "icone": "somnus-passos-de-sonambulo-p.png"
+      },
+      {
+        "nome": "Passos de Sombra",
+        "texto": "Somnus reina sobre o silêncio das noites, e seu filho herda esse dom. O semideus caminha sem produzir o menor ruído: seus passos não rangem em madeira velha, não estalam em folhas secas e não ecoam em corredores de pedra, e nem o tilintar de uma armadura o denuncia. Para além disso, sua presença é leve e fácil de ignorar, e quem passa por perto raramente o nota, a menos que o procure com atenção. Ele atravessa hordas de monstros, quarteis e salões sem perturbar o sono de ninguém.",
+        "grau": "",
+        "id": "passos-de-sombra-p",
+        "servico": 0,
+        "icone": "somnus-passos-de-sombra-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Sono Restaurador",
+        "texto": "Um descendente de Somnus aproveita cada cochilo como se fosse uma noite inteira de descanso. Uma soneca de poucos minutos cura ferimentos superficiais e dissipa o cansaço, e quanto mais o semideus dorme, mais graves são as enfermidades que o próprio corpo consegue tratar. Para que ferimentos simples se fechem, ele precisa de pelo menos dois turnos de sono. Durante a soneca, sua percepção continua ativa, graças ao seu sonambulismo peculiar.",
+        "grau": "",
+        "id": "sono-restaurador-p",
+        "servico": 1,
+        "icone": "somnus-sono-restaurador-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Demos Oneiroi",
+        "texto": "Quando o filho de Somnus relaxa a mente por completo, o caminho até o Reino dos Sonhos se abre. Se alguém adormece sob essa influência, o semideus projeta sua consciência para dentro do sonho e passa a ser uma presença no mundo mental de quem dorme. No início, a projeção ainda carrega a identidade dele. Ele não consegue esconder quem é, e o alvo percebe que há um invasor no próprio sonho. Ali dentro, o semideus observa fragmentos da mente e acessa memórias recentes. Os sonhos funcionam como uma janela para o passado, e ele entende o que aconteceu na vida da pessoa nos últimos três meses. No terceiro serviço, o domínio fica mais refinado. O semideus estende sua presença pelo Reino dos Sonhos e passa a existir em vários pontos dele ao mesmo tempo. Também molda a própria aparência para esconder sua identidade, e o alvo deixa de reconhecê-lo como intruso.",
+        "grau": "",
+        "id": "demos-oneiroi-p",
+        "servico": 2,
+        "icone": "somnus-demos-oneiroi-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Sono Pesado",
+        "texto": "Ninguém tira um filho de Somnus do sono contra sua vontade. Enquanto dorme, sua mente fica trancada para qualquer tipo de invasão, e ilusões, hipnoses e outros poderes que atacam o pensamento não são eficazes. Caso esteja acordado, apresenta a resistência de forma enfraquecida, sentindo os efeitos da invasão psíquica dois turnos após a investida.",
+        "grau": "",
+        "id": "sono-pesado-p",
+        "servico": 3,
+        "icone": "somnus-sono-pesado-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Maré de Letargia",
+        "texto": "Basta a presença de um filho de Somnus para tirar o ânimo de quem o enfrenta. Os adversários que estiverem em um raio de três quadrados dele sentem, aos poucos, uma onda de cansaço tomar o corpo. Os golpes saem mais lentos, o fôlego curto e a vontade de lutar enfraquece. Quanto mais tempo ficam por perto, mais pesada a sonolência se torna, e eles lutam com muito menos vigor do que teriam longe do semideus.",
+        "grau": "",
+        "id": "mare-de-letargia-p",
+        "servico": 4,
+        "icone": "somnus-mare-de-letargia-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Pesadelo",
+        "texto": "Quem vive entre sonhos aprende a reconhecer o que assusta cada pessoa. Depois de muito tempo percorrendo os sonhos alheios, o filho de Somnus passa a pressentir os maiores medos de quem está diante dele, sem precisar de esforço.\n\n________________",
+        "grau": "",
+        "id": "pesadelo-p",
+        "servico": 5,
+        "icone": "somnus-pesadelo-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Fôlego do Sono",
+        "texto": "Onde o filho de Somnus passa, o sono e a preguiça o acompanham. Se mantiver contato visual mútuo por pelo menos dois turnos com uma vítima a até 5 quadrados de distância, ele solta um bocejo lento e o alvo sente o cansaço cair de uma vez. Começa a bocejar, pisca devagar e perde o foco por até 2 turnos. O efeito não funciona em alvos que estejam atuando com avidez em algum tipo de ação.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "folego-do-sono-a",
+        "servico": 1,
+        "icone": "somnus-folego-do-sono-a.png"
+      },
+      {
+        "nome": "Lâmina Adormecida",
+        "texto": "O semideus faz uma breve prece a Somnus, e a arma escolhida é abençoada. O primeiro golpe bem executado com ela deixa a região atingida dormente. A dormência cresce por dois turnos e atrapalha apenas os movimentos que dependem daquela parte do corpo. No auge, o membro atingido fica inutilizado por um único turno, sem resposta a qualquer comando.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "lamina-adormecida-a",
+        "servico": 1,
+        "icone": "somnus-lamina-adormecida-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Bolha Letárgica",
+        "texto": "O filho de Somnus ergue uma cúpula invisível sobre uma área de 3x3 quadrados e a mantém ativa por três turnos. Quem entrar nela adormece imediatamente, sem chance de resistir. O sono termina quando um terceiro interfere, seja com um sacolejo, um grito ou qualquer barulho forte próximo à vítima. Funciona mais como uma armadilha em combate ou uma pegadinha.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "bolha-letargica-a",
+        "servico": 2,
+        "icone": "somnus-bolha-letargica-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Paralisia do Sono",
+        "texto": "Como seu pai é conhecido por criar o distúrbio da paralisia do sono, seu filho consegue replicá-la em pessoas despertas. Ao tocar a vítima, o semideus paralisa o corpo dela por dois turnos. Nesse estado, o alvo só consegue mexer os olhos, embora continue totalmente consciente. A experiência é a mesma de quem sofre o distúrbio durante o sono: o alvo sente um peso esmagador no peito, a respiração parece presa e o ar não chega aos pulmões. É comum que enxergue, ao lado, uma figura escura e demoníaca. Essa figura é uma ilusão criada pelo medo e não pode feri-lo, mas o pavor que provoca é real.",
+        "reposicao": "20 turnos",
+        "grau": "",
+        "id": "paralisia-do-sono-a",
+        "servico": 3,
+        "icone": "somnus-paralisia-do-sono-a.png"
+      },
+      {
+        "nome": "Insônia Forçada",
+        "texto": "Proferidas palavras em oração a Somnus, seu filho consegue azar​ar uma vítima que esteja necessariamente em seu campo de visão, mediante contato visual mútuo. Durante dois turnos, o alvo sente um sono perturbador, mas não consegue dormir. A falta de descanso chega a provocar alucinações e, por mais que a vítima deseje, o sono nunca vem. Se o alvo sair do campo de visão dele, o efeito termina.",
+        "reposicao": "20 turnos",
+        "grau": "",
+        "id": "insonia-forcada-a",
+        "servico": 3,
+        "icone": "somnus-insonia-forcada-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Apneia do Sono",
+        "texto": "Durante o sono, os músculos da garganta relaxam e podem bloquear a passagem de ar, o que reduz ou interrompe a respiração enquanto o corpo ainda tenta inspirar. O filho de Somnus reproduz esse distúrbio em pessoas despertas e faz da sufocação uma arma. O semideus se concentra por dois turnos, com a arma em punho ou com a mão pronta para tocar a vítima. Quando a lâmina ou a pele encosta no alvo, os músculos da faringe relaxam. O ar entra com dificuldade e, depois, deixa de entrar. A vítima se sente sufocada, mas o resto do corpo também não obedece, e ela não consegue reagir nem pedir ajuda. O efeito é agonizante e termina, depois de dois turnos torturantes, com o alvo desmaiado. O custo para o semideus também é alto: ele sai exausto, com olheiras profundas e um cansaço que parece quase fingido.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "apneia-do-sono-a",
+        "servico": 4,
+        "icone": "somnus-apneia-do-sono-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Projeção Astral",
+        "texto": "O filho de Somnus, nesse estágio de seu poder, consegue abandonar o próprio corpo e viajar pelo plano espiritual. Sem forma física, pode absorver a vitalidade dos outros, entrar em sonhos, furtar memórias, desvendar segredos e alterar pensamentos alheios. Enquanto isso, seu corpo físico parece morto: o coração para de bater e o cérebro se desliga aos poucos. É um dom perigoso, porque, caso demore mais de cinco turnos para voltar a si, pode morrer definitivamente.",
+        "reposicao": "1 vez ao dia",
+        "grau": "",
+        "id": "projecao-astral-a",
+        "servico": 5,
+        "icone": "somnus-projecao-astral-a.png"
+      }
+    ]
+  ]
+}

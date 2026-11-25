@@ -1,0 +1,165 @@
+{
+  "id": "mercurio",
+  "nome": "Mercúrio",
+  "estandarte": "https://i.imgur.com/tYUWKCk.png",
+  "titulo": "",
+  "introducao": [
+    "Mercúrio é o deus romano do comércio, das viagens, da eloquência e — não por coincidência — também dos ladrões e trapaceiros. Filho de Júpiter com a ninfa Maia, herdou do pai a autoridade e da mãe a discrição, combinação que o tornou o mais versátil dos deuses: mensageiro oficial do panteão, intermediário entre as esferas divina e mortal e o único capaz de transitar livremente entre o mundo dos vivos e o dos mortos, função que lhe rendeu o título de condutor das almas rumo ao submundo. Seu nome deriva da mesma raiz latina de mercari e merx, ligadas à mercadoria e à negociação, evidência de que sua vocação primordial em Roma sempre esteve atrelada ao lucro, à troca e ao fluxo constante de bens.",
+    "Poucos deuses ostentam insígnias tão reconhecíveis. Mercúrio é sempre representado com o pétaso, o chapéu alado de abas largas, e com as sandálias aladas que lhe garantem velocidade incomparável, além do caduceu — bastão entrelaçado por duas serpentes, símbolo de negociação, trégua e mediação. Diz a tradição que sua astúcia manifestou-se ainda na primeira infância: pouquíssimas horas após o nascimento, já havia inventado a lira e furtado o rebanho de Apolo, conseguindo escapar da punição não pela força, mas pela lábia — e, ao fim, trocando o instrumento recém-criado pela absolvição do irmão, num acordo que o consagrou como o negociador mais hábil do panteão."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Passo Leve",
+        "texto": "Este talento divino faz com que o recruta nasça com uma leveza natural em seus movimentos, sendo um batedor de carteiras e infiltrador nato. Seus pés mal tocam o chão com força, permitindo que ele se aproxime de alvos ou passe por sentinelas sem chamar atenção — o que exige cautela e reduz sua velocidade de deslocamento pela metade enquanto estiver furtivo. Suas mãos são extremamente ágeis, permitindo afanar pequenos objetos (como denários, chaves ou adagas) que estejam presos ao corpo de alguém sem ser percebido.",
+        "grau": "",
+        "id": "passo-leve-p",
+        "servico": 0,
+        "icone": "mercurio-passo-leve-p.png"
+      },
+      {
+        "nome": "Passo Fluido",
+        "texto": "A conexão de Mercúrio com as correntes de ar confere ao probatio uma leveza aerodinâmica. O semideus ignora completamente qualquer penalidade de movimento ou lentidão causada por ventos fortes, tempestades ou terrenos escorregadios. Em termos mecânicos, ele nunca perde o equilíbrio, é imune a efeitos que tentem derrubá-lo no chão, mantendo-se sempre firme e pronto para agir.",
+        "grau": "",
+        "id": "passo-fluido-p",
+        "servico": 0,
+        "icone": "mercurio-passo-fluido-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cinesia Célere",
+        "texto": "O legionário passa a operar em uma frequência de percepção física superior, respondendo a estímulos hostis com a mesma urgência marcial de um veterano de Marte. Esse estado constante de alerta garante que o semideus antecipe o perigo na ordem de iniciativas, capacitando-o a esquivar-se com perfeição de até dois projéteis direcionados a ele em uma mesma rodada de forma sequencial. Além disso, sua maleabilidade corporal permite anular totalmente o impacto de golpes de combate próximo executados na mesma zona (a zero quadrados), saindo ileso através de manobras de contorcionismo e evasão imediata.",
+        "grau": "",
+        "id": "cinesia-celere-p",
+        "servico": 1,
+        "icone": "mercurio-cinesia-celere-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Astúcia do Trapaceiro",
+        "texto": "O veterano aprendeu a usar a própria malandragem para prever os movimentos escusos dos adversários. O semideus é completamente imune a ataques furtivos, golpes pelas costas ou emboscadas. Ele possui um \"sexto sentido\" que o avisa milissegundos antes de um ataque surpresa acontecer, impedindo que inimigos por estarem escondidos. Em combate, se um oponente tentar fingir uma fraqueza para contra-atacar, o filho de Mercúrio percebe a armadilha visual instantaneamente e ganha um ataque de oportunidade gratuito contra o alvo.",
+        "grau": "",
+        "id": "astucia-do-trapaceiro-p",
+        "servico": 2,
+        "icone": "mercurio-astucia-do-trapaceiro-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Tração Aerodinâmica",
+        "texto": "O corpo do semideus se adapta perfeitamente à alta velocidade, desenvolvendo uma aderência e tração física incomuns nos pés. Ele consegue correr verticalmente por paredes, colunas ou estruturas sólidas por alguns metros sem escorregar, além de fazer curvas fechadas e mudanças bruscas de direção em velocidade máxima sem derrapar ou perder o ímpeto. O atrito de seus calçados com o solo é otimizado divinamente, permitindo paradas instantâneas e arranques sem qualquer tempo de preparação.",
+        "grau": "",
+        "id": "tracao-aerodinamica-p",
+        "servico": 3,
+        "icone": "mercurio-tracao-aerodinamica-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Vigor do Mensageiro",
+        "texto": "A fisiologia do veterano se adapta ao papel mais crucial de Mercúrio na máquina de guerra romana: o transporte de ordens militares em longas distâncias. O corpo do semideus desenvolve uma eficiência cardiopulmonar inabalável, tornando-o completamente imune à fadiga, cãibras e exaustão física decorrentes de corridas prolongadas ou marchas forçadas. Mesmo utilizando armadura legionária completa, seus músculos não acumulam ácido lático, permitindo que ele corra em velocidade máxima por horas ininterruptas e chegue ao destino pronto para o combate.",
+        "grau": "",
+        "id": "vigor-do-mensageiro-p",
+        "servico": 4,
+        "icone": "mercurio-vigor-do-mensageiro-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Anatomia Invisível",
+        "texto": "O semideus desenvolve um controle tão profundo de sua própria musculatura, circulação e calor corporal que consegue camuflar sua existência biológica no ambiente. Quando parado ou movendo-se com cautela, seus batimentos cardíacos, respiração e odor corporal são reduzidos a níveis quase nulos. Essa condição física faz com que ele se torne indetectável para sentidos aguçados: cães de guarda, monstros faro-sensíveis ou semideuses com percepção mística avançada são fisicamente incapazes de farejar ou ouvir a sua presença, transformando-o no infiltrador supremo da Legião.\n\n________________",
+        "grau": "",
+        "id": "anatomia-invisivel-p",
+        "servico": 5,
+        "icone": "mercurio-anatomia-invisivel-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Comando de Centúria",
+        "texto": "O recruta utiliza a lábia diplomática de Mercúrio para ditar uma ordem direta de organização militar a um alvo propenso a ceder. Caso o alvo seja um filho de Marte e filho de Belona, ele não obedece à ordem. Quantos aos outros, a mente fica temporariamente confusa tentando processar a autoridade da fala, fazendo com que ele perca o tempo de sua próxima reação defensiva.",
+        "reposicao": "4 turnos",
+        "grau": "",
+        "id": "comando-de-centuria-a",
+        "servico": 1,
+        "icone": "mercurio-comando-de-centuria-a.png"
+      },
+      {
+        "nome": "Voo de Pilo",
+        "texto": "O semideus arremessa a sua lança romana imbuindo nela uma corrente de ar rotativa. Se a lança atingir o escudo de um oponente, o vento espiral se ativa e arranca o escudo das mãos do inimigo, jogando o equipamento a dois quadrados de distância e deixando o alvo desprotegido. A lança perde o efeito e cai no solo logo após o impacto.",
+        "reposicao": "4 turnos",
+        "grau": "",
+        "id": "voo-de-pilo-a",
+        "servico": 1,
+        "icone": "mercurio-voo-de-pilo-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Foi Sem Querer!",
+        "texto": "Ao desferir um golpe rápido com o seu gládio, o legionário manipula o deslocamento do ar para estender o alcance do corte. A lâmina cria uma lufada invisível e afiada que viaja em linha reta por até dois quadrados. Inimigos atingidos por esse vácuo sofrem um corte superficial idêntico ao de uma lâmina física, permitindo golpear adversários que estão fora do alcance corpo a corpo padrão.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "foi-sem-querer-a",
+        "servico": 2,
+        "icone": "mercurio-foi-sem-querer-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Transmutação Vítrea",
+        "texto": "O legionário canaliza o domínio de Mercúrio sobre a composição dos metais e a alquimia de materiais. Ao desferir um golpe que faça contato direto com a arma leve ou o escudo de um oponente, a habilidade alquímica que corre nas veias do semideus altera instantaneamente a estrutura molecular do objeto atingido. O metal torna-se frágil e quebradiço como vidro comum por duas rodadas inteiras; se sofrer qualquer impacto nesse período, o equipamento se estilhaça inutilizado. Esse efeito não vale contra relíquias.",
+        "reposicao": "12 turnos",
+        "grau": "",
+        "id": "transmutacao-vitrea-a",
+        "servico": 3,
+        "icone": "mercurio-transmutacao-vitrea-a.png"
+      },
+      {
+        "nome": "Câmbio Instantâneo",
+        "texto": "O semideus subverte as leis do comércio para realizar uma transação forçada e equivalente em pleno combate. Ao focar em um oponente a até 4 quadrados de distância, o legionário consegue trocar instantaneamente uma arma normal que o alvo esteja empunhando ou carregando (como uma adaga, um arco ou uma lança) por um item de peso similar que o semideus possua em mãos ou no inventário (como uma barra de ferro, uma clava velha ou até um pedaço de madeira). A troca acontece em um piscar de olhos, porém precisa manter o contato visual com a arma que deseja trocar.",
+        "reposicao": "12 turnos",
+        "grau": "",
+        "id": "cambio-instantaneo-a",
+        "servico": 3,
+        "icone": "mercurio-cambio-instantaneo-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Sobrecarga Metabólica",
+        "texto": "O semideus força o seu próprio coração a bombear sangue em uma velocidade alarmante, entrando em um estado de aceleração física pura. Durante dois turnos, sua agilidade se torna tão absurda que ele consegue realizar duas ações de movimento no mesmo turno sem sofrer penalidades de fadiga. No entanto, assim que o efeito termina no terceiro turno, o acúmulo de cansaço atinge os músculos de uma vez, impedindo o semideus de correr na rodada seguinte e inutilizando o Vigor do Mensageiro.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "sobrecarga-metabolica-a",
+        "servico": 4,
+        "icone": "mercurio-sobrecarga-metabolica-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Cãibra Divina",
+        "texto": "O legionário é temporariamente revestido pelo momentum absoluto de seu pai, fazendo com que pequenas marcas de asas etéreas se projetem nos calcanhares de suas botas. Durante dois turnos completos, o semideus opera em um plano de velocidade tão absurdo que ganha o direito de realizar três ações completas em cada um de seus turnos (permitindo atacar, recarregar ou interagir consecutivamente), enquanto os adversários observam apenas um feixe de poeira. No entanto, o custo biológico para manter o corpo nessa frequência é devastador: ao fim do segundo turno, os tendões do semideus travam por completo e impedindo-o de realizar qualquer ação na rodada seguinte.",
+        "reposicao": "1 vez por dia",
+        "grau": "",
+        "id": "caibra-divina-a",
+        "servico": 5,
+        "icone": "mercurio-caibra-divina-a.png"
+      }
+    ]
+  ]
+}

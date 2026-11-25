@@ -1,0 +1,165 @@
+{
+  "id": "ceres",
+  "nome": "Ceres",
+  "estandarte": "https://i.imgur.com/yjblcUW.png",
+  "titulo": "",
+  "introducao": [
+    "Dourada como o trigo que representa, Ceres é uma das deusas mais antigas e influentes do panteão romano, ocupando um trono de cedro bem próximo ao de Júpiter, seu irmão. Em outras épocas, o culto a Ceres era amplamente praticado pelos camponeses, que dependiam de suas colheitas como fonte de renda, o que fez dela, com o tempo, uma padroeira dos mais humildes e dos trabalhadores do campo. Seu templo na colina do Aventino, erguido ainda nos primórdios da República, tornou-se um dos principais centros de culto plebeu em Roma, associando a deusa não apenas à fertilidade da terra, mas também às lutas e aos anseios do povo comum.",
+    "Ainda assim, Ceres é vista como uma deusa bastante ambígua, pois traz alimento na mesma medida em que o retira. Essa dualidade encontra eco no célebre mito de sua filha, Proserpina, raptada por Plutão para reinar ao seu lado no submundo. Tomada pela dor da perda, Ceres teria abandonado seus deveres, fazendo a terra inteira mergulhar em esterilidade e inverno; somente o acordo que permitiu à filha retornar por parte do ano trouxe de volta a primavera e as colheitas fartas. Assim, Ceres não é apenas a deusa da abundância, mas também um símbolo vivo do ciclo eterno entre a fartura e a escassez, entre a vida que floresce e a que se recolhe."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Mãos Férteis",
+        "texto": "Com a agricultura correndo em suas veias, os legionários sempre reconhecem quais são as terras e os adubos mais férteis, além de distinguir qualquer tipo de planta apenas com um breve olhar — sabendo identificar, inclusive, espécies venenosas ou de propriedades medicinais. Como se não bastasse essa aptidão natural para o plantio, contam ainda com mãos \"abençoadas\", capazes de fazer flores brotarem até em pleno deserto.",
+        "grau": "",
+        "id": "maos-ferteis-p",
+        "servico": 0,
+        "icone": "ceres-maos-ferteis-p.png"
+      },
+      {
+        "nome": "Sussurro da Natureza",
+        "texto": "A ligação com a natureza permite que o filho da deusa da agricultura ouça e sinta o que os vegetais ao seu redor pensam e comunicam. Consegue localizar plantas e vegetais específicos em um determinado local e escuta o que as árvores têm a lhe revelar — desde a presença de uma criatura escondida em meio à vegetação até rastros de passagem deixados por viajantes horas antes. Raízes e troncos antigos, por guardarem décadas ou séculos de \"memória\", tendem a fornecer informações mais precisas e detalhadas do que brotos jovens ou plantas recém-nascidas.",
+        "grau": "",
+        "id": "sussurro-da-natureza-p",
+        "servico": 0,
+        "icone": "ceres-sussurro-da-natureza-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Sismonastia",
+        "texto": "A floresta está intimamente ligada ao filho de Ceres e, por isso, sempre busca auxiliá-lo. O herdeiro da deusa é capaz de identificar movimentos na superfície terrestre, sejam eles provenientes de criaturas ou de outros semideuses, sentindo pequenas vibrações ao tatear o solo. Assim, consegue tanto localizar indivíduos próximos em uma área de sete quadrados quanto perceber tudo o que se move no subsolo ao seu redor.",
+        "grau": "",
+        "id": "sismonastia-p",
+        "servico": 1,
+        "icone": "ceres-sismonastia-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fotossíntese",
+        "texto": "Assim como as plantas se revigoram ao serem expostas ao sol, o filho de Ceres suprime sua fadiga e suas fraquezas ao receber diretamente os raios luminosos do astro-rei. É capaz de recuperar a energia perdida e até mesmo curar pequenos ferimentos, sendo esse processo tanto mais eficaz quanto mais intensa for a luz solar recebida — um dia claro e aberto rende bem mais do que um entardecer nublado. À noite ou em ambientes fechados, sem qualquer luz natural, a habilidade permanece inativa.",
+        "grau": "",
+        "id": "fotossintese-p",
+        "servico": 2,
+        "icone": "ceres-fotossintese-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ciclo das Estações",
+        "texto": "Assim como a vegetação floresce, resiste e se renova a cada mudança de clima, o filho de Ceres carrega em si o próprio ritmo das estações, adaptando-se naturalmente às suas variações — suportando com facilidade ambientes hostis, sejam eles gélidos, áridos ou de clima extremo.",
+        "grau": "",
+        "id": "ciclo-das-estacoes-p",
+        "servico": 3,
+        "icone": "ceres-ciclo-das-estacoes-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Camuflagem",
+        "texto": "Quando em contato com a natureza, o filho de Ceres é capaz de se camuflar quase perfeitamente entre a vegetação ao seu redor, mesclando-se a folhas, arbustos e troncos a ponto de se tornar praticamente invisível aos olhos de espectadores desavisados. Quanto mais densa e fértil for a área, mais eficaz se torna o disfarce. A camuflagem permite que o semideus se aproxime de inimigos despercebido ou aguarde o momento certo para agir, mas exige imobilidade quase total: qualquer ação ofensiva, ataque ou movimento brusco realizado pelo legionário rompe o efeito imediatamente, revelando sua posição.",
+        "grau": "",
+        "id": "camuflagem-p",
+        "servico": 4,
+        "icone": "ceres-camuflagem-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Antídoto Natural",
+        "texto": "O filho de Ceres desenvolve uma resistência natural a toxinas, como se seu próprio sangue absorvesse um pouco da imunidade que certas plantas possuem contra pragas e predadores. Toda e qualquer peçonha criada por semideuses ou por monstros de até dois níveis acima, tem seus efeitos reduzidos tanto em intensidade quanto em duração — a intoxicação manifesta-se de forma mais branda que o esperado, e o tempo de efeito é reduzido para um turno. Contra venenos e toxinas de origem natural — sejam eles produzidos por plantas, animais ou pela própria terra —, o filho de Ceres é completamente imune, seu organismo reconhecendo e neutralizando a substância antes que qualquer efeito possa se manifestar.\n\n________________",
+        "grau": "",
+        "id": "antidoto-natural-p",
+        "servico": 5,
+        "icone": "ceres-antidoto-natural-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Karpoi",
+        "texto": "Os karpoi (no singular, karpos) são antigos espíritos dos grãos, com aparência semelhante à de bebês alados, exceto por serem esverdeados, cobertos de sementes, extremamente rancorosos e donos de dentes afiadíssimos. Devem obediência a Ceres, mas nutrem certo rancor pela deusa, já que foi ela quem ensinou os mortais a cultivá-los. Ainda assim, os herdeiros da rainha da agricultura podem invocá-los e requisitar sua ajuda, desde que paguem o preço necessário — um punhado de trigo, cevada, milho ou arroz, a depender do tipo de karpos chamado. No combate, revelam-se voadores ágeis, com mordidas poderosas e capacidade de transportar pequenos objetos, embora não resistam por mais de quatro turnos lutando. É possível invocar um único karpos por uso da habilidade.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "karpoi-a",
+        "servico": 1,
+        "icone": "ceres-karpoi-a.png"
+      },
+      {
+        "nome": "Teletransporte Natural",
+        "texto": "Uma forma peculiar de teletransporte: o filho de Ceres pode imergir em uma planta, tronco ou arbusto vivo, emergindo segundos depois em outro vegetal presente no mesmo ambiente. Funciona de maneira similar à Viagem nas Sombras, substituindo, porém, o uso das sombras pela conexão do semideus com a vegetação viva — um reflexo direto do domínio de Ceres sobre tudo o que brota da terra.",
+        "reposicao": "2 vezes por combate",
+        "grau": "",
+        "id": "teletransporte-natural-a",
+        "servico": 1,
+        "icone": "ceres-teletransporte-natural-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Abraço da Terra",
+        "texto": "O filho da deusa da agricultura possui domínio sobre plantas, árvores e raízes do solo, sendo capaz de controlá-las conforme sua vontade. Ao direcionar sua magia contra a vegetação ao redor, pode fazer com que raízes e galhos se enroscam nos membros de um adversário, imobilizando-o, ou utilizá-los como chicotes vivos para golpear à distância. Uma vez que o comando é dado ao vegetal, ele permanece sob a influência do semideus por até três turnos, obedecendo a seus comandos com a mesma docilidade da terra fértil que a própria Ceres cultiva.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "abraco-da-terra-a",
+        "servico": 2,
+        "icone": "ceres-abraco-da-terra-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Semente Voraz",
+        "texto": "O filho de Ceres arremessa contra o solo uma semente imbuída de magia natural. Ao entrar em contato com a superfície, ela brota com violência explosiva, rompendo o chão numa implosão de raízes e espinhos que se espalha por uma área de três quadrados, arremessando para trás quem estiver próximo e causando ferimentos profundos a quem for atingido diretamente pelos espinhos. É uma habilidade que exige contato com solo exposto — concreto ou superfícies artificiais anulam completamente seu efeito.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "semente-voraz-a",
+        "servico": 3,
+        "icone": "ceres-semente-voraz-a.png"
+      },
+      {
+        "nome": "Muralha de Espinhos",
+        "texto": "Ao cravar as mãos no solo exposto, o filho de Ceres faz brotar uma densa muralha de vinhas espinhosas ao seu redor ou ao redor de um aliado próximo, cobrindo uma área de até três quadrados. A barreira bloqueia projéteis e dificulta o avanço de inimigos, causando ferimentos leves a quem tentar atravessá-la à força. Trata-se de uma habilidade puramente defensiva e estacionária — as vinhas não se movem nem atacam por conta própria, apenas resistem, protegendo quem estiver abrigado atrás delas. A muralha permanece de pé por quatro turnos ou até sofrer dano suficiente para ser destruída.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "muralha-de-espinhos-a",
+        "servico": 3,
+        "icone": "ceres-muralha-de-espinhos-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Ritmo das Estações",
+        "texto": "O semideus é capaz de convocar um efeito climático correspondente à estação escolhida, honrando o ciclo sazonal que a própria Ceres rege. A condição selecionada perdura por seis turnos e acomete uma área de cinco quadrados.\n\nPrimavera: Produz uma chuva leve, sem raios, deixando o solo escorregadio e lamacento. As flores ao redor crescem mais rápido que o normal.\n\nVerão: Afasta as nuvens, permitindo a passagem direta dos raios solares e trazendo calor, suor e mormaço ao ambiente.\n\nOutono: Convoca fortes ventanias que dificultam a visão e o disparo de projéteis.\n\nInverno: Provoca uma nevasca intensa e descontrolada, deixando o ar gélido e desconfortável.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "ritmo-das-estacoes-a",
+        "servico": 4,
+        "icone": "ceres-ritmo-das-estacoes-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Mãe Natureza",
+        "texto": "Através de um grito de guerra, os filhos da deusa da agricultura despertam a terra e a vegetação de um quarto inteiro contra seus inimigos — um eco distante da fúria que a própria Ceres manifestou ao ver os campos do mundo definharem durante a ausência de Proserpina. No meio do caos, plantas parecem ganhar vida própria e se voltam contra os adversários, raízes serpenteiam acima do solo como tentáculos e fendas se abrem na terra. Dependendo da situação, a mesma habilidade também pode assumir funções defensivas ou utilitárias, como erguer uma barreira, enraizar objetos de grande porte ou construir uma ponte improvisada. O efeito dura três turnos e perde grande parte de sua eficácia em locais com pouca ou nenhuma presença de natureza.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "mae-natureza-a",
+        "servico": 5,
+        "icone": "ceres-mae-natureza-a.png"
+      }
+    ]
+  ]
+}

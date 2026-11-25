@@ -1,0 +1,164 @@
+{
+  "id": "salacia",
+  "nome": "Salácia",
+  "estandarte": "https://i.imgur.com/1Fdx1lP.png",
+  "titulo": "",
+  "introducao": [
+    "Salácia é a esposa de Netuno e reina ao seu lado como a deusa das águas salgadas e das profundezas do mar. Segundo a tradição, Netuno teria precisado cortejá-la por um bom tempo antes que ela aceitasse deixar as profundezas do oceano, onde se escondia, para governar ao seu lado — o que já revela a personalidade independente e nada facilmente impressionável que ela transmitiu a todos os seus filhos. Enquanto Netuno é associado à fúria das tempestades e à imprevisibilidade do mar aberto, Salácia representa o equilíbrio, a calmaria e o controle preciso das correntes, sendo tida por muitos como a verdadeira engenheira por trás de qualquer domínio marítimo."
+  ],
+  "destaque": null,
+  "servicos": [
+    "Probatio",
+    "Primeiro serviço",
+    "Segundo serviço",
+    "Terceiro serviço",
+    "Quarto serviço",
+    "Quinto serviço"
+  ],
+  "passivas": [
+    [
+      {
+        "nome": "Hidratação",
+        "texto": "A pele do semideus possui uma capacidade natural de absorver a umidade presente no ar ao seu redor, mantendo seu organismo hidratado mesmo em condições extremas, como o calor intenso de uma travessia no deserto — seu corpo extrai a água necessária diretamente do ambiente, tornando-o praticamente imune aos efeitos da desidratação. O verdadeiro potencial dessa habilidade, no entanto, manifesta-se no contato direto com a água: nesse momento, sua capacidade de regeneração se intensifica consideravelmente, permitindo que ferimentos superficiais e cortes leves se fechem em apenas um a três turnos.",
+        "grau": "",
+        "id": "hidratacao-p",
+        "servico": 0,
+        "icone": "salacia-hidratacao-p.png"
+      },
+      {
+        "nome": "Pele de Pérola",
+        "texto": "A pele do semideus adquire uma resistência incomum, tornando-se lisa e firme como uma pérola polida — característica que faz com que ataques superficiais e lâminas mal direcionadas desviem de seu corpo sem causar dano significativo. Além dessa proteção física, seu organismo desenvolve uma resistência natural contra venenos líquidos e toxinas ingeridas, sendo capaz de neutralizar automaticamente qualquer ameaça desse tipo antes que produza efeitos mais graves.",
+        "grau": "",
+        "id": "pele-de-perola-p",
+        "servico": 0,
+        "icone": "salacia-pele-de-perola-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fôlego Infinito",
+        "texto": "Herdando a natureza da Rainha do Mar, o semideus respira debaixo d'água com total naturalidade, ignorando por completo a pressão das profundezas que normalmente seria fatal para um mortal comum. Possui, ainda, a capacidade de se comunicar com qualquer criatura marinha, estabelecendo diálogo com desde os predadores mais territoriais até as espécies mais discretas dos oceanos. Essa habilidade o torna especialmente valioso em missões de reconhecimento subaquático, permitindo negociar passagens seguras ou obter informações valiosas junto à fauna marinha.",
+        "grau": "",
+        "id": "folego-infinito-p",
+        "servico": 1,
+        "icone": "salacia-folego-infinito-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Favor das Correntes",
+        "texto": "Embora ainda distante da autoridade plena que sua linhagem promete revelar no futuro, o semideus já sente as correntes marítimas responderem discretamente à sua presença. Ao nadar, desloca-se com uma naturalidade muito acima da esperada para um mortal comum, sentindo pouca ou nenhuma resistência da água ao seu redor, como se o próprio mar suavizasse o caminho à sua frente. Além disso, consegue prever com boa precisão pequenas mudanças no comportamento das águas — uma maré que está prestes a virar, uma correnteza que se formará em poucos instantes —, permitindo-lhe antecipar perigos ou aproveitar essas variações a seu favor durante um deslocamento aquático.",
+        "grau": "",
+        "id": "favor-das-correntes-p",
+        "servico": 2,
+        "icone": "salacia-favor-das-correntes-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Soberania Marinha",
+        "texto": "O sangue da Rainha Salácia corre nas veias do semideus com força suficiente para que o próprio mar o reconheça como parte de sua realeza. Criaturas marinhas e feras aquáticas sentem essa autoridade instintivamente, hesitando antes de atacá-lo — mesmo as mais famintas costumam recuar diante de sua presença, preferindo direcionar sua agressividade a outros alvos ao redor. Esse respeito instintivo permite ao semideus atravessar territórios aquáticos hostis com uma segurança que raramente qualquer outro filho dos deuses conseguiria alcançar sozinho.",
+        "grau": "",
+        "id": "soberania-marinha-p",
+        "servico": 3,
+        "icone": "salacia-soberania-marinha-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Aura de Pressão",
+        "texto": "Um resquício das fossas abissais acompanha o semideus para onde quer que vá, densificando o ar num raio de quatro quadrados ao seu redor como se ali existissem centenas de metros de água salgada empilhados sobre a atmosfera comum. Qualquer projétil físico — flechas, dardos, armas de arremesso — perde força ao atravessar essa camada invisível, tendo sua trajetória desviada ou simplesmente caindo antes de alcançar o alvo. Ataques à distância tornam-se, assim, praticamente inúteis contra o semideus, restando aos adversários apenas a opção de aproximar-se e enfrentar diretamente o peso dessa presença submersa.",
+        "grau": "",
+        "id": "aura-de-pressao-p",
+        "servico": 4,
+        "icone": "salacia-aura-de-pressao-p.png"
+      }
+    ],
+    [
+      {
+        "nome": "Majestade das Profundezas",
+        "texto": "No ápice de sua linhagem, o semideus deixa de apenas carregar o sangue de Salácia — passa a manifestar, em si, um fragmento genuíno da soberania da própria rainha dos mares. Toda a vasta extensão oceânica reconhece essa presença como extensão da vontade divina: correntes marítimas se ajustam sutilmente ao seu favor, tempestades no mar perdem parte de sua fúria ao redor do semideus, e criaturas aquáticas de qualquer porte — desde os predadores mais territoriais até as feras mais ancestrais das profundezas — curvam-se instintivamente à sua autoridade, recusando-se a atacá-lo sob qualquer circunstância, a menos que sejam elas mesmas comandadas por uma divindade de poder superior. Em contato direto com qualquer corpo d'água, seja um oceano ou uma simples poça, o semideus tem todos os seus atributos físicos — força, velocidade e resistência — elevados de forma considerável, como se a própria água reconhecesse nele um herdeiro do trono. Fora da água, esses benefícios se dissipam gradualmente, mas nunca desaparecem por completo, permanecendo como um eco constante da majestade que corre em seu sangue.\n\n________________",
+        "grau": "",
+        "id": "majestade-das-profundezas-p",
+        "servico": 5,
+        "icone": "salacia-majestade-das-profundezas-p.png"
+      }
+    ]
+  ],
+  "ativas": [
+    [],
+    [
+      {
+        "nome": "Eco Submerso",
+        "texto": "Ao pressionar a palma da mão contra qualquer superfície molhada ou fonte de água próxima, o semideus envia um breve pulso vibracional através do líquido, capaz de percorrer canos, poças conectadas ou pequenos cursos d'água até um ponto de saída à sua escolha. No local de destino, o pulso produz um som abafado, semelhante a um borbulhar repentino, suficiente para distrair um inimigo próximo ou sinalizar discretamente a um aliado sem depender de comunicação verbal direta.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "eco-submerso-a",
+        "servico": 1,
+        "icone": "salacia-eco-submerso-a.png"
+      },
+      {
+        "nome": "Visão das Águas",
+        "texto": "Ao concentrar sua vontade sobre uma superfície de água parada — uma poça, uma bacia ou mesmo uma pequena porção de líquido derramado —, o semideus abre uma breve janela de percepção para outro ponto conectado pela mesma fonte, seja um trecho adiante de um rio, um poço distante ou uma tubulação que atravessa um edifício inteiro. As imagens surgem distorcidas e tremulantes, como se vistas através de ondas em constante movimento, e raramente revelam uma cena completa — mas são suficientes para flagrar a movimentação de possíveis inimigos ou confirmar a presença de aliados em locais que, de outra forma, permaneceriam completamente fora de alcance. Quanto mais distante o ponto observado, mais instável e curta se torna a visão, exigindo concentração redobrada do semideus para mantê-la.",
+        "reposicao": "5 turnos",
+        "grau": "",
+        "id": "visao-das-aguas-a",
+        "servico": 1,
+        "icone": "salacia-visao-das-aguas-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Fluxo Controlado",
+        "texto": "Sem a capacidade de gerar água por conta própria, o semideus depende de uma fonte próxima — uma cantina, uma poça, um rio ou qualquer líquido disponível nas redondezas — para exercer um domínio limitado sobre a hidrocinese. A partir dessa fonte, é capaz de moldar e direcionar a água de formas variadas em até seis quadrados: disparando jatos pressurizados capazes de empurrar um adversário, formando pequenas correntes que desequilibram o solo sob os pés de um inimigo, ou erguendo finas paredes líquidas que bloqueiam parcialmente projéteis e ataques físicos por um breve instante. O alcance e a intensidade desses efeitos, porém, permanecem limitados pela quantidade de água disponível nas proximidades e pelo esforço físico do próprio semideus, que não sustenta o controle por muito tempo antes de precisar de uma pausa.",
+        "reposicao": "10 turnos",
+        "grau": "",
+        "id": "fluxo-controlado-a",
+        "servico": 2,
+        "icone": "salacia-fluxo-controlado-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Canto de Sereia",
+        "texto": "O semideus projeta uma melodia hipnótica, herdeira do fascínio que Salácia exerce sobre as profundezas do oceano, atingindo todos os inimigos presentes em um raio de seis quadrados. O som se infiltra na mente dos alvos como uma música irresistível, interrompendo imediatamente qualquer ação ofensiva e atraindo-os, guiados quase involuntariamente, em direção ao semideus. Durante dois turnos, os afetados permanecem completamente vulneráveis, com a guarda baixa, abrindo uma janela ideal para que aliados próximos aproveitem a distração e ataquem de posições estratégicas.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "canto-de-sereia-a",
+        "servico": 3,
+        "icone": "salacia-canto-de-sereia-a.png"
+      },
+      {
+        "nome": "Bolha Sufocante",
+        "texto": "Utilizando a umidade do ar ou qualquer fonte de água próxima, o semideus molda uma bolha densa ao redor da cabeça de um oponente a até quatro quadrados de distância. O alvo passa a sofrer os efeitos imediatos da asfixia, debatendo-se contra uma barreira líquida que resiste a qualquer tentativa de rompimento e que bloqueia por completo a entrada de ar. Além do pânico natural de um afogamento em pleno solo firme, a bolha também impede qualquer forma de comunicação verbal, silenciando o alvo e impossibilitando-o de conjurar habilidades que dependam da fala ou de emitir ordens durante dois turnos.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "bolha-sufocante-a",
+        "servico": 3,
+        "icone": "salacia-bolha-sufocante-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Tsunami Tático",
+        "texto": "Havendo uma fonte de água considerável nas proximidades, o semideus é capaz de convocar uma onda massiva de água, que varre o campo de batalha em um raio de cinco quadrados, derrubando qualquer inimigo em seu caminho com a força de um verdadeiro deslizamento. O efeito, no entanto, é seletivo: enquanto desestabiliza as fileiras inimigas, a mesma onda cura ferimentos médios de aliados presentes na área ao longo de quatro a seis turnos, tornando-se tanto uma arma ofensiva quanto um recurso de suporte.",
+        "reposicao": "12 turnos",
+        "grau": "",
+        "id": "tsunami-tatico-a",
+        "servico": 4,
+        "icone": "salacia-tsunami-tatico-a.png"
+      }
+    ],
+    [
+      {
+        "nome": "Eco das Marés",
+        "texto": "O semideus projeta uma voz que carrega em si o peso das fossas abissais e a serenidade das marés, direcionando-a a um único alvo a até cinco quadrados de distância através de um comando absoluto. Suas palavras funcionam como uma corrente invisível capaz de dominar a vontade desse alvo — seja um semideus experiente, seja uma criatura marinha de grande porte —, forçando-o a obedecer a uma única ordem, executada de imediato e sem hesitação. Apenas indivíduos com proteção mental sólida conseguem resistir a esse efeito, que se impõe com a mesma naturalidade do movimento das marés.",
+        "reposicao": "1 vez por combate",
+        "grau": "",
+        "id": "eco-das-mares-a",
+        "servico": 5,
+        "icone": "salacia-eco-das-mares-a.png"
+      }
+    ]
+  ]
+}
