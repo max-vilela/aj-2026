@@ -75,9 +75,6 @@
     /* ---------- árvore ---------- */
     var arvore = criar("section", "arvore");
     arvore.setAttribute("aria-label", "Árvore de habilidades de " + d.nome);
-    arvore.appendChild(criar("h3", "arvore__titulo", "Árvore de habilidades"));
-    arvore.appendChild(criar("p", "arvore__ajuda", "Toque numa habilidade para ler os detalhes. Escolha os anos de serviço para ver o que cada fase libera e marque as ativas que quer comprar."));
-
     var controle = criar("div", "arvore__controle");
     controle.appendChild(criar("span", "arvore__rotulo", "Anos de serviço"));
     var grupo = criar("div", "arvore__niveis");
@@ -89,7 +86,12 @@
       b.type = "button";
       b.setAttribute("role", "radio");
       b.title = nome;
-      b.addEventListener("click", function () { estado.nivel = i; atualizar(); });
+      b.addEventListener("click", function () {
+        estado.nivel = i;
+        atualizar();
+        var linha = linhas[i];
+        if (linha) linha.scrollIntoView({ block: "center", behavior: "smooth" });
+      });
       grupo.appendChild(b);
     });
     controle.appendChild(grupo);
@@ -106,6 +108,7 @@
     arvore.appendChild(abas);
 
     var grade = criar("div", "arvore__grade");
+    var linhas = [];
     var topo = [criar("h4", "arvore__coluna arvore__coluna--passivas", "Habilidades passivas"), criar("span", "arvore__vazio"), criar("h4", "arvore__coluna arvore__coluna--ativas", "Habilidades ativas")];
     topo.forEach(function (e) { grade.appendChild(e); });
 
@@ -115,7 +118,13 @@
       rot.appendChild(criar("span", null, serv));
       var ca = criar("div", "arvore__celula arvore__celula--ativas");
       [["passivas", cp], ["ativas", ca]].forEach(function (par) {
-        (d[par[0]][t] || []).forEach(function (h) {
+        var lista = d[par[0]][t] || [];
+        if (!lista.length) {
+          par[1].classList.add("arvore__celula--vazia");
+          par[1].appendChild(criar("p", "arvore__nada",
+            par[0] === "ativas" ? "Nenhuma habilidade ativa neste serviço." : "Nenhuma habilidade passiva neste serviço."));
+        }
+        lista.forEach(function (h) {
           var b = criar("button", "no");
           b.type = "button";
           b.dataset.id = h.id;
@@ -139,6 +148,7 @@
       grade.appendChild(cp);
       grade.appendChild(rot);
       grade.appendChild(ca);
+      linhas[t] = rot;
     });
 
     var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -208,12 +218,28 @@
 
     raiz.appendChild(arvore);
 
-    /* ---------- ligações ---------- */
-    function pais(tipo, t, h) {
+    /* ---------- ligações ----------
+       Passivas: todas de um serviço vêm juntas, então irmãs do mesmo nível ficam unidas por uma
+       barra horizontal. Ativas: cada nome é uma rota que sobe de grau, então a ligação é vertical
+       e só entre os graus da mesma rota. */
+    function pais(tipo, t, h, i) {
       if (t === 0) return [];
       var anteriores = d[tipo][t - 1] || [];
+      if (!anteriores.length) {
+        /* o serviço anterior está vazio: procura o último que tem algo */
+        for (var k = t - 2; k >= 0; k--) if ((d[tipo][k] || []).length) { anteriores = d[tipo][k]; break; }
+      }
       var mesmo = anteriores.filter(function (x) { return x.nome === h.nome; });
-      return mesmo.length ? mesmo : anteriores;
+      if (mesmo.length) return mesmo;
+      if (tipo === "ativas" && anteriores.length === (d[tipo][t] || []).length) return [anteriores[i]];
+      return anteriores;
+    }
+
+    function linhaSvg(d2, classe) {
+      var l = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      l.setAttribute("d", d2);
+      l.setAttribute("class", classe);
+      return l;
     }
 
     function desenhar() {
@@ -224,11 +250,28 @@
       svg.textContent = "";
       ["passivas", "ativas"].forEach(function (tipo) {
         d[tipo].forEach(function (tier, t) {
-          tier.forEach(function (h) {
+          var apagada = t > estado.nivel ? " arvore__linha--apagada" : "";
+
+          /* barra entre irmãs do mesmo serviço (só passivas) */
+          if (tipo === "passivas" && tier.length > 1) {
+            for (var i = 0; i < tier.length - 1; i++) {
+              var ea = nos[tier[i].id].botao, eb = nos[tier[i + 1].id].botao;
+              if (!ea.offsetParent || !eb.offsetParent) continue;
+              var ra = ea.getBoundingClientRect(), rb = eb.getBoundingClientRect();
+              var ic = ea.querySelector(".no__icone");
+              var meioY = ra.top - caixa.top + (ic ? ic.getBoundingClientRect().height / 2 : 28);
+              svg.appendChild(linhaSvg(
+                "M" + (ra.right - caixa.left) + " " + meioY + " H" + (rb.left - caixa.left),
+                "arvore__linha arvore__linha--irmas" + apagada));
+            }
+          }
+
+          tier.forEach(function (h, i) {
             var filho = nos[h.id].botao;
             if (!filho.offsetParent) return;
             var f = filho.getBoundingClientRect();
-            pais(tipo, t, h).forEach(function (p) {
+            var rota = tipo === "ativas" ? " arvore__linha--rota" : "";
+            pais(tipo, t, h, i).forEach(function (p) {
               var pai = nos[p.id].botao;
               if (!pai.offsetParent) return;
               var a = pai.getBoundingClientRect();
@@ -236,11 +279,10 @@
               var y1 = a.bottom - caixa.top;
               var x2 = f.left + f.width / 2 - caixa.left;
               var y2 = f.top - caixa.top;
-              var meio = (y1 + y2) / 2;
-              var linha = document.createElementNS("http://www.w3.org/2000/svg", "path");
-              linha.setAttribute("d", "M" + x1 + " " + y1 + " V" + meio + " H" + x2 + " V" + y2);
-              linha.setAttribute("class", "arvore__linha" + (t > estado.nivel ? " arvore__linha--apagada" : ""));
-              svg.appendChild(linha);
+              var caminho = Math.abs(x1 - x2) < 2
+                ? "M" + x1 + " " + y1 + " V" + y2
+                : "M" + x1 + " " + y1 + " V" + ((y1 + y2) / 2) + " H" + x2 + " V" + y2;
+              svg.appendChild(linhaSvg(caminho, "arvore__linha" + rota + apagada));
             });
           });
         });
@@ -314,6 +356,7 @@
       Array.prototype.forEach.call(grupo.children, function (b, i) {
         b.setAttribute("aria-checked", i === estado.nivel ? "true" : "false");
         b.classList.toggle("arvore__nivel--ativo", i === estado.nivel);
+        if (linhas[i]) linhas[i].classList.toggle("arvore__servico--atual", i === estado.nivel);
       });
       Array.prototype.forEach.call(abas.children, function (b) {
         b.classList.toggle("arvore__aba--ativa", b.dataset.vista === estado.vista);

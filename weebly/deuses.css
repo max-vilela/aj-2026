@@ -604,3 +604,39 @@
 
 /* o anel de foco do teclado tem de sobreviver ao estado "escolhida" */
 .deus[data-estilo="menu"] .no:focus-visible { outline: 2px solid var(--ouro-claro); outline-offset: 3px; }
+
+/* ---------- Ajustes da árvore: sem título, linhas mais claras, nada de vão vazio ---------- */
+.arvore__controle { margin-bottom: 1.4rem; }
+.arvore__grade { row-gap: 1.9rem; }
+
+/* célula sem habilidade naquele serviço */
+.arvore__nada {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--tinta-suave);
+  opacity: 0.75;
+}
+
+/* irmãs do mesmo serviço: a barra mostra que as duas abrem juntas */
+.arvore__linha--irmas { stroke-width: 2; stroke-dasharray: none; }
+
+/* ativas: cada nome é uma rota própria, então a linha é mais firme */
+.arvore__linha--rota { stroke-width: 2.4; stroke: var(--purpura); opacity: 0.75; }
+.deus[data-estilo="menu"] .arvore__linha--rota { stroke: var(--purpura); }
+
+/* o serviço selecionado fica marcado na coluna do meio */
+.arvore__servico--atual { color: var(--purpura); }
+.arvore__servico--atual::before,
+.arvore__servico--atual::after { background: var(--purpura); }
+
+/* As habilidades de um mesmo serviço ficam lado a lado: o nome quebra em duas linhas
+   em vez de empurrar a irmã para baixo. */
+.arvore__grade { grid-template-columns: minmax(0, 1fr) 9rem minmax(0, 1fr); }
+.arvore__celula { gap: 0.9rem; flex-wrap: nowrap; }
+.deus[data-estilo="menu"] .no { max-width: 9.5rem; }
+.no__nome { overflow-wrap: anywhere; hyphens: auto; }
+.arvore__servico { font-size: 0.64rem; letter-spacing: 0.1em; }
+.arvore__servico::before, .arvore__servico::after { width: 0.32rem; height: 0.32rem; }

@@ -34,17 +34,13 @@ const PAGINAS = [
   ["trama", "Trama", "A história central do Acampamento Júpiter e o ponto de partida da campanha."],
   ["ambientacao", "Ambientação", "O mundo do RPG: Nova Roma, o acampamento e as terras ao redor."],
   ["cronologia", "Cronologia", ""],
-  ["sistemas", "Sistemas", "As regras de combate, progressão e economia do RPG."],
   ["guias", "Guias", "Passo a passo para criar o personagem e começar a jogar."],
-  ["olimpiadas", "Olimpíadas", "Os jogos e as competições entre as coortes."],
   ["legados", "Legados", "Quem são os legados e como suas linhagens funcionam no acampamento."],
   ["coortes", "Coortes", "As cinco coortes da Duodécima Legião e o que cada uma representa."],
   ["senado", "Senado", "O Senado de Nova Roma, os pretores e as decisões que moldam o acampamento."],
   ["bestiario", "Bestiário", "Monstros e criaturas que ameaçam semideuses e legionários."],
   ["arsenal", "Arsenal", "Armas, armaduras e equipamentos da Legião."],
   ["conquistas", "Conquistas", "Marcos, honrarias e feitos dos jogadores."],
-  ["formularios", "Formulários", "Fichas e formulários para participar do RPG."],
-  ["nucleos", "Núcleos", "Os núcleos e grupos de jogadores dentro do acampamento."],
   ["agradecimentos", "Agradecimentos", "Créditos e agradecimentos a quem ajudou a construir o acampamento."],
 ];
 
