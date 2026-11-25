@@ -206,8 +206,6 @@
     janela.addEventListener("click", function (e) { if (e.target === janela) fechar(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !janela.hidden) fechar(); });
 
-    var resumo = criar("div", "arvore__resumo");
-    arvore.appendChild(resumo);
     raiz.appendChild(arvore);
 
     /* ---------- ligações ---------- */
@@ -310,38 +308,6 @@
       if (estavaFechada) abrirAnimado();
     }
 
-    /* ---------- resumo ---------- */
-    function textoResumo() {
-      var pas = [], ati = [];
-      d.passivas.forEach(function (tier, t) { if (t <= estado.nivel) tier.forEach(function (h) { pas.push(h.nome); }); });
-      d.ativas.forEach(function (tier) { tier.forEach(function (h) { if (estado.marcadas.has(h.id)) ati.push(h.nome + (h.grau ? " " + h.grau : "")); }); });
-      return d.nome + " — até " + d.servicos[estado.nivel] + "\nPassivas: " + (pas.join(", ") || "nenhuma") + "\nAtivas: " + (ati.join(", ") || "nenhuma marcada");
-    }
-
-    function desenharResumo() {
-      resumo.textContent = "";
-      resumo.appendChild(criar("h4", "resumo__titulo", "Sua árvore"));
-      var linhas = textoResumo().split("\n");
-      resumo.appendChild(criar("p", "resumo__linha resumo__linha--destaque", linhas[0]));
-      resumo.appendChild(criar("p", "resumo__linha", linhas[1]));
-      resumo.appendChild(criar("p", "resumo__linha", linhas[2]));
-      var acoes = criar("div", "resumo__acoes");
-      var copiar = criar("button", "botao", "Copiar lista");
-      copiar.type = "button";
-      copiar.addEventListener("click", function () {
-        var t = textoResumo();
-        function ok() { copiar.textContent = "Copiado ✓"; setTimeout(function () { copiar.textContent = "Copiar lista"; }, 1800); }
-        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, function () {});
-        else { var a = criar("textarea"); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand("copy"); ok(); } catch (e) {} a.remove(); }
-      });
-      var limpar = criar("button", "botao botao--discreto", "Limpar marcações");
-      limpar.type = "button";
-      limpar.addEventListener("click", function () { estado.marcadas.clear(); atualizar(); });
-      acoes.appendChild(copiar);
-      acoes.appendChild(limpar);
-      resumo.appendChild(acoes);
-    }
-
     /* ---------- atualizar tudo ---------- */
     function atualizar() {
       grade.dataset.vista = estado.vista;
@@ -364,7 +330,6 @@
         n.botao.title = n.dado.nome + (n.dado.grau ? " " + n.dado.grau : "") + " — " + d.servicos[n.servico];
       });
       desenharDetalhe();
-      desenharResumo();
       guardar(CHAVE, { nivel: estado.nivel, marcadas: Array.from(estado.marcadas) });
       desenhar();
     }

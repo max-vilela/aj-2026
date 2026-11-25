@@ -113,8 +113,17 @@ const siteJs = `/* Scripts compartilhados do site: marca a página atual no menu
     atualizar();
 
     var irPanteao = document.querySelector(".gaveta__panteao");
-    if (irPanteao && gaveta) {
-      irPanteao.addEventListener("click", function () { gaveta.checked = false; atualizar(); });
+    if (irPanteao) {
+      irPanteao.addEventListener("click", function () {
+        if (gaveta) { gaveta.checked = false; atualizar(); }
+      });
+      /* o Panteão é um <label>, então o teclado precisa de ajuda para abri-lo */
+      irPanteao.addEventListener("keydown", function (e) {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        if (panteao) panteao.checked = true;
+        if (gaveta) { gaveta.checked = false; atualizar(); }
+      });
     }
 
     document.addEventListener("keydown", function (e) {

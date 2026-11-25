@@ -29,8 +29,8 @@
 
 .deus__nome {
   margin: 0;
-  font-family: "Cinzel Decorative", var(--fonte-titulo);
-  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   line-height: 1.05;
   letter-spacing: 0.04em;
@@ -435,31 +435,6 @@
 
 .botao--discreto:hover:not(:disabled) { color: var(--purpura); background: transparent; }
 
-/* Resumo */
-.arvore__resumo {
-  max-width: 46rem;
-  margin: 0 auto;
-  padding: 1.25rem 1.6rem;
-  text-align: center;
-  border-top: 1px solid var(--ouro);
-}
-
-.resumo__titulo {
-  margin: 0 0 0.75rem;
-  font-family: var(--fonte-titulo);
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--purpura);
-}
-
-.resumo__linha { margin: 0 0 0.45rem; font-size: 0.95rem; }
-
-.resumo__linha--destaque { font-family: var(--fonte-titulo); font-size: 0.8rem; letter-spacing: 0.12em; color: var(--ouro); }
-
-.resumo__acoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1rem; }
-
 /* Telas estreitas: uma coluna por vez (Passivas | Ativas) */
 @media (max-width: 760px) {
   .arvore__abas { display: flex; }
@@ -479,19 +454,16 @@
 }
 
 /* O Weebly impõe a fonte do tema (Quicksand) com !important dentro de #wsite-content. */
-#wsite-content .deus .deus__nome { font-family: "Cinzel Decorative", var(--fonte-titulo) !important; font-weight: 700 !important; font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important; }
+#wsite-content .deus .deus__nome { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important; }
 #wsite-content .deus h3,
 #wsite-content .deus h4 { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; }
 #wsite-content .deus .arvore__titulo { font-size: clamp(1.5rem, 2.6vw, 2rem) !important; }
 #wsite-content .deus .deus__destaque h3 { font-size: 0.95rem !important; }
 #wsite-content .deus .arvore__coluna { font-size: clamp(0.95rem, 1.6vw, 1.2rem) !important; }
 #wsite-content .deus .detalhe__nome { font-size: 1.35rem !important; }
-#wsite-content .deus .resumo__titulo { font-size: 0.85rem !important; }
 #wsite-content .deus p { font-family: var(--fonte-texto) !important; font-size: inherit !important; }
 #wsite-content .deus .deus__titulo { font-size: 1.05rem !important; }
 #wsite-content .deus .arvore__ajuda { font-size: 0.95rem !important; }
-#wsite-content .deus .resumo__linha { font-size: 0.95rem !important; }
-#wsite-content .deus .resumo__linha--destaque { font-family: var(--fonte-titulo) !important; font-size: 0.8rem !important; }
 #wsite-content .deus .detalhe__aviso { font-size: 0.88rem !important; }
 
 /* Ilustração do deus: mesma moldura dourada das páginas, em 16:9 */
