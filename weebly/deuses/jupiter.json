@@ -26,14 +26,16 @@
         "texto": "Filhos do deus que ocupa o trono soberano do Olimpo, os descendentes de Júpiter nascem com uma vocação natural para a liderança. Sua opinião carrega peso considerável tanto dentro do Acampamento que leva o nome de seu pai quanto fora dele, em ambientes puramente mortais. Irradiam popularidade e um magnetismo pessoal difícil de ignorar, a ponto de apenas herdeiros de Netuno e Plutão ousarem questionar sua autoridade — qualquer outro semideus dificilmente permanece imune à imponência natural de um filho do céu. Essa mesma conexão concede ao semideus facilidade em se comunicar com criaturas ligadas aos domínios de seu pai, conquistando a confiança delas com notável naturalidade.",
         "grau": "",
         "id": "herdeiro-do-trono-p",
-        "servico": 0
+        "servico": 0,
+        "icone": "jupiter-herdeiro-do-trono-p.png"
       },
       {
         "nome": "Reflexo das Nuvens",
         "texto": "Dotados de uma conexão intrínseca com a atmosfera, os descendentes de Júpiter carregam emoções profundamente ligadas aos próprios movimentos do céu. Sempre que irritados ou magoados por alguém ou por alguma situação, o tempo ao seu redor tende a se fechar naturalmente: nuvens escurecem, a brisa se agita repentinamente, e não é raro que pancadas de chuva surjam sem aviso — às vezes acompanhadas de raios e trovões, como se o próprio céu refletisse fielmente o estado emocional do semideus.",
         "grau": "",
         "id": "reflexo-das-nuvens-p",
-        "servico": 0
+        "servico": 0,
+        "icone": "jupiter-reflexo-das-nuvens-p.png"
       }
     ],
     [
@@ -42,7 +44,8 @@
         "texto": "Quando em ambientes abertos, o filho de Júpiter sente-se revigorado pelo contato constante com o ar fresco ao seu redor. Essa conexão o torna significativamente mais resistente ao cansaço em combate, tornando-o completamente imune a ataques de natureza eólica — incluindo tempestades e correntes de vento provenientes de outras fontes de poder — e também à eletricidade em geral. Seu fôlego se prolonga muito além do de qualquer outro semideus, sempre que estiver em cenários abertos, permitindo-lhe recuperar-se com maior rapidez entre esforços. Além disso, jamais perde a noção dos pontos cardeais, orientando-se com precisão em qualquer ambiente, exceto quando confrontado por caminhos deliberadamente ocultos pela Névoa.",
         "grau": "",
         "id": "brisa-favoravel-p",
-        "servico": 1
+        "servico": 1,
+        "icone": "jupiter-brisa-favoravel-p.png"
       }
     ],
     [
@@ -51,7 +54,8 @@
         "texto": "Por carregar o sangue de um dos Três Grandes, o semideus possui um vigor físico muito acima da média, com força superior à dos próprios filhos de Marte e Vulcano. Além disso, essa herança divina concede uma resistência superior a qualquer forma de controle mental, bem como imunidade parcial a auras intimidadoras de outros semideuses que tentem comprometer seu autodomínio.",
         "grau": "",
         "id": "soberano-dos-ceus-p",
-        "servico": 2
+        "servico": 2,
+        "icone": "jupiter-soberano-dos-ceus-p.png"
       }
     ],
     [
@@ -60,7 +64,8 @@
         "texto": "O filho de Júpiter é capaz de reaproveitar a energia que seu corpo dissipa em forma de movimento e calor, convertendo-a em eletricidade. Durante o calor de uma batalha, essa energia percorre sua pele e torna seus golpes mais letais e seus movimentos mais ágeis. Após um esforço prolongado, como uma longa corrida, o excesso de carga pode danificar aparelhos eletrônicos que ele tocar. Seu corpo agitado também solta faíscas naturais e, quando a carga está alta, chega a emitir um brilho próprio.",
         "grau": "",
         "id": "carga-viva-p",
-        "servico": 3
+        "servico": 3,
+        "icone": "jupiter-carga-viva-p.png"
       }
     ],
     [
@@ -69,7 +74,8 @@
         "texto": "Assim como a águia, um dos símbolos mais reconhecidos no Acampamento Júpiter, o semideus possui os olhos adaptados de um verdadeiro falcão em plena caça. Enxerga a grandes distâncias com notável clareza e é extremamente sensível a detalhes, percebendo mudanças sutis ou movimentos praticamente imperceptíveis a olho nu.",
         "grau": "",
         "id": "visao-de-aguia-p",
-        "servico": 4
+        "servico": 4,
+        "icone": "jupiter-visao-de-aguia-p.png"
       }
     ],
     [
@@ -78,7 +84,8 @@
         "texto": "No ápice de sua linhagem, o filho de Júpiter passa a irradiar, de forma constante e involuntária, um fragmento genuíno da própria soberania paterna sobre os céus. Sempre que permanece parado por tempo suficiente em ambiente aberto, uma leve instabilidade atmosférica se instala ao seu redor — o vento gira em círculos discretos junto ao seu corpo, pequenas faíscas percorrem sua pele sem lhe causar qualquer dano, e o próprio ar parece mais denso, como se aguardasse apenas uma ordem para se tornar tempestade. Esse domínio inato também se reflete diretamente em combate: ventos favoráveis desviam qualquer projétil lançado contra o semideus, tornando ataques à distância inúteis contra ele, enquanto qualquer descarga elétrica direcionada ao seu corpo se dissipa por completo, reconhecendo instintivamente a autoridade superior de quem a recebe. Criaturas e espíritos ligados ao céu, ao vento ou às tempestades jamais o atacam, preferindo fugir a enfrentá-lo, tomados por um medo instintivo diante de sua presença.  Até mesmo divindades menores hesitam antes de agir contra ele, tratando-o com um respeito quase reverente, como se, por um instante, enxergassem nele um reflexo do próprio Júpiter.",
         "grau": "",
         "id": "presenca-celestial-p",
-        "servico": 5
+        "servico": 5,
+        "icone": "jupiter-presenca-celestial-p.png"
       }
     ]
   ],
@@ -90,7 +97,8 @@
         "reposicao": "20 turnos",
         "grau": "",
         "id": "voo-a",
-        "servico": 0
+        "servico": 0,
+        "icone": "jupiter-voo-a.png"
       }
     ],
     [
@@ -100,7 +108,8 @@
         "reposicao": "20 turnos",
         "grau": "I",
         "id": "eletrocinese-i-a",
-        "servico": 1
+        "servico": 1,
+        "icone": "jupiter-eletrocinese-i-a.png"
       },
       {
         "nome": "Aerocinese",
@@ -108,7 +117,8 @@
         "reposicao": "20 turnos",
         "grau": "I",
         "id": "aerocinese-i-a",
-        "servico": 1
+        "servico": 1,
+        "icone": "jupiter-aerocinese-i-a.png"
       }
     ],
     [
@@ -118,7 +128,8 @@
         "reposicao": "20 turnos",
         "grau": "II",
         "id": "eletrocinese-ii-a",
-        "servico": 2
+        "servico": 2,
+        "icone": "jupiter-eletrocinese-ii-a.png"
       },
       {
         "nome": "Aerocinese",
@@ -126,7 +137,8 @@
         "reposicao": "20 turnos",
         "grau": "II",
         "id": "aerocinese-ii-a",
-        "servico": 2
+        "servico": 2,
+        "icone": "jupiter-aerocinese-ii-a.png"
       }
     ],
     [
@@ -136,7 +148,8 @@
         "reposicao": "1 vez por dia",
         "grau": "III",
         "id": "eletrocinese-iii-a",
-        "servico": 3
+        "servico": 3,
+        "icone": "jupiter-eletrocinese-iii-a.png"
       },
       {
         "nome": "Aerocinese",
@@ -144,7 +157,8 @@
         "reposicao": "1 vez por combate",
         "grau": "III",
         "id": "aerocinese-iii-a",
-        "servico": 3
+        "servico": 3,
+        "icone": "jupiter-aerocinese-iii-a.png"
       }
     ],
     [
@@ -154,7 +168,8 @@
         "reposicao": "1 vez por dia",
         "grau": "",
         "id": "os-venti-a",
-        "servico": 4
+        "servico": 4,
+        "icone": "jupiter-os-venti-a.png"
       }
     ],
     [
@@ -164,7 +179,8 @@
         "reposicao": "1 vez por dia",
         "grau": "",
         "id": "atmocinese-a",
-        "servico": 5
+        "servico": 5,
+        "icone": "jupiter-atmocinese-a.png"
       }
     ]
   ]

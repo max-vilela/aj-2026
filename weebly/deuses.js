@@ -20,6 +20,8 @@
   function ler(chave) { try { return JSON.parse(localStorage.getItem(chave)); } catch (e) { return null; } }
 
   function montar(raiz, d) {
+    /* os ícones ficam ao lado do JSON, em deuses/icones/ */
+    var baseIcones = (raiz.getAttribute("data-fonte") || "").replace(/[^/]*$/, "") + "icones/";
     var CHAVE = "aj-deus-" + d.id;
     var salvo = ler(CHAVE) || {};
     var ultimo = d.servicos.length - 1;
@@ -117,6 +119,15 @@
           var b = criar("button", "no");
           b.type = "button";
           b.dataset.id = h.id;
+          if (h.icone) {
+            var moldura = criar("span", "no__icone");
+            var fig = new Image();
+            fig.src = baseIcones + h.icone;
+            fig.alt = "";
+            fig.loading = "lazy";
+            moldura.appendChild(fig);
+            b.appendChild(moldura);
+          }
           b.appendChild(criar("span", "no__nome", h.nome));
           if (h.grau) b.appendChild(criar("span", "no__grau", h.grau));
           b.appendChild(criar("span", "no__marca", "★"));
@@ -213,6 +224,14 @@
       var h = n.dado;
       var liberada = n.servico <= estado.nivel;
       var cab = criar("div", "detalhe__cabeca");
+      if (h.icone) {
+        var mold = criar("span", "detalhe__icone");
+        var fi = new Image();
+        fi.src = baseIcones + h.icone;
+        fi.alt = "";
+        mold.appendChild(fi);
+        cab.appendChild(mold);
+      }
       cab.appendChild(criar("h4", "detalhe__nome", h.nome + (h.grau ? " " + h.grau : "")));
       var chips = criar("div", "detalhe__chips");
       chips.appendChild(criar("span", "chip chip--" + n.tipo, n.tipo === "passivas" ? "Passiva" : "Ativa"));

@@ -1822,3 +1822,49 @@ body { font-size: 1rem; font-weight: 400; }
 .deus[data-estilo="menu"] .arvore__linha--apagada { opacity: 0.2; }
 
 .deus[data-estilo="menu"] .arvore__celula { gap: 1.6rem; }
+
+/* ---------- Ícones das habilidades (medalhão dourado, no estilo do site) ---------- */
+.no__icone {
+  position: relative;
+  display: block;
+  width: 3.1rem;
+  height: 3.1rem;
+  margin: 0 auto 0.4rem;
+  padding: 2px;
+  background: linear-gradient(145deg, var(--ouro-claro), var(--ouro) 45%, #8a6425);
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.5rem -0.2rem rgb(40 20 10 / 0.6);
+  transition: filter 0.25s, opacity 0.25s, transform 0.25s;
+}
+
+.no__icone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.no--bloqueado .no__icone { filter: grayscale(1) brightness(0.8); }
+.no:hover .no__icone { transform: scale(1.06); }
+
+/* a estrela de "marcada" fica sobre o medalhão */
+.no--marcado .no__icone { box-shadow: 0 0 0 2px var(--ouro-claro), 0 0 0.9rem rgb(220 193 131 / 0.7); }
+
+/* Variante menu: o medalhão é o elemento principal, o nome vem abaixo */
+.deus[data-estilo="menu"] .no { padding-top: 0.2rem; }
+.deus[data-estilo="menu"] .no__icone { width: 3.6rem; height: 3.6rem; }
+.deus[data-estilo="menu"] .no--bloqueado { opacity: 0.55; }
+
+/* Na janela de detalhe, ao lado do nome */
+.detalhe__cabeca { display: grid; grid-template-columns: auto 1fr; gap: 0 1rem; align-items: center; }
+.detalhe__icone {
+  grid-row: span 2;
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 2px;
+  background: linear-gradient(145deg, var(--ouro-claro), var(--ouro) 45%, #8a6425);
+  border-radius: 50%;
+}
+.detalhe__icone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.detalhe__nome { margin-bottom: 0.4rem; }
