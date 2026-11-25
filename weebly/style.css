@@ -1262,11 +1262,12 @@ body { font-size: 1rem; font-weight: 400; }
 /* ---------- Página de um deus (weebly/deuses.js) ---------- */
 
 .deus {
-  --largo: min(72rem, 100vw - 2rem);
+  /* dentro da coluna de conteúdo: mais largo que isto passa por baixo da moldura do tema */
+  --largo: min(60rem, 100%);
   --no-fundo: var(--purpura);
   --no-borda: var(--ouro);
   width: var(--largo);
-  margin: 0 0 4rem calc((100% - var(--largo)) / 2);
+  margin: 0 auto 4rem;
   color: var(--tinta);
 }
 
