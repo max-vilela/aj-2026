@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escolher ícones — árvore de habilidades</title>
+<style>
+  :root { color-scheme: dark; --borda: #3a3f4b; --ouro: #d8b45a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; display: grid; grid-template-columns: 22rem 1fr; height: 100vh;
+         font: 14px/1.4 system-ui, sans-serif; color: #e8e6e3; background: #14171d; }
+  h1 { margin: 0 0 .75rem; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ouro); }
+  aside { padding: 1rem; overflow-y: auto; border-right: 1px solid var(--borda); background: #1a1e26; }
+  main { display: flex; flex-direction: column; min-width: 0; }
+  .barra { display: flex; gap: .5rem; align-items: center; padding: 1rem; border-bottom: 1px solid var(--borda); }
+  input { flex: 1; padding: .55rem .7rem; color: inherit; background: #11141a; border: 1px solid var(--borda); border-radius: .3rem; }
+  button { padding: .5rem .8rem; cursor: pointer; color: inherit; background: #262c38; border: 1px solid var(--borda); border-radius: .3rem; }
+  button:hover { border-color: var(--ouro); }
+  .grade { flex: 1; overflow-y: auto; display: grid; gap: .5rem; padding: 1rem;
+           grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); align-content: start; }
+  .icone { position: relative; cursor: pointer; border: 1px solid transparent; border-radius: .3rem; }
+  .icone img { display: block; width: 100%; aspect-ratio: 1; border-radius: .3rem; }
+  .icone:hover { border-color: var(--ouro); }
+  .icone span { position: absolute; inset: auto 0 0; padding: 2px; font-size: 9px; text-align: center;
+                background: #000c; opacity: 0; }
+  .icone:hover span { opacity: 1; }
+  .hab { display: flex; gap: .6rem; align-items: center; width: 100%; margin-bottom: .3rem; padding: .35rem;
+         text-align: left; background: none; border: 1px solid transparent; }
+  .hab.atual { border-color: var(--ouro); background: #262c38; }
+  .hab i { display: grid; place-items: center; width: 40px; height: 40px; flex: none;
+           font-style: normal; color: #6b7280; background: #11141a; border: 1px solid var(--borda); border-radius: .3rem; }
+  .hab i img { width: 100%; border-radius: .3rem; }
+  .hab b { display: block; font-weight: 600; }
+  .hab small { color: #9aa3b2; }
+  .grupo { margin: 1rem 0 .4rem; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: #9aa3b2; }
+  .acoes { display: flex; gap: .5rem; margin-top: 1rem; }
+  textarea { width: 100%; height: 7rem; margin-top: .6rem; padding: .5rem; color: inherit;
+             background: #11141a; border: 1px solid var(--borda); border-radius: .3rem; font: 11px/1.4 monospace; }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Habilidades de Júpiter</h1>
+  <div id="lista"></div>
+  <div class="acoes">
+    <button id="copiar">Copiar JSON</button>
+    <button id="limpar">Limpar</button>
+  </div>
+  <textarea id="saida" readonly></textarea>
+</aside>
+<main>
+  <div class="barra">
+    <input id="busca" placeholder="Procurar ícone (ex.: lightning, storm, wind, eagle)" autofocus>
+    <span id="conta"></span>
+  </div>
+  <div class="grade" id="grade"></div>
+</main>
+<script>
+(async function () {
+  var deus = await (await fetch("jupiter.json")).json();
+  var arquivos = await (await fetch("catalogo/lista.json")).json();
+  var nomes = await (await fetch("catalogo/nomes.json")).json();
+  var habs = [];
+  ["passivas", "ativas"].forEach(function (t) {
+    deus[t].forEach(function (tier, i) {
+      tier.forEach(function (h) { habs.push({ id: h.id, nome: h.nome + (h.grau ? " " + h.grau : ""), tipo: t, servico: i }); });
+    });
+  });
+  var escolhas = JSON.parse(localStorage.getItem("icones-jupiter") || "{}");
+  var atual = habs[0].id;
+
+  function salvar() {
+    localStorage.setItem("icones-jupiter", JSON.stringify(escolhas));
+    document.getElementById("saida").value = JSON.stringify(escolhas, null, 2);
+  }
+
+  function desenharLista() {
+    var alvo = document.getElementById("lista");
+    alvo.textContent = "";
+    ["passivas", "ativas"].forEach(function (t) {
+      var tit = document.createElement("p");
+      tit.className = "grupo";
+      tit.textContent = t === "passivas" ? "Passivas" : "Ativas";
+      alvo.appendChild(tit);
+      habs.filter(function (h) { return h.tipo === t; }).forEach(function (h) {
+        var b = document.createElement("button");
+        b.className = "hab" + (h.id === atual ? " atual" : "");
+        var ic = document.createElement("i");
+        if (escolhas[h.id]) {
+          var im = document.createElement("img");
+          im.src = "catalogo/" + escolhas[h.id];
+          ic.appendChild(im);
+        } else ic.textContent = "?";
+        var txt = document.createElement("div");
+        var nome = document.createElement("b");
+        nome.textContent = h.nome;
+        var serv = document.createElement("small");
+        serv.textContent = deus.servicos[h.servico];
+        txt.appendChild(nome); txt.appendChild(serv);
+        b.appendChild(ic); b.appendChild(txt);
+        b.addEventListener("click", function () { atual = h.id; desenharLista(); });
+        alvo.appendChild(b);
+      });
+    });
+    salvar();
+  }
+
+  function desenharGrade(filtro) {
+    var f = (filtro || "").trim().toLowerCase();
+    var lista = f ? arquivos.filter(function (a) {
+      return (a + " " + (nomes[a] || "")).toLowerCase().indexOf(f) >= 0;
+    }) : arquivos;
+    document.getElementById("conta").textContent = lista.length + " ícones";
+    var g = document.getElementById("grade");
+    g.textContent = "";
+    lista.slice(0, 600).forEach(function (a) {
+      var d = document.createElement("div");
+      d.className = "icone";
+      var im = document.createElement("img");
+      im.src = "catalogo/" + a;
+      im.loading = "lazy";
+      var s = document.createElement("span");
+      s.textContent = (nomes[a] || "").split(" ").slice(0, 3).join(" ") || a.replace(".png", "");
+      d.title = a.replace(".png", "") + (nomes[a] ? " — " + nomes[a] : "");
+      d.appendChild(im); d.appendChild(s);
+      d.addEventListener("click", function () {
+        escolhas[atual] = a;
+        var i = habs.findIndex(function (h) { return h.id === atual; });
+        if (i >= 0 && i + 1 < habs.length) atual = habs[i + 1].id;
+        desenharLista();
+      });
+      g.appendChild(d);
+    });
+  }
+
+  document.getElementById("busca").addEventListener("input", function (e) { desenharGrade(e.target.value); });
+  document.getElementById("copiar").addEventListener("click", function () {
+    navigator.clipboard.writeText(JSON.stringify(escolhas, null, 2));
+    this.textContent = "Copiado!";
+    var b = this;
+    setTimeout(function () { b.textContent = "Copiar JSON"; }, 1500);
+  });
+  document.getElementById("limpar").addEventListener("click", function () {
+    if (confirm("Apagar todas as escolhas?")) { escolhas = {}; desenharLista(); }
+  });
+
+  desenharLista();
+  desenharGrade("");
+})();
+</script>
+</body>
+</html>
