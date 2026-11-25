@@ -1228,15 +1228,15 @@ body:has(.gaveta__toggle:checked) .gaveta__rodape { animation-delay: 0.46s; }
 /* ---------- Ajustes do Weebly ---------- */
 .conteudo { display: block; }
 
-/* ---------- Tipografia combinada em 12/10 ----------
-   Cinzel Decorative só no título principal, Cinzel nos títulos e menus, Libre Caslon Text no texto. */
+/* ---------- Tipografia ----------
+   Cinzel nos títulos e menus, Libre Caslon Text no texto. */
 :root { --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif; }
 body { font-size: 1rem; font-weight: 400; }
 .ano__titulo { font-family: var(--fonte-titulo); font-weight: 600; }
 .topo__titulo {
   padding-left: 0.06em;
-  font-family: "Cinzel Decorative", var(--fonte-titulo);
-  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
   font-size: clamp(1.4rem, 2.8vw, 2.5rem);
   letter-spacing: 0.06em;
 }

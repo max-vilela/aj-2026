@@ -61,15 +61,15 @@ const cssWeebly = `
 /* ---------- Ajustes do Weebly ---------- */
 .conteudo { display: block; }
 
-/* ---------- Tipografia combinada em 12/10 ----------
-   Cinzel Decorative só no título principal, Cinzel nos títulos e menus, Libre Caslon Text no texto. */
+/* ---------- Tipografia ----------
+   Cinzel nos títulos e menus, Libre Caslon Text no texto. */
 :root { --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif; }
 body { font-size: 1rem; font-weight: 400; }
 .ano__titulo { font-family: var(--fonte-titulo); font-weight: 600; }
 .topo__titulo {
   padding-left: 0.06em;
-  font-family: "Cinzel Decorative", var(--fonte-titulo);
-  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
   font-size: clamp(1.4rem, 2.8vw, 2.5rem);
   letter-spacing: 0.06em;
 }
@@ -146,7 +146,7 @@ scriptCarregamento = scriptCarregamento
 if (!scriptCarregamento.includes('window.location.replace("/inicio")')) throw new Error("redirect não encontrado");
 scriptCarregamento = scriptCarregamento.replace(
   /var fontes = \[[^\]]*\];/,
-  'var fontes = ["600 1em Cinzel", "700 1em \'Cinzel Decorative\'", "400 1em \'Libre Caslon Text\'", "italic 400 1em \'Libre Caslon Text\'"];'
+  'var fontes = ["600 1em Cinzel", "400 1em \'Libre Caslon Text\'", "italic 400 1em \'Libre Caslon Text\'"];'
 );
 scriptCarregamento = scriptCarregamento.replace(
   'window.location.replace("/inicio");',
@@ -186,7 +186,7 @@ corpo = corpo.replace("</h1>", '</h1>\n      <p class="topo__subtitulo">A Renasc
 const cabecaFontes = [
   '  <link rel="preconnect" href="https://fonts.googleapis.com">',
   '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
-  '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">',
+  '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">',
 ].join("\n");
 
 const montarTema = (css, js) => `<!DOCTYPE html>

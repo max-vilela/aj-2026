@@ -26,7 +26,7 @@ if (window.top === window.self) {
     var enderecos = principais.concat(anos.slice(0, ANOS_NA_ESPERA)).map(endereco)
       .filter(function (url, i, lista) { return url && lista.indexOf(url) === i; });
 
-    var fontes = ["600 1em Cinzel", "700 1em 'Cinzel Decorative'", "400 1em 'Libre Caslon Text'", "italic 400 1em 'Libre Caslon Text'"];
+    var fontes = ["600 1em Cinzel", "400 1em 'Libre Caslon Text'", "italic 400 1em 'Libre Caslon Text'"];
 
     var total = enderecos.length + fontes.length;
     var feitos = 0;
