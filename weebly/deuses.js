@@ -149,13 +149,60 @@
 
     var detalhe = criar("div", "arvore__detalhe");
     detalhe.setAttribute("aria-live", "polite");
+    /* A janela do detalhe cresce a partir do medalhão clicado e encolhe de volta para ele. */
+    var SUAVE = "cubic-bezier(0.165, 0.84, 0.44, 1)";
+    var ANIMA = !!detalhe.animate && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    var origem = null;
+    var animFundo = null;
+    var animCaixa = null;
+
+    function pararAnimacoes() {
+      if (animFundo) animFundo.cancel();
+      if (animCaixa) animCaixa.cancel();
+      animFundo = animCaixa = null;
+    }
+
+    /* transform que encolhe a janela até o lugar e o tamanho do medalhão de origem */
+    function sobreOrigem() {
+      if (!origem) return null;
+      var a = origem.getBoundingClientRect();
+      var b = detalhe.getBoundingClientRect();
+      if (!a.width || !b.width) return null;
+      return "translate(" + ((a.left + a.width / 2) - (b.left + b.width / 2)) + "px, " +
+        ((a.top + a.height / 2) - (b.top + b.height / 2)) + "px) scale(" + Math.max(a.width / b.width, 0.08) + ")";
+    }
+
+    function abrirAnimado() {
+      if (!ANIMA) return;
+      pararAnimacoes();
+      var de = sobreOrigem();
+      if (!de) return;
+      animFundo = janela.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 280, easing: SUAVE });
+      animCaixa = detalhe.animate(
+        [{ transform: de, opacity: 0 }, { transform: "none", opacity: 1 }],
+        { duration: 280, easing: SUAVE }
+      );
+    }
+
     /* o detalhe abre como janela por cima da árvore */
     var janela = criar("div", "arvore__janela");
     janela.hidden = true;
     detalhe.setAttribute("role", "dialog");
     janela.appendChild(detalhe);
     arvore.appendChild(janela);
-    function fechar() { estado.selecionada = null; atualizar(); }
+    function fechar() {
+      var acabar = function () { estado.selecionada = null; origem = null; atualizar(); };
+      var para = ANIMA && !janela.hidden ? sobreOrigem() : null;
+      if (!para) return acabar();
+      pararAnimacoes();
+      /* a saída é um pouco mais rápida que a entrada */
+      animFundo = janela.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, easing: SUAVE, fill: "forwards" });
+      animCaixa = detalhe.animate(
+        [{ transform: "none", opacity: 1 }, { transform: para, opacity: 0 }],
+        { duration: 220, easing: SUAVE, fill: "forwards" }
+      );
+      animFundo.onfinish = acabar;
+    }
     janela.addEventListener("click", function (e) { if (e.target === janela) fechar(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !janela.hidden) fechar(); });
 
@@ -204,6 +251,8 @@
 
     /* ---------- detalhe ---------- */
     function selecionar(id) {
+      var alvo = nos[id] && nos[id].botao;
+      origem = (alvo && alvo.querySelector(".no__icone")) || alvo;
       estado.selecionada = id;
       atualizar();
     }
@@ -213,8 +262,7 @@
       var n = nos[estado.selecionada];
       var estavaFechada = janela.hidden;
       janela.hidden = !n;
-      if (!n) { janela.classList.remove("arvore__janela--abrindo"); return; }
-      if (estavaFechada) { janela.classList.remove("arvore__janela--abrindo"); void janela.offsetWidth; janela.classList.add("arvore__janela--abrindo"); }
+      if (!n) return;
       detalhe.className = "arvore__detalhe";
       var x = criar("button", "detalhe__fechar", "×");
       x.type = "button";
@@ -259,6 +307,7 @@
         rodape.appendChild(criar("span", "detalhe__aviso", liberada ? "Já liberada com esses anos de serviço." : "Libera em: " + d.servicos[n.servico]));
       }
       detalhe.appendChild(rodape);
+      if (estavaFechada) abrirAnimado();
     }
 
     /* ---------- resumo ---------- */

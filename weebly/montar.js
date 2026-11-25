@@ -243,7 +243,7 @@ gravar("weebly/paginas/home.html", htmlHome);
 /* páginas dos deuses: um div com o JSON de dados + o script que monta a árvore */
 const DEUSES = ["jupiter"];
 const embedDeus = (id, base, estilo) => `<div class="deus"${estilo ? ` data-estilo="${estilo}"` : ""} data-fonte="${base}/deuses/${id}.json"></div>\n<script src="${base}/deuses.js"></script>\n`;
-for (const id of DEUSES) gravar("weebly/paginas/" + id + ".html", embedDeus(id, CDN));
+for (const id of DEUSES) gravar("weebly/paginas/" + id + ".html", embedDeus(id, CDN, "menu"));
 
 /* ---------- prévia local ---------- */
 const temaPrevia = montarTema("../style.css", "../site.js")
@@ -255,9 +255,7 @@ const previaPagina = (conteudo) => {
   return t;
 };
 for (const slug of SLUGS) gravar("weebly/preview/" + slug + ".html", previaPagina(conteudos[slug]));
-for (const id of DEUSES) gravar("weebly/preview/" + id + ".html", previaPagina(embedDeus(id, "..")));
-/* variante da árvore no estilo do menu (só prévia, para comparar) */
-gravar("weebly/preview/jupiter-menu.html", previaPagina(embedDeus("jupiter", "..", "menu")));
+for (const id of DEUSES) gravar("weebly/preview/" + id + ".html", previaPagina(embedDeus(id, "..", "menu")));
 const previaHome = previaPagina(
   htmlCarregamento + '\n<script>window.AJ_DESTINO = "/weebly/preview/inicio.html";</script>\n<script src="../carregamento.js"></script>'
 );

@@ -329,39 +329,7 @@
 
 .arvore__janela[hidden] { display: none; }
 
-/* Abertura: o fundo escurece, a janela sobe e cresce, e o brilho dourado da borda acende */
-.arvore__janela--abrindo { animation: janela-fundo 0.35s ease-out both; }
-.arvore__janela--abrindo .arvore__detalhe { animation: janela-entrada 0.5s cubic-bezier(0.2, 0.9, 0.25, 1.1) both; }
-.arvore__janela--abrindo .detalhe__cabeca,
-.arvore__janela--abrindo .detalhe__texto,
-.arvore__janela--abrindo .detalhe__rodape { animation: janela-texto 0.5s ease-out both; }
-.arvore__janela--abrindo .detalhe__cabeca { animation-delay: 0.12s; }
-.arvore__janela--abrindo .detalhe__texto { animation-delay: 0.2s; }
-.arvore__janela--abrindo .detalhe__rodape { animation-delay: 0.28s; }
-
-@keyframes janela-fundo {
-  from { opacity: 0; backdrop-filter: blur(0); }
-  to { opacity: 1; backdrop-filter: blur(2px); }
-}
-
-@keyframes janela-entrada {
-  0% { opacity: 0; transform: translateY(1.5rem) scale(0.92); box-shadow: inset 0 0 0 3px #fbf4e2, inset 0 0 0 4px var(--ouro), 0 0 0 rgb(220 193 131 / 0); }
-  60% { box-shadow: inset 0 0 0 3px #fbf4e2, inset 0 0 0 4px var(--ouro), 0 0 2.5rem rgb(220 193 131 / 0.8); }
-  100% { opacity: 1; transform: none; box-shadow: inset 0 0 0 3px #fbf4e2, inset 0 0 0 4px var(--ouro), 0 1.5rem 3rem -1rem rgb(20 8 25 / 0.7); }
-}
-
-@keyframes janela-texto {
-  from { opacity: 0; transform: translateY(0.6rem); }
-  to { opacity: 1; transform: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .arvore__janela--abrindo,
-  .arvore__janela--abrindo .arvore__detalhe,
-  .arvore__janela--abrindo .detalhe__cabeca,
-  .arvore__janela--abrindo .detalhe__texto,
-  .arvore__janela--abrindo .detalhe__rodape { animation: none; }
-}
+/* A abertura é animada em deuses.js, a partir do ícone clicado (API de animações do navegador). */
 
 .arvore__detalhe {
   position: relative;
@@ -644,3 +612,22 @@
 }
 .detalhe__icone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .detalhe__nome { margin-bottom: 0.4rem; }
+
+/* Habilidade escolhida: o medalhão ganha o aro duplo de uma moeda e um halo quente.
+   É o único destaque forte da árvore; o resto fica quieto. */
+.no__icone { transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.25s, opacity 0.25s; }
+
+.deus .no--selecionado .no__icone {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px #fbf4e2, 0 0 0 5px var(--ouro), 0 0 1.5rem rgb(220 193 131 / 0.8);
+}
+
+.deus[data-estilo="menu"] .no--selecionado .no__nome { color: var(--purpura); }
+.deus[data-estilo="menu"] .no--selecionado { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .no__icone { transition: none; }
+}
+
+/* o anel de foco do teclado tem de sobreviver ao estado "escolhida" */
+.deus[data-estilo="menu"] .no:focus-visible { outline: 2px solid var(--ouro-claro); outline-offset: 3px; }
