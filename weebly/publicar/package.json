@@ -1,0 +1,11 @@
+{
+  "name": "aj-publicar",
+  "private": true,
+  "description": "Publica o site do Acampamento Júpiter no Weebly com o Chrome, sem clicar à mão.",
+  "scripts": {
+    "publicar": "node publicar.js"
+  },
+  "dependencies": {
+    "playwright-core": "^1.49.0"
+  }
+}

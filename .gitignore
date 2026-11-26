@@ -7,3 +7,7 @@ weebly/preview/
 
 # Catalogo de icones baixado para escolher (fora do git)
 weebly/deuses/catalogo/
+
+# Perfil do Chrome usado para publicar (fora do git)
+weebly/publicar/perfil/
+weebly/publicar/node_modules/

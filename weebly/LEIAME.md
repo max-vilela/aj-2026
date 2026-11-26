@@ -27,7 +27,20 @@ Tudo aqui é gerado por `node weebly/montar.js` a partir do material de `tumblr/
 2. Commit e push.
 3. Ponha o hash do commit publicado em `TAG`, no topo de `montar.js`, e rode `node weebly/montar.js` de novo.
    O jsDelivr serve qualquer commit por hash, e hash não tem cache velho (tag antiga fica em cache para sempre).
-4. Cole `tema/no-header.html` nos dois arquivos do tema e os `paginas/*.html` que mudaram.
+4. Rode `node weebly/publicar/publicar.js`. Ele abre o Chrome, cola o tema nos dois arquivos,
+   corrige o endereço do CSS no Header Code, troca o código da página do Panteão e publica.
+
+## Publicar sem clicar
+
+- `npm install` dentro de `weebly/publicar/` na primeira vez (usa `playwright-core`, não baixa navegador).
+- `node weebly/publicar/publicar.js --conferir` só abre e diz o que encontrou, sem mudar nada.
+- `node weebly/publicar/publicar.js --sem-publicar` faz tudo menos apertar Publish.
+- O script usa o Chrome instalado, com um perfil próprio em `weebly/publicar/perfil/` (fora do git).
+  Na primeira vez a janela abre no login do Weebly: entre uma vez e a sessão fica guardada.
+  Como o perfil é separado, o seu Chrome do dia a dia pode continuar aberto.
+- Colar à mão continua possível, mas tem duas armadilhas: no editor de código do Weebly,
+  escrever por JavaScript não salva (tem que ser digitação ou Ctrl+V de verdade), e o PowerShell
+  lê arquivo UTF-8 como ANSI, o que quebra os acentos do site inteiro.
 
 ## Páginas dos deuses
 
