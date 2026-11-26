@@ -32,7 +32,7 @@
         "grau": "",
         "id": "impacto-forjado-p",
         "servico": 0,
-        "icone": "vulcano-impacto-forjado-p.png"
+        "icone": "vulcano-impacto-forjado-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "codigo-de-ligacao-p",
         "servico": 2,
-        "icone": "vulcano-codigo-de-ligacao-p.png"
+        "icone": "vulcano-codigo-de-ligacao-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "corpo-incandescente-p",
         "servico": 3,
-        "icone": "vulcano-corpo-incandescente-p.png"
+        "icone": "vulcano-corpo-incandescente-p.jpg"
       }
     ],
     [
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "ruptura-sismica-a",
         "servico": 1,
-        "icone": "vulcano-ruptura-sismica-a.png"
+        "icone": "vulcano-ruptura-sismica-a.jpg"
       },
       {
         "nome": "Boom!",
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "boom-a",
         "servico": 1,
-        "icone": "vulcano-boom-a.png"
+        "icone": "vulcano-boom-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "suor-de-combustao-a",
         "servico": 3,
-        "icone": "vulcano-suor-de-combustao-a.png"
+        "icone": "vulcano-suor-de-combustao-a.jpg"
       },
       {
         "nome": "Lâmina de Fundição",
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "lamina-de-fundicao-a",
         "servico": 3,
-        "icone": "vulcano-lamina-de-fundicao-a.png"
+        "icone": "vulcano-lamina-de-fundicao-a.jpg"
       }
     ],
     [],

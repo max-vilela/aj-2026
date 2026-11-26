@@ -24,7 +24,7 @@
         "grau": "",
         "id": "rosto-de-inocente-p",
         "servico": 0,
-        "icone": "laverna-rosto-de-inocente-p.png"
+        "icone": "laverna-rosto-de-inocente-p.jpg"
       },
       {
         "nome": "Farejar da Espreita",
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "dedos-ageis-p",
         "servico": 3,
-        "icone": "laverna-dedos-ageis-p.png"
+        "icone": "laverna-dedos-ageis-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "reflexo-falso-p",
         "servico": 5,
-        "icone": "laverna-reflexo-falso-p.png"
+        "icone": "laverna-reflexo-falso-p.jpg"
       }
     ]
   ],
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "maos-trocadas-a",
         "servico": 1,
-        "icone": "laverna-maos-trocadas-a.png"
+        "icone": "laverna-maos-trocadas-a.jpg"
       }
     ],
     [
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "divida-impagavel-a",
         "servico": 3,
-        "icone": "laverna-divida-impagavel-a.png"
+        "icone": "laverna-divida-impagavel-a.jpg"
       }
     ],
     [

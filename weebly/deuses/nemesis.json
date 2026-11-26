@@ -53,7 +53,7 @@
         "grau": "",
         "id": "escudo-da-equidade-p",
         "servico": 2,
-        "icone": "nemesis-escudo-da-equidade-p.png"
+        "icone": "nemesis-escudo-da-equidade-p.jpg"
       }
     ],
     [
@@ -97,7 +97,7 @@
         "grau": "",
         "id": "veredito-a",
         "servico": 1,
-        "icone": "nemesis-veredito-a.png"
+        "icone": "nemesis-veredito-a.jpg"
       },
       {
         "nome": "Adrasteia",
@@ -106,7 +106,7 @@
         "grau": "",
         "id": "adrasteia-a",
         "servico": 1,
-        "icone": "nemesis-adrasteia-a.png"
+        "icone": "nemesis-adrasteia-a.jpg"
       }
     ],
     [
@@ -137,7 +137,7 @@
         "grau": "",
         "id": "purgar-a",
         "servico": 3,
-        "icone": "nemesis-purgar-a.png"
+        "icone": "nemesis-purgar-a.jpg"
       }
     ],
     [

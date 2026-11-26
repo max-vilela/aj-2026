@@ -72,7 +72,7 @@
         "grau": "",
         "id": "estabilidade-tragica-p",
         "servico": 4,
-        "icone": "baco-estabilidade-tragica-p.png"
+        "icone": "baco-estabilidade-tragica-p.jpg"
       }
     ],
     [
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "muralha-de-ramos-a",
         "servico": 1,
-        "icone": "baco-muralha-de-ramos-a.png"
+        "icone": "baco-muralha-de-ramos-a.jpg"
       }
     ],
     [
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "explosao-de-sabor-a",
         "servico": 2,
-        "icone": "baco-explosao-de-sabor-a.png"
+        "icone": "baco-explosao-de-sabor-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "defrutum-a",
         "servico": 3,
-        "icone": "baco-defrutum-a.png"
+        "icone": "baco-defrutum-a.jpg"
       },
       {
         "nome": "Prensa de Cevadeira",
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "delirio-de-tirreno-a",
         "servico": 4,
-        "icone": "baco-delirio-de-tirreno-a.png"
+        "icone": "baco-delirio-de-tirreno-a.jpg"
       }
     ],
     [
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "open-bar-a",
         "servico": 5,
-        "icone": "baco-open-bar-a.png"
+        "icone": "baco-open-bar-a.jpg"
       }
     ]
   ]

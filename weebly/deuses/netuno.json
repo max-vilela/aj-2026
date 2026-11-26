@@ -63,7 +63,7 @@
         "grau": "",
         "id": "mestre-do-conves-p",
         "servico": 2,
-        "icone": "netuno-mestre-do-conves-p.png"
+        "icone": "netuno-mestre-do-conves-p.jpg"
       }
     ],
     [
@@ -73,7 +73,7 @@
         "grau": "",
         "id": "pulso-do-oceano-p",
         "servico": 3,
-        "icone": "netuno-pulso-do-oceano-p.png"
+        "icone": "netuno-pulso-do-oceano-p.jpg"
       }
     ],
     [
@@ -83,7 +83,7 @@
         "grau": "",
         "id": "olhar-de-tempestade-p",
         "servico": 4,
-        "icone": "netuno-olhar-de-tempestade-p.png"
+        "icone": "netuno-olhar-de-tempestade-p.jpg"
       }
     ],
     [
@@ -93,7 +93,7 @@
         "grau": "",
         "id": "pes-de-marujo-p",
         "servico": 5,
-        "icone": "netuno-pes-de-marujo-p.png"
+        "icone": "netuno-pes-de-marujo-p.jpg"
       }
     ]
   ],
@@ -106,7 +106,7 @@
         "grau": "",
         "id": "simbolo-dos-mares-a",
         "servico": 0,
-        "icone": "netuno-simbolo-dos-mares-a.png"
+        "icone": "netuno-simbolo-dos-mares-a.jpg"
       }
     ],
     [
@@ -117,7 +117,7 @@
         "grau": "I",
         "id": "hidrocinese-i-a",
         "servico": 1,
-        "icone": "netuno-hidrocinese-i-a.png"
+        "icone": "netuno-hidrocinese-i-a.jpg"
       },
       {
         "nome": "Terremoto",
@@ -157,7 +157,7 @@
         "grau": "III",
         "id": "hidrocinese-iii-a",
         "servico": 3,
-        "icone": "netuno-hidrocinese-iii-a.png"
+        "icone": "netuno-hidrocinese-iii-a.jpg"
       },
       {
         "nome": "Terremoto",
@@ -177,7 +177,7 @@
         "grau": "",
         "id": "fluxo-sem-fronteiras-a",
         "servico": 4,
-        "icone": "netuno-fluxo-sem-fronteiras-a.png"
+        "icone": "netuno-fluxo-sem-fronteiras-a.jpg"
       }
     ],
     [

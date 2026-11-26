@@ -32,7 +32,7 @@
         "grau": "",
         "id": "passos-de-sombra-p",
         "servico": 0,
-        "icone": "somnus-passos-de-sombra-p.png"
+        "icone": "somnus-passos-de-sombra-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "sono-pesado-p",
         "servico": 3,
-        "icone": "somnus-sono-pesado-p.png"
+        "icone": "somnus-sono-pesado-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "pesadelo-p",
         "servico": 5,
-        "icone": "somnus-pesadelo-p.png"
+        "icone": "somnus-pesadelo-p.jpg"
       }
     ]
   ],
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "lamina-adormecida-a",
         "servico": 1,
-        "icone": "somnus-lamina-adormecida-a.png"
+        "icone": "somnus-lamina-adormecida-a.jpg"
       }
     ],
     [
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "insonia-forcada-a",
         "servico": 3,
-        "icone": "somnus-insonia-forcada-a.png"
+        "icone": "somnus-insonia-forcada-a.jpg"
       }
     ],
     [
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "apneia-do-sono-a",
         "servico": 4,
-        "icone": "somnus-apneia-do-sono-a.png"
+        "icone": "somnus-apneia-do-sono-a.jpg"
       }
     ],
     [

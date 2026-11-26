@@ -24,7 +24,7 @@
         "grau": "",
         "id": "filho-da-noite-p",
         "servico": 0,
-        "icone": "hecate-filho-da-noite-p.png"
+        "icone": "hecate-filho-da-noite-p.jpg"
       },
       {
         "nome": "Biblioteca Ambulante",
@@ -32,7 +32,7 @@
         "grau": "",
         "id": "biblioteca-ambulante-p",
         "servico": 0,
-        "icone": "hecate-biblioteca-ambulante-p.png"
+        "icone": "hecate-biblioteca-ambulante-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "tres-rostos-p",
         "servico": 2,
-        "icone": "hecate-tres-rostos-p.png"
+        "icone": "hecate-tres-rostos-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "verdadeira-essencia-p",
         "servico": 4,
-        "icone": "hecate-verdadeira-essencia-p.png"
+        "icone": "hecate-verdadeira-essencia-p.jpg"
       }
     ],
     [
@@ -117,7 +117,7 @@
         "grau": "",
         "id": "mistiocinese-a",
         "servico": 2,
-        "icone": "hecate-mistiocinese-a.png"
+        "icone": "hecate-mistiocinese-a.jpg"
       }
     ],
     [
@@ -159,7 +159,7 @@
         "grau": "",
         "id": "deusa-menor-a",
         "servico": 5,
-        "icone": "hecate-deusa-menor-a.png"
+        "icone": "hecate-deusa-menor-a.jpg"
       }
     ]
   ]

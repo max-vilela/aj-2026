@@ -24,7 +24,7 @@
         "grau": "",
         "id": "maos-ferteis-p",
         "servico": 0,
-        "icone": "ceres-maos-ferteis-p.png"
+        "icone": "ceres-maos-ferteis-p.jpg"
       },
       {
         "nome": "Sussurro da Natureza",
@@ -32,7 +32,7 @@
         "grau": "",
         "id": "sussurro-da-natureza-p",
         "servico": 0,
-        "icone": "ceres-sussurro-da-natureza-p.png"
+        "icone": "ceres-sussurro-da-natureza-p.jpg"
       }
     ],
     [
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "sismonastia-p",
         "servico": 1,
-        "icone": "ceres-sismonastia-p.png"
+        "icone": "ceres-sismonastia-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "fotossintese-p",
         "servico": 2,
-        "icone": "ceres-fotossintese-p.png"
+        "icone": "ceres-fotossintese-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "ciclo-das-estacoes-p",
         "servico": 3,
-        "icone": "ceres-ciclo-das-estacoes-p.png"
+        "icone": "ceres-ciclo-das-estacoes-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "antidoto-natural-p",
         "servico": 5,
-        "icone": "ceres-antidoto-natural-p.png"
+        "icone": "ceres-antidoto-natural-p.jpg"
       }
     ]
   ],
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "karpoi-a",
         "servico": 1,
-        "icone": "ceres-karpoi-a.png"
+        "icone": "ceres-karpoi-a.jpg"
       },
       {
         "nome": "Teletransporte Natural",
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "abraco-da-terra-a",
         "servico": 2,
-        "icone": "ceres-abraco-da-terra-a.png"
+        "icone": "ceres-abraco-da-terra-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "semente-voraz-a",
         "servico": 3,
-        "icone": "ceres-semente-voraz-a.png"
+        "icone": "ceres-semente-voraz-a.jpg"
       },
       {
         "nome": "Muralha de Espinhos",
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "mae-natureza-a",
         "servico": 5,
-        "icone": "ceres-mae-natureza-a.png"
+        "icone": "ceres-mae-natureza-a.jpg"
       }
     ]
   ]

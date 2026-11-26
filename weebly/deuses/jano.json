@@ -43,7 +43,7 @@
         "grau": "",
         "id": "intuicao-afiada-p",
         "servico": 1,
-        "icone": "jano-intuicao-afiada-p.png"
+        "icone": "jano-intuicao-afiada-p.jpg"
       }
     ],
     [
@@ -53,7 +53,7 @@
         "grau": "",
         "id": "dupla-perspectiva-p",
         "servico": 2,
-        "icone": "jano-dupla-perspectiva-p.png"
+        "icone": "jano-dupla-perspectiva-p.jpg"
       }
     ],
     [
@@ -73,7 +73,7 @@
         "grau": "",
         "id": "pressagio-do-limiar-p",
         "servico": 4,
-        "icone": "jano-pressagio-do-limiar-p.png"
+        "icone": "jano-pressagio-do-limiar-p.jpg"
       }
     ],
     [
@@ -83,7 +83,7 @@
         "grau": "",
         "id": "senhor-dos-comecos-e-fins-p",
         "servico": 5,
-        "icone": "jano-senhor-dos-comecos-e-fins-p.png"
+        "icone": "jano-senhor-dos-comecos-e-fins-p.jpg"
       }
     ]
   ],
@@ -97,7 +97,7 @@
         "grau": "I",
         "id": "cara-i-a",
         "servico": 1,
-        "icone": "jano-cara-i-a.png"
+        "icone": "jano-cara-i-a.jpg"
       },
       {
         "nome": "Coroa",
@@ -117,7 +117,7 @@
         "grau": "",
         "id": "passo-entre-mundos-a",
         "servico": 2,
-        "icone": "jano-passo-entre-mundos-a.png"
+        "icone": "jano-passo-entre-mundos-a.jpg"
       }
     ],
     [
@@ -137,7 +137,7 @@
         "grau": "II",
         "id": "coroa-ii-a",
         "servico": 3,
-        "icone": "jano-coroa-ii-a.png"
+        "icone": "jano-coroa-ii-a.jpg"
       }
     ],
     [

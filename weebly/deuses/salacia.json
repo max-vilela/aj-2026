@@ -31,7 +31,7 @@
         "grau": "",
         "id": "pele-de-perola-p",
         "servico": 0,
-        "icone": "salacia-pele-de-perola-p.png"
+        "icone": "salacia-pele-de-perola-p.jpg"
       }
     ],
     [
@@ -51,7 +51,7 @@
         "grau": "",
         "id": "favor-das-correntes-p",
         "servico": 2,
-        "icone": "salacia-favor-das-correntes-p.png"
+        "icone": "salacia-favor-das-correntes-p.jpg"
       }
     ],
     [
@@ -61,7 +61,7 @@
         "grau": "",
         "id": "soberania-marinha-p",
         "servico": 3,
-        "icone": "salacia-soberania-marinha-p.png"
+        "icone": "salacia-soberania-marinha-p.jpg"
       }
     ],
     [
@@ -104,7 +104,7 @@
         "grau": "",
         "id": "visao-das-aguas-a",
         "servico": 1,
-        "icone": "salacia-visao-das-aguas-a.png"
+        "icone": "salacia-visao-das-aguas-a.jpg"
       }
     ],
     [
@@ -115,7 +115,7 @@
         "grau": "",
         "id": "fluxo-controlado-a",
         "servico": 2,
-        "icone": "salacia-fluxo-controlado-a.png"
+        "icone": "salacia-fluxo-controlado-a.jpg"
       }
     ],
     [
@@ -135,7 +135,7 @@
         "grau": "",
         "id": "bolha-sufocante-a",
         "servico": 3,
-        "icone": "salacia-bolha-sufocante-a.png"
+        "icone": "salacia-bolha-sufocante-a.jpg"
       }
     ],
     [
@@ -146,7 +146,7 @@
         "grau": "",
         "id": "tsunami-tatico-a",
         "servico": 4,
-        "icone": "salacia-tsunami-tatico-a.png"
+        "icone": "salacia-tsunami-tatico-a.jpg"
       }
     ],
     [

@@ -95,7 +95,7 @@
         "grau": "",
         "id": "beijo-de-amor-a",
         "servico": 1,
-        "icone": "venus-beijo-de-amor-a.png"
+        "icone": "venus-beijo-de-amor-a.jpg"
       },
       {
         "nome": "Olhar Envenenado",
@@ -104,7 +104,7 @@
         "grau": "",
         "id": "olhar-envenenado-a",
         "servico": 1,
-        "icone": "venus-olhar-envenenado-a.png"
+        "icone": "venus-olhar-envenenado-a.jpg"
       }
     ],
     [
@@ -157,7 +157,7 @@
         "grau": "",
         "id": "bencao-de-paris-a",
         "servico": 5,
-        "icone": "venus-bencao-de-paris-a.png"
+        "icone": "venus-bencao-de-paris-a.jpg"
       }
     ]
   ]

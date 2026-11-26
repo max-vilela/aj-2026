@@ -35,7 +35,7 @@
         "grau": "",
         "id": "nobreza-infernal-p",
         "servico": 0,
-        "icone": "plutao-nobreza-infernal-p.png"
+        "icone": "plutao-nobreza-infernal-p.jpg"
       },
       {
         "nome": "Aura Fúnebre",
@@ -43,7 +43,7 @@
         "grau": "",
         "id": "aura-funebre-p",
         "servico": 0,
-        "icone": "plutao-aura-funebre-p.png"
+        "icone": "plutao-aura-funebre-p.jpg"
       }
     ],
     [
@@ -63,7 +63,7 @@
         "grau": "",
         "id": "sensor-de-morte-p",
         "servico": 2,
-        "icone": "plutao-sensor-de-morte-p.png"
+        "icone": "plutao-sensor-de-morte-p.jpg"
       }
     ],
     [
@@ -83,7 +83,7 @@
         "grau": "",
         "id": "combustivel-do-caos-p",
         "servico": 4,
-        "icone": "plutao-combustivel-do-caos-p.png"
+        "icone": "plutao-combustivel-do-caos-p.jpg"
       }
     ],
     [
@@ -146,7 +146,7 @@
         "grau": "II",
         "id": "dominio-do-solo-ii-a",
         "servico": 2,
-        "icone": "plutao-dominio-do-solo-ii-a.png"
+        "icone": "plutao-dominio-do-solo-ii-a.jpg"
       }
     ],
     [
@@ -166,7 +166,7 @@
         "grau": "III",
         "id": "dominio-do-solo-iii-a",
         "servico": 3,
-        "icone": "plutao-dominio-do-solo-iii-a.png"
+        "icone": "plutao-dominio-do-solo-iii-a.jpg"
       }
     ],
     [
@@ -177,7 +177,7 @@
         "grau": "",
         "id": "umbracinese-a",
         "servico": 4,
-        "icone": "plutao-umbracinese-a.png"
+        "icone": "plutao-umbracinese-a.jpg"
       }
     ],
     [
@@ -188,7 +188,7 @@
         "grau": "",
         "id": "toque-do-ceifador-a",
         "servico": 5,
-        "icone": "plutao-toque-do-ceifador-a.png"
+        "icone": "plutao-toque-do-ceifador-a.jpg"
       }
     ]
   ]

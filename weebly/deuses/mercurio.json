@@ -24,7 +24,7 @@
         "grau": "",
         "id": "passo-leve-p",
         "servico": 0,
-        "icone": "mercurio-passo-leve-p.png"
+        "icone": "mercurio-passo-leve-p.jpg"
       },
       {
         "nome": "Passo Fluido",
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "tracao-aerodinamica-p",
         "servico": 3,
-        "icone": "mercurio-tracao-aerodinamica-p.png"
+        "icone": "mercurio-tracao-aerodinamica-p.jpg"
       }
     ],
     [
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "comando-de-centuria-a",
         "servico": 1,
-        "icone": "mercurio-comando-de-centuria-a.png"
+        "icone": "mercurio-comando-de-centuria-a.jpg"
       },
       {
         "nome": "Voo de Pilo",
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "foi-sem-querer-a",
         "servico": 2,
-        "icone": "mercurio-foi-sem-querer-a.png"
+        "icone": "mercurio-foi-sem-querer-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "transmutacao-vitrea-a",
         "servico": 3,
-        "icone": "mercurio-transmutacao-vitrea-a.png"
+        "icone": "mercurio-transmutacao-vitrea-a.jpg"
       },
       {
         "nome": "Câmbio Instantâneo",
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "sobrecarga-metabolica-a",
         "servico": 4,
-        "icone": "mercurio-sobrecarga-metabolica-a.png"
+        "icone": "mercurio-sobrecarga-metabolica-a.jpg"
       }
     ],
     [

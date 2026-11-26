@@ -32,7 +32,7 @@
         "grau": "",
         "id": "escultural-p",
         "servico": 0,
-        "icone": "victoria-escultural-p.png"
+        "icone": "victoria-escultural-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "veredito-da-vitoria-p",
         "servico": 3,
-        "icone": "victoria-veredito-da-vitoria-p.png"
+        "icone": "victoria-veredito-da-vitoria-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "alifero-ii-p",
         "servico": 4,
-        "icone": "victoria-alifero-ii-p.png"
+        "icone": "victoria-alifero-ii-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "a-vitoria-nao-aceita-contestacao-p",
         "servico": 5,
-        "icone": "victoria-a-vitoria-nao-aceita-contestacao-p.png"
+        "icone": "victoria-a-vitoria-nao-aceita-contestacao-p.jpg"
       }
     ]
   ],
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "asa-guardia-a",
         "servico": 2,
-        "icone": "victoria-asa-guardia-a.png"
+        "icone": "victoria-asa-guardia-a.jpg"
       }
     ],
     [
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "instante-da-vitoria-a",
         "servico": 3,
-        "icone": "victoria-instante-da-vitoria-a.png"
+        "icone": "victoria-instante-da-vitoria-a.jpg"
       }
     ],
     [
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "legiao-de-victoria-a",
         "servico": 4,
-        "icone": "victoria-legiao-de-victoria-a.png"
+        "icone": "victoria-legiao-de-victoria-a.jpg"
       }
     ],
     [
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "egide-do-invicto-a",
         "servico": 5,
-        "icone": "victoria-egide-do-invicto-a.png"
+        "icone": "victoria-egide-do-invicto-a.jpg"
       }
     ]
   ]

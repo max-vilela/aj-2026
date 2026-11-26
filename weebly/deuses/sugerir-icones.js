@@ -60,17 +60,35 @@ const TEMA = {
 const semAcento = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 const catalogo = Object.keys(nomes);
+/* O verbete do Dota traz nome + descrição longa; o do WoW traz só o nome. Sem separar os dois,
+   a descrição do Dota ganha sempre. Então o nome vale cheio e a descrição vale pouco. */
+const VERBETE = {};
+for (const arq of catalogo) {
+  const texto = (nomes[arq] || "").replace(/\s*\(WoW\)\s*$/, "");
+  const palavras = texto.split(" ");
+  VERBETE[arq] = {
+    nome: (arq.replace(/^wow-/, "").replace(/\.[a-z]+$/, "").replace(/_/g, " ") + " " + palavras.slice(0, 4).join(" ")).toLowerCase(),
+    desc: palavras.slice(4).join(" ").toLowerCase(),
+  };
+}
+
 function candidatos(palavras, usados) {
   const termos = palavras.split(" ").filter(Boolean);
   const pontos = [];
   for (const arq of catalogo) {
     if (usados.has(arq)) continue;
-    const alvo = (arq + " " + (nomes[arq] || "")).toLowerCase();
+    const v = VERBETE[arq];
     let p = 0;
-    termos.forEach((t, i) => { if (alvo.indexOf(t) >= 0) p += (termos.length - i); });
+    termos.forEach(function (t, i) {
+      const peso = termos.length - i;
+      if (v.nome.indexOf(t) >= 0) p += peso;
+      else if (v.desc.indexOf(t) >= 0) p += peso * 0.25;
+    });
     if (p > 0) pontos.push([p, arq]);
   }
-  pontos.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]));
+  /* em empate, fica com a arte do Dota: é maior (128px) que a do WoW (56px) */
+  const doDota = (f) => (f.indexOf("wow-") === 0 ? 1 : 0);
+  pontos.sort((a, b) => b[0] - a[0] || doDota(a[1]) - doDota(b[1]) || a[1].localeCompare(b[1]));
   return pontos.map((x) => x[1]);
 }
 
@@ -95,7 +113,7 @@ for (const id of lista) {
     if (!op.length) return;
     const escolhido = op[0];
     usados.add(escolhido);
-    const nomeArq = id + "-" + h.id + ".png";
+    const nomeArq = id + "-" + h.id + path.extname(escolhido);
     fs.copyFileSync(path.join(CATALOGO, escolhido), path.join(ICONES, nomeArq));
     h.icone = nomeArq;
     postos++;
