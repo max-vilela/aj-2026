@@ -35,7 +35,7 @@
         "grau": "",
         "id": "nobreza-infernal-p",
         "servico": 0,
-        "icone": "plutao-nobreza-infernal-p.jpg"
+        "icone": "plutao-nobreza-infernal-p.png"
       },
       {
         "nome": "Aura Fúnebre",
@@ -43,7 +43,7 @@
         "grau": "",
         "id": "aura-funebre-p",
         "servico": 0,
-        "icone": "plutao-aura-funebre-p.jpg"
+        "icone": "plutao-aura-funebre-p.png"
       }
     ],
     [
@@ -53,7 +53,7 @@
         "grau": "",
         "id": "detector-de-metais-p",
         "servico": 1,
-        "icone": "plutao-detector-de-metais-p.png"
+        "icone": "plutao-detector-de-metais-p.jpg"
       }
     ],
     [
@@ -63,7 +63,7 @@
         "grau": "",
         "id": "sensor-de-morte-p",
         "servico": 2,
-        "icone": "plutao-sensor-de-morte-p.jpg"
+        "icone": "plutao-sensor-de-morte-p.png"
       }
     ],
     [
@@ -83,7 +83,7 @@
         "grau": "",
         "id": "combustivel-do-caos-p",
         "servico": 4,
-        "icone": "plutao-combustivel-do-caos-p.jpg"
+        "icone": "plutao-combustivel-do-caos-p.png"
       }
     ],
     [
@@ -93,7 +93,7 @@
         "grau": "",
         "id": "corpo-do-abismo-p",
         "servico": 5,
-        "icone": "plutao-corpo-do-abismo-p.png"
+        "icone": "plutao-corpo-do-abismo-p.jpg"
       }
     ]
   ],
@@ -106,7 +106,7 @@
         "grau": "",
         "id": "viagem-nas-sombras-a",
         "servico": 0,
-        "icone": "plutao-viagem-nas-sombras-a.png"
+        "icone": "plutao-viagem-nas-sombras-a.jpg"
       }
     ],
     [
@@ -117,7 +117,7 @@
         "grau": "I",
         "id": "necromancia-i-a",
         "servico": 1,
-        "icone": "plutao-necromancia-i-a.png"
+        "icone": "plutao-necromancia-i-a.jpg"
       },
       {
         "nome": "Domínio do Solo",
@@ -137,7 +137,7 @@
         "grau": "II",
         "id": "necromancia-ii-a",
         "servico": 2,
-        "icone": "plutao-necromancia-ii-a.png"
+        "icone": "plutao-necromancia-ii-a.jpg"
       },
       {
         "nome": "Domínio do Solo",
@@ -146,7 +146,7 @@
         "grau": "II",
         "id": "dominio-do-solo-ii-a",
         "servico": 2,
-        "icone": "plutao-dominio-do-solo-ii-a.jpg"
+        "icone": "plutao-dominio-do-solo-ii-a.png"
       }
     ],
     [
@@ -166,7 +166,7 @@
         "grau": "III",
         "id": "dominio-do-solo-iii-a",
         "servico": 3,
-        "icone": "plutao-dominio-do-solo-iii-a.jpg"
+        "icone": "plutao-dominio-do-solo-iii-a.png"
       }
     ],
     [
@@ -177,7 +177,7 @@
         "grau": "",
         "id": "umbracinese-a",
         "servico": 4,
-        "icone": "plutao-umbracinese-a.jpg"
+        "icone": "plutao-umbracinese-a.png"
       }
     ],
     [
@@ -188,7 +188,7 @@
         "grau": "",
         "id": "toque-do-ceifador-a",
         "servico": 5,
-        "icone": "plutao-toque-do-ceifador-a.jpg"
+        "icone": "plutao-toque-do-ceifador-a.png"
       }
     ]
   ]

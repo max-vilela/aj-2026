@@ -24,7 +24,7 @@
         "grau": "",
         "id": "mente-de-artifice-p",
         "servico": 0,
-        "icone": "vulcano-mente-de-artifice-p.png"
+        "icone": "vulcano-mente-de-artifice-p.jpg"
       },
       {
         "nome": "Impacto Forjado",
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "corpo-incandescente-p",
         "servico": 3,
-        "icone": "vulcano-corpo-incandescente-p.jpg"
+        "icone": "vulcano-corpo-incandescente-p.png"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "aureola-de-fuligem-p",
         "servico": 4,
-        "icone": "vulcano-aureola-de-fuligem-p.png"
+        "icone": "vulcano-aureola-de-fuligem-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "reconhecimento-legitimo-p",
         "servico": 5,
-        "icone": "vulcano-reconhecimento-legitimo-p.png"
+        "icone": "vulcano-reconhecimento-legitimo-p.jpg"
       }
     ]
   ],
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "ruptura-sismica-a",
         "servico": 1,
-        "icone": "vulcano-ruptura-sismica-a.jpg"
+        "icone": "vulcano-ruptura-sismica-a.png"
       },
       {
         "nome": "Boom!",
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "boom-a",
         "servico": 1,
-        "icone": "vulcano-boom-a.jpg"
+        "icone": "vulcano-boom-a.png"
       }
     ],
     [
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "lamina-de-fundicao-a",
         "servico": 3,
-        "icone": "vulcano-lamina-de-fundicao-a.jpg"
+        "icone": "vulcano-lamina-de-fundicao-a.png"
       }
     ],
     [],
@@ -148,7 +148,7 @@
         "grau": "",
         "id": "nucleo-tormenta-a",
         "servico": 5,
-        "icone": "vulcano-nucleo-tormenta-a.png"
+        "icone": "vulcano-nucleo-tormenta-a.jpg"
       }
     ]
   ]

@@ -24,7 +24,7 @@
         "grau": "",
         "id": "arsenal-pratico-p",
         "servico": 0,
-        "icone": "marte-arsenal-pratico-p.jpg"
+        "icone": "marte-arsenal-pratico-p.png"
       },
       {
         "nome": "Sentido de Trincheira",
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "resiliencia-belica-p",
         "servico": 1,
-        "icone": "marte-resiliencia-belica-p.png"
+        "icone": "marte-resiliencia-belica-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "fibra-muscular-p",
         "servico": 2,
-        "icone": "marte-fibra-muscular-p.png"
+        "icone": "marte-fibra-muscular-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "presenca-de-comando-p",
         "servico": 3,
-        "icone": "marte-presenca-de-comando-p.png"
+        "icone": "marte-presenca-de-comando-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "corpo-renovado-p",
         "servico": 5,
-        "icone": "marte-corpo-renovado-p.png"
+        "icone": "marte-corpo-renovado-p.jpg"
       }
     ]
   ],
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "gatilho-belico-a",
         "servico": 1,
-        "icone": "marte-gatilho-belico-a.png"
+        "icone": "marte-gatilho-belico-a.jpg"
       },
       {
         "nome": "Corte da Falange",
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "corte-da-falange-a",
         "servico": 1,
-        "icone": "marte-corte-da-falange-a.jpg"
+        "icone": "marte-corte-da-falange-a.png"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "duelo-de-linha-a",
         "servico": 3,
-        "icone": "marte-duelo-de-linha-a.png"
+        "icone": "marte-duelo-de-linha-a.jpg"
       },
       {
         "nome": "Reivindicação da Arma",
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "reivindicacao-da-arma-a",
         "servico": 3,
-        "icone": "marte-reivindicacao-da-arma-a.png"
+        "icone": "marte-reivindicacao-da-arma-a.jpg"
       }
     ],
     [
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "legiao-ferrata-a",
         "servico": 5,
-        "icone": "marte-legiao-ferrata-a.jpg"
+        "icone": "marte-legiao-ferrata-a.png"
       }
     ]
   ]

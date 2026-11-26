@@ -24,7 +24,7 @@
         "grau": "",
         "id": "filho-da-noite-p",
         "servico": 0,
-        "icone": "hecate-filho-da-noite-p.jpg"
+        "icone": "hecate-filho-da-noite-p.png"
       },
       {
         "nome": "Biblioteca Ambulante",
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "passe-livre-do-submundo-p",
         "servico": 1,
-        "icone": "hecate-passe-livre-do-submundo-p.png"
+        "icone": "hecate-passe-livre-do-submundo-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "tres-rostos-p",
         "servico": 2,
-        "icone": "hecate-tres-rostos-p.jpg"
+        "icone": "hecate-tres-rostos-p.png"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "verdadeira-essencia-p",
         "servico": 4,
-        "icone": "hecate-verdadeira-essencia-p.jpg"
+        "icone": "hecate-verdadeira-essencia-p.png"
       }
     ],
     [
@@ -106,7 +106,7 @@
         "grau": "",
         "id": "viagem-nas-sombras-a",
         "servico": 1,
-        "icone": "hecate-viagem-nas-sombras-a.png"
+        "icone": "hecate-viagem-nas-sombras-a.jpg"
       }
     ],
     [
@@ -159,7 +159,7 @@
         "grau": "",
         "id": "deusa-menor-a",
         "servico": 5,
-        "icone": "hecate-deusa-menor-a.jpg"
+        "icone": "hecate-deusa-menor-a.png"
       }
     ]
   ]

@@ -41,7 +41,7 @@
         "grau": "",
         "id": "dinheiro-infinito-p",
         "servico": 1,
-        "icone": "fortuna-dinheiro-infinito-p.png"
+        "icone": "fortuna-dinheiro-infinito-p.jpg"
       }
     ],
     [
@@ -51,7 +51,7 @@
         "grau": "",
         "id": "ostentacao-fora-do-normal-p",
         "servico": 2,
-        "icone": "fortuna-ostentacao-fora-do-normal-p.png"
+        "icone": "fortuna-ostentacao-fora-do-normal-p.jpg"
       }
     ],
     [
@@ -61,7 +61,7 @@
         "grau": "",
         "id": "cashback-p",
         "servico": 3,
-        "icone": "fortuna-cashback-p.png"
+        "icone": "fortuna-cashback-p.jpg"
       }
     ],
     [
@@ -104,7 +104,7 @@
         "grau": "",
         "id": "moeda-ao-vento-a",
         "servico": 1,
-        "icone": "fortuna-moeda-ao-vento-a.png"
+        "icone": "fortuna-moeda-ao-vento-a.jpg"
       }
     ],
     [
@@ -115,7 +115,7 @@
         "grau": "",
         "id": "roleta-do-destino-a",
         "servico": 2,
-        "icone": "fortuna-roleta-do-destino-a.png"
+        "icone": "fortuna-roleta-do-destino-a.jpg"
       }
     ],
     [
@@ -135,7 +135,7 @@
         "grau": "",
         "id": "dia-de-sorte-a",
         "servico": 3,
-        "icone": "fortuna-dia-de-sorte-a.png"
+        "icone": "fortuna-dia-de-sorte-a.jpg"
       }
     ],
     [
@@ -157,7 +157,7 @@
         "grau": "",
         "id": "reacao-em-cadeia-a",
         "servico": 5,
-        "icone": "fortuna-reacao-em-cadeia-a.png"
+        "icone": "fortuna-reacao-em-cadeia-a.jpg"
       }
     ]
   ]

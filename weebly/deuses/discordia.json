@@ -32,7 +32,7 @@
         "grau": "",
         "id": "faca-na-manga-p",
         "servico": 0,
-        "icone": "discordia-faca-na-manga-p.png"
+        "icone": "discordia-faca-na-manga-p.jpg"
       }
     ],
     [
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "cada-um-por-si-p",
         "servico": 1,
-        "icone": "discordia-cada-um-por-si-p.png"
+        "icone": "discordia-cada-um-por-si-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "cabeca-dura-p",
         "servico": 2,
-        "icone": "discordia-cabeca-dura-p.png"
+        "icone": "discordia-cabeca-dura-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "eu-nao-disse-isso-p",
         "servico": 3,
-        "icone": "discordia-eu-nao-disse-isso-p.png"
+        "icone": "discordia-eu-nao-disse-isso-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "mae-dos-maus-p",
         "servico": 4,
-        "icone": "discordia-mae-dos-maus-p.png"
+        "icone": "discordia-mae-dos-maus-p.jpg"
       }
     ],
     [
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "aqui-seu-fraco-a",
         "servico": 1,
-        "icone": "discordia-aqui-seu-fraco-a.png"
+        "icone": "discordia-aqui-seu-fraco-a.jpg"
       },
       {
         "nome": "Presente da Mamãe",
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "dois-rostos-a",
         "servico": 2,
-        "icone": "discordia-dois-rostos-a.png"
+        "icone": "discordia-dois-rostos-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "palavra-de-caos-a",
         "servico": 3,
-        "icone": "discordia-palavra-de-caos-a.png"
+        "icone": "discordia-palavra-de-caos-a.jpg"
       },
       {
         "nome": "Cá e Acolá",
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "inquilino-a",
         "servico": 4,
-        "icone": "discordia-inquilino-a.png"
+        "icone": "discordia-inquilino-a.jpg"
       }
     ],
     [
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "maca-da-discordia-a",
         "servico": 5,
-        "icone": "discordia-maca-da-discordia-a.jpg"
+        "icone": "discordia-maca-da-discordia-a.png"
       }
     ]
   ]

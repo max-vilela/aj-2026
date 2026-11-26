@@ -25,7 +25,7 @@
         "grau": "",
         "id": "olhar-analitico-p",
         "servico": 0,
-        "icone": "nemesis-olhar-analitico-p.png"
+        "icone": "nemesis-olhar-analitico-p.jpg"
       },
       {
         "nome": "Sombra da Vingança",
@@ -43,7 +43,7 @@
         "grau": "",
         "id": "farejar-da-verdade-p",
         "servico": 1,
-        "icone": "nemesis-farejar-da-verdade-p.png"
+        "icone": "nemesis-farejar-da-verdade-p.jpg"
       }
     ],
     [
@@ -63,7 +63,7 @@
         "grau": "",
         "id": "resistencia-inabalavel-p",
         "servico": 3,
-        "icone": "nemesis-resistencia-inabalavel-p.png"
+        "icone": "nemesis-resistencia-inabalavel-p.jpg"
       }
     ],
     [
@@ -73,7 +73,7 @@
         "grau": "",
         "id": "balanca-cega-p",
         "servico": 4,
-        "icone": "nemesis-balanca-cega-p.png"
+        "icone": "nemesis-balanca-cega-p.jpg"
       }
     ],
     [
@@ -83,7 +83,7 @@
         "grau": "",
         "id": "percepcao-carmica-p",
         "servico": 5,
-        "icone": "nemesis-percepcao-carmica-p.png"
+        "icone": "nemesis-percepcao-carmica-p.jpg"
       }
     ]
   ],
@@ -117,7 +117,7 @@
         "grau": "",
         "id": "lei-de-taliao-a",
         "servico": 2,
-        "icone": "nemesis-lei-de-taliao-a.png"
+        "icone": "nemesis-lei-de-taliao-a.jpg"
       }
     ],
     [
@@ -128,7 +128,7 @@
         "grau": "",
         "id": "equacao-da-justica-a",
         "servico": 3,
-        "icone": "nemesis-equacao-da-justica-a.png"
+        "icone": "nemesis-equacao-da-justica-a.jpg"
       },
       {
         "nome": "Purgar",
@@ -137,7 +137,7 @@
         "grau": "",
         "id": "purgar-a",
         "servico": 3,
-        "icone": "nemesis-purgar-a.jpg"
+        "icone": "nemesis-purgar-a.png"
       }
     ],
     [
@@ -148,7 +148,7 @@
         "grau": "",
         "id": "corpo-em-silencio-a",
         "servico": 4,
-        "icone": "nemesis-corpo-em-silencio-a.png"
+        "icone": "nemesis-corpo-em-silencio-a.jpg"
       }
     ],
     [
@@ -159,7 +159,7 @@
         "grau": "",
         "id": "justo-retorno-a",
         "servico": 5,
-        "icone": "nemesis-justo-retorno-a.png"
+        "icone": "nemesis-justo-retorno-a.jpg"
       }
     ]
   ]

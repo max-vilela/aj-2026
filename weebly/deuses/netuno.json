@@ -35,7 +35,7 @@
         "grau": "",
         "id": "reverencia-das-ondas-p",
         "servico": 0,
-        "icone": "netuno-reverencia-das-ondas-p.png"
+        "icone": "netuno-reverencia-das-ondas-p.jpg"
       },
       {
         "nome": "Onda Viva",
@@ -43,7 +43,7 @@
         "grau": "",
         "id": "onda-viva-p",
         "servico": 0,
-        "icone": "netuno-onda-viva-p.png"
+        "icone": "netuno-onda-viva-p.jpg"
       }
     ],
     [
@@ -53,7 +53,7 @@
         "grau": "",
         "id": "mare-vital-p",
         "servico": 1,
-        "icone": "netuno-mare-vital-p.png"
+        "icone": "netuno-mare-vital-p.jpg"
       }
     ],
     [
@@ -63,7 +63,7 @@
         "grau": "",
         "id": "mestre-do-conves-p",
         "servico": 2,
-        "icone": "netuno-mestre-do-conves-p.jpg"
+        "icone": "netuno-mestre-do-conves-p.png"
       }
     ],
     [
@@ -93,7 +93,7 @@
         "grau": "",
         "id": "pes-de-marujo-p",
         "servico": 5,
-        "icone": "netuno-pes-de-marujo-p.jpg"
+        "icone": "netuno-pes-de-marujo-p.png"
       }
     ]
   ],
@@ -106,7 +106,7 @@
         "grau": "",
         "id": "simbolo-dos-mares-a",
         "servico": 0,
-        "icone": "netuno-simbolo-dos-mares-a.jpg"
+        "icone": "netuno-simbolo-dos-mares-a.png"
       }
     ],
     [
@@ -126,7 +126,7 @@
         "grau": "I",
         "id": "terremoto-i-a",
         "servico": 1,
-        "icone": "netuno-terremoto-i-a.png"
+        "icone": "netuno-terremoto-i-a.jpg"
       }
     ],
     [
@@ -157,7 +157,7 @@
         "grau": "III",
         "id": "hidrocinese-iii-a",
         "servico": 3,
-        "icone": "netuno-hidrocinese-iii-a.jpg"
+        "icone": "netuno-hidrocinese-iii-a.png"
       },
       {
         "nome": "Terremoto",
@@ -166,7 +166,7 @@
         "grau": "III",
         "id": "terremoto-iii-a",
         "servico": 3,
-        "icone": "netuno-terremoto-iii-a.png"
+        "icone": "netuno-terremoto-iii-a.jpg"
       }
     ],
     [

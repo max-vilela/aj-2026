@@ -52,7 +52,7 @@
         "grau": "",
         "id": "fotossintese-p",
         "servico": 2,
-        "icone": "ceres-fotossintese-p.jpg"
+        "icone": "ceres-fotossintese-p.png"
       }
     ],
     [
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "karpoi-a",
         "servico": 1,
-        "icone": "ceres-karpoi-a.jpg"
+        "icone": "ceres-karpoi-a.png"
       },
       {
         "nome": "Teletransporte Natural",
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "muralha-de-espinhos-a",
         "servico": 3,
-        "icone": "ceres-muralha-de-espinhos-a.png"
+        "icone": "ceres-muralha-de-espinhos-a.jpg"
       }
     ],
     [
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "ritmo-das-estacoes-a",
         "servico": 4,
-        "icone": "ceres-ritmo-das-estacoes-a.png"
+        "icone": "ceres-ritmo-das-estacoes-a.jpg"
       }
     ],
     [

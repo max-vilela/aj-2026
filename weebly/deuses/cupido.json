@@ -24,7 +24,7 @@
         "grau": "",
         "id": "beleza-que-ofusca-p",
         "servico": 0,
-        "icone": "cupido-beleza-que-ofusca-p.png"
+        "icone": "cupido-beleza-que-ofusca-p.jpg"
       },
       {
         "nome": "Presença Cativante",
@@ -32,7 +32,7 @@
         "grau": "",
         "id": "presenca-cativante-p",
         "servico": 0,
-        "icone": "cupido-presenca-cativante-p.png"
+        "icone": "cupido-presenca-cativante-p.jpg"
       }
     ],
     [
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "mira-do-desejo-p",
         "servico": 1,
-        "icone": "cupido-mira-do-desejo-p.png"
+        "icone": "cupido-mira-do-desejo-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "percepcao-emocional-p",
         "servico": 3,
-        "icone": "cupido-percepcao-emocional-p.png"
+        "icone": "cupido-percepcao-emocional-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "asas-do-amor-ii-p",
         "servico": 4,
-        "icone": "cupido-asas-do-amor-ii-p.png"
+        "icone": "cupido-asas-do-amor-ii-p.jpg"
       }
     ],
     [
@@ -96,7 +96,7 @@
         "grau": "I",
         "id": "ponta-dourada-i-a",
         "servico": 1,
-        "icone": "cupido-ponta-dourada-i-a.png"
+        "icone": "cupido-ponta-dourada-i-a.jpg"
       },
       {
         "nome": "Ponta de Chumbo",
@@ -105,7 +105,7 @@
         "grau": "I",
         "id": "ponta-de-chumbo-i-a",
         "servico": 1,
-        "icone": "cupido-ponta-de-chumbo-i-a.png"
+        "icone": "cupido-ponta-de-chumbo-i-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "II",
         "id": "ponta-dourada-ii-a",
         "servico": 3,
-        "icone": "cupido-ponta-dourada-ii-a.png"
+        "icone": "cupido-ponta-dourada-ii-a.jpg"
       },
       {
         "nome": "Ponta de Chumbo",
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "invisibilidade-erratica-a",
         "servico": 4,
-        "icone": "cupido-invisibilidade-erratica-a.png"
+        "icone": "cupido-invisibilidade-erratica-a.jpg"
       }
     ],
     [
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "espelho-de-cupido-a",
         "servico": 5,
-        "icone": "cupido-espelho-de-cupido-a.png"
+        "icone": "cupido-espelho-de-cupido-a.jpg"
       }
     ]
   ]

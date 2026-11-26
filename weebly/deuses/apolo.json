@@ -24,7 +24,7 @@
         "grau": "",
         "id": "solsticio-p",
         "servico": 0,
-        "icone": "apolo-solsticio-p.png"
+        "icone": "apolo-solsticio-p.jpg"
       },
       {
         "nome": "Alma de Artista",
@@ -32,7 +32,7 @@
         "grau": "",
         "id": "alma-de-artista-p",
         "servico": 0,
-        "icone": "apolo-alma-de-artista-p.png"
+        "icone": "apolo-alma-de-artista-p.jpg"
       }
     ],
     [
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "maos-de-cura-p",
         "servico": 1,
-        "icone": "apolo-maos-de-cura-p.png"
+        "icone": "apolo-maos-de-cura-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "olhar-de-piton-p",
         "servico": 4,
-        "icone": "apolo-olhar-de-piton-p.png"
+        "icone": "apolo-olhar-de-piton-p.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "arsenal-solar-a",
         "servico": 3,
-        "icone": "apolo-arsenal-solar-a.png"
+        "icone": "apolo-arsenal-solar-a.jpg"
       },
       {
         "nome": "Artista do Ano",
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "flecha-de-aquiles-a",
         "servico": 5,
-        "icone": "apolo-flecha-de-aquiles-a.jpg"
+        "icone": "apolo-flecha-de-aquiles-a.png"
       }
     ]
   ]

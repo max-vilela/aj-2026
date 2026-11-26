@@ -33,7 +33,7 @@
         "grau": "",
         "id": "ambidestria-p",
         "servico": 0,
-        "icone": "jano-ambidestria-p.png"
+        "icone": "jano-ambidestria-p.jpg"
       }
     ],
     [
@@ -63,7 +63,7 @@
         "grau": "",
         "id": "acesso-irrestrito-p",
         "servico": 3,
-        "icone": "jano-acesso-irrestrito-p.png"
+        "icone": "jano-acesso-irrestrito-p.jpg"
       }
     ],
     [
@@ -106,7 +106,7 @@
         "grau": "I",
         "id": "coroa-i-a",
         "servico": 1,
-        "icone": "jano-coroa-i-a.png"
+        "icone": "jano-coroa-i-a.jpg"
       }
     ],
     [
@@ -128,7 +128,7 @@
         "grau": "II",
         "id": "cara-ii-a",
         "servico": 3,
-        "icone": "jano-cara-ii-a.png"
+        "icone": "jano-cara-ii-a.jpg"
       },
       {
         "nome": "Coroa",
@@ -148,7 +148,7 @@
         "grau": "",
         "id": "ecos-do-tempo-a",
         "servico": 4,
-        "icone": "jano-ecos-do-tempo-a.png"
+        "icone": "jano-ecos-do-tempo-a.jpg"
       }
     ],
     [

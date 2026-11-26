@@ -24,7 +24,7 @@
         "grau": "",
         "id": "triagem-de-campanha-p",
         "servico": 0,
-        "icone": "esculapio-triagem-de-campanha-p.png"
+        "icone": "esculapio-triagem-de-campanha-p.jpg"
       },
       {
         "nome": "Herança Ofídica",
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "medicus-legionis-p",
         "servico": 1,
-        "icone": "esculapio-medicus-legionis-p.png"
+        "icone": "esculapio-medicus-legionis-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "anatomia-militar-p",
         "servico": 2,
-        "icone": "esculapio-anatomia-militar-p.png"
+        "icone": "esculapio-anatomia-militar-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "suporte-do-bastao-p",
         "servico": 3,
-        "icone": "esculapio-suporte-do-bastao-p.png"
+        "icone": "esculapio-suporte-do-bastao-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "homeostase-p",
         "servico": 4,
-        "icone": "esculapio-homeostase-p.png"
+        "icone": "esculapio-homeostase-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "renovacao-cutanea-p",
         "servico": 5,
-        "icone": "esculapio-renovacao-cutanea-p.png"
+        "icone": "esculapio-renovacao-cutanea-p.jpg"
       }
     ]
   ],
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "ecdise-a",
         "servico": 1,
-        "icone": "esculapio-ecdise-a.png"
+        "icone": "esculapio-ecdise-a.jpg"
       },
       {
         "nome": "Grilhões de Linho",
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "grilhoes-de-linho-a",
         "servico": 1,
-        "icone": "esculapio-grilhoes-de-linho-a.png"
+        "icone": "esculapio-grilhoes-de-linho-a.jpg"
       }
     ],
     [
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "resfolego-premium-a",
         "servico": 2,
-        "icone": "esculapio-resfolego-premium-a.png"
+        "icone": "esculapio-resfolego-premium-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "fiador-biologico-a",
         "servico": 3,
-        "icone": "esculapio-fiador-biologico-a.png"
+        "icone": "esculapio-fiador-biologico-a.jpg"
       },
       {
         "nome": "Área Restrita",
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "area-restrita-a",
         "servico": 3,
-        "icone": "esculapio-area-restrita-a.png"
+        "icone": "esculapio-area-restrita-a.jpg"
       }
     ],
     [
@@ -147,7 +147,7 @@
         "grau": "",
         "id": "pulsacao-traumatica-a",
         "servico": 4,
-        "icone": "esculapio-pulsacao-traumatica-a.png"
+        "icone": "esculapio-pulsacao-traumatica-a.jpg"
       }
     ],
     [

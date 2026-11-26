@@ -32,7 +32,7 @@
         "grau": "",
         "id": "passo-fluido-p",
         "servico": 0,
-        "icone": "mercurio-passo-fluido-p.png"
+        "icone": "mercurio-passo-fluido-p.jpg"
       }
     ],
     [
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "cinesia-celere-p",
         "servico": 1,
-        "icone": "mercurio-cinesia-celere-p.png"
+        "icone": "mercurio-cinesia-celere-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "astucia-do-trapaceiro-p",
         "servico": 2,
-        "icone": "mercurio-astucia-do-trapaceiro-p.png"
+        "icone": "mercurio-astucia-do-trapaceiro-p.jpg"
       }
     ],
     [
@@ -72,7 +72,7 @@
         "grau": "",
         "id": "vigor-do-mensageiro-p",
         "servico": 4,
-        "icone": "mercurio-vigor-do-mensageiro-p.png"
+        "icone": "mercurio-vigor-do-mensageiro-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "anatomia-invisivel-p",
         "servico": 5,
-        "icone": "mercurio-anatomia-invisivel-p.png"
+        "icone": "mercurio-anatomia-invisivel-p.jpg"
       }
     ]
   ],
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "voo-de-pilo-a",
         "servico": 1,
-        "icone": "mercurio-voo-de-pilo-a.png"
+        "icone": "mercurio-voo-de-pilo-a.jpg"
       }
     ],
     [
@@ -116,7 +116,7 @@
         "grau": "",
         "id": "foi-sem-querer-a",
         "servico": 2,
-        "icone": "mercurio-foi-sem-querer-a.jpg"
+        "icone": "mercurio-foi-sem-querer-a.png"
       }
     ],
     [
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "caibra-divina-a",
         "servico": 5,
-        "icone": "mercurio-caibra-divina-a.png"
+        "icone": "mercurio-caibra-divina-a.jpg"
       }
     ]
   ]

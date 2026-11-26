@@ -32,7 +32,7 @@
         "grau": "",
         "id": "passos-de-sombra-p",
         "servico": 0,
-        "icone": "somnus-passos-de-sombra-p.jpg"
+        "icone": "somnus-passos-de-sombra-p.png"
       }
     ],
     [
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "sono-restaurador-p",
         "servico": 1,
-        "icone": "somnus-sono-restaurador-p.png"
+        "icone": "somnus-sono-restaurador-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "pesadelo-p",
         "servico": 5,
-        "icone": "somnus-pesadelo-p.jpg"
+        "icone": "somnus-pesadelo-p.png"
       }
     ]
   ],
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "folego-do-sono-a",
         "servico": 1,
-        "icone": "somnus-folego-do-sono-a.png"
+        "icone": "somnus-folego-do-sono-a.jpg"
       },
       {
         "nome": "Lâmina Adormecida",
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "paralisia-do-sono-a",
         "servico": 3,
-        "icone": "somnus-paralisia-do-sono-a.png"
+        "icone": "somnus-paralisia-do-sono-a.jpg"
       },
       {
         "nome": "Insônia Forçada",
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "projecao-astral-a",
         "servico": 5,
-        "icone": "somnus-projecao-astral-a.png"
+        "icone": "somnus-projecao-astral-a.jpg"
       }
     ]
   ]

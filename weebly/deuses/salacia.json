@@ -23,7 +23,7 @@
         "grau": "",
         "id": "hidratacao-p",
         "servico": 0,
-        "icone": "salacia-hidratacao-p.png"
+        "icone": "salacia-hidratacao-p.jpg"
       },
       {
         "nome": "Pele de Pérola",
@@ -41,7 +41,7 @@
         "grau": "",
         "id": "folego-infinito-p",
         "servico": 1,
-        "icone": "salacia-folego-infinito-p.png"
+        "icone": "salacia-folego-infinito-p.jpg"
       }
     ],
     [
@@ -51,7 +51,7 @@
         "grau": "",
         "id": "favor-das-correntes-p",
         "servico": 2,
-        "icone": "salacia-favor-das-correntes-p.jpg"
+        "icone": "salacia-favor-das-correntes-p.png"
       }
     ],
     [
@@ -61,7 +61,7 @@
         "grau": "",
         "id": "soberania-marinha-p",
         "servico": 3,
-        "icone": "salacia-soberania-marinha-p.jpg"
+        "icone": "salacia-soberania-marinha-p.png"
       }
     ],
     [
@@ -71,7 +71,7 @@
         "grau": "",
         "id": "aura-de-pressao-p",
         "servico": 4,
-        "icone": "salacia-aura-de-pressao-p.png"
+        "icone": "salacia-aura-de-pressao-p.jpg"
       }
     ],
     [
@@ -81,7 +81,7 @@
         "grau": "",
         "id": "majestade-das-profundezas-p",
         "servico": 5,
-        "icone": "salacia-majestade-das-profundezas-p.png"
+        "icone": "salacia-majestade-das-profundezas-p.jpg"
       }
     ]
   ],
@@ -95,7 +95,7 @@
         "grau": "",
         "id": "eco-submerso-a",
         "servico": 1,
-        "icone": "salacia-eco-submerso-a.png"
+        "icone": "salacia-eco-submerso-a.jpg"
       },
       {
         "nome": "Visão das Águas",
@@ -146,7 +146,7 @@
         "grau": "",
         "id": "tsunami-tatico-a",
         "servico": 4,
-        "icone": "salacia-tsunami-tatico-a.jpg"
+        "icone": "salacia-tsunami-tatico-a.png"
       }
     ],
     [

@@ -24,7 +24,7 @@
         "grau": "",
         "id": "sejamos-justos-p",
         "servico": 0,
-        "icone": "victoria-sejamos-justos-p.png"
+        "icone": "victoria-sejamos-justos-p.jpg"
       },
       {
         "nome": "Escultural",
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "nada-de-trapacas-p",
         "servico": 1,
-        "icone": "victoria-nada-de-trapacas-p.png"
+        "icone": "victoria-nada-de-trapacas-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "alifero-p",
         "servico": 2,
-        "icone": "victoria-alifero-p.png"
+        "icone": "victoria-alifero-p.jpg"
       }
     ],
     [
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "coroa-de-louros-a",
         "servico": 1,
-        "icone": "victoria-coroa-de-louros-a.png"
+        "icone": "victoria-coroa-de-louros-a.jpg"
       },
       {
         "nome": "Laço Salvador",
@@ -105,7 +105,7 @@
         "grau": "",
         "id": "laco-salvador-a",
         "servico": 1,
-        "icone": "victoria-laco-salvador-a.png"
+        "icone": "victoria-laco-salvador-a.jpg"
       }
     ],
     [
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "impeto-celeste-a",
         "servico": 3,
-        "icone": "victoria-impeto-celeste-a.png"
+        "icone": "victoria-impeto-celeste-a.jpg"
       },
       {
         "nome": "Instante da Vitória",
@@ -136,7 +136,7 @@
         "grau": "",
         "id": "instante-da-vitoria-a",
         "servico": 3,
-        "icone": "victoria-instante-da-vitoria-a.jpg"
+        "icone": "victoria-instante-da-vitoria-a.png"
       }
     ],
     [

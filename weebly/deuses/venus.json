@@ -23,7 +23,7 @@
         "grau": "",
         "id": "aroma-irresistivel-p",
         "servico": 0,
-        "icone": "venus-aroma-irresistivel-p.png"
+        "icone": "venus-aroma-irresistivel-p.jpg"
       },
       {
         "nome": "Face Intocável",
@@ -31,7 +31,7 @@
         "grau": "",
         "id": "face-intocavel-p",
         "servico": 0,
-        "icone": "venus-face-intocavel-p.png"
+        "icone": "venus-face-intocavel-p.jpg"
       }
     ],
     [
@@ -41,7 +41,7 @@
         "grau": "",
         "id": "beleza-insuperavel-p",
         "servico": 1,
-        "icone": "venus-beleza-insuperavel-p.png"
+        "icone": "venus-beleza-insuperavel-p.jpg"
       }
     ],
     [
@@ -51,7 +51,7 @@
         "grau": "",
         "id": "linha-do-coracao-p",
         "servico": 2,
-        "icone": "venus-linha-do-coracao-p.png"
+        "icone": "venus-linha-do-coracao-p.jpg"
       }
     ],
     [
@@ -61,7 +61,7 @@
         "grau": "",
         "id": "elasticidade-venerea-p",
         "servico": 3,
-        "icone": "venus-elasticidade-venerea-p.png"
+        "icone": "venus-elasticidade-venerea-p.jpg"
       }
     ],
     [
@@ -71,7 +71,7 @@
         "grau": "",
         "id": "autoestima-inabalavel-p",
         "servico": 4,
-        "icone": "venus-autoestima-inabalavel-p.png"
+        "icone": "venus-autoestima-inabalavel-p.jpg"
       }
     ],
     [
@@ -115,7 +115,7 @@
         "grau": "",
         "id": "desgraca-estetica-a",
         "servico": 2,
-        "icone": "venus-desgraca-estetica-a.png"
+        "icone": "venus-desgraca-estetica-a.jpg"
       }
     ],
     [
@@ -126,7 +126,7 @@
         "grau": "",
         "id": "beijo-que-sara-a",
         "servico": 3,
-        "icone": "venus-beijo-que-sara-a.png"
+        "icone": "venus-beijo-que-sara-a.jpg"
       },
       {
         "nome": "Névoa Intoxicante",
@@ -146,7 +146,7 @@
         "grau": "",
         "id": "toque-anestesico-a",
         "servico": 4,
-        "icone": "venus-toque-anestesico-a.png"
+        "icone": "venus-toque-anestesico-a.jpg"
       }
     ],
     [

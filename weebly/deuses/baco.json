@@ -24,7 +24,7 @@
         "grau": "",
         "id": "metrica-do-banquete-p",
         "servico": 0,
-        "icone": "baco-metrica-do-banquete-p.png"
+        "icone": "baco-metrica-do-banquete-p.jpg"
       },
       {
         "nome": "Eterno Anfitrião",
@@ -42,7 +42,7 @@
         "grau": "",
         "id": "fisiologia-purificada-p",
         "servico": 1,
-        "icone": "baco-fisiologia-purificada-p.png"
+        "icone": "baco-fisiologia-purificada-p.jpg"
       }
     ],
     [
@@ -52,7 +52,7 @@
         "grau": "",
         "id": "efeito-sommelier-p",
         "servico": 2,
-        "icone": "baco-efeito-sommelier-p.png"
+        "icone": "baco-efeito-sommelier-p.jpg"
       }
     ],
     [
@@ -62,7 +62,7 @@
         "grau": "",
         "id": "termostato-divino-p",
         "servico": 3,
-        "icone": "baco-termostato-divino-p.png"
+        "icone": "baco-termostato-divino-p.jpg"
       }
     ],
     [
@@ -82,7 +82,7 @@
         "grau": "",
         "id": "eco-de-prata-p",
         "servico": 5,
-        "icone": "baco-eco-de-prata-p.png"
+        "icone": "baco-eco-de-prata-p.jpg"
       }
     ]
   ],
@@ -96,7 +96,7 @@
         "grau": "",
         "id": "bagaco-compacto-a",
         "servico": 1,
-        "icone": "baco-bagaco-compacto-a.png"
+        "icone": "baco-bagaco-compacto-a.jpg"
       },
       {
         "nome": "Muralha de Ramos",
@@ -127,7 +127,7 @@
         "grau": "",
         "id": "defrutum-a",
         "servico": 3,
-        "icone": "baco-defrutum-a.jpg"
+        "icone": "baco-defrutum-a.png"
       },
       {
         "nome": "Prensa de Cevadeira",
@@ -158,7 +158,7 @@
         "grau": "",
         "id": "open-bar-a",
         "servico": 5,
-        "icone": "baco-open-bar-a.jpg"
+        "icone": "baco-open-bar-a.png"
       }
     ]
   ]
