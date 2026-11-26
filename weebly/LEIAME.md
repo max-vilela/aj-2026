@@ -33,7 +33,11 @@ Tudo aqui é gerado por `node weebly/montar.js` a partir do material de `tumblr/
 
 - O conteúdo sai do Google Docs "AJ ★ Poderes" (uma aba por deus, ✅ = pronto para publicar).
 - `node weebly/deuses/importar-doc.js <texto.txt>` gera um JSON por deus e a `lista.json`.
-- `node weebly/deuses/sugerir-icones.js` dá o primeiro palpite de ícone (catálogo do Dota 2, fora do git).
+- O catálogo de ícones (fora do git) junta dois acervos: as habilidades do Dota 2 (128x128, CDN da Valve,
+  lista pelo `odota/dotaconstants`) e os ícones do WoW (56x56, `wow.zamimg.com`, lista pela tabela
+  `ManifestInterfaceData` do `wago.tools`). `node weebly/deuses/juntar-catalogo.js <pasta>` soma os do WoW,
+  com prefixo `wow-`, à `lista.json` e à `nomes.json` do catálogo.
+- `node weebly/deuses/sugerir-icones.js` dá o primeiro palpite de ícone a partir desse catálogo.
 - `weebly/deuses/escolher-icones.html` troca os ícones à mão; `aplicar-icones.js` grava a escolha.
 - No site é **uma página só**: `panteao.html?deus=netuno`. A janela do Panteão já aponta para cada deus.
 
