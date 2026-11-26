@@ -537,8 +537,9 @@ html.carregando .carregamento {
   text-transform: uppercase;
 }
 
+/* Com 12 itens o menu tem três linhas de quatro; a terceira só precisa de um respiro leve */
 .menu li:nth-child(n + 9):nth-child(-n + 12) {
-  margin-top: 1.1rem;
+  margin-top: 0.4rem;
 }
 
 .deuses a {
