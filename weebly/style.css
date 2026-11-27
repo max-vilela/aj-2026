@@ -542,11 +542,6 @@ html.carregando .carregamento {
   margin-top: 0.4rem;
 }
 
-/* Se sobrar um item solto na última linha, ele ocupa a faixa toda e fica centralizado */
-.menu li:nth-child(13):last-child {
-  grid-column: 1 / -1;
-  margin-top: 0.4rem;
-}
 
 .deuses a {
   color: var(--tinta);
@@ -1912,7 +1907,8 @@ body { font-size: 1rem; font-weight: 400; }
 
 /* ---------- Páginas de conteúdo (Mercado, Legados) ---------- */
 .pagina {
-  width: min(44rem, 100%);
+  /* mesma largura do texto das outras páginas: mais que isso passa por baixo da moldura */
+  width: min(36rem, 100%);
   margin: 0 auto 4rem;
   color: var(--tinta);
 }
