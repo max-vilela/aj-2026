@@ -542,12 +542,6 @@ html.carregando .carregamento {
   margin-top: 0.4rem;
 }
 
-/* Se sobrar um item solto na última linha, ele ocupa a faixa toda e fica centralizado */
-.menu li:nth-child(13):last-child {
-  grid-column: 1 / -1;
-  margin-top: 0.4rem;
-}
-
 .deuses a {
   color: var(--tinta);
   text-decoration: none;
