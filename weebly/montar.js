@@ -36,6 +36,7 @@ const PAGINAS = [
   ["cronologia", "Cronologia", ""],
   ["guias", "Guias", "Passo a passo para criar o personagem e começar a jogar."],
   ["legados", "Legados", "Quem são os legados e como suas linhagens funcionam no acampamento."],
+  ["mercado", "Mercado", "Perícias, vantagens e relíquias que os legionários podem adquirir."],
   ["coortes", "Coortes", "As cinco coortes da Duodécima Legião e o que cada uma representa."],
   ["senado", "Senado", "O Senado de Nova Roma, os pretores e as decisões que moldam o acampamento."],
   ["bestiario", "Bestiário", "Monstros e criaturas que ameaçam semideuses e legionários."],
@@ -77,7 +78,7 @@ body { font-size: 1rem; font-weight: 400; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }
 `;
-gravar("weebly/style.css", cssTumblr.trimEnd() + "\n\n/* ---------- Ajustes das páginas (Panteão em imagem, gaveta do menu) ---------- */\n" + cssExtra.trim() + "\n" + cssWeebly + "\n" + ler("weebly/deuses.css"));
+gravar("weebly/style.css", cssTumblr.trimEnd() + "\n\n/* ---------- Ajustes das páginas (Panteão em imagem, gaveta do menu) ---------- */\n" + cssExtra.trim() + "\n" + cssWeebly + "\n" + ler("weebly/deuses.css") + "\n" + ler("weebly/conteudo.css"));
 
 /* ---------- scripts ---------- */
 const siteJs = `/* Scripts compartilhados do site: marca a página atual no menu, fecha janelas com Esc,
@@ -170,7 +171,8 @@ for (const s of SLUGS) corpo = corpo.split('href="/' + s + '"').join('href="/' +
 corpo = corpo.split(' aria-current="page"').join("");
 /* Panteão: cada deus com habilidades prontas ganha link para a sua página */
 const NOME_DEUS = {};
-for (const id of JSON.parse(ler("weebly/deuses/lista.json"))) NOME_DEUS[JSON.parse(ler("weebly/deuses/" + id + ".json")).nome] = id;
+/* só os deuses liberados ganham link; os outros ficam no repositório mas fora do site */
+for (const id of JSON.parse(ler("weebly/deuses/publicados.json"))) NOME_DEUS[JSON.parse(ler("weebly/deuses/" + id + ".json")).nome] = id;
 corpo = corpo.replace(/<li><a href="#">(<img src="[^"]*"[^>]*><span>([^<]+)<\/span>)<\/a><\/li>/g,
   (todo, miolo, nome) => (NOME_DEUS[nome] ? `<li><a href="/panteao.html?deus=${NOME_DEUS[nome]}">${miolo}</a></li>` : todo));
 corpo = corpo.replace(/<!--[\s\S]*?-->\n?\s*/g, (m) => (m.includes("Janela do Panteão") || m.includes("gaveta") ? m : ""));
@@ -240,7 +242,10 @@ const listaCronologia = '<ol class="anais">' + olCronologia.miolo.split("\n").ma
 
 const conteudos = {};
 for (const [slug, titulo, descricao] of PAGINAS) {
-  conteudos[slug] = slug === "cronologia" ? listaCronologia : listaPlaceholder(titulo, descricao);
+  const pronto = path.join(RAIZ, "weebly/conteudo/" + slug + ".html");
+  conteudos[slug] = slug === "cronologia" ? listaCronologia
+    : fs.existsSync(pronto) ? '<div class="pagina">\n' + ler("weebly/conteudo/" + slug + ".html") + "</div>\n"
+    : listaPlaceholder(titulo, descricao);
   gravar("weebly/paginas/" + slug + ".html", conteudos[slug]);
 }
 const htmlHome = `${htmlCarregamento}
