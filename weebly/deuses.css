@@ -455,7 +455,7 @@
 }
 
 /* O Weebly impõe a fonte do tema (Quicksand) com !important dentro de #wsite-content. */
-#wsite-content .deus .deus__nome { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important; }
+#wsite-content .deus .deus__nome { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(1.8rem, 2.6vw, 2.1rem) !important; }
 #wsite-content .deus h3,
 #wsite-content .deus h4 { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; }
 #wsite-content .deus .arvore__titulo { font-size: clamp(1.5rem, 2.6vw, 2rem) !important; }
