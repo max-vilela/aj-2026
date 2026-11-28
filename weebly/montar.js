@@ -12,7 +12,7 @@ const fs = require("fs");
 const path = require("path");
 
 const RAIZ = path.resolve(__dirname, "..");
-const TAG = "3341de4daddf26e762346af44f9e5d1614021dd7";  /* commit publicado; o jsDelivr serve por hash */
+const TAG = "62e55bf7b51a8279232049baba905505b8441531";  /* commit publicado; o jsDelivr serve por hash */
 const CDN = "https://cdn.jsdelivr.net/gh/max-vilela/aj-2026@" + TAG + "/weebly";
 
 const ler = (p) => fs.readFileSync(path.join(RAIZ, p), "utf8").replace(/\r\n/g, "\n");
