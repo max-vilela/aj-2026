@@ -1,24 +1,15 @@
-/* ==========================================================
-   Cronologia do Acampamento Júpiter (HTML + CSS; JavaScript só na tela de carregamento)
-   ========================================================== */
-
 :root {
-  /* ===== IMAGENS (hospedadas no Imgur) =====
-     Para trocar uma imagem, cole o link direto dela (https://i.imgur.com/XXXXXXX.png).
-     Envie em PNG: o Imgur não aceita WEBP, e o PNG mantém o fundo transparente. */
-  --img-pergaminho: url("https://i.imgur.com/3TQae1q.png");          /* textura de pergaminho do fundo */
-  --img-topo: url("https://i.imgur.com/AY6yRCT.png");                /* panorama com os estandartes (céu branco) */
-  --img-brasao: url("https://i.imgur.com/AaWidyx.png");              /* brasão SPQR com coroa de louros */
-  --img-divisor: url("https://i.imgur.com/Hhe9OYt.png");             /* linha dourada com a águia */
-  --img-moldura: url("https://i.imgur.com/Ne8Mym7.png");             /* moldura dourada quadrada (1254 × 1254) */
-  --img-estandarte: url("https://i.imgur.com/ztYypx6.png");          /* estandarte SPQR (reserva nas molduras) */
-  --img-colunata-esq: url("https://i.imgur.com/Pu6sv7R.png");        /* colunata com estandarte, lado esquerdo */
-  --img-colunas-dir: url("https://i.imgur.com/xmTCqlN.png");         /* colunas com hera, lado direito */
-  --img-louro-esq: url("https://i.imgur.com/tRbSTZZ.png");           /* ramo de louro no lado esquerdo da imagem */
-  --img-louro-dir: url("https://i.imgur.com/4nwXAuS.png");           /* ramo de louro no lado direito da imagem */
+  --img-pergaminho: url("https://i.imgur.com/3TQae1q.png");
+  --img-topo: url("https://i.imgur.com/AY6yRCT.png");
+  --img-brasao: url("https://i.imgur.com/AaWidyx.png");
+  --img-divisor: url("https://i.imgur.com/Hhe9OYt.png");
+  --img-moldura: url("https://i.imgur.com/Ne8Mym7.png");
+  --img-estandarte: url("https://i.imgur.com/ztYypx6.png");
+  --img-colunata-esq: url("https://i.imgur.com/Pu6sv7R.png");
+  --img-colunas-dir: url("https://i.imgur.com/xmTCqlN.png");
+  --img-louro-esq: url("https://i.imgur.com/tRbSTZZ.png");
+  --img-louro-dir: url("https://i.imgur.com/4nwXAuS.png");
 
-  /* Ilustração de cada ano (imagens quadradas). Se trocar alguma por "none",
-     a moldura mostra o estandarte ou o brasão no lugar. */
   --img-2016: url("https://i.imgur.com/NkJP4TI.png");
   --img-2017: url("https://i.imgur.com/wI2SESb.png");
   --img-2018: url("https://i.imgur.com/py7lUQs.png");
@@ -31,7 +22,6 @@
   --img-2025: url("https://i.imgur.com/1sYZ7vh.png");
   --img-2026: url("https://i.imgur.com/HKu67Mj.png");
 
-  /* ===== CORES E FONTES ===== */
   --pergaminho: #f3e9d8;
   --tinta: #3d2e21;
   --tinta-suave: #76654f;
@@ -44,7 +34,7 @@
   --fonte-texto: "Cormorant Garamond", Garamond, Georgia, serif;
 
   --largura: 56rem;
-  /* Escala da moldura dourada (imagem de 1254 × 1254 px) */
+
   --m: 0.17;
 }
 
@@ -65,7 +55,6 @@ html {
   }
 }
 
-/* Layout fixo de desktop: abaixo dessa largura a página rola na horizontal */
 body {
   min-width: 62rem;
   margin: 0;
@@ -79,7 +68,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Pergaminho fixo atrás de tudo */
 body::before {
   content: "";
   position: fixed;
@@ -115,10 +103,8 @@ a:focus-visible {
   top: 1rem;
 }
 
-/* ---------- Tela de carregamento ---------- */
+/* tela de carregamento */
 
-/* Só aparece se o script ligar a classe "carregando" no <html>.
-   Sem JavaScript, o site abre direto. */
 .carregamento {
   position: fixed;
   inset: 0;
@@ -131,7 +117,9 @@ a:focus-visible {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.7s ease, visibility 0s 0.7s;
+  transition:
+    opacity 0.7s ease,
+    visibility 0s 0.7s;
 }
 
 html.carregando {
@@ -179,7 +167,6 @@ html.carregando .carregamento {
   transition: transform 0.35s ease-out;
 }
 
-/* Frase do universo de Rick Riordan que troca a cada poucos segundos */
 .carregamento__frase {
   display: grid;
   align-content: start;
@@ -229,7 +216,6 @@ html.carregando .carregamento {
     animation: pulsar 2.2s ease-in-out infinite;
   }
 
-  /* A entrada do topo só começa quando o site abre */
   html.carregando .topo__fundo,
   html.carregando .topo__ornamento,
   html.carregando .topo__titulo,
@@ -246,9 +232,8 @@ html.carregando .carregamento {
   }
 }
 
-/* ---------- Barra de rolagem ---------- */
+/* barra de rolagem */
 
-/* Chrome, Edge e Safari: trilho de pergaminho e puxador dourado com borda */
 ::-webkit-scrollbar {
   width: 14px;
   height: 14px;
@@ -274,7 +259,6 @@ html.carregando .carregamento {
   background: #efe3cc;
 }
 
-/* Firefox */
 @supports not selector(::-webkit-scrollbar) {
   html,
   .panteao__caixa {
@@ -283,7 +267,7 @@ html.carregando .carregamento {
   }
 }
 
-/* ---------- Botão de voltar ao topo ---------- */
+/* botão de voltar ao topo */
 
 .voltar-topo {
   position: fixed;
@@ -298,11 +282,16 @@ html.carregando .carregamento {
   text-decoration: none;
   background: rgb(255 250 238 / 0.92);
   border: 1px solid var(--ouro);
-  box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.7), 0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45);
-  transition: opacity 0.3s, translate 0.3s, color 0.2s, background-color 0.2s;
+  box-shadow:
+    inset 0 0 0 2px rgb(255 250 238 / 0.7),
+    0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45);
+  transition:
+    opacity 0.3s,
+    translate 0.3s,
+    color 0.2s,
+    background-color 0.2s;
 }
 
-/* Seta feita com duas bordas */
 .voltar-topo::before {
   content: "";
   width: 0.7rem;
@@ -319,16 +308,14 @@ html.carregando .carregamento {
   background: var(--purpura);
 }
 
-/* Escondido enquanto a página está no topo (o script liga a classe) */
 .voltar-topo.oculto {
   opacity: 0;
   translate: 0 1rem;
   pointer-events: none;
 }
 
-/* ---------- Laterais: louros e colunatas ---------- */
+/* laterais: louros e colunatas */
 
-/* Envolve a cronologia e o rodapé; as laterais começam abaixo do topo */
 .pagina {
   position: relative;
 }
@@ -337,12 +324,10 @@ html.carregando .carregamento {
   display: none;
 }
 
-/* Só aparecem quando sobra espaço dos lados do conteúdo */
 @media (min-width: 80rem) {
   .cenario {
-    /* Espaço livre de cada lado da coluna de conteúdo */
     --vao: calc((100vw - var(--largura)) / 2);
-    /* Colunatas: até 66% da tela, sem invadir demais o texto */
+
     --alto-colunata: min(66vh, (var(--vao) + 2rem) / 0.42);
     --alto-louro: min(52vh, 34rem);
 
@@ -354,7 +339,6 @@ html.carregando .carregamento {
     pointer-events: none;
   }
 
-  /* Palco do tamanho da tela que acompanha a rolagem */
   .cenario__palco {
     position: sticky;
     top: 0;
@@ -373,16 +357,14 @@ html.carregando .carregamento {
   .cenario__colunata--esq {
     left: 0;
     background: var(--img-colunata-esq) center / 100% 100% no-repeat;
-    mask-image:
-      linear-gradient(to right, #000 40%, transparent 72%),
+    mask-image: linear-gradient(to right, #000 40%, transparent 72%),
       linear-gradient(to bottom, transparent, #000 16%);
   }
 
   .cenario__colunata--dir {
     right: 0;
     background: var(--img-colunas-dir) center / 100% 100% no-repeat;
-    mask-image:
-      linear-gradient(to left, #000 50%, transparent 85%),
+    mask-image: linear-gradient(to left, #000 50%, transparent 85%),
       linear-gradient(to bottom, transparent, #000 16%);
   }
 
@@ -405,19 +387,17 @@ html.carregando .carregamento {
   }
 }
 
-/* ---------- Topo ---------- */
+/* topo */
 
-/* O título fica na faixa de céu, acima da cidade */
 .topo {
   position: relative;
   display: grid;
   place-items: start center;
-  min-height: clamp(15rem, 17.5vw, 24rem);
+  min-height: clamp(18.5rem, 22vw, 29rem);
   padding: clamp(1.75rem, 3.2vw, 3rem) 1rem 2rem;
   text-align: center;
 }
 
-/* O céu branco da imagem some no pergaminho com multiply */
 .topo__fundo {
   position: absolute;
   inset: 0;
@@ -458,7 +438,7 @@ html.carregando .carregamento {
 
 .topo__titulo {
   margin: 0;
-  padding-left: 0.1em; /* compensa o espaçamento após a última letra */
+  padding-left: 0.1em;
   font-family: var(--fonte-titulo);
   font-weight: 600;
   font-size: clamp(2rem, 4vw, 3.25rem);
@@ -479,16 +459,14 @@ html.carregando .carregamento {
   color: var(--tinta-suave);
 }
 
-/* ---------- Menu do site e lista de deuses ---------- */
+/* menu do site e lista de deuses */
 
-/* O portal é mais largo que a coluna da cronologia: deuses | menu | deuses */
 .portal {
   --largo: min(72rem, 100vw - 2rem);
   width: var(--largo);
   margin: 0 0 3.5rem calc((100% - var(--largo)) / 2);
 }
 
-/* Águia no centro de uma linha dourada, abrindo o menu */
 .menu__abertura {
   display: flex;
   align-items: center;
@@ -522,7 +500,6 @@ html.carregando .carregamento {
   border-image: linear-gradient(to right, transparent, var(--ouro), transparent) 1;
 }
 
-/* Menu enxuto: 4 colunas; as linhas 1-2 e 3-4 formam dois blocos */
 .menu ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -537,11 +514,6 @@ html.carregando .carregamento {
   text-transform: uppercase;
 }
 
-/* Com 12 itens o menu tem três linhas de quatro; a terceira só precisa de um respiro leve */
-.menu li:nth-child(n + 9):nth-child(-n + 12) {
-  margin-top: 0.4rem;
-}
-
 .deuses a {
   color: var(--tinta);
   text-decoration: none;
@@ -552,14 +524,17 @@ html.carregando .carregamento {
   color: var(--purpura);
 }
 
-/* Itens do menu: ao passar o mouse a palavra sobe um pouco, fica roxa e ganha uma barrinha dourada */
 .menu a {
   position: relative;
   display: inline-block;
   padding: 0.3rem 0.15rem 0.45rem;
   color: var(--tinta);
   text-decoration: none;
-  transition: color 0.25s, translate 0.25s, text-shadow 0.25s, letter-spacing 0.25s;
+  transition:
+    color 0.25s,
+    translate 0.25s,
+    text-shadow 0.25s,
+    letter-spacing 0.25s;
 }
 
 .menu a::after {
@@ -569,7 +544,14 @@ html.carregando .carregamento {
   right: 0;
   bottom: 0;
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--ouro) 20%, var(--ouro-claro) 50%, var(--ouro) 80%, transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--ouro) 20%,
+    var(--ouro-claro) 50%,
+    var(--ouro) 80%,
+    transparent
+  );
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.24, 1);
@@ -589,19 +571,16 @@ html.carregando .carregamento {
   transform: scaleX(1);
 }
 
-/* A página atual fica em roxo com a barrinha sempre acesa */
 .menu a[aria-current="page"] {
   color: var(--purpura);
 }
 
-/* Deuses: grupos com título e 2 nomes por linha */
 .deuses {
   display: grid;
   gap: 1.25rem;
   text-align: center;
 }
 
-/* Deuses: texto discreto, em itálico e minúsculas, só uma palavra de título */
 .deuses__titulo {
   display: block;
   margin: 0 0 0.35rem;
@@ -632,12 +611,10 @@ html.carregando .carregamento {
   color: var(--purpura);
 }
 
-/* Nome sozinho na última linha fica centralizado */
 .deuses li:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
 
-/* Menu sozinho no centro */
 .portal__corpo {
   display: block;
 }
@@ -647,7 +624,7 @@ html.carregando .carregamento {
   margin: 0 auto;
 }
 
-/* ---------- Botão Panteão: tabula ansata, a plaqueta romana com "orelhas" ---------- */
+/* botão Panteão: tabula ansata, a plaqueta romana com "orelhas" */
 
 .panteao {
   margin-top: 1.5rem;
@@ -674,7 +651,9 @@ html.carregando .carregamento {
   background: rgb(255 250 238 / 0.65);
   border: 1px solid var(--ouro);
   box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.6);
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
 .panteao__botao span {
@@ -713,9 +692,8 @@ html.carregando .carregamento {
   outline-offset: 4px;
 }
 
-/* ---------- Janela do Panteão ---------- */
+/* janela do Panteão */
 
-/* Fechada fica fora da página (display: none), então os estandartes só carregam ao abrir */
 .panteao__janela {
   display: none;
   position: fixed;
@@ -802,7 +780,6 @@ html:has(.panteao__toggle:checked) {
   clip-path: inset(50%);
 }
 
-/* Título de cada grupo: louro no meio de uma linha dourada e o nome embaixo */
 .pt-grupo + .pt-grupo,
 .pt-dupla {
   margin-top: 1.25rem;
@@ -858,7 +835,6 @@ html:has(.panteao__toggle:checked) {
   color: var(--purpura);
 }
 
-/* Fileira de estandartes: um ao lado do outro, com losangos dourados entre os nomes */
 .pt-fileira {
   --larg: 6.5rem;
   --vao: 1.6rem;
@@ -877,7 +853,6 @@ html:has(.panteao__toggle:checked) {
   --vao: 2.25rem;
 }
 
-/* Deuses menores em duas linhas de 8 */
 .pt-grupo--menores .pt-fileira {
   --larg: 6rem;
   --vao: 1.6rem;
@@ -906,7 +881,6 @@ html:has(.panteao__toggle:checked) {
   background: var(--ouro);
 }
 
-/* Estandartes alinhados pelo topo e nomes alinhados na base da fileira */
 .pt-fileira a {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -942,7 +916,6 @@ html:has(.panteao__toggle:checked) {
   color: var(--purpura);
 }
 
-/* Entidades e Seres lado a lado */
 .pt-dupla {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -957,7 +930,6 @@ html:has(.panteao__toggle:checked) {
   --larg: 5.5rem;
 }
 
-/* Entrada do topo: o título se fecha como uma inscrição */
 @media (prefers-reduced-motion: no-preference) {
   .topo__fundo {
     animation: assentar 2.2s cubic-bezier(0.22, 0.8, 0.24, 1) both;
@@ -1004,14 +976,13 @@ html:has(.panteao__toggle:checked) {
   }
 }
 
-/* ---------- Cronologia ---------- */
+/* cronologia */
 
 .cronologia {
   width: min(100% - 2rem, var(--largura));
   margin-inline: auto;
 }
 
-/* Águia isolada, recortada do divisor */
 .aguia {
   display: block;
   width: 6rem;
@@ -1026,13 +997,11 @@ html:has(.panteao__toggle:checked) {
   list-style: none;
 }
 
-/* Cada ano numa coluna central: título, ilustração e texto, todos na mesma largura */
 .ano {
   --coluna: 38rem;
   text-align: center;
 }
 
-/* Divisor com a águia entre um ano e outro */
 .ano + .ano::before {
   content: "";
   display: block;
@@ -1041,19 +1010,16 @@ html:has(.panteao__toggle:checked) {
   background: var(--img-divisor) center / min(100%, 42rem) auto no-repeat;
 }
 
-/* ---------- Moldura dourada ---------- */
+/* moldura dourada */
 
-/* A moldura por fora da imagem tem a mesma largura da coluna de texto */
 .quadro {
-  /* Imagem reserva enquanto a ilustração do ano não existir */
   --reserva: var(--img-estandarte) center 55% / auto 84% no-repeat;
 
   position: relative;
   width: calc(var(--coluna) - 2 * 121px * var(--m));
   aspect-ratio: 3 / 2;
   margin: calc(152px * var(--m)) auto calc(2rem + 152px * var(--m));
-  /* As artes são quadradas: o recorte 3:2 mostra a faixa indicada em --foco
-     (0% = topo da arte, 100% = base). Ajuste por ano no style do <figure>. */
+
   background:
     var(--ilustracao, none) var(--foco, 50% 35%) / cover no-repeat,
     var(--reserva),
@@ -1079,7 +1045,7 @@ html:has(.panteao__toggle:checked) {
   pointer-events: none;
 }
 
-/* ---------- Título e texto de cada ano ---------- */
+/* título e texto de cada ano */
 
 .ano__titulo {
   position: relative;
@@ -1088,7 +1054,7 @@ html:has(.panteao__toggle:checked) {
   padding-bottom: 0.85rem;
   font-family: var(--fonte-texto);
   font-weight: 700;
-  font-size: clamp(2.3rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 2.4vw, 1.9rem);
   font-variant-numeric: lining-nums;
   line-height: 1;
   color: var(--purpura);
@@ -1107,7 +1073,6 @@ html:has(.panteao__toggle:checked) {
   transition: width 0.5s cubic-bezier(0.22, 0.8, 0.24, 1);
 }
 
-/* Texto justificado, com hifenização para não abrir buracos entre as palavras */
 .ano__texto p {
   margin: 0 0 1em;
   text-align: justify;
@@ -1124,7 +1089,6 @@ html:has(.panteao__toggle:checked) {
   margin-inline: auto;
 }
 
-/* Ano escolhido no índice */
 .ano:target .ano__titulo {
   color: var(--purpura-viva);
 }
@@ -1133,7 +1097,7 @@ html:has(.panteao__toggle:checked) {
   width: 5.5rem;
 }
 
-/* ---------- Rodapé ---------- */
+/* rodapé */
 
 .rodape {
   padding: 4.5rem 1rem 3.5rem;
@@ -1163,88 +1127,383 @@ html:has(.panteao__toggle:checked) {
   text-decoration-color: var(--ouro);
 }
 
-/* ---------- Ajustes das páginas (Panteão em imagem, gaveta do menu) ---------- */
-/* Teste na /inicio: botão do Panteão como imagem (só esta página) */
-.panteao__botao--img { padding: 0; border: 0; background: none; box-shadow: none; line-height: 0; transition: transform 0.2s, filter 0.2s; }
-.panteao__botao--img::before, .panteao__botao--img::after { display: none; }
-.panteao__botao--img img { display: block; width: min(300px, 90vw); height: auto; }
-.panteao__botao--img:hover, .panteao__toggle:checked + .panteao__botao--img { background: none; transform: scale(1.03); filter: brightness(1.08); }
-/* Panteão no meio da linha divisória, como a águia do topo */
-.portal__corpo { padding-bottom: 0; border-bottom: 0; border-image: none; }
-.panteao { display: flex; align-items: center; gap: 0; }
-.panteao::before, .panteao::after { content: ""; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--ouro)); }
-.panteao::after { background: linear-gradient(to left, transparent, var(--ouro)); }
+/* ajustes das páginas */
 
-/* Menu em gaveta (protótipo): medalhão que aparece ao rolar e abre os links do site */
-.gaveta__toggle { position: absolute; width: 1px; height: 1px; opacity: 0; }
-.gaveta__botao { position: fixed; top: 1.75rem; left: 1.75rem; z-index: 85; width: 3.6rem; height: 3.6rem; border-radius: 50%; cursor: pointer; background: var(--img-brasao) center / 82% no-repeat, rgb(255 250 238 / 0.94); border: 1px solid var(--ouro); box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.7), 0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45); transition: opacity 0.3s, translate 0.3s, filter 0.2s; }
-.gaveta__botao:hover { filter: brightness(1.06) saturate(1.1); translate: 0 -2px; }
-.gaveta__toggle:focus-visible + .gaveta__botao { outline: 2px solid var(--purpura); outline-offset: 4px; }
-.gaveta__botao.oculto { opacity: 0; translate: 0 -1rem; pointer-events: none; }
-.gaveta__painel { position: fixed; inset: 0; z-index: 880; visibility: hidden; pointer-events: none; transition: visibility 0s 0.35s; }
-body:has(.gaveta__toggle:checked) .gaveta__painel { visibility: visible; pointer-events: auto; transition: none; }
-html:has(.gaveta__toggle:checked) { overflow: hidden; }
-.gaveta__fundo { position: absolute; inset: 0; cursor: pointer; background: rgb(28 10 34 / 0.6); backdrop-filter: blur(2px); opacity: 0; transition: opacity 0.3s; }
-body:has(.gaveta__toggle:checked) .gaveta__fundo { opacity: 1; }
-.gaveta__caixa { position: absolute; top: 0; bottom: 0; left: 0; display: flex; flex-direction: column; width: min(21rem, 88vw); overflow-y: auto; padding: 1.1rem 1.6rem 1rem; background: #f4ead8 var(--img-pergaminho) center / cover; border-right: 1px solid var(--ouro); box-shadow: inset -4px 0 0 rgb(244 234 216 / 0.9), inset -5px 0 0 rgb(176 135 58 / 0.45), 2rem 0 4rem -1rem rgb(20 8 25 / 0.6); translate: -100% 0; transition: translate 0.35s cubic-bezier(0.22, 0.8, 0.24, 1); }
-body:has(.gaveta__toggle:checked) .gaveta__caixa { translate: 0 0; }
-.gaveta__cabeca { display: flex; align-items: center; gap: 0.8rem; padding-right: 2.4rem; }
-.gaveta__brasao { flex: none; width: 2.2rem; height: 2.2rem; background: var(--img-brasao) center / contain no-repeat; }
-.gaveta__titulo { margin: 0; font-family: var(--fonte-titulo); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purpura); }
-.gaveta__subtitulo { margin: 0.1rem 0 0; font-family: var(--fonte-texto); font-style: italic; font-size: 0.78rem; color: var(--tinta-suave); }
-.gaveta__divisor { height: 1.1rem; margin: 0.6rem 0 0.7rem; background: var(--img-divisor) center / contain no-repeat; }
-.gaveta__rotulo { margin: 0.7rem 0 0.2rem; font-family: var(--fonte-titulo); font-size: 0.74rem; letter-spacing: 0.06em; color: var(--ouro); }
-.gaveta__secao:first-of-type .gaveta__rotulo { margin-top: 0; }
-.gaveta__rodape { margin: auto 0 0; padding-top: 0.7rem; text-align: center; font-family: var(--fonte-titulo); font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-suave); border-top: 1px solid transparent; border-image: linear-gradient(to right, transparent, var(--ouro), transparent) 1; }
-.gaveta__lista { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.05rem; }
-.gaveta__lista a, .gaveta__lista label { position: relative; cursor: pointer; display: block; padding: 0.18rem 0.7rem 0.18rem 0.9rem; font-family: var(--fonte-titulo); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--tinta); transition: color 0.2s, background-color 0.2s, padding-left 0.25s; }
-.gaveta__lista a::before, .gaveta__lista label::before { content: ""; position: absolute; left: 0; top: 20%; bottom: 20%; width: 2px; background: var(--ouro); transform: scaleY(0); transition: transform 0.3s; }
-.gaveta__lista a:hover, .gaveta__lista a:focus-visible, .gaveta__lista a[aria-current="page"], .gaveta__lista label:hover, .gaveta__lista label:focus-visible { color: var(--purpura); background: rgb(255 250 238 / 0.55); padding-left: 1.25rem; }
-.gaveta__lista a:hover::before, .gaveta__lista a:focus-visible::before, .gaveta__lista a[aria-current="page"]::before, .gaveta__lista label:hover::before, .gaveta__lista label:focus-visible::before { transform: scaleY(1); }
+.panteao__botao--img {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  line-height: 0;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+.panteao__botao--img::before,
+.panteao__botao--img::after {
+  display: none;
+}
+.panteao__botao--img img {
+  display: block;
+  width: min(300px, 90vw);
+  height: auto;
+}
+.panteao__botao--img:hover,
+.panteao__toggle:checked + .panteao__botao--img {
+  background: none;
+  transform: scale(1.03);
+  filter: brightness(1.08);
+}
 
-/* Ao abrir, os blocos do menu sobem em sequência */
+.portal__corpo {
+  padding-bottom: 0;
+  border-bottom: 0;
+  border-image: none;
+}
+.panteao {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.panteao::before,
+.panteao::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ouro));
+}
+.panteao::after {
+  background: linear-gradient(to left, transparent, var(--ouro));
+}
+
+.gaveta__toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.gaveta__botao {
+  position: fixed;
+  top: 1.75rem;
+  left: 1.75rem;
+  z-index: 85;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background:
+    var(--img-brasao) center / 82% no-repeat,
+    rgb(255 250 238 / 0.94);
+  border: 1px solid var(--ouro);
+  box-shadow:
+    inset 0 0 0 2px rgb(255 250 238 / 0.7),
+    0 0.5rem 1rem -0.4rem rgb(50 25 10 / 0.45);
+  transition:
+    opacity 0.3s,
+    translate 0.3s,
+    filter 0.2s;
+}
+.gaveta__botao:hover {
+  filter: brightness(1.06) saturate(1.1);
+  translate: 0 -2px;
+}
+.gaveta__toggle:focus-visible + .gaveta__botao {
+  outline: 2px solid var(--purpura);
+  outline-offset: 4px;
+}
+.gaveta__botao.oculto {
+  opacity: 0;
+  translate: 0 -1rem;
+  pointer-events: none;
+}
+.gaveta__painel {
+  position: fixed;
+  inset: 0;
+  z-index: 880;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s 0.35s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__painel {
+  visibility: visible;
+  pointer-events: auto;
+  transition: none;
+}
+html:has(.gaveta__toggle:checked) {
+  overflow: hidden;
+}
+.gaveta__fundo {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: rgb(28 10 34 / 0.6);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__fundo {
+  opacity: 1;
+}
+.gaveta__caixa {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(21rem, 88vw);
+  overflow-y: auto;
+  padding: 1.1rem 1.6rem 1rem;
+  background: #f4ead8 var(--img-pergaminho) center / cover;
+  border-right: 1px solid var(--ouro);
+  box-shadow:
+    inset -4px 0 0 rgb(244 234 216 / 0.9),
+    inset -5px 0 0 rgb(176 135 58 / 0.45),
+    2rem 0 4rem -1rem rgb(20 8 25 / 0.6);
+  translate: -100% 0;
+  transition: translate 0.35s cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+body:has(.gaveta__toggle:checked) .gaveta__caixa {
+  translate: 0 0;
+}
+.gaveta__cabeca {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-right: 2.4rem;
+}
+.gaveta__brasao {
+  flex: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: var(--img-brasao) center / contain no-repeat;
+}
+.gaveta__titulo {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--purpura);
+}
+.gaveta__subtitulo {
+  margin: 0.1rem 0 0;
+  font-family: var(--fonte-texto);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--tinta-suave);
+}
+.gaveta__divisor {
+  height: 1.1rem;
+  margin: 0.6rem 0 0.7rem;
+  background: var(--img-divisor) center / contain no-repeat;
+}
+.gaveta__rotulo {
+  margin: 0.7rem 0 0.2rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: var(--ouro);
+}
+.gaveta__secao:first-of-type .gaveta__rotulo {
+  margin-top: 0;
+}
+.gaveta__rodape {
+  margin: auto 0 0;
+  padding-top: 0.7rem;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--tinta-suave);
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent, var(--ouro), transparent) 1;
+}
+.gaveta__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.05rem;
+}
+.gaveta__lista a,
+.gaveta__lista label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding: 0.18rem 0.7rem 0.18rem 0.9rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--tinta);
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    padding-left 0.25s;
+}
+.gaveta__lista a::before,
+.gaveta__lista label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 2px;
+  background: var(--ouro);
+  transform: scaleY(0);
+  transition: transform 0.3s;
+}
+.gaveta__lista a:hover,
+.gaveta__lista a:focus-visible,
+.gaveta__lista a[aria-current="page"],
+.gaveta__lista label:hover,
+.gaveta__lista label:focus-visible {
+  color: var(--purpura);
+  background: rgb(255 250 238 / 0.55);
+  padding-left: 1.25rem;
+}
+.gaveta__lista a:hover::before,
+.gaveta__lista a:focus-visible::before,
+.gaveta__lista a[aria-current="page"]::before,
+.gaveta__lista label:hover::before,
+.gaveta__lista label:focus-visible::before {
+  transform: scaleY(1);
+}
+
 body:has(.gaveta__toggle:checked) .gaveta__cabeca,
 body:has(.gaveta__toggle:checked) .gaveta__divisor,
 body:has(.gaveta__toggle:checked) .gaveta__secao,
-body:has(.gaveta__toggle:checked) .gaveta__rodape { animation: gaveta-entra 0.4s cubic-bezier(0.2, 0, 0, 1) both; }
-body:has(.gaveta__toggle:checked) .gaveta__divisor { animation-delay: 0.06s; }
-body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(1) { animation-delay: 0.1s; }
-body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(2) { animation-delay: 0.16s; }
-body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(3) { animation-delay: 0.22s; }
-body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(4) { animation-delay: 0.28s; }
-body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(5) { animation-delay: 0.34s; }
-body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(6) { animation-delay: 0.4s; }
-body:has(.gaveta__toggle:checked) .gaveta__rodape { animation-delay: 0.46s; }
-@keyframes gaveta-entra { from { opacity: 0; transform: translateY(10px); filter: blur(3px); } to { opacity: 1; transform: none; filter: blur(0); } }
+body:has(.gaveta__toggle:checked) .gaveta__rodape {
+  animation: gaveta-entra 0.4s cubic-bezier(0.2, 0, 0, 1) both;
+}
+body:has(.gaveta__toggle:checked) .gaveta__divisor {
+  animation-delay: 0.06s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(2) {
+  animation-delay: 0.16s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(3) {
+  animation-delay: 0.22s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(4) {
+  animation-delay: 0.28s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(5) {
+  animation-delay: 0.34s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__secao:nth-of-type(6) {
+  animation-delay: 0.4s;
+}
+body:has(.gaveta__toggle:checked) .gaveta__rodape {
+  animation-delay: 0.46s;
+}
+@keyframes gaveta-entra {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
-  .gaveta__caixa { transition: none; }
+  .gaveta__caixa {
+    transition: none;
+  }
   body:has(.gaveta__toggle:checked) .gaveta__cabeca,
   body:has(.gaveta__toggle:checked) .gaveta__divisor,
   body:has(.gaveta__toggle:checked) .gaveta__secao,
-  body:has(.gaveta__toggle:checked) .gaveta__rodape { animation: none; }
+  body:has(.gaveta__toggle:checked) .gaveta__rodape {
+    animation: none;
+  }
 }
-/* Telas baixas: aperta o menu para tudo caber sem rolar */
+
 @media (max-height: 780px) {
-  .gaveta__caixa { padding: 0.8rem 1.4rem 0.7rem; }
-  .gaveta__brasao { width: 1.9rem; height: 1.9rem; }
-  .gaveta__titulo { font-size: 0.74rem; }
-  .gaveta__subtitulo { font-size: 0.72rem; }
-  .gaveta__divisor { height: 0.9rem; margin: 0.45rem 0 0.45rem; }
-  .gaveta__rotulo { margin: 0.5rem 0 0.1rem; font-size: 0.7rem; }
-  .gaveta__lista a, .gaveta__lista label { padding-top: 0.09rem; padding-bottom: 0.09rem; font-size: 0.76rem; }
-  .gaveta__rodape { padding-top: 0.5rem; font-size: 0.64rem; }
+  .gaveta__caixa {
+    padding: 0.8rem 1.4rem 0.7rem;
+  }
+  .gaveta__brasao {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+  .gaveta__titulo {
+    font-size: 0.74rem;
+  }
+  .gaveta__subtitulo {
+    font-size: 0.72rem;
+  }
+  .gaveta__divisor {
+    height: 0.9rem;
+    margin: 0.45rem 0 0.45rem;
+  }
+  .gaveta__rotulo {
+    margin: 0.5rem 0 0.1rem;
+    font-size: 0.7rem;
+  }
+  .gaveta__lista a,
+  .gaveta__lista label {
+    padding-top: 0.09rem;
+    padding-bottom: 0.09rem;
+    font-size: 0.76rem;
+  }
+  .gaveta__rodape {
+    padding-top: 0.5rem;
+    font-size: 0.64rem;
+  }
 }
-.gaveta__fechar { position: absolute; top: 0.9rem; right: 0.9rem; width: 2.2rem; height: 2.2rem; display: grid; place-items: center; cursor: pointer; font-size: 1.6rem; line-height: 1; color: var(--purpura); border: 1px solid var(--ouro); background: #f7efde; }
-.gaveta__fechar:hover { color: #f6ead0; background: var(--purpura); }
+.gaveta__fechar {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--purpura);
+  border: 1px solid var(--ouro);
+  background: #f7efde;
+}
+.gaveta__fechar:hover {
+  color: #f6ead0;
+  background: var(--purpura);
+}
 
-/* ---------- Ajustes do Weebly ---------- */
-.conteudo { display: block; }
+/* ajustes do Weebly */
+.conteudo {
+  display: block;
+}
 
-/* ---------- Tipografia ----------
-   Cinzel nos títulos e menus, Libre Caslon Text no texto. */
-:root { --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif; }
-body { font-size: 1rem; font-weight: 400; }
-.ano__titulo { font-family: var(--fonte-titulo); font-weight: 600; }
+.topo__ceu {
+  position: absolute;
+  inset: 0;
+  background: url("imagens/ceu-por-do-sol.webp") center 38% / cover no-repeat;
+  opacity: 0.7;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
+:root {
+  --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+}
+body {
+  font-size: 0.94rem;
+  font-weight: 400;
+}
+.ano__titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+}
 .topo__titulo {
   padding-left: 0.06em;
   font-family: var(--fonte-titulo);
@@ -1253,17 +1512,28 @@ body { font-size: 1rem; font-weight: 400; }
   letter-spacing: 0.06em;
 }
 
-/* O Weebly aplica a fonte do tema (Quicksand) com !important em tudo dentro de #wsite-content,
-   onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site. */
-#wsite-content .ano__titulo { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
-#wsite-content .ano__texto p { font-family: inherit !important; font-size: inherit !important; }
-.weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
-.weebly-rodape a { color: inherit; }
+#wsite-content .ano__titulo {
+  font-family: var(--fonte-titulo) !important;
+  font-weight: 600 !important;
+  font-size: clamp(1.6rem, 2.4vw, 1.9rem) !important;
+}
+#wsite-content .ano__texto p {
+  font-family: inherit !important;
+  font-size: inherit !important;
+}
+.weebly-rodape {
+  padding: 1rem 1rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--tinta-suave);
+}
+.weebly-rodape a {
+  color: inherit;
+}
 
-/* ---------- Página de um deus (weebly/deuses.js) ---------- */
+/* página de um deus */
 
 .deus {
-  /* dentro da coluna de conteúdo: mais largo que isto passa por baixo da moldura do tema */
   --largo: min(60rem, 100%);
   --no-fundo: var(--purpura);
   --no-borda: var(--ouro);
@@ -1272,9 +1542,10 @@ body { font-size: 1rem; font-weight: 400; }
   color: var(--tinta);
 }
 
-.deus > * { max-width: 100%; }
+.deus > * {
+  max-width: 100%;
+}
 
-/* Abertura: estandarte à esquerda, nome e domínios à direita */
 .deus__cabeca {
   display: flex;
   align-items: center;
@@ -1294,7 +1565,7 @@ body { font-size: 1rem; font-weight: 400; }
   margin: 0;
   font-family: var(--fonte-titulo);
   font-weight: 600;
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-size: clamp(1.8rem, 2.6vw, 2.1rem);
   line-height: 1.05;
   letter-spacing: 0.04em;
   color: var(--purpura);
@@ -1342,7 +1613,9 @@ body { font-size: 1rem; font-weight: 400; }
 }
 
 .deus__texto p:last-child,
-.deus__destaque p:last-child { margin-bottom: 0; }
+.deus__destaque p:last-child {
+  margin-bottom: 0;
+}
 
 .deus__destaque {
   max-width: 44rem;
@@ -1363,7 +1636,7 @@ body { font-size: 1rem; font-weight: 400; }
   color: var(--purpura);
 }
 
-/* ---------- Árvore de habilidades ---------- */
+/* árvore de habilidades */
 
 .arvore__titulo {
   margin: 0 0 0.5rem;
@@ -1401,7 +1674,9 @@ body { font-size: 1rem; font-weight: 400; }
   color: var(--tinta-suave);
 }
 
-.arvore__niveis { display: flex; }
+.arvore__niveis {
+  display: flex;
+}
 
 .arvore__nivel,
 .arvore__aba {
@@ -1416,13 +1691,19 @@ body { font-size: 1rem; font-weight: 400; }
   background: rgb(255 250 238 / 0.65);
   border: 1px solid var(--ouro);
   margin-left: -1px;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
-.arvore__nivel:first-child { margin-left: 0; }
+.arvore__nivel:first-child {
+  margin-left: 0;
+}
 
 .arvore__nivel:hover,
-.arvore__aba:hover { background: #fff6e0; }
+.arvore__aba:hover {
+  background: #fff6e0;
+}
 
 .arvore__nivel--ativo,
 .arvore__aba--ativa {
@@ -1431,11 +1712,16 @@ body { font-size: 1rem; font-weight: 400; }
 }
 
 .arvore__nivel--ativo:hover,
-.arvore__aba--ativa:hover { background: var(--purpura); }
+.arvore__aba--ativa:hover {
+  background: var(--purpura);
+}
 
-.arvore__abas { display: none; justify-content: center; margin-bottom: 1.5rem; }
+.arvore__abas {
+  display: none;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
 
-/* Grade: passivas | serviço | ativas. Cada serviço é uma linha, então os dois lados ficam alinhados. */
 .arvore__grade {
   position: relative;
   display: grid;
@@ -1457,10 +1743,14 @@ body { font-size: 1rem; font-weight: 400; }
   stroke: var(--ouro);
   stroke-width: 2;
   stroke-linejoin: round;
-  transition: stroke 0.3s, opacity 0.3s;
+  transition:
+    stroke 0.3s,
+    opacity 0.3s;
 }
 
-.arvore__linha--apagada { opacity: 0.25; }
+.arvore__linha--apagada {
+  opacity: 0.25;
+}
 
 .arvore__coluna {
   position: relative;
@@ -1508,7 +1798,6 @@ body { font-size: 1rem; font-weight: 400; }
   background: var(--ouro);
 }
 
-/* Habilidade (nó da árvore) */
 .no {
   position: relative;
   display: grid;
@@ -1528,11 +1817,19 @@ body { font-size: 1rem; font-weight: 400; }
   background: var(--no-fundo);
   border: 2px solid var(--no-borda);
   border-radius: 0.65rem;
-  box-shadow: inset 0 0 0 2px rgb(20 8 25 / 0.45), 0 0.35rem 0.8rem -0.35rem rgb(30 12 36 / 0.55);
-  transition: transform 0.2s, box-shadow 0.25s, opacity 0.25s, filter 0.25s;
+  box-shadow:
+    inset 0 0 0 2px rgb(20 8 25 / 0.45),
+    0 0.35rem 0.8rem -0.35rem rgb(30 12 36 / 0.55);
+  transition:
+    transform 0.2s,
+    box-shadow 0.25s,
+    opacity 0.25s,
+    filter 0.25s;
 }
 
-.no:hover { transform: translateY(-2px); }
+.no:hover {
+  transform: translateY(-2px);
+}
 
 .no:focus-visible,
 .no--selecionado {
@@ -1540,7 +1837,9 @@ body { font-size: 1rem; font-weight: 400; }
   outline-offset: 3px;
 }
 
-.no__nome { display: block; }
+.no__nome {
+  display: block;
+}
 
 .no__grau {
   display: block;
@@ -1566,11 +1865,16 @@ body { font-size: 1rem; font-weight: 400; }
   border-radius: 50%;
 }
 
-.no--marcado .no__marca { display: grid; }
+.no--marcado .no__marca {
+  display: grid;
+}
 
 .no--liberado,
 .no--marcado {
-  box-shadow: inset 0 0 0 2px rgb(20 8 25 / 0.45), 0 0 0 1px var(--ouro-claro), 0 0 1.1rem rgb(220 193 131 / 0.55);
+  box-shadow:
+    inset 0 0 0 2px rgb(20 8 25 / 0.45),
+    0 0 0 1px var(--ouro-claro),
+    0 0 1.1rem rgb(220 193 131 / 0.55);
 }
 
 .no--bloqueado {
@@ -1578,7 +1882,6 @@ body { font-size: 1rem; font-weight: 400; }
   filter: grayscale(0.55);
 }
 
-/* Detalhe da habilidade escolhida */
 .arvore__janela {
   position: fixed;
   inset: 0;
@@ -1590,9 +1893,9 @@ body { font-size: 1rem; font-weight: 400; }
   backdrop-filter: blur(2px);
 }
 
-.arvore__janela[hidden] { display: none; }
-
-/* A abertura é animada em deuses.js, a partir do ícone clicado (API de animações do navegador). */
+.arvore__janela[hidden] {
+  display: none;
+}
 
 .arvore__detalhe {
   position: relative;
@@ -1602,7 +1905,10 @@ body { font-size: 1rem; font-weight: 400; }
   padding: 1.6rem 1.9rem 1.7rem;
   background: #fbf4e2;
   border: 2px solid var(--ouro);
-  box-shadow: inset 0 0 0 3px #fbf4e2, inset 0 0 0 4px var(--ouro), 0 1.5rem 3rem -1rem rgb(20 8 25 / 0.7);
+  box-shadow:
+    inset 0 0 0 3px #fbf4e2,
+    inset 0 0 0 4px var(--ouro),
+    0 1.5rem 3rem -1rem rgb(20 8 25 / 0.7);
 }
 
 .detalhe__fechar {
@@ -1619,9 +1925,13 @@ body { font-size: 1rem; font-weight: 400; }
   border: 0;
 }
 
-.detalhe__fechar:hover { color: var(--ouro); }
+.detalhe__fechar:hover {
+  color: var(--ouro);
+}
 
-.detalhe__cabeca { margin-bottom: 0.9rem; }
+.detalhe__cabeca {
+  margin-bottom: 0.9rem;
+}
 
 .detalhe__nome {
   margin: 0 0 0.6rem;
@@ -1633,7 +1943,11 @@ body { font-size: 1rem; font-weight: 400; }
   color: var(--purpura);
 }
 
-.detalhe__chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.detalhe__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
 
 .chip {
   padding: 0.2rem 0.65rem;
@@ -1647,9 +1961,15 @@ body { font-size: 1rem; font-weight: 400; }
 }
 
 .chip--passivas,
-.chip--ativas { color: #f6ead0; background: var(--purpura); border-color: var(--purpura); }
+.chip--ativas {
+  color: #f6ead0;
+  background: var(--purpura);
+  border-color: var(--purpura);
+}
 
-.chip--tempo { color: var(--purpura); }
+.chip--tempo {
+  color: var(--purpura);
+}
 
 .detalhe__texto p {
   margin: 0 0 1em;
@@ -1658,7 +1978,9 @@ body { font-size: 1rem; font-weight: 400; }
   text-wrap: pretty;
 }
 
-.detalhe__texto p:last-child { margin-bottom: 0; }
+.detalhe__texto p:last-child {
+  margin-bottom: 0;
+}
 
 .detalhe__rodape {
   display: flex;
@@ -1686,50 +2008,107 @@ body { font-size: 1rem; font-weight: 400; }
   background: rgb(255 250 238 / 0.75);
   border: 1px solid var(--ouro);
   box-shadow: inset 0 0 0 2px rgb(255 250 238 / 0.6);
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
 .botao:hover:not(:disabled),
-.botao--ativo { color: #f6ead0; background: var(--purpura); }
+.botao--ativo {
+  color: #f6ead0;
+  background: var(--purpura);
+}
 
-.botao:disabled { opacity: 0.5; cursor: not-allowed; }
+.botao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
-.botao--discreto { border-color: transparent; background: transparent; box-shadow: none; text-decoration: underline; text-underline-offset: 0.3em; }
+.botao--discreto {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
 
-.botao--discreto:hover:not(:disabled) { color: var(--purpura); background: transparent; }
+.botao--discreto:hover:not(:disabled) {
+  color: var(--purpura);
+  background: transparent;
+}
 
-/* Telas estreitas: uma coluna por vez (Passivas | Ativas) */
 @media (max-width: 760px) {
-  .arvore__abas { display: flex; }
-  .arvore__grade { grid-template-columns: minmax(0, 1fr); row-gap: 2.2rem; }
+  .arvore__abas {
+    display: flex;
+  }
+  .arvore__grade {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2.2rem;
+  }
   .arvore__vazio,
-  .arvore__coluna { display: none; }
+  .arvore__coluna {
+    display: none;
+  }
   .arvore__grade[data-vista="passivas"] .arvore__celula--ativas,
-  .arvore__grade[data-vista="ativas"] .arvore__celula--passivas { display: none; }
-  .arvore__servico { justify-content: flex-start; padding-left: 0.2rem; }
-  .deus__cabeca { flex-direction: column; text-align: center; }
-  .deus__dominios { justify-content: center; }
+  .arvore__grade[data-vista="ativas"] .arvore__celula--passivas {
+    display: none;
+  }
+  .arvore__servico {
+    justify-content: flex-start;
+    padding-left: 0.2rem;
+  }
+  .deus__cabeca {
+    flex-direction: column;
+    text-align: center;
+  }
+  .deus__dominios {
+    justify-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .no,
-  .arvore__linha { transition: none; }
+  .arvore__linha {
+    transition: none;
+  }
 }
 
-/* O Weebly impõe a fonte do tema (Quicksand) com !important dentro de #wsite-content. */
-#wsite-content .deus .deus__nome { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important; }
+#wsite-content .deus .deus__nome {
+  font-family: var(--fonte-titulo) !important;
+  font-weight: 600 !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important;
+}
 #wsite-content .deus h3,
-#wsite-content .deus h4 { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; }
-#wsite-content .deus .arvore__titulo { font-size: clamp(1.5rem, 2.6vw, 2rem) !important; }
-#wsite-content .deus .deus__destaque h3 { font-size: 0.95rem !important; }
-#wsite-content .deus .arvore__coluna { font-size: clamp(0.95rem, 1.6vw, 1.2rem) !important; }
-#wsite-content .deus .detalhe__nome { font-size: 1.35rem !important; }
-#wsite-content .deus p { font-family: var(--fonte-texto) !important; font-size: inherit !important; }
-#wsite-content .deus .deus__titulo { font-size: 1.05rem !important; }
-#wsite-content .deus .arvore__ajuda { font-size: 0.95rem !important; }
-#wsite-content .deus .detalhe__aviso { font-size: 0.88rem !important; }
+#wsite-content .deus h4 {
+  font-family: var(--fonte-titulo) !important;
+  font-weight: 600 !important;
+}
+#wsite-content .deus .arvore__titulo {
+  font-size: clamp(1.5rem, 2.6vw, 2rem) !important;
+}
+#wsite-content .deus .deus__destaque h3 {
+  font-size: 0.95rem !important;
+}
+#wsite-content .deus .arvore__coluna {
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem) !important;
+}
+#wsite-content .deus .detalhe__nome {
+  font-size: 1.35rem !important;
+}
+#wsite-content .deus p {
+  font-family: var(--fonte-texto) !important;
+  font-size: inherit !important;
+}
+#wsite-content .deus .deus__titulo {
+  font-size: 1.05rem !important;
+}
+#wsite-content .deus .arvore__ajuda {
+  font-size: 0.95rem !important;
+}
+#wsite-content .deus .detalhe__aviso {
+  font-size: 0.88rem !important;
+}
 
-/* Ilustração do deus: mesma moldura dourada das páginas, em 16:9 */
 .deus .quadro--deus {
   --foco: 50% 50%;
   width: min(34rem, calc(100% - 4rem));
@@ -1737,7 +2116,7 @@ body { font-size: 1rem; font-weight: 400; }
   margin: 2.5rem auto 3.5rem;
 }
 
-/* ---------- Variante "menu": a árvore no estilo do menu do site (data-estilo="menu") ---------- */
+/* variante "menu": a árvore no estilo do menu do site */
 .deus[data-estilo="menu"] .no {
   width: auto;
   min-width: 8.5rem;
@@ -1750,7 +2129,11 @@ body { font-size: 1rem; font-weight: 400; }
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  transition: color 0.25s, translate 0.25s, letter-spacing 0.25s, opacity 0.25s;
+  transition:
+    color 0.25s,
+    translate 0.25s,
+    letter-spacing 0.25s,
+    opacity 0.25s;
 }
 
 .deus[data-estilo="menu"] .no::after {
@@ -1760,31 +2143,67 @@ body { font-size: 1rem; font-weight: 400; }
   right: 0;
   bottom: 0;
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--ouro) 20%, var(--ouro-claro) 50%, var(--ouro) 80%, transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--ouro) 20%,
+    var(--ouro-claro) 50%,
+    var(--ouro) 80%,
+    transparent
+  );
   scale: 0.45 1;
   opacity: 0.55;
-  transition: scale 0.25s, opacity 0.25s;
+  transition:
+    scale 0.25s,
+    opacity 0.25s;
 }
 
-.deus[data-estilo="menu"] .no:hover { transform: none; translate: 0 -2px; color: var(--purpura); letter-spacing: 0.1em; }
-.deus[data-estilo="menu"] .no:hover::after { scale: 1 1; opacity: 1; }
+.deus[data-estilo="menu"] .no:hover {
+  transform: none;
+  translate: 0 -2px;
+  color: var(--purpura);
+  letter-spacing: 0.1em;
+}
+.deus[data-estilo="menu"] .no:hover::after {
+  scale: 1 1;
+  opacity: 1;
+}
 
-.deus[data-estilo="menu"] .no__grau { color: var(--ouro); letter-spacing: 0.2em; }
+.deus[data-estilo="menu"] .no__grau {
+  color: var(--ouro);
+  letter-spacing: 0.2em;
+}
 
 .deus[data-estilo="menu"] .no--liberado,
-.deus[data-estilo="menu"] .no--marcado { box-shadow: none; }
+.deus[data-estilo="menu"] .no--marcado {
+  box-shadow: none;
+}
 
-.deus[data-estilo="menu"] .no--liberado::after { opacity: 0.85; scale: 0.75 1; }
+.deus[data-estilo="menu"] .no--liberado::after {
+  opacity: 0.85;
+  scale: 0.75 1;
+}
 
 .deus[data-estilo="menu"] .no--marcado,
-.deus[data-estilo="menu"] .no--selecionado { color: var(--purpura); }
+.deus[data-estilo="menu"] .no--selecionado {
+  color: var(--purpura);
+}
 
 .deus[data-estilo="menu"] .no--marcado::after,
-.deus[data-estilo="menu"] .no--selecionado::after { scale: 1 1; opacity: 1; background: linear-gradient(to right, transparent, var(--purpura) 20%, var(--purpura) 80%, transparent); }
+.deus[data-estilo="menu"] .no--selecionado::after {
+  scale: 1 1;
+  opacity: 1;
+  background: linear-gradient(to right, transparent, var(--purpura) 20%, var(--purpura) 80%, transparent);
+}
 
-.deus[data-estilo="menu"] .no--selecionado { outline: 0; }
+.deus[data-estilo="menu"] .no--selecionado {
+  outline: 0;
+}
 
-.deus[data-estilo="menu"] .no--bloqueado { opacity: 0.38; filter: none; }
+.deus[data-estilo="menu"] .no--bloqueado {
+  opacity: 0.38;
+  filter: none;
+}
 
 .deus[data-estilo="menu"] .no__marca {
   top: 0.15rem;
@@ -1797,23 +2216,62 @@ body { font-size: 1rem; font-weight: 400; }
   border-radius: 0;
 }
 
-.deus[data-estilo="menu"] .arvore__linha { stroke-width: 1; opacity: 0.85; }
-.deus[data-estilo="menu"] .arvore__linha--apagada { opacity: 0.2; }
+.deus[data-estilo="menu"] .arvore__linha {
+  stroke-width: 1;
+  opacity: 0.85;
+}
+.deus[data-estilo="menu"] .arvore__linha--apagada {
+  opacity: 0.2;
+}
 
-.deus[data-estilo="menu"] .arvore__celula { gap: 1.6rem; }
+.deus[data-estilo="menu"] .arvore__celula {
+  gap: 1.6rem;
+}
 
-/* ---------- Ícones das habilidades (medalhão dourado, no estilo do site) ---------- */
+/* ícones das habilidades */
+
+:root {
+  --aro-vivo: linear-gradient(60deg, #dcc183, #b0873a, #8a6425, #6e2a80, #4a1a57, #8a6425, #b0873a, #f6ead0);
+}
+
+@keyframes aro-vivo {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.no__icone,
+.detalhe__icone {
+  animation: aro-vivo 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .no__icone,
+  .detalhe__icone {
+    animation: none;
+    background-position: 0% 50%;
+  }
+}
+
 .no__icone {
   position: relative;
   display: block;
   width: 3.1rem;
   height: 3.1rem;
   margin: 0 auto 0.4rem;
-  padding: 2px;
-  background: linear-gradient(145deg, var(--ouro-claro), var(--ouro) 45%, #8a6425);
+  padding: 3px;
+  background: var(--aro-vivo);
+  background-size: 300% 300%;
   border-radius: 50%;
   box-shadow: 0 0.2rem 0.5rem -0.2rem rgb(40 20 10 / 0.6);
-  transition: filter 0.25s, opacity 0.25s, transform 0.25s;
+  transition:
+    filter 0.25s,
+    opacity 0.25s,
+    transform 0.25s;
 }
 
 .no__icone img {
@@ -1824,54 +2282,104 @@ body { font-size: 1rem; font-weight: 400; }
   border-radius: 50%;
 }
 
-.no--bloqueado .no__icone { filter: grayscale(1) brightness(0.8); }
-.no:hover .no__icone { transform: scale(1.06); }
+.no--bloqueado .no__icone {
+  filter: grayscale(1) brightness(0.8);
+}
+.no:hover .no__icone {
+  transform: scale(1.06);
+}
 
-/* a estrela de "marcada" fica sobre o medalhão */
-.no--marcado .no__icone { box-shadow: 0 0 0 2px var(--ouro-claro), 0 0 0.9rem rgb(220 193 131 / 0.7); }
+.no--marcado .no__icone {
+  box-shadow:
+    0 0 0 2px var(--ouro-claro),
+    0 0 0.9rem rgb(220 193 131 / 0.7);
+}
 
-/* Variante menu: o medalhão é o elemento principal, o nome vem abaixo */
-.deus[data-estilo="menu"] .no { padding-top: 0.2rem; }
-.deus[data-estilo="menu"] .no__icone { width: 3.6rem; height: 3.6rem; }
-.deus[data-estilo="menu"] .no--bloqueado { opacity: 0.55; }
+.deus[data-estilo="menu"] .no {
+  padding-top: 0.2rem;
+}
+.deus[data-estilo="menu"] .no__icone {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+.deus[data-estilo="menu"] .no--bloqueado {
+  opacity: 0.55;
+}
 
-/* Na janela de detalhe, ao lado do nome */
-.detalhe__cabeca { display: grid; grid-template-columns: auto 1fr; gap: 0 1rem; align-items: center; }
+.detalhe__cabeca {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1rem;
+  align-items: center;
+}
 .detalhe__icone {
   grid-row: span 2;
   width: 4.2rem;
   height: 4.2rem;
-  padding: 2px;
-  background: linear-gradient(145deg, var(--ouro-claro), var(--ouro) 45%, #8a6425);
+  padding: 3px;
+  background: var(--aro-vivo);
+  background-size: 300% 300%;
   border-radius: 50%;
 }
-.detalhe__icone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-.detalhe__nome { margin-bottom: 0.4rem; }
+.detalhe__icone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.detalhe__nome {
+  margin-bottom: 0.4rem;
+}
 
-/* Habilidade escolhida: o medalhão ganha o aro duplo de uma moeda e um halo quente.
-   É o único destaque forte da árvore; o resto fica quieto. */
-.no__icone { transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.25s, opacity 0.25s; }
+.no__icone {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.25s,
+    opacity 0.25s;
+}
 
 .deus .no--selecionado .no__icone {
   transform: scale(1.12);
-  box-shadow: 0 0 0 3px #fbf4e2, 0 0 0 5px var(--ouro), 0 0 1.5rem rgb(220 193 131 / 0.8);
+  box-shadow:
+    0 0 0 3px #fbf4e2,
+    0 0 0 5px var(--ouro),
+    0 0 1.5rem rgb(220 193 131 / 0.8);
 }
 
-.deus[data-estilo="menu"] .no--selecionado .no__nome { color: var(--purpura); }
-.deus[data-estilo="menu"] .no--selecionado { opacity: 1; }
+.deus[data-estilo="menu"] .no--selecionado .no__nome {
+  color: var(--purpura);
+}
+.deus[data-estilo="menu"] .no--selecionado {
+  opacity: 1;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .no__icone { transition: none; }
+  .no__icone {
+    transition: none;
+  }
 }
 
-/* o anel de foco do teclado tem de sobreviver ao estado "escolhida" */
-.deus[data-estilo="menu"] .no:focus-visible { outline: 2px solid var(--ouro-claro); outline-offset: 3px; }
+.deus[data-estilo="menu"] .no:focus-visible {
+  outline: 2px solid var(--ouro-claro);
+  outline-offset: 3px;
+}
 
-/* ---------- Ajustes da árvore: sem título, linhas mais claras, nada de vão vazio ---------- */
-.arvore__controle { margin-bottom: 1.4rem; }
-.arvore__grade { row-gap: 1.9rem; }
+/* ajustes da árvore: sem título, linhas mais claras, nada de vão vazio */
+.arvore__controle {
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+.arvore__niveis {
+  justify-content: center;
+}
+.arvore__grade {
+  row-gap: 1.9rem;
+}
 
-/* célula sem habilidade naquele serviço */
 .arvore__nada {
   margin: 0;
   padding: 0.5rem 1rem;
@@ -1882,23 +2390,48 @@ body { font-size: 1rem; font-weight: 400; }
   opacity: 0.75;
 }
 
-/* irmãs do mesmo serviço: a barra mostra que as duas abrem juntas */
-.arvore__linha--irmas { stroke-width: 2; stroke-dasharray: none; }
+.arvore__linha--irmas {
+  stroke-width: 2;
+  stroke-dasharray: none;
+}
 
-/* ativas: cada nome é uma rota própria, então a linha é mais firme */
-.arvore__linha--rota { stroke-width: 2.4; stroke: var(--purpura); opacity: 0.75; }
-.deus[data-estilo="menu"] .arvore__linha--rota { stroke: var(--purpura); }
+.arvore__linha--rota {
+  stroke-width: 2.4;
+  stroke: var(--purpura);
+  opacity: 0.75;
+}
+.deus[data-estilo="menu"] .arvore__linha--rota {
+  stroke: var(--purpura);
+}
 
-/* o serviço selecionado fica marcado na coluna do meio */
-.arvore__servico--atual { color: var(--purpura); }
+.arvore__servico--atual {
+  color: var(--purpura);
+}
 .arvore__servico--atual::before,
-.arvore__servico--atual::after { background: var(--purpura); }
+.arvore__servico--atual::after {
+  background: var(--purpura);
+}
 
-/* As habilidades de um mesmo serviço ficam lado a lado: o nome quebra em duas linhas
-   em vez de empurrar a irmã para baixo. */
-.arvore__grade { grid-template-columns: minmax(0, 1fr) 9rem minmax(0, 1fr); }
-.arvore__celula { gap: 0.9rem; flex-wrap: nowrap; }
-.deus[data-estilo="menu"] .no { max-width: 9.5rem; }
-.no__nome { overflow-wrap: anywhere; hyphens: auto; }
-.arvore__servico { font-size: 0.64rem; letter-spacing: 0.1em; }
-.arvore__servico::before, .arvore__servico::after { width: 0.32rem; height: 0.32rem; }
+.arvore__grade {
+  grid-template-columns: minmax(0, 1fr) 9rem minmax(0, 1fr);
+}
+.arvore__celula {
+  gap: 0.9rem;
+  flex-wrap: nowrap;
+}
+.deus[data-estilo="menu"] .no {
+  max-width: 9.5rem;
+}
+.no__nome {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.arvore__servico {
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+}
+.arvore__servico::before,
+.arvore__servico::after {
+  width: 0.32rem;
+  height: 0.32rem;
+}

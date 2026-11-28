@@ -59,3 +59,7 @@ Tudo aqui é gerado por `node weebly/montar.js` a partir do material de `tumblr/
 - O editor do Weebly não mostra o CSS externo; só o site publicado (ou a prévia do editor de código) mostra o visual.
 - Senha de site e "Members" exigem plano pago.
 - O texto das páginas (menos Cronologia) é provisório.
+
+## Código limpo
+
+`node weebly/montar.js` entrega `style.css`, `site.js`, `carregamento.js`, o tema e as páginas **sem comentários** (no HTML do tema ficam só marcações curtas, como `<!-- menu -->`), usando `weebly/limpar.js`. Se o prettier estiver instalado (`npm i` em `weebly/publicar`), o código sai também alinhado. Os comentários explicativos continuam nos arquivos-fonte (`tumblr/style.css`, `weebly/deuses.css` etc.).

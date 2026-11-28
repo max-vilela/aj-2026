@@ -1,5 +1,3 @@
-/* Scripts compartilhados do site: marca a página atual no menu, fecha janelas com Esc,
-   mostra o botão de voltar ao topo e o medalhão do menu depois de rolar um pouco. */
 (function () {
   function marcarPaginaAtual() {
     var atual = window.location.pathname;
@@ -29,21 +27,30 @@
     var irPanteao = document.querySelector(".gaveta__panteao");
     if (irPanteao) {
       irPanteao.addEventListener("click", function () {
-        if (gaveta) { gaveta.checked = false; atualizar(); }
+        if (gaveta) {
+          gaveta.checked = false;
+          atualizar();
+        }
       });
-      /* o Panteão é um <label>, então o teclado precisa de ajuda para abri-lo */
+
       irPanteao.addEventListener("keydown", function (e) {
         if (e.key !== "Enter" && e.key !== " ") return;
         e.preventDefault();
         if (panteao) panteao.checked = true;
-        if (gaveta) { gaveta.checked = false; atualizar(); }
+        if (gaveta) {
+          gaveta.checked = false;
+          atualizar();
+        }
       });
     }
 
     document.addEventListener("keydown", function (e) {
       if (e.key !== "Escape") return;
       if (panteao && panteao.checked) panteao.checked = false;
-      if (gaveta && gaveta.checked) { gaveta.checked = false; atualizar(); }
+      if (gaveta && gaveta.checked) {
+        gaveta.checked = false;
+        atualizar();
+      }
     });
   }
 

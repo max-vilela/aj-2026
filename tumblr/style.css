@@ -412,7 +412,7 @@ html.carregando .carregamento {
   position: relative;
   display: grid;
   place-items: start center;
-  min-height: clamp(15rem, 17.5vw, 24rem);
+  min-height: clamp(18.5rem, 22vw, 29rem);
   padding: clamp(1.75rem, 3.2vw, 3rem) 1rem 2rem;
   text-align: center;
 }
@@ -535,11 +535,6 @@ html.carregando .carregamento {
   font-size: 0.78rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-}
-
-/* Com 12 itens o menu tem três linhas de quatro; a terceira só precisa de um respiro leve */
-.menu li:nth-child(n + 9):nth-child(-n + 12) {
-  margin-top: 0.4rem;
 }
 
 .deuses a {
@@ -1088,7 +1083,7 @@ html:has(.panteao__toggle:checked) {
   padding-bottom: 0.85rem;
   font-family: var(--fonte-texto);
   font-weight: 700;
-  font-size: clamp(2.3rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 2.4vw, 1.9rem);
   font-variant-numeric: lining-nums;
   line-height: 1;
   color: var(--purpura);

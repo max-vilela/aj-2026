@@ -16,10 +16,32 @@ const TAG = "70c3a70b9fd00da25a8091d2806f84358552036b";  /* commit publicado; o 
 const CDN = "https://cdn.jsdelivr.net/gh/max-vilela/aj-2026@" + TAG + "/weebly";
 
 const ler = (p) => fs.readFileSync(path.join(RAIZ, p), "utf8").replace(/\r\n/g, "\n");
+/* Tudo que vai para o site sai sem comentários; no HTML do tema entram só marcações curtas de seção */
+const { limparCss, limparJs, limparHtml, marcarHtml } = require("./limpar");
+const MARCAS_TEMA = [
+  ['<header class="topo">', "topo"],
+  ['<div class="pagina">', "página"],
+  ['<div class="cenario"', "cenário lateral"],
+  ['<nav class="menu"', "menu"],
+  ['<div class="panteao">', "botão do panteão"],
+  ["\\{\\{#sections\\}\\}", "conteúdo"],
+  ['<footer class="rodape">', "rodapé"],
+  ['<div class="panteao__janela"', "janela do panteão"],
+  ['<input type="checkbox" id="gaveta"', "menu lateral"],
+  ['<a class="voltar-topo', "voltar ao topo"],
+  ['<div id="navMobile"', "menu mobile do Weebly"],
+];
+const limpar = (p, texto) => {
+  const ext = path.extname(p);
+  if (ext === ".css") return limparCss(texto);
+  if (ext === ".js") return limparJs(texto);
+  const html = limparHtml(texto);
+  return p.includes("tema/") || p.includes("preview/") ? marcarHtml(html, MARCAS_TEMA) : html;
+};
 const gravar = (p, texto) => {
   const alvo = path.join(RAIZ, p);
   fs.mkdirSync(path.dirname(alvo), { recursive: true });
-  fs.writeFileSync(alvo, texto, "utf8");
+  fs.writeFileSync(alvo, limpar(p, texto), "utf8");
 };
 const entre = (texto, ini, fim, de = 0) => {
   const a = texto.indexOf(ini, de);
@@ -57,10 +79,19 @@ const cssWeebly = `
 /* ---------- Ajustes do Weebly ---------- */
 .conteudo { display: block; }
 
+/* Céu de pôr do sol atrás do título: a imagem do topo multiplica por cima e o céu branco dela deixa o pôr do sol aparecer */
+.topo__ceu {
+  position: absolute;
+  inset: 0;
+  background: url("imagens/ceu-por-do-sol.webp") center 38% / cover no-repeat;
+  opacity: 0.7;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
 /* ---------- Tipografia ----------
    Cinzel nos títulos e menus, Libre Caslon Text no texto. */
 :root { --fonte-texto: "Libre Caslon Text", Georgia, "Times New Roman", serif; }
-body { font-size: 1rem; font-weight: 400; }
+body { font-size: 0.94rem; font-weight: 400; }
 .ano__titulo { font-family: var(--fonte-titulo); font-weight: 600; }
 .topo__titulo {
   padding-left: 0.06em;
@@ -72,7 +103,7 @@ body { font-size: 1rem; font-weight: 400; }
 
 /* O Weebly aplica a fonte do tema (Quicksand) com !important em tudo dentro de #wsite-content,
    onde entra o conteúdo das páginas. Estas regras (mais específicas) devolvem a fonte do site. */
-#wsite-content .ano__titulo { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(2.3rem, 4vw, 3rem) !important; }
+#wsite-content .ano__titulo { font-family: var(--fonte-titulo) !important; font-weight: 600 !important; font-size: clamp(1.6rem, 2.4vw, 1.9rem) !important; }
 #wsite-content .ano__texto p { font-family: inherit !important; font-size: inherit !important; }
 .weebly-rodape { padding: 1rem 1rem 2rem; text-align: center; font-size: 0.8rem; color: var(--tinta-suave); }
 .weebly-rodape a { color: inherit; }
@@ -178,6 +209,12 @@ corpo = corpo.replace(/\n{3,}/g, "\n\n");
 /* O Weebly usa toda <img src> do HTML como og:image (pré-visualização de links). Para o link mostrar só o
    brasão, as imagens do tema vão em data-src e um script curto liga o src no navegador. */
 corpo = corpo.replace(/<img ([^>]*?)src="/g, '<img $1data-src="');
+/* O rodapé do Weebly fica DENTRO de .pagina: assim o cenário lateral (colunatas e louros) vai até o fim da página, sem vão em branco */
+if (!corpo.includes("</footer>")) throw new Error("footer não encontrado");
+corpo = corpo.replace("</footer>", '</footer>\n    <div class="weebly-rodape">{footer}</div>');
+/* Céu atrás do título (estilo em .topo__ceu) */
+if (!corpo.includes('<div class="topo__fundo"')) throw new Error("topo__fundo não encontrado");
+corpo = corpo.replace('<div class="topo__fundo"', '<div class="topo__ceu" aria-hidden="true"></div>\n    <div class="topo__fundo"');
 /* Subtítulo do cabeçalho */
 if (!corpo.includes("</h1>")) throw new Error("h1 não encontrado");
 corpo = corpo.replace("</h1>", '</h1>\n      <p class="topo__subtitulo">A Renascença</p>');
@@ -193,6 +230,8 @@ const montarTema = (css, js) => `<!DOCTYPE html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=1280" />
+  <link rel="icon" type="image/png" sizes="32x32" href="${css.replace("style.css", "imagens/aguia-32.png")}">
+  <link rel="apple-touch-icon" href="${css.replace("style.css", "imagens/aguia-180.png")}">
 ${cabecaFontes}
   <link rel="stylesheet" href="${css}">
   <script src="${js}" defer></script>
@@ -200,7 +239,6 @@ ${cabecaFontes}
 <body id="topo">
 ${corpo.trimEnd()}
 
-  <div class="weebly-rodape">{footer}</div>
 
   <script>for (var i = 0, m = document.images; i < m.length; i++) m[i].dataset.src && (m[i].src = m[i].dataset.src);</script>
 
@@ -271,5 +309,16 @@ const previaHome = previaPagina(
   htmlCarregamento + '\n<script>window.AJ_DESTINO = "/weebly/preview/inicio.html";</script>\n<script src="../carregamento.js"></script>'
 );
 gravar("weebly/preview/home.html", previaHome);
+
+/* Formatação: com o prettier instalado (npm i em weebly/publicar), o código sai alinhado, como escrito à mão */
+const prettier = path.join(__dirname, "publicar/node_modules/prettier/bin/prettier.cjs");
+if (fs.existsSync(prettier)) {
+  const arquivos = ["style.css", "site.js", "carregamento.js", "deuses.js", "tema/no-header.html", ...SLUGS.map((s) => "paginas/" + s + ".html"), "paginas/home.html", "paginas/panteao.html"];
+  require("child_process").execFileSync(
+    process.execPath,
+    [prettier, "--write", "--log-level", "warn", "--print-width", "110", ...arquivos.map((a) => path.join(__dirname, a))],
+    { stdio: "inherit" }
+  );
+}
 
 console.log("ok: " + SLUGS.length + " páginas + home; css " + fs.statSync(path.join(RAIZ, "weebly/style.css")).size + " bytes");
